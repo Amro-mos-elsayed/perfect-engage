@@ -1,0 +1,99 @@
+/* 
+  Localizable.strings
+  Scimbo
+
+  Created by CASPERON on 27/12/16.
+  Copyright © 2016 CASPERON. All rights reserved.
+*/
+
+
+"enter_mobileno" = "ENTER YOUR MOBILE NUMBER";
+"signin" = "SIGN IN";
+"edit" = "Edit";
+"favourite" = "Favourite";
+"all" = "All";
+"missed" = "Missed";
+"broadcast" = "Broadcast List";
+"newgroup" = "New Group";
+"chat" = "Chats";
+"contacts" = "Contacts";
+"setting" = "Settings";
+"personal" = "Who can seen my personal info";
+"privacy" = "Privacy";
+"lastseen" = "Last seen";
+"profilepht" = "Profile photo";
+"status"= "Status";
+"descrip" = "If you dont share last seen, you won't be";
+"descrip2"  = "able to see other people's last seen";
+"messaging" = "Messaging";
+"blockedcts" = "Blocked contacts";
+"listofblock" = "List of contacts that you have blocked";
+"readreceip" = "Read receipts";
+"readrecpdesp" = "If you dont share last seen, you won't be able to see other people's last seen";
+"everyone" = "Everyone";
+"datausage"= "Data usage";
+"network" = "Network usage";
+"whenusing"= "when using mobile data";
+"mediaauto"= "Media auto-download";
+"whenroaming"="When roaming";
+"notedesp"= "NOTE:Voice messages are always automatically downloaded for the the best communication experience";
+"call_setting"="Call settings";
+"low_data"="Low data usage";
+"low_desp"="NOTE:Lower the amount of data used during a Raad call ";
+"when_using_sel"="No media";
+"when_conn_sel"="No media";
+"when_roam_sel" = "No media";
+"security"="Security";
+"when_possible"="when possible ,the messages you send and your calls are secured with end-to-end encryption,which means Scimbo and third parties can't read or listen to them.";
+"learn_more"="Learn more about Raad security";
+"show_security"="Show security notification";
+"turn_on"="Turn on this setting to receive notifications when a contact's security code has changed.Your calls and the messages you send are encrypted regardless of this setting,when possible.";
+"account"="Account";
+"delete"="Delete my account";
+"delete_your_will"="DELETING YOUR ACCOUNT WILL:";
+"delete_your_sub"=".  Delete your account from Raad";
+"erase_your"=".  Erase your message history";
+"delete_your"=".  Delete you from all of your Raad groups";
+"want_to"="Want to change number instead?";
+"to_delete"="To delete your account,confirm your";
+"country_code"="Country code and enter your phone number";
+"delete_acc_btn" = "DELETE MY ACCOUNT";
+"changeNo" = "Change number";
+"next"="NEXT";
+"chang_desp1"="Changing your phone number will migrate your account info,groups and settings.    ";
+"chang_desp2"="Before Proceeding,please confirm that you are able to receive SMS or calls at your new number.                                  ";
+"change_desp3"="If you have both a new phone and a new number ,first  change your number on your old phone.";
+"notification"="Notifications";
+"conver_tone"="Conversation tones";
+"play_sound"="Play sounds for incoming and outgoing messages";
+"messg_notifi"="Message notifications";
+"messg_noti_tone"="Notification tone";
+"messg_default_tone"="Default ringtone(Water Drop)";
+"contact_tone"="Contact ringtone";
+"no_longer_desp"="No longer available.set custom notification by tapping the name at the top of a chat.";
+"vibrate"="Vibrate";
+"vibrate_off"="Off";
+"messg_pop_notif"="Popup notification";
+"messg_no_pop"="No popup";
+"light"="Light";
+"light_color" ="Red";
+"call_notif"= "Call notifications";
+"call_notif_tone"="Notification tone";
+"call_default_tone"="Default ringtone(Water Drop)";
+"call_contact_tone"="Contact ringtone";
+"call_vibrate"="Vibrate";
+"call_vibrate_off"="Off";
+"call_Pop"="Popup notification";
+"call_No_Pop"="No popup";
+"call_NoLonger_Desp"="No longer available.set custom notification by tapping the name at the top of a chat.";
+"oldno_code" = "YOUR OLD COUNTRY CODE AND PHONE NUMBER";
+"newno_code" = "YOUR NEW COUNTRY CODE AND PHONE NUMBER";
+"changeno" = "Change number";
+"about_help" = "About and help";
+
+
+
+
+
+
+

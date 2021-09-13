@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Verify"; ObjectID = "9gI-Th-exX"; */
+"9gI-Th-exX.normalTitle" = "تأكيد";
+
+/* Class = "UILabel"; text = "OTP"; ObjectID = "YLu-G3-r57"; */
+"YLu-G3-r57.text" = "رمز التحقق";
+
+/* Class = "UILabel"; text = "Please Enter your OTP code which sent to your Mobile"; ObjectID = "fIw-Ku-qt0"; */
+"fIw-Ku-qt0.text" = "من فضلك قم بادخال رمز التحقق المرسل الى جوالك";
+
+/* Class = "UIButton"; normalTitle = "Resend"; ObjectID = "mXX-F5-lx3"; */
+"mXX-F5-lx3.normalTitle" = "اعادة ارسال";

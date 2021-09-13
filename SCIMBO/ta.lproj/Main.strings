@@ -1,0 +1,1039 @@
+
+/* Class = "UILabel"; text = "Delete my account"; ObjectID = "05O-Eg-73R"; */
+"05O-Eg-73R.text" = "Delete my account";
+
+/* Class = "UILabel"; text = "No recent chats. Kindly tap on New Group to create group"; ObjectID = "0EO-pz-ZQ1"; */
+"0EO-pz-ZQ1.text" = "No recent chats. Kindly tap on New Group to create group";
+
+/* Class = "UILabel"; text = "Friends | 152"; ObjectID = "0Z7-Ul-NUy"; */
+"0Z7-Ul-NUy.text" = "Friends | 152";
+
+/* Class = "UILabel"; text = "Blocked Contacts"; ObjectID = "0cp-uX-ZLB"; */
+"0cp-uX-ZLB.text" = "Blocked Contacts";
+
+/* Class = "UILabel"; text = "No Contacts "; ObjectID = "0ex-sf-7CE"; */
+"0ex-sf-7CE.text" = "No Contacts ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1Ck-nJ-PCG"; */
+"1Ck-nJ-PCG.text" = "Label";
+
+/* Class = "UILabel"; text = "Everyone"; ObjectID = "1YQ-0g-ett"; */
+"1YQ-0g-ett.text" = "Everyone";
+
+/* Class = "UILabel"; text = "Vibrate"; ObjectID = "1Z6-B0-xgu"; */
+"1Z6-B0-xgu.text" = "Vibrate";
+
+/* Class = "UILabel"; text = "Created 1/12/2017 at 06:40Am"; ObjectID = "1o7-Jv-su3"; */
+"1o7-Jv-su3.text" = "Created 1/12/2017 at 06:40Am";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "2J0-f3-N5f"; */
+"2J0-f3-N5f.normalTitle" = "NEXT";
+
+/* Class = "UITextField"; placeholder = "* DISPLAY NAME"; ObjectID = "2ey-ed-C6A"; */
+"2ey-ed-C6A.placeholder" = "* DISPLAY NAME";
+
+/* Class = "UILabel"; text = "Light"; ObjectID = "2fb-VE-jRI"; */
+"2fb-VE-jRI.text" = "Light";
+
+/* Class = "UILabel"; text = ".  Delete your account from Scimbo"; ObjectID = "32i-Vn-aRe"; */
+"32i-Vn-aRe.text" = ".  Delete your account from Scimbo";
+
+/* Class = "UILabel"; text = "Contact ringtone"; ObjectID = "39t-1f-5lf"; */
+"39t-1f-5lf.text" = "Contact ringtone";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "3oh-Rx-DJq"; */
+"3oh-Rx-DJq.normalTitle" = "Submit";
+
+/* Class = "UITextView"; text = "Before Proceeding,please confirm that you are able to receive SMS or calls at your new number.                                  "; ObjectID = "4D7-WH-lBI"; */
+"4D7-WH-lBI.text" = "Before Proceeding,please confirm that you are able to receive SMS or calls at your new number.                                  ";
+
+/* Class = "UILabel"; text = "John Doe"; ObjectID = "4Kc-WM-LbO"; */
+"4Kc-WM-LbO.text" = "John Doe";
+
+/* Class = "UIButton"; normalTitle = "Show Places"; ObjectID = "4MP-pE-BfB"; */
+"4MP-pE-BfB.normalTitle" = "Show Places";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4bo-ye-UO5"; */
+"4bo-ye-UO5.text" = "Label";
+
+/* Class = "UILabel"; text = "About Us"; ObjectID = "4kt-ak-qy7"; */
+"4kt-ak-qy7.text" = "About Us";
+
+/* Class = "UILabel"; text = "The African Talent Contest"; ObjectID = "4qm-g1-CyE"; */
+"4qm-g1-CyE.text" = "The African Talent Contest";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "4zf-pD-PG3"; */
+"4zf-pD-PG3.text" = "Chats";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "5An-Nt-vFT"; */
+"5An-Nt-vFT.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Choose a category:"; ObjectID = "5Gr-Bj-zth"; */
+"5Gr-Bj-zth.text" = "Choose a category:";
+
+/* Class = "UILabel"; text = "No data avaliable"; ObjectID = "5Vr-b7-6Fy"; */
+"5Vr-b7-6Fy.text" = "No data avaliable";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "5WY-vC-QUj"; */
+"5WY-vC-QUj.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = "List of contacts that you have blocked"; ObjectID = "5df-N1-8X0"; */
+"5df-N1-8X0.text" = "List of contacts that you have blocked";
+
+/* Class = "UILabel"; text = "OTP verification"; ObjectID = "5eM-kh-uJO"; */
+"5eM-kh-uJO.text" = "OTP verification";
+
+/* Class = "UILabel"; text = "Privacy"; ObjectID = "63V-j7-bs3"; */
+"63V-j7-bs3.text" = "Privacy";
+
+/* Class = "UITextField"; placeholder = "Recovery Email id"; ObjectID = "67R-km-Utg"; */
+"67R-km-Utg.placeholder" = "Recovery Email id";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6OA-xe-1OH"; */
+"6OA-xe-1OH.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Privacy"; ObjectID = "6Yz-eJ-pAy"; */
+"6Yz-eJ-pAy.normalTitle" = "Privacy";
+
+/* Class = "UILabel"; text = "Groups"; ObjectID = "6pg-eR-o5L"; */
+"6pg-eR-o5L.text" = "Groups";
+
+/* Class = "UILabel"; text = "Connect"; ObjectID = "6xh-ND-jfX"; */
+"6xh-ND-jfX.text" = "Connect";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "7Hc-QP-sKg"; */
+"7Hc-QP-sKg.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = "In-App Notification"; ObjectID = "7eR-t6-Gos"; */
+"7eR-t6-Gos.text" = "In-App Notification";
+
+/* Class = "UITextView"; text = "YOUR OLD COUNTRY CODE AND PHONE NUMBER"; ObjectID = "8KW-dN-YmV"; */
+"8KW-dN-YmV.text" = "YOUR OLD COUNTRY CODE AND PHONE NUMBER";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "8SD-Ec-rKJ"; */
+"8SD-Ec-rKJ.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Starred Messages"; ObjectID = "8VF-uk-Umc"; */
+"8VF-uk-Umc.text" = "Starred Messages";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "8bt-ZD-pKk"; */
+"8bt-ZD-pKk.placeholder" = "Search";
+
+/* Class = "UISearchBar"; 8bt-ZD-pKk.scopeButtonTitles[0] = "Title"; ObjectID = "8bt-ZD-pKk"; */
+"8bt-ZD-pKk.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; 8bt-ZD-pKk.scopeButtonTitles[1] = "Title"; ObjectID = "8bt-ZD-pKk"; */
+"8bt-ZD-pKk.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UILabel"; text = "Archived Chats"; ObjectID = "8jN-8a-DFU"; */
+"8jN-8a-DFU.text" = "Archived Chats";
+
+/* Class = "UITextField"; placeholder = "* WHY DO YOU NEED AN OFFICIAL ACCOUNT?"; ObjectID = "8mS-hU-pH9"; */
+"8mS-hU-pH9.placeholder" = "* WHY DO YOU NEED AN OFFICIAL ACCOUNT?";
+
+/* Class = "UIButton"; normalTitle = "Add Media"; ObjectID = "8nK-wK-Hd4"; */
+"8nK-wK-Hd4.normalTitle" = "Add Media";
+
+/* Class = "UILabel"; text = "No recent secret chats. Kindly tap on  📝 icon to start secret chating"; ObjectID = "8xa-fh-4ta"; */
+"8xa-fh-4ta.text" = "No recent secret chats. Kindly tap on  📝 icon to start secret chating";
+
+/* Class = "UIButton"; normalTitle = "India"; ObjectID = "98A-os-zS6"; */
+"98A-os-zS6.normalTitle" = "India";
+
+/* Class = "UILabel"; text = "WHY DO YOU NEED AN OFFICIAL ACCOUNT?"; ObjectID = "9Qj-ak-Tjm"; */
+"9Qj-ak-Tjm.text" = "WHY DO YOU NEED AN OFFICIAL ACCOUNT?";
+
+/* Class = "UIButton"; normalTitle = "Archive"; ObjectID = "9R6-il-e43"; */
+"9R6-il-e43.normalTitle" = "Archive";
+
+/* Class = "UILabel"; text = "Celebrity"; ObjectID = "9bT-Af-03r"; */
+"9bT-Af-03r.text" = "Celebrity";
+
+/* Class = "UILabel"; text = "Add Participants"; ObjectID = "9l7-21-h7I"; */
+"9l7-21-h7I.text" = "Add Participants";
+
+/* Class = "UILabel"; text = "Promotions"; ObjectID = "9o1-1Q-70L"; */
+"9o1-1Q-70L.text" = "Promotions";
+
+/* Class = "UITextField"; text = "Company Name"; ObjectID = "AZh-ES-5so"; */
+"AZh-ES-5so.text" = "Company Name";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Abr-7u-A4k"; */
+"Abr-7u-A4k.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Vaigunda Anand"; ObjectID = "AmF-ld-C1S"; */
+"AmF-ld-C1S.text" = "Vaigunda Anand";
+
+/* Class = "UIButton"; normalTitle = "Read"; ObjectID = "AoT-ja-vAs"; */
+"AoT-ja-vAs.normalTitle" = "Read";
+
+/* Class = "UILabel"; text = "Tap + to share documents"; ObjectID = "B28-eA-kLb"; */
+"B28-eA-kLb.text" = "Tap + to share documents";
+
+/* Class = "UILabel"; text = "asdadsadsad"; ObjectID = "B4l-ZZ-mdu"; */
+"B4l-ZZ-mdu.text" = "asdadsadsad";
+
+/* Class = "UILabel"; text = "System status"; ObjectID = "B8h-Zs-w1b"; */
+"B8h-Zs-w1b.text" = "System status";
+
+/* Class = "UIButton"; normalTitle = "New Group"; ObjectID = "BFC-4Y-0Vi"; */
+"BFC-4Y-0Vi.normalTitle" = "New Group";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "Bl6-bz-QnJ"; */
+"Bl6-bz-QnJ.text" = "Status";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "BnL-MT-UVK"; */
+"BnL-MT-UVK.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "Default(Note)"; ObjectID = "BnR-bp-QTK"; */
+"BnR-bp-QTK.text" = "Default(Note)";
+
+/* Class = "UILabel"; text = "Sound"; ObjectID = "Bte-5e-J1E"; */
+"Bte-5e-J1E.text" = "Sound";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "C57-hB-5gY"; */
+"C57-hB-5gY.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "CCo-9u-Lu7"; */
+"CCo-9u-Lu7.normalTitle" = "Cancel";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit amet, sit pellentesque pellentesque ultrices, et egestas eu."; ObjectID = "CEL-hR-oef"; */
+"CEL-hR-oef.text" = "Lorem ipsum dolor sit amet, sit pellentesque pellentesque ultrices, et egestas eu.";
+
+/* Class = "UILabel"; text = "Become a Celebrity"; ObjectID = "Cc3-8y-TnE"; */
+"Cc3-8y-TnE.text" = "Become a Celebrity";
+
+/* Class = "UILabel"; text = "John Doe"; ObjectID = "CjH-dz-2Oh"; */
+"CjH-dz-2Oh.text" = "John Doe";
+
+/* Class = "UIButton"; normalTitle = "New Group"; ObjectID = "D5I-Y0-Lw2"; */
+"D5I-Y0-Lw2.normalTitle" = "New Group";
+
+/* Class = "UILabel"; text = "Become a Connect"; ObjectID = "DWN-7i-4fU"; */
+"DWN-7i-4fU.text" = "Become a Connect";
+
+/* Class = "UILabel"; text = "We will send you a one time SMS message. Carrier charges may apply"; ObjectID = "Da4-LR-htV"; */
+"Da4-LR-htV.text" = "We will send you a one time SMS message. Carrier charges may apply";
+
+/* Class = "UILabel"; text = "We hate to see you go! Why are you leaving?"; ObjectID = "E2b-MO-Wdy"; */
+"E2b-MO-Wdy.text" = "We hate to see you go! Why are you leaving?";
+
+/* Class = "UITextView"; text = "No longer available.set custom notification by tapping the name at the top of a chat."; ObjectID = "ENU-CP-00r"; */
+"ENU-CP-00r.text" = "No longer available.set custom notification by tapping the name at the top of a chat.";
+
+/* Class = "UILabel"; text = "Popup notification"; ObjectID = "EOh-QU-72o"; */
+"EOh-QU-72o.text" = "Popup notification";
+
+/* Class = "UIButton"; normalTitle = "Want to change number instead?"; ObjectID = "EUm-N9-LWK"; */
+"EUm-N9-LWK.normalTitle" = "Want to change number instead?";
+
+/* Class = "UILabel"; text = "No Documents"; ObjectID = "Ebh-2W-Qs3"; */
+"Ebh-2W-Qs3.text" = "No Documents";
+
+/* Class = "UILabel"; text = "No comments avaliable"; ObjectID = "EfF-ar-J6j"; */
+"EfF-ar-J6j.text" = "No comments avaliable";
+
+/* Class = "UILabel"; text = "New post"; ObjectID = "EyX-tK-Mr0"; */
+"EyX-tK-Mr0.text" = "New post";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "FMc-lA-Ius"; */
+"FMc-lA-Ius.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Country code and enter your phone number"; ObjectID = "FUg-O9-I8P"; */
+"FUg-O9-I8P.text" = "Country code and enter your phone number";
+
+/* Class = "UIButton"; normalTitle = "Create"; ObjectID = "Fsd-2q-8CR"; */
+"Fsd-2q-8CR.normalTitle" = "Create";
+
+/* Class = "UILabel"; text = "Delete my account"; ObjectID = "GqQ-9P-8Xc"; */
+"GqQ-9P-8Xc.text" = "Delete my account";
+
+/* Class = "UILabel"; text = ".  Delete you from all of your Scimbo groups"; ObjectID = "GsN-y8-9Ue"; */
+"GsN-y8-9Ue.text" = ".  Delete you from all of your Scimbo groups";
+
+/* Class = "UITextField"; placeholder = "* DATE OF BIRTH"; ObjectID = "HCc-rI-yWz"; */
+"HCc-rI-yWz.placeholder" = "* DATE OF BIRTH";
+
+/* Class = "UILabel"; text = "DISPLAY NAME"; ObjectID = "HNe-S0-Uq7"; */
+"HNe-S0-Uq7.text" = "DISPLAY NAME";
+
+/* Class = "UILabel"; text = "If you dont share Last Seen,you won't be "; ObjectID = "Hdw-Pu-mmk"; */
+"Hdw-Pu-mmk.text" = "If you dont share Last Seen,you won't be ";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Hid-on-zAc"; */
+"Hid-on-zAc.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Delete All"; ObjectID = "IGI-Qh-sd8"; */
+"IGI-Qh-sd8.normalTitle" = "Delete All";
+
+/* Class = "UILabel"; text = "No Starred Messages"; ObjectID = "IHa-zy-ajt"; */
+"IHa-zy-ajt.text" = "No Starred Messages";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "IWf-1p-d71"; */
+"IWf-1p-d71.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Secret Chats"; ObjectID = "In4-cr-LAE"; */
+"In4-cr-LAE.text" = "Secret Chats";
+
+/* Class = "UILabel"; text = ".  Erase your message history"; ObjectID = "IvQ-OG-wkq"; */
+"IvQ-OG-wkq.text" = ".  Erase your message history";
+
+/* Class = "UILabel"; text = "Version 1.5"; ObjectID = "J3H-6c-geI"; */
+"J3H-6c-geI.text" = "Version 1.5";
+
+/* Class = "UILabel"; text = "PROFESSION"; ObjectID = "J3z-OZ-Wag"; */
+"J3z-OZ-Wag.text" = "PROFESSION";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "J4z-d3-Fme"; */
+"J4z-d3-Fme.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Update Email Settings"; ObjectID = "J5O-fl-hNw"; */
+"J5O-fl-hNw.text" = "Update Email Settings";
+
+/* Class = "UILabel"; text = "+917896321546"; ObjectID = "JeR-df-Nkw"; */
+"JeR-df-Nkw.text" = "+917896321546";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Jzv-IV-XfI"; */
+"Jzv-IV-XfI.normalTitle" = "Next";
+
+/* Class = "UITextView"; text = "To verify your email settings, all you have to do is click this link sent to you in the email"; ObjectID = "K6J-La-dSG"; */
+"K6J-La-dSG.text" = "To verify your email settings, all you have to do is click this link sent to you in the email";
+
+/* Class = "UILabel"; text = "Loading contacts..."; ObjectID = "KEz-9P-IkL"; */
+"KEz-9P-IkL.text" = "Loading contacts...";
+
+/* Class = "UIButton"; normalTitle = "Search or enter an address"; ObjectID = "KKD-j0-PKH"; */
+"KKD-j0-PKH.normalTitle" = "Search or enter an address";
+
+/* Class = "UILabel"; text = "Group Info"; ObjectID = "KZ5-p3-L4O"; */
+"KZ5-p3-L4O.text" = "Group Info";
+
+/* Class = "UILabel"; text = "No Feeds avaliable"; ObjectID = "KcP-o0-im5"; */
+"KcP-o0-im5.text" = "No Feeds avaliable";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "Khe-sC-0ir"; */
+"Khe-sC-0ir.normalTitle" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "L4C-JL-Clb"; */
+"L4C-JL-Clb.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "This is not your user name or pin. This name will be visible to your Let chat contacts. This is not your user name or pin. This name will be visible to your Let chat contacts."; ObjectID = "L5g-3B-2vu"; */
+"L5g-3B-2vu.text" = "This is not your user name or pin. This name will be visible to your Let chat contacts. This is not your user name or pin. This name will be visible to your Let chat contacts.";
+
+/* Class = "UILabel"; text = "Scan Code"; ObjectID = "LEp-G0-EOi"; */
+"LEp-G0-EOi.text" = "Scan Code";
+
+/* Class = "UILabel"; text = "Edit Profile"; ObjectID = "LRF-ln-fdA"; */
+"LRF-ln-fdA.text" = "Edit Profile";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LZA-pK-dy8"; */
+"LZA-pK-dy8.text" = "Label";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "Lu1-ah-aDD"; */
+"Lu1-ah-aDD.text" = "Settings";
+
+/* Class = "UILabel"; text = "Change number"; ObjectID = "LyD-BJ-nzE"; */
+"LyD-BJ-nzE.text" = "Change number";
+
+/* Class = "UITextField"; placeholder = "Write a comment..."; ObjectID = "M53-Gd-U7j"; */
+"M53-Gd-U7j.placeholder" = "Write a comment...";
+
+/* Class = "UILabel"; text = "Connect"; ObjectID = "MKP-Ys-Zwu"; */
+"MKP-Ys-Zwu.text" = "Connect";
+
+/* Class = "UIButton"; normalTitle = "Clear all"; ObjectID = "MSg-Kb-o0m"; */
+"MSg-Kb-o0m.normalTitle" = "Clear all";
+
+/* Class = "UILabel"; text = "Last seen"; ObjectID = "MZV-QU-6jW"; */
+"MZV-QU-6jW.text" = "Last seen";
+
+/* Class = "UILabel"; text = "ringing +91 99999 99999..."; ObjectID = "Mh0-by-gP6"; */
+"Mh0-by-gP6.text" = "ringing +91 99999 99999...";
+
+/* Class = "UILabel"; text = "To place a call tap + at the top and select a contact"; ObjectID = "MpH-nw-acN"; */
+"MpH-nw-acN.text" = "To place a call tap + at the top and select a contact";
+
+/* Class = "UILabel"; text = "Scimbo service is operating normally"; ObjectID = "MyI-3A-MDp"; */
+"MyI-3A-MDp.text" = "Scimbo service is operating normally";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "NXf-Zg-phc"; */
+"NXf-Zg-phc.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = "  PARTICIPANTS: 3 OF 253"; ObjectID = "Nq5-w7-4YN"; */
+"Nq5-w7-4YN.text" = "  PARTICIPANTS: 3 OF 253";
+
+/* Class = "UILabel"; text = "Create Post"; ObjectID = "NqM-9G-oO4"; */
+"NqM-9G-oO4.text" = "Create Post";
+
+/* Class = "UILabel"; text = "Off"; ObjectID = "NvD-aq-aSA"; */
+"NvD-aq-aSA.text" = "Off";
+
+/* Class = "UILabel"; text = "BIOGRAPHY"; ObjectID = "O5G-xk-aWp"; */
+"O5G-xk-aWp.text" = "BIOGRAPHY";
+
+/* Class = "UIButton"; normalTitle = "Archived Chats (0)"; ObjectID = "OHL-xF-FfF"; */
+"OHL-xF-FfF.normalTitle" = "Archived Chats (0)";
+
+/* Class = "UIButton"; normalTitle = "Who can see my personal info"; ObjectID = "ORK-Jg-6lx"; */
+"ORK-Jg-6lx.normalTitle" = "Who can see my personal info";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Og1-4t-I6b"; */
+"Og1-4t-I6b.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "Group In Common"; ObjectID = "OhS-DY-D8X"; */
+"OhS-DY-D8X.text" = "Group In Common";
+
+/* Class = "UISegmentedControl"; PG2-RS-aSI.segmentTitles[0] = "All"; ObjectID = "PG2-RS-aSI"; */
+"PG2-RS-aSI.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; PG2-RS-aSI.segmentTitles[1] = "Missed"; ObjectID = "PG2-RS-aSI"; */
+"PG2-RS-aSI.segmentTitles[1]" = "Missed";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "PK9-dM-noJ"; */
+"PK9-dM-noJ.normalTitle" = "Save";
+
+/* Class = "UILabel"; text = "Accept"; ObjectID = "PlF-lR-JKJ"; */
+"PlF-lR-JKJ.text" = "Accept";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "QUj-XG-cpB"; */
+"QUj-XG-cpB.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "3D"; ObjectID = "QtR-Xv-0cr"; */
+"QtR-Xv-0cr.normalTitle" = "3D";
+
+/* Class = "UILabel"; text = "Call notifications"; ObjectID = "Qxs-Nx-QL1"; */
+"Qxs-Nx-QL1.text" = "Call notifications";
+
+/* Class = "UILabel"; text = "Group Name "; ObjectID = "RMZ-bO-Jzm"; */
+"RMZ-bO-Jzm.text" = "Group Name ";
+
+/* Class = "UILabel"; text = "There are no archived chats."; ObjectID = "RP9-Ia-gIi"; */
+"RP9-Ia-gIi.text" = "There are no archived chats.";
+
+/* Class = "UILabel"; text = "Loading"; ObjectID = "RiC-gF-y3Y"; */
+"RiC-gF-y3Y.text" = "Loading";
+
+/* Class = "UILabel"; text = "Kar . Status"; ObjectID = "RnP-uf-A6r"; */
+"RnP-uf-A6r.text" = "Kar . Status";
+
+/* Class = "UITextView"; text = "Changing your phone number will migrate your account info,groups and settings.                                   "; ObjectID = "SBY-gh-hAo"; */
+"SBY-gh-hAo.text" = "Changing your phone number will migrate your account info,groups and settings.                                   ";
+
+/* Class = "UILabel"; text = "ringing +91 99999 99999..."; ObjectID = "SSQ-VW-9aG"; */
+"SSQ-VW-9aG.text" = "ringing +91 99999 99999...";
+
+/* Class = "UITextView"; text = "No longer available.set custom notification by tapping the name at the top of a chat."; ObjectID = "Soh-0d-7uA"; */
+"Soh-0d-7uA.text" = "No longer available.set custom notification by tapping the name at the top of a chat.";
+
+/* Class = "UILabel"; text = "Go to .com on your computrr and scan the QR Code"; ObjectID = "T9Q-jk-iaB"; */
+"T9Q-jk-iaB.text" = "Go to .com on your computrr and scan the QR Code";
+
+/* Class = "UILabel"; text = "Blocked contacts"; ObjectID = "TBv-Rm-mc1"; */
+"TBv-Rm-mc1.text" = "Blocked contacts";
+
+/* Class = "UILabel"; text = "Musician"; ObjectID = "TCL-Ff-HQQ"; */
+"TCL-Ff-HQQ.text" = "Musician";
+
+/* Class = "UILabel"; text = "Security"; ObjectID = "TKr-dN-3xF"; */
+"TKr-dN-3xF.text" = "Security";
+
+/* Class = "UILabel"; text = "Call Info"; ObjectID = "TNG-Lo-Spm"; */
+"TNG-Lo-Spm.text" = "Call Info";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TYD-Hb-1pC"; */
+"TYD-Hb-1pC.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Forward"; ObjectID = "Tj1-zj-JB3"; */
+"Tj1-zj-JB3.normalTitle" = "Forward";
+
+/* Class = "UILabel"; text = "Contacts"; ObjectID = "UBc-Xv-fv3"; */
+"UBc-Xv-fv3.text" = "Contacts";
+
+/* Class = "UITextField"; placeholder = "your phone number"; ObjectID = "UTY-8r-vPe"; */
+"UTY-8r-vPe.placeholder" = "your phone number";
+
+/* Class = "UILabel"; text = "No data avaliable"; ObjectID = "Uan-4X-jxR"; */
+"Uan-4X-jxR.text" = "No data avaliable";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "Uc2-JP-bxo"; */
+"Uc2-JP-bxo.text" = "Notifications";
+
+/* Class = "UILabel"; text = "Custom Notifications"; ObjectID = "UhY-oC-7ZV"; */
+"UhY-oC-7ZV.text" = "Custom Notifications";
+
+/* Class = "UILabel"; text = "Contact Us"; ObjectID = "V3r-xA-Yd6"; */
+"V3r-xA-Yd6.text" = "Contact Us";
+
+/* Class = "UILabel"; text = "Contact ringtone"; ObjectID = "VDg-x3-IP4"; */
+"VDg-x3-IP4.text" = "Contact ringtone";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "VYV-hU-66j"; */
+"VYV-hU-66j.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "VhT-sB-VZM"; */
+"VhT-sB-VZM.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "     Message Sound"; ObjectID = "WFs-XW-t3A"; */
+"WFs-XW-t3A.normalTitle" = "     Message Sound";
+
+/* Class = "UIButton"; normalTitle = "Post"; ObjectID = "WVg-ht-5sO"; */
+"WVg-ht-5sO.normalTitle" = "Post";
+
+/* Class = "UILabel"; text = "Show security notification"; ObjectID = "WWq-00-rvL"; */
+"WWq-00-rvL.text" = "Show security notification";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "WfN-i5-caR"; */
+"WfN-i5-caR.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Wy5-B0-nQu"; */
+"Wy5-B0-nQu.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Conversation tones"; ObjectID = "X34-al-zqz"; */
+"X34-al-zqz.text" = "Conversation tones";
+
+/* Class = "UILabel"; text = "New Chat"; ObjectID = "X5k-ow-jjd"; */
+"X5k-ow-jjd.text" = "New Chat";
+
+/* Class = "UITextView"; text = "Your recovery e-mail is used to reach you incase we detect unusual activity in your account or you accidentally get locked out"; ObjectID = "X9L-Ui-0Jb"; */
+"X9L-Ui-0Jb.text" = "Your recovery e-mail is used to reach you incase we detect unusual activity in your account or you accidentally get locked out";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "X9e-oa-2mo"; */
+"X9e-oa-2mo.text" = "Status";
+
+/* Class = "UILabel"; text = "Message notifications"; ObjectID = "XEF-ts-Ls9"; */
+"XEF-ts-Ls9.text" = "Message notifications";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "XTc-Lq-xhi"; */
+"XTc-Lq-xhi.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "XXp-8S-RMz"; */
+"XXp-8S-RMz.normalTitle" = "Share";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "XeK-hT-cLW"; */
+"XeK-hT-cLW.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "Terms And Conditions"; ObjectID = "XwU-g8-QjD"; */
+"XwU-g8-QjD.text" = "Terms And Conditions";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "YTP-em-lP9"; */
+"YTP-em-lP9.text" = "Chats";
+
+/* Class = "UILabel"; text = "John Doe"; ObjectID = "YVA-Yg-oDl"; */
+"YVA-Yg-oDl.text" = "John Doe";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "Yon-8h-8eo"; */
+"Yon-8h-8eo.text" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YqC-b7-0Cj"; */
+"YqC-b7-0Cj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Feeling lazy? Import your profile from Facebook"; ObjectID = "Yri-9S-6me"; */
+"Yri-9S-6me.text" = "Feeling lazy? Import your profile from Facebook";
+
+/* Class = "UIButton"; normalTitle = "Signup"; ObjectID = "Yz2-6c-f2L"; */
+"Yz2-6c-f2L.normalTitle" = "Signup";
+
+/* Class = "UILabel"; text = "My Updates"; ObjectID = "Z64-P8-0hq"; */
+"Z64-P8-0hq.text" = "My Updates";
+
+/* Class = "UILabel"; text = "No post yet..."; ObjectID = "ZwZ-0L-z8z"; */
+"ZwZ-0L-z8z.text" = "No post yet...";
+
+/* Class = "UILabel"; text = "Share Info"; ObjectID = "aEb-ba-Mn2"; */
+"aEb-ba-Mn2.text" = "Share Info";
+
+/* Class = "UITextField"; placeholder = "Verification Code"; ObjectID = "aFP-Vh-dP7"; */
+"aFP-Vh-dP7.placeholder" = "Verification Code";
+
+/* Class = "UILabel"; text = "Chat Wallpaper"; ObjectID = "aas-Bw-ACf"; */
+"aas-Bw-ACf.text" = "Chat Wallpaper";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "abu-Bi-bt7"; */
+"abu-Bi-bt7.text" = "Title";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "aeS-Va-AHW"; */
+"aeS-Va-AHW.text" = "Profile";
+
+/* Class = "UILabel"; text = "Users"; ObjectID = "ahP-0O-7Gq"; */
+"ahP-0O-7Gq.text" = "Users";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "aqp-qX-Wap"; */
+"aqp-qX-Wap.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "John Smith"; ObjectID = "avY-Cq-cmz"; */
+"avY-Cq-cmz.text" = "John Smith";
+
+/* Class = "UIButton"; normalTitle = "  Available"; ObjectID = "axt-QK-U2Y"; */
+"axt-QK-U2Y.normalTitle" = "  Available";
+
+/* Class = "UILabel"; text = "WEBSITE"; ObjectID = "bAo-h7-Di1"; */
+"bAo-h7-Di1.text" = "WEBSITE";
+
+/* Class = "UILabel"; text = "Websites"; ObjectID = "bJa-Bd-raQ"; */
+"bJa-Bd-raQ.text" = "Websites";
+
+/* Class = "UILabel"; text = "  STATUS"; ObjectID = "bVY-XT-Zd2"; */
+"bVY-XT-Zd2.text" = "  STATUS";
+
+/* Class = "UILabel"; text = "Scimbo VOICE CALL"; ObjectID = "boO-2J-uEd"; */
+"boO-2J-uEd.text" = "Scimbo VOICE CALL";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c6d-If-1DI"; */
+"c6d-If-1DI.text" = "Label";
+
+/* Class = "UILabel"; text = "Decline"; ObjectID = "cPH-lo-3hb"; */
+"cPH-lo-3hb.text" = "Decline";
+
+/* Class = "UIButton"; normalTitle = "Archived Chats (0)"; ObjectID = "cVc-Sn-xHa"; */
+"cVc-Sn-xHa.normalTitle" = "Archived Chats (0)";
+
+/* Class = "UILabel"; text = "Doc Name"; ObjectID = "cVx-Qz-kS2"; */
+"cVx-Qz-kS2.text" = "Doc Name";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "cd8-Cj-6P0"; */
+"cd8-Cj-6P0.normalTitle" = "Delete";
+
+/* Class = "UISegmentedControl"; cq4-rB-IEM.segmentTitles[0] = "All"; ObjectID = "cq4-rB-IEM"; */
+"cq4-rB-IEM.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; cq4-rB-IEM.segmentTitles[1] = "Missed"; ObjectID = "cq4-rB-IEM"; */
+"cq4-rB-IEM.segmentTitles[1]" = "Missed";
+
+/* Class = "UIButton"; normalTitle = "DELETE MY ACCOUNT"; ObjectID = "crT-Hl-qYP"; */
+"crT-Hl-qYP.normalTitle" = "DELETE MY ACCOUNT";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "d1Z-Se-V77"; */
+"d1Z-Se-V77.text" = "Chats";
+
+/* Class = "UILabel"; text = "Welcome to Scimbo"; ObjectID = "dNp-Mc-Oz6"; */
+"dNp-Mc-Oz6.text" = "Welcome to Scimbo";
+
+/* Class = "UILabel"; text = "Enter your name and add an optional profile picture"; ObjectID = "dNw-pi-meP"; */
+"dNw-pi-meP.text" = "Enter your name and add an optional profile picture";
+
+/* Class = "UISegmentedControl"; dWP-jA-F1l.segmentTitles[0] = "Media"; ObjectID = "dWP-jA-F1l"; */
+"dWP-jA-F1l.segmentTitles[0]" = "Media";
+
+/* Class = "UISegmentedControl"; dWP-jA-F1l.segmentTitles[1] = "Links"; ObjectID = "dWP-jA-F1l"; */
+"dWP-jA-F1l.segmentTitles[1]" = "Links";
+
+/* Class = "UISegmentedControl"; dWP-jA-F1l.segmentTitles[2] = "Docs"; ObjectID = "dWP-jA-F1l"; */
+"dWP-jA-F1l.segmentTitles[2]" = "Docs";
+
+/* Class = "UILabel"; text = "DATE OF BIRTH"; ObjectID = "dwD-B0-7wF"; */
+"dwD-B0-7wF.text" = "DATE OF BIRTH";
+
+/* Class = "UILabel"; text = "The African Talent Contest"; ObjectID = "dwh-0q-8ra"; */
+"dwh-0q-8ra.text" = "The African Talent Contest";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "eEJ-sU-JnG"; */
+"eEJ-sU-JnG.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "eLE-2l-uLD"; */
+"eLE-2l-uLD.normalTitle" = "Edit";
+
+/* Class = "UITextField"; placeholder = "* BIOGRAPHY"; ObjectID = "eSN-hl-5hX"; */
+"eSN-hl-5hX.placeholder" = "* BIOGRAPHY";
+
+/* Class = "UIButton"; normalTitle = "Disagree"; ObjectID = "ely-yK-cpd"; */
+"ely-yK-cpd.normalTitle" = "Disagree";
+
+/* Class = "UITextField"; placeholder = "Enter Name"; ObjectID = "f6r-9B-GpM"; */
+"f6r-9B-GpM.placeholder" = "Enter Name";
+
+/* Class = "UITextField"; placeholder = "your phone number"; ObjectID = "fFe-ZJ-gwD"; */
+"fFe-ZJ-gwD.placeholder" = "your phone number";
+
+/* Class = "UILabel"; text = "Subject"; ObjectID = "fIt-FS-KkM"; */
+"fIt-FS-KkM.text" = "Subject";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "fQE-m8-fwL"; */
+"fQE-m8-fwL.normalTitle" = "Delete";
+
+/* Class = "UITextView"; text = "When possible ,the messages you send and your calls are secured with end-to-end encryption,which means Scimbo and third parties can't read or listen to them."; ObjectID = "fQx-e2-tmD"; */
+"fQx-e2-tmD.text" = "When possible ,the messages you send and your calls are secured with end-to-end encryption,which means Scimbo and third parties can't read or listen to them.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fb7-bw-KQh"; */
+"fb7-bw-KQh.text" = "Label";
+
+/* Class = "UILabel"; text = "http://www.company.com"; ObjectID = "fsq-mn-Hv5"; */
+"fsq-mn-Hv5.text" = "http://www.company.com";
+
+/* Class = "UILabel"; text = "Vibrate"; ObjectID = "ft3-W0-oUc"; */
+"ft3-W0-oUc.text" = "Vibrate";
+
+/* Class = "UILabel"; text = "Reply"; ObjectID = "gK8-te-pe1"; */
+"gK8-te-pe1.text" = "Reply";
+
+/* Class = "UILabel"; text = "Account"; ObjectID = "gLg-hH-ZPR"; */
+"gLg-hH-ZPR.text" = "Account";
+
+/* Class = "UILabel"; text = "speaker"; ObjectID = "gdg-Fn-sCl"; */
+"gdg-Fn-sCl.text" = "speaker";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "gnI-mZ-8L9"; */
+"gnI-mZ-8L9.text" = "Status";
+
+/* Class = "UISegmentedControl"; gnW-6f-mGW.segmentTitles[0] = "Map"; ObjectID = "gnW-6f-mGW"; */
+"gnW-6f-mGW.segmentTitles[0]" = "Map";
+
+/* Class = "UISegmentedControl"; gnW-6f-mGW.segmentTitles[1] = "Hybrid"; ObjectID = "gnW-6f-mGW"; */
+"gnW-6f-mGW.segmentTitles[1]" = "Hybrid";
+
+/* Class = "UISegmentedControl"; gnW-6f-mGW.segmentTitles[2] = "Satellite"; ObjectID = "gnW-6f-mGW"; */
+"gnW-6f-mGW.segmentTitles[2]" = "Satellite";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "gpm-JQ-tOb"; */
+"gpm-JQ-tOb.text" = "Services";
+
+/* Class = "UIViewController"; title = "PickerVC"; ObjectID = "gyz-7A-v7U"; */
+"gyz-7A-v7U.title" = "PickerVC";
+
+/* Class = "UILabel"; text = "Solid Colors"; ObjectID = "hEh-7b-nsh"; */
+"hEh-7b-nsh.text" = "Solid Colors";
+
+/* Class = "UITextView"; text = "Turn on this setting to receive notifications when a contact's security code has changed.Your calls and the messages you send are encrypted regardless of this setting,when possible."; ObjectID = "hLm-66-1zm"; */
+"hLm-66-1zm.text" = "Turn on this setting to receive notifications when a contact's security code has changed.Your calls and the messages you send are encrypted regardless of this setting,when possible.";
+
+/* Class = "UILabel"; text = "Select a reason"; ObjectID = "hRF-6F-mzN"; */
+"hRF-6F-mzN.text" = "Select a reason";
+
+/* Class = "UIButton"; normalTitle = "DELETE MY ACCOUNT"; ObjectID = "hfN-J6-bi5"; */
+"hfN-J6-bi5.normalTitle" = "DELETE MY ACCOUNT";
+
+/* Class = "UITextField"; placeholder = "Search or enter an address"; ObjectID = "hmM-r6-OQm"; */
+"hmM-r6-OQm.placeholder" = "Search or enter an address";
+
+/* Class = "UILabel"; text = "Verification Code"; ObjectID = "htM-co-GHZ"; */
+"htM-co-GHZ.text" = "Verification Code";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "htW-2n-F4H"; */
+"htW-2n-F4H.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "hw8-n6-VUh"; */
+"hw8-n6-VUh.normalTitle" = "Share";
+
+/* Class = "UITextField"; placeholder = "Group Subject"; ObjectID = "hxR-Ms-eYJ"; */
+"hxR-Ms-eYJ.placeholder" = "Group Subject";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "i27-OH-DfU"; */
+"i27-OH-DfU.text" = "Status";
+
+/* Class = "UILabel"; text = "mute"; ObjectID = "i4j-6b-K6y"; */
+"i4j-6b-K6y.text" = "mute";
+
+/* Class = "UILabel"; text = "Network usage"; ObjectID = "iPE-zi-2Eh"; */
+"iPE-zi-2Eh.text" = "Network usage";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "iYf-bN-xEC"; */
+"iYf-bN-xEC.normalTitle" = "Clear";
+
+/* Class = "UIButton"; normalTitle = "Create Post"; ObjectID = "iZi-Wz-bVa"; */
+"iZi-Wz-bVa.normalTitle" = "Create Post";
+
+/* Class = "UILabel"; text = "Profile photo"; ObjectID = "iab-3j-7gX"; */
+"iab-3j-7gX.text" = "Profile photo";
+
+/* Class = "UITextField"; placeholder = "Your Phone Number"; ObjectID = "ifZ-FV-eBa"; */
+"ifZ-FV-eBa.placeholder" = "Your Phone Number";
+
+/* Class = "UITextField"; placeholder = "WEBSITE"; ObjectID = "iyW-HX-Gqa"; */
+"iyW-HX-Gqa.placeholder" = "WEBSITE";
+
+/* Class = "UILabel"; text = "Chat Expiration Time"; ObjectID = "j1p-bm-3yY"; */
+"j1p-bm-3yY.text" = "Chat Expiration Time";
+
+/* Class = "UILabel"; text = "DELETING YOUR ACCOUNT WILL:"; ObjectID = "jJP-Ok-ZIJ"; */
+"jJP-Ok-ZIJ.text" = "DELETING YOUR ACCOUNT WILL:";
+
+/* Class = "UILabel"; text = "No recent chats. Kindly tap on  📝 icon to start chating"; ObjectID = "jQH-uy-XFt"; */
+"jQH-uy-XFt.text" = "No recent chats. Kindly tap on  📝 icon to start chating";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jQI-dQ-yGf"; */
+"jQI-dQ-yGf.text" = "Label";
+
+/* Class = "UILabel"; text = "Data usage"; ObjectID = "jR1-OQ-uo4"; */
+"jR1-OQ-uo4.text" = "Data usage";
+
+/* Class = "UIButton"; normalTitle = "Use Your Facebook Info"; ObjectID = "jRa-TN-jat"; */
+"jRa-TN-jat.normalTitle" = "Use Your Facebook Info";
+
+/* Class = "UILabel"; text = "searching..."; ObjectID = "jTf-Jo-8vg"; */
+"jTf-Jo-8vg.text" = "searching...";
+
+/* Class = "UILabel"; text = "No popup"; ObjectID = "jbg-k6-O6q"; */
+"jbg-k6-O6q.text" = "No popup";
+
+/* Class = "UIButton"; normalTitle = "HAVE YOU READ OUR FAQ YET?"; ObjectID = "jdx-Ij-247"; */
+"jdx-Ij-247.normalTitle" = "HAVE YOU READ OUR FAQ YET?";
+
+/* Class = "UILabel"; text = "Biography"; ObjectID = "jnc-DS-HyP"; */
+"jnc-DS-HyP.text" = "Biography";
+
+/* Class = "UIButton"; normalTitle = "Send Your Location"; ObjectID = "jrT-LY-pHd"; */
+"jrT-LY-pHd.normalTitle" = "Send Your Location";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "kOe-BY-qgk"; */
+"kOe-BY-qgk.normalTitle" = "Share";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "kRu-t3-kns"; */
+"kRu-t3-kns.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Chat Backup"; ObjectID = "kfL-lP-vEQ"; */
+"kfL-lP-vEQ.text" = "Chat Backup";
+
+/* Class = "UILabel"; text = "To delete your account,confirm your"; ObjectID = "ksv-mA-NRU"; */
+"ksv-mA-NRU.text" = "To delete your account,confirm your";
+
+/* Class = "UILabel"; text = "Red"; ObjectID = "l4m-nz-PmM"; */
+"l4m-nz-PmM.text" = "Red";
+
+/* Class = "UILabel"; text = "Everyone"; ObjectID = "l7d-AK-5j3"; */
+"l7d-AK-5j3.text" = "Everyone";
+
+/* Class = "UILabel"; text = "Verification Successful"; ObjectID = "lSQ-Ux-MSs"; */
+"lSQ-Ux-MSs.text" = "Verification Successful";
+
+/* Class = "UIButton"; normalTitle = "Archive"; ObjectID = "lSR-wl-2AO"; */
+"lSR-wl-2AO.normalTitle" = "Archive";
+
+/* Class = "UILabel"; text = "Secret Chat"; ObjectID = "lTy-Ka-VNd"; */
+"lTy-Ka-VNd.text" = "Secret Chat";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "lY2-eW-lP7"; */
+"lY2-eW-lP7.normalTitle" = "Done";
+
+/* Class = "UITextField"; placeholder = "Add a caption..."; ObjectID = "ljB-tp-VjE"; */
+"ljB-tp-VjE.placeholder" = "Add a caption...";
+
+/* Class = "UILabel"; text = "mute"; ObjectID = "m7K-ev-2Xw"; */
+"m7K-ev-2Xw.text" = "mute";
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "mC1-lg-UqT"; */
+"mC1-lg-UqT.placeholder" = "User Name";
+
+/* Class = "UITextField"; placeholder = "* COUNTRY"; ObjectID = "mRQ-ih-ZRp"; */
+"mRQ-ih-ZRp.placeholder" = "* COUNTRY";
+
+/* Class = "UILabel"; text = "Message Info"; ObjectID = "mVI-GD-bcb"; */
+"mVI-GD-bcb.text" = "Message Info";
+
+/* Class = "UITextView"; text = "Your recovery phone is used to reach you incase we detect unusual activity in your account or you accidentally get locked out"; ObjectID = "mZZ-w6-cxv"; */
+"mZZ-w6-cxv.text" = "Your recovery phone is used to reach you incase we detect unusual activity in your account or you accidentally get locked out";
+
+/* Class = "UILabel"; text = "Off"; ObjectID = "mkP-KE-QJX"; */
+"mkP-KE-QJX.text" = "Off";
+
+/* Class = "UILabel"; text = "camera"; ObjectID = "n2p-ft-OpQ"; */
+"n2p-ft-OpQ.text" = "camera";
+
+/* Class = "UITextView"; text = "Your email is used to reach you incase you accidentally get locked out"; ObjectID = "n9j-YM-jk2"; */
+"n9j-YM-jk2.text" = "Your email is used to reach you incase you accidentally get locked out";
+
+/* Class = "UILabel"; text = "All rights reserved"; ObjectID = "nDG-N5-tAR"; */
+"nDG-N5-tAR.text" = "All rights reserved";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "nJo-DP-M6v"; */
+"nJo-DP-M6v.text" = "Status";
+
+/* Class = "UILabel"; text = "Status Privacy"; ObjectID = "nNs-ee-pZJ"; */
+"nNs-ee-pZJ.text" = "Status Privacy";
+
+/* Class = "UILabel"; text = "PARTICIPANTS: 1 OF 256"; ObjectID = "nYM-A2-XVw"; */
+"nYM-A2-XVw.text" = "PARTICIPANTS: 1 OF 256";
+
+/* Class = "UILabel"; text = "Celebrity"; ObjectID = "nkX-Ij-dlg"; */
+"nkX-Ij-dlg.text" = "Celebrity";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "nqe-LY-dRY"; */
+"nqe-LY-dRY.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = "(Feedback is optional)"; ObjectID = "nxW-ee-k9G"; */
+"nxW-ee-k9G.text" = "(Feedback is optional)";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "o24-E0-zEk"; */
+"o24-E0-zEk.normalTitle" = "Edit";
+
+/* Class = "UITextField"; placeholder = "Recovery Mobile No."; ObjectID = "o4b-Ok-7D0"; */
+"o4b-Ok-7D0.placeholder" = "Recovery Mobile No.";
+
+/* Class = "UILabel"; text = "No Blocked Contacts"; ObjectID = "o7p-wS-y6o"; */
+"o7p-wS-y6o.text" = "No Blocked Contacts";
+
+/* Class = "UILabel"; text = "Please provide your name and an optional profile photo"; ObjectID = "oHv-V3-CJb"; */
+"oHv-V3-CJb.text" = "Please provide your name and an optional profile photo";
+
+/* Class = "UITextField"; placeholder = "* PROFESSION"; ObjectID = "oMY-31-9PX"; */
+"oMY-31-9PX.placeholder" = "* PROFESSION";
+
+/* Class = "UILabel"; text = "Vaigunda Anand"; ObjectID = "oXA-mC-EIU"; */
+"oXA-mC-EIU.text" = "Vaigunda Anand";
+
+/* Class = "UIButton"; normalTitle = "Resend code"; ObjectID = "ogN-8p-WMA"; */
+"ogN-8p-WMA.normalTitle" = "Resend code";
+
+/* Class = "UILabel"; text = "You can't send messages to this group because you're no longer a participant."; ObjectID = "ohf-yb-6ck"; */
+"ohf-yb-6ck.text" = "You can't send messages to this group because you're no longer a participant.";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "ozv-4e-Fhj"; */
+"ozv-4e-Fhj.normalTitle" = "Edit";
+
+/* Class = "UILabel"; text = "No popup"; ObjectID = "p07-L2-UiQ"; */
+"p07-L2-UiQ.text" = "No popup";
+
+/* Class = "UILabel"; text = "This is the sample text for testing."; ObjectID = "p70-Bj-huF"; */
+"p70-Bj-huF.text" = "This is the sample text for testing.";
+
+/* Class = "UISegmentedControl"; pO5-dD-vhu.segmentTitles[0] = "Map"; ObjectID = "pO5-dD-vhu"; */
+"pO5-dD-vhu.segmentTitles[0]" = "Map";
+
+/* Class = "UISegmentedControl"; pO5-dD-vhu.segmentTitles[1] = "Hybrid"; ObjectID = "pO5-dD-vhu"; */
+"pO5-dD-vhu.segmentTitles[1]" = "Hybrid";
+
+/* Class = "UISegmentedControl"; pO5-dD-vhu.segmentTitles[2] = "Satellite"; ObjectID = "pO5-dD-vhu"; */
+"pO5-dD-vhu.segmentTitles[2]" = "Satellite";
+
+/* Class = "UILabel"; text = "Your Status(139)"; ObjectID = "pXs-XV-kWJ"; */
+"pXs-XV-kWJ.text" = "Your Status(139)";
+
+/* Class = "UITextField"; placeholder = "* GENDER"; ObjectID = "qO5-e6-C32"; */
+"qO5-e6-C32.placeholder" = "* GENDER";
+
+/* Class = "UILabel"; text = "Everyone"; ObjectID = "qhU-Zp-xXT"; */
+"qhU-Zp-xXT.text" = "Everyone";
+
+/* Class = "UILabel"; text = "Notification tone"; ObjectID = "qhd-Pd-ViD"; */
+"qhd-Pd-ViD.text" = "Notification tone";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "r39-5S-IHr"; */
+"r39-5S-IHr.title" = "Item";
+
+/* Class = "UILabel"; text = "GENDER"; ObjectID = "rGo-uR-qLc"; */
+"rGo-uR-qLc.text" = "GENDER";
+
+/* Class = "UILabel"; text = "Tap status to edit "; ObjectID = "rU4-aA-qGg"; */
+"rU4-aA-qGg.text" = "Tap status to edit ";
+
+/* Class = "UILabel"; text = "Change number"; ObjectID = "rmk-Oz-TsW"; */
+"rmk-Oz-TsW.text" = "Change number";
+
+/* Class = "UITextView"; text = "YOUR NEW COUNTRY CODE AND PHONE NUMBER"; ObjectID = "s4W-m6-Cjh"; */
+"s4W-m6-Cjh.text" = "YOUR NEW COUNTRY CODE AND PHONE NUMBER";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "s8i-BW-xtE"; */
+"s8i-BW-xtE.normalTitle" = "Done";
+
+/* Class = "UILabel"; text = "Scimbo VIDEO CALL"; ObjectID = "sQ2-NX-TqH"; */
+"sQ2-NX-TqH.text" = "Scimbo VIDEO CALL";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tCS-eZ-mIZ"; */
+"tCS-eZ-mIZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "tPv-gT-N9E"; */
+"tPv-gT-N9E.text" = "25";
+
+/* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "tZB-SK-gYz"; */
+"tZB-SK-gYz.normalTitle" = "Agree";
+
+/* Class = "UITextView"; text = "If you have both a new phone and a new number ,first  change your number on your old phone.                                 "; ObjectID = "thP-EJ-1Qi"; */
+"thP-EJ-1Qi.text" = "If you have both a new phone and a new number ,first  change your number on your old phone.                                 ";
+
+/* Class = "UILabel"; text = "Favourites"; ObjectID = "tm6-Xx-InL"; */
+"tm6-Xx-InL.text" = "Favourites";
+
+/* Class = "UILabel"; text = "COUNTRY"; ObjectID = "uDU-Rz-a5G"; */
+"uDU-Rz-a5G.text" = "COUNTRY";
+
+/* Class = "UIButton"; normalTitle = "100 Followers"; ObjectID = "ugI-gi-FOk"; */
+"ugI-gi-FOk.normalTitle" = "100 Followers";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "umu-t3-TPv"; */
+"umu-t3-TPv.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "About and help"; ObjectID = "vFK-Vl-ttJ"; */
+"vFK-Vl-ttJ.text" = "About and help";
+
+/* Class = "UITextField"; placeholder = "Email id"; ObjectID = "vcG-Ty-gpW"; */
+"vcG-Ty-gpW.placeholder" = "Email id";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "viG-5b-yIz"; */
+"viG-5b-yIz.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Messaging"; ObjectID = "vkh-TC-xoY"; */
+"vkh-TC-xoY.normalTitle" = "Messaging";
+
+/* Class = "UISearchBar"; vqz-kq-bxn.scopeButtonTitles[0] = "Title"; ObjectID = "vqz-kq-bxn"; */
+"vqz-kq-bxn.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UITextField"; placeholder = "Search..."; ObjectID = "w1f-TE-gF9"; */
+"w1f-TE-gF9.placeholder" = "Search...";
+
+/* Class = "UILabel"; text = "Become a Connect"; ObjectID = "w7m-39-lyH"; */
+"w7m-39-lyH.text" = "Become a Connect";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "wEB-9j-sr8"; */
+"wEB-9j-sr8.text" = "Notifications";
+
+/* Class = "UITextField"; placeholder = "Tell us how can we improve"; ObjectID = "wMx-Qj-dkY"; */
+"wMx-Qj-dkY.placeholder" = "Tell us how can we improve";
+
+/* Class = "UILabel"; text = "Popup notification"; ObjectID = "waf-Px-p05"; */
+"waf-Px-p05.text" = "Popup notification";
+
+/* Class = "UILabel"; text = "Calls"; ObjectID = "wee-ah-HB8"; */
+"wee-ah-HB8.text" = "Calls";
+
+/* Class = "UIButton"; normalTitle = "Read"; ObjectID = "wmI-zw-0ql"; */
+"wmI-zw-0ql.normalTitle" = "Read";
+
+/* Class = "UIButton"; normalTitle = "Learn more about Scimbo security"; ObjectID = "wyj-Mc-ldc"; */
+"wyj-Mc-ldc.normalTitle" = "Learn more about Scimbo security";
+
+/* Class = "UILabel"; text = "Accept"; ObjectID = "xck-hP-K55"; */
+"xck-hP-K55.text" = "Accept";
+
+/* Class = "UIButton"; normalTitle = "ENTER CHAT"; ObjectID = "xiD-Wa-lxE"; */
+"xiD-Wa-lxE.normalTitle" = "ENTER CHAT";
+
+/* Class = "UIBarButtonItem"; title = "Previous"; ObjectID = "xtg-FD-F8h"; */
+"xtg-FD-F8h.title" = "Previous";
+
+/* Class = "UILabel"; text = "Default ringtone(Water Drop)"; ObjectID = "xu4-gX-fDd"; */
+"xu4-gX-fDd.text" = "Default ringtone(Water Drop)";
+
+/* Class = "UIButton"; normalTitle = "Unfollow"; ObjectID = "yDX-kj-e3I"; */
+"yDX-kj-e3I.normalTitle" = "Unfollow";
+
+/* Class = "UILabel"; text = "Decline"; ObjectID = "yRl-Fo-Iam"; */
+"yRl-Fo-Iam.text" = "Decline";
+
+/* Class = "UILabel"; text = "Add screenshots (optional):"; ObjectID = "yZy-LM-JcK"; */
+"yZy-LM-JcK.text" = "Add screenshots (optional):";
+
+/* Class = "UILabel"; text = "  PHONE NUMBER"; ObjectID = "zJ4-4B-sIR"; */
+"zJ4-4B-sIR.text" = "  PHONE NUMBER";
+
+/* Class = "UILabel"; text = "New Group"; ObjectID = "zLc-dQ-iuO"; */
+"zLc-dQ-iuO.text" = "New Group";
+
+/* Class = "UITextView"; text = "Play sounds for incoming and outgoing messages"; ObjectID = "zWf-JF-kgn"; */
+"zWf-JF-kgn.text" = "Play sounds for incoming and outgoing messages";
+
+/* Class = "UIButton"; normalTitle = "Send this location"; ObjectID = "zaF-ZD-6XD"; */
+"zaF-ZD-6XD.normalTitle" = "Send this location";
+
+/* Class = "UILabel"; text = "No Contest Available"; ObjectID = "zag-c7-5VQ"; */
+"zag-c7-5VQ.text" = "No Contest Available";
+
+/* Class = "UILabel"; text = "able to see other people's Last seen"; ObjectID = "zdn-8S-1Yx"; */
+"zdn-8S-1Yx.text" = "able to see other people's Last seen";
+
+/* Class = "UILabel"; text = "Scimbo"; ObjectID = "zhT-S6-f4h"; */
+"zhT-S6-f4h.text" = "Scimbo";
+
+/* Class = "UILabel"; text = "WallPaper Preview"; ObjectID = "zsM-rR-T59"; */
+"zsM-rR-T59.text" = "WallPaper Preview";
+
+/* Class = "UIButton"; normalTitle = "edit"; ObjectID = "zxi-gK-Jxg"; */
+"zxi-gK-Jxg.normalTitle" = "edit";
+

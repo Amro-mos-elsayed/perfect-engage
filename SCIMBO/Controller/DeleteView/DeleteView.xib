@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DeleteView" customModule="Raad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deleted for both side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJo-Jf-GM9">
+                    <rect key="frame" x="115.5" y="323.5" width="144" height="20.5"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4M-LC-1wd" customClass="SSCircularProgressView" customModule="Raad" customModuleProvider="target">
+                    <rect key="frame" x="80.5" y="321" width="25" height="25"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="Mgs-yo-v5J"/>
+                        <constraint firstAttribute="height" constant="25" id="TXe-h4-UgH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="themeColor"/>
+            <constraints>
+                <constraint firstItem="HJo-Jf-GM9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LuT-h6-2Jb"/>
+                <constraint firstItem="p4M-LC-1wd" firstAttribute="centerY" secondItem="HJo-Jf-GM9" secondAttribute="centerY" id="Td7-g0-r7x"/>
+                <constraint firstItem="HJo-Jf-GM9" firstAttribute="leading" secondItem="p4M-LC-1wd" secondAttribute="trailing" constant="10" id="jzb-vW-fLW"/>
+                <constraint firstItem="HJo-Jf-GM9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kk8-h9-EMW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="hint_lbl" destination="HJo-Jf-GM9" id="hLb-f1-h7n"/>
+                <outlet property="progressBar" destination="p4M-LC-1wd" id="iAB-yN-Uz6"/>
+            </connections>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="themeColor">
+            <color red="0.0039215686274509803" green="0.46274509803921571" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

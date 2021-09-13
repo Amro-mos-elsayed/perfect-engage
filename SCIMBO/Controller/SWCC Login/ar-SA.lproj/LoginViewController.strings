@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "3AC-5b-9Mw"; */
+"3AC-5b-9Mw.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "IPk-NY-Aeb"; */
+"IPk-NY-Aeb.placeholder" = "ادخل كلمة المرور";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "NCG-eY-L7Y"; */
+"NCG-eY-L7Y.text" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "RmA-n4-b6L"; */
+"RmA-n4-b6L.text" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "Employee ID"; ObjectID = "eFk-am-C5u"; */
+"eFk-am-C5u.text" = "الرقم الوظيفي";
+
+/* Class = "UITextField"; placeholder = "123456"; ObjectID = "f54-vh-Xy7"; */
+"f54-vh-Xy7.placeholder" = "123456";
+
+/* Class = "UILabel"; text = "U"; ObjectID = "hf8-Wu-vLz"; */
+"hf8-Wu-vLz.text" = "U";

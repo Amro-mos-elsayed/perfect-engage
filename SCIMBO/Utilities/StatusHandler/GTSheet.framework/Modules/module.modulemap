@@ -1,0 +1,11 @@
+framework module GTSheet {
+  umbrella header "GTSheet.h"
+
+  export *
+  module * { export * }
+}
+
+module GTSheet.Swift {
+    header "GTSheet-Swift.h"
+    requires objc
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<objects>
+<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="FWD-fx-qts" customClass="MediaTableViewCell" customModule="Nobel_Net" customModuleProvider="target">
+<rect key="frame" x="0.0" y="0.0" width="326" height="65"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FWD-fx-qts" id="qvv-nK-8Ax">
+<rect key="frame" x="0.0" y="0.0" width="326" height="64.5"/>
+<autoresizingMask key="autoresizingMask"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xU3-eV-Rcf">
+<rect key="frame" x="62" y="13" width="250" height="38.5"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casperon Technologies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4b-n4-AjX">
+<rect key="frame" x="0.0" y="0.0" width="250" height="21"/>
+<constraints>
+<constraint firstAttribute="height" constant="21" id="zAO-zz-QXI"/>
+</constraints>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greams Road, Thousand Lights, Chennai" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ao-ti-b3t">
+<rect key="frame" x="0.0" y="24" width="250" height="14.5"/>
+<fontDescription key="fontDescription" type="system" pointSize="13"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-pR-i2D">
+<rect key="frame" x="14" y="13" width="40" height="40"/>
+<subviews>
+<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="link" translatesAutoresizingMaskIntoConstraints="NO" id="leo-fd-pMq">
+<rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+</imageView>
+</subviews>
+<color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<constraints>
+<constraint firstAttribute="trailing" secondItem="leo-fd-pMq" secondAttribute="trailing" id="75S-Hm-y1f"/>
+<constraint firstItem="leo-fd-pMq" firstAttribute="top" secondItem="QAo-pR-i2D" secondAttribute="top" id="CGY-f9-fBG"/>
+<constraint firstAttribute="height" constant="40" id="Hro-JW-Z8C"/>
+<constraint firstAttribute="width" secondItem="QAo-pR-i2D" secondAttribute="height" multiplier="1:1" id="Idx-cH-mI7"/>
+<constraint firstItem="leo-fd-pMq" firstAttribute="leading" secondItem="QAo-pR-i2D" secondAttribute="leading" id="K8G-RQ-swc"/>
+<constraint firstAttribute="bottom" secondItem="leo-fd-pMq" secondAttribute="bottom" id="kAR-rf-gAw"/>
+</constraints>
+<userDefinedRuntimeAttributes>
+<userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
+<userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+<integer key="value" value="10"/>
+</userDefinedRuntimeAttribute>
+</userDefinedRuntimeAttributes>
+</view>
+</subviews>
+<color key="backgroundColor" white="0.90390258215962438" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<constraints>
+<constraint firstItem="xU3-eV-Rcf" firstAttribute="top" secondItem="qvv-nK-8Ax" secondAttribute="top" constant="13" id="90w-dl-ajW"/>
+<constraint firstItem="xU3-eV-Rcf" firstAttribute="leading" secondItem="QAo-pR-i2D" secondAttribute="trailing" constant="8" id="TaC-sd-gUO"/>
+<constraint firstItem="QAo-pR-i2D" firstAttribute="top" secondItem="xU3-eV-Rcf" secondAttribute="top" id="e3p-Hu-FtK"/>
+<constraint firstItem="QAo-pR-i2D" firstAttribute="leading" secondItem="qvv-nK-8Ax" secondAttribute="leading" constant="14" id="f3p-yT-qY9"/>
+<constraint firstAttribute="trailing" secondItem="xU3-eV-Rcf" secondAttribute="trailing" constant="14" id="iHe-tj-xG5"/>
+<constraint firstItem="xU3-eV-Rcf" firstAttribute="centerY" secondItem="qvv-nK-8Ax" secondAttribute="centerY" id="vDN-Zx-K6d"/>
+</constraints>
+</tableViewCellContentView>
+<viewLayoutGuide key="safeArea" id="EiP-ly-FsH"/>
+<connections>
+<outlet property="desc" destination="6Ao-ti-b3t" id="HdN-rL-cM0"/>
+<outlet property="link_image" destination="leo-fd-pMq" id="5K9-xn-OsY"/>
+<outlet property="title" destination="q4b-n4-AjX" id="Uwt-l0-ae7"/>
+</connections>
+<point key="canvasLocation" x="91" y="-181"/>
+</tableViewCell>
+</objects>
+<resources>
+<image name="link" width="39" height="39"/>
+</resources>
+</document>
+

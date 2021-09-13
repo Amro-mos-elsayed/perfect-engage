@@ -1,0 +1,36 @@
+/* Bundle display name */
+"CFBundleDisplayName" = "التواصل الفعال";
+
+/* Bundle name */
+"CFBundleName" = "التواصل الفعال";
+
+/* Privacy - Media Library Usage Description */
+"NSAppleMusicUsageDescription" = "يتيح لك هذا إرسال الرسائل الصوتية والتسجيلات الصوتية.";
+
+/* Privacy - Calendars Usage Description */
+"NSCalendarsUsageDescription" = "يتيح لك هذا إضافة الأحداث وبعض أحداث التقويم.";
+
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "يتيح لك هذا التقاط الصور ومقاطع الفيديو من داخل رعد مباشرة";
+
+/* Privacy - Contacts Usage Description */
+"NSContactsUsageDescription" = "قم بتحميل جهات الاتصال الخاصة بك على خوادم Scimbo لمساعدتك على الاتصال بأصدقائك بسرعة ومساعدتنا في تقديم تجربة أفضل.";
+
+/* Privacy - Location Always Usage Description */
+"NSLocationAlwaysUsageDescription" = " يتيح لك هذا إرسال موقعك الحالي أو مكان قريب.";
+
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "يتيح لك هذا إرسال موقعك الحالي أو مكان قريب.";
+
+/* Privacy - Microphone Usage Description */
+"NSMicrophoneUsageDescription" = "يتيح لك ذلك إجراء مكالمات وإرسال رسائل صوتية وتسجيل مقاطع فيديو بصوت.";
+
+/* Privacy - Photo Library Additions Usage Description */
+"NSPhotoLibraryAddUsageDescription" = " يتيح لك هذا إرسال الصور ومقاطع الفيديو من مكتبتك وحفظ الصور التي تلتقطها.";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "يتيح لك هذا إرسال الصور ومقاطع الفيديو من مكتبتك وحفظ الصور التي تلتقطها.";
+
+/* Privacy - Speech Recognition Usage Description */
+"NSSpeechRecognitionUsageDescription" = "يتيح لك هذا التعرف على كلامك إلى نص.";
+

@@ -1,0 +1,879 @@
+/* Class = "UILabel"; text = "Blocked Contacts"; ObjectID = "0cp-uX-ZLB"; */
+"0cp-uX-ZLB.text" = "الاتصالات المحجوبة";
+
+/* Class = "UILabel"; text = "No Contacts "; ObjectID = "0ex-sf-7CE"; */
+"0ex-sf-7CE.text" = "لا يوجد آسماء ";
+
+/* Class = "UIButton"; normalTitle = "ENTER CHAT"; ObjectID = "0Xl-cS-LF5"; */
+"0Xl-cS-LF5.normalTitle" = "ادخل الدردشة";
+
+/* Class = "UILabel"; text = "Friends | 152"; ObjectID = "0Z7-Ul-NUy"; */
+"0Z7-Ul-NUy.text" = "Friends | 152";
+
+/* Class = "UILabel"; text = "Archive a Chat"; ObjectID = "1AL-o7-lZX"; */
+"1AL-o7-lZX.text" = "حفظ دردشة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1Ck-nJ-PCG"; */
+"1Ck-nJ-PCG.text" = "Label";
+
+/* Class = "UILabel"; text = "Created 1/12/2017 at 06:40Am"; ObjectID = "1o7-Jv-su3"; */
+"1o7-Jv-su3.text" = "تم الإنشاء في 1/12/2017 الساعة 06: 40 صباحًا";
+
+/* Class = "UILabel"; text = "Everyone"; ObjectID = "1YQ-0g-ett"; */
+"1YQ-0g-ett.text" = "الكل";
+
+/* Class = "UILabel"; text = "Vibrate"; ObjectID = "1Z6-B0-xgu"; */
+"1Z6-B0-xgu.text" = "تذبذب";
+
+/* Class = "UILabel"; text = "Light"; ObjectID = "2fb-VE-jRI"; */
+"2fb-VE-jRI.text" = "Light";
+
+/* Class = "UILabel"; text = "Make a Call"; ObjectID = "2iP-4r-rG0"; */
+"2iP-4r-rG0.text" = "إجراء مكالمة";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "2J0-f3-N5f"; */
+"2J0-f3-N5f.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Raad"; ObjectID = "3QS-vc-xvx"; */
+"3QS-vc-xvx.text" = " رعد";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4bo-ye-UO5"; */
+"4bo-ye-UO5.text" = "Label";
+
+/* Class = "UITextView"; text = "Before Proceeding,please confirm that you are able to receive SMS or calls at your new number.                                  "; ObjectID = "4D7-WH-lBI"; */
+"4D7-WH-lBI.text" = "قبل المتابعة ، يرجى تأكيد قدرتك على تلقي الرسائل القصيرة أو المكالمات على رقمك الجديد.";
+
+/* Class = "UILabel"; text = "Enter your mobile number"; ObjectID = "4gh-Uo-MIR"; */
+"4gh-Uo-MIR.text" = "من فضلك ادخل رقم الجوال";
+
+/* Class = "UILabel"; text = "About Us"; ObjectID = "4kt-ak-qy7"; */
+"4kt-ak-qy7.text" = "معلومات عنا";
+
+/* Class = "UIButton"; normalTitle = "Show Places"; ObjectID = "4MP-pE-BfB"; */
+"4MP-pE-BfB.normalTitle" = "إظهار الأماكن";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "4zf-pD-PG3"; */
+"4zf-pD-PG3.text" = "الدردشات";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "5An-Nt-vFT"; */
+"5An-Nt-vFT.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "List of contacts that you have blocked"; ObjectID = "5df-N1-8X0"; */
+"5df-N1-8X0.text" = "قائمة جهات الاتصال التي قمت بحظرها";
+
+/* Class = "UILabel"; text = "Delete my account"; ObjectID = "05O-Eg-73R"; */
+"05O-Eg-73R.text" = "حذف حسابي";
+
+/* Class = "UILabel"; text = "Users"; ObjectID = "5RJ-2Z-Dcn"; */
+"5RJ-2Z-Dcn.text" = "المستخدمين";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "5WY-vC-QUj"; */
+"5WY-vC-QUj.normalTitle" = "تعديل";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6OA-xe-1OH"; */
+"6OA-xe-1OH.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Privacy"; ObjectID = "6Yz-eJ-pAy"; */
+"6Yz-eJ-pAy.normalTitle" = "الخصوصية";
+
+/* Class = "UILabel"; text = "In-App Notification"; ObjectID = "7eR-t6-Gos"; */
+"7eR-t6-Gos.text" = "إشعارات داخل التطبيق";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "7Hc-QP-sKg"; */
+"7Hc-QP-sKg.normalTitle" = "تعديل";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "8bt-ZD-pKk"; */
+"8bt-ZD-pKk.placeholder" = "بحث";
+
+/* Class = "UISearchBar"; 8bt-ZD-pKk.scopeButtonTitles[0] = "Title"; ObjectID = "8bt-ZD-pKk"; */
+"8bt-ZD-pKk.scopeButtonTitles[0]" = "العنوان";
+
+/* Class = "UISearchBar"; 8bt-ZD-pKk.scopeButtonTitles[1] = "Title"; ObjectID = "8bt-ZD-pKk"; */
+"8bt-ZD-pKk.scopeButtonTitles[1]" = "العنوان";
+
+/* Class = "UILabel"; text = "Archived Chats"; ObjectID = "8jN-8a-DFU"; */
+"8jN-8a-DFU.text" = "ارشيف الدردشة";
+
+/* Class = "UITextView"; text = "YOUR OLD COUNTRY CODE AND PHONE NUMBER"; ObjectID = "8KW-dN-YmV"; */
+"8KW-dN-YmV.text" = "رمز البلد القديم ورقم الهاتف";
+
+/* Class = "UILabel"; text = "Starred Messages"; ObjectID = "8VF-uk-Umc"; */
+"8VF-uk-Umc.text" = "الرسائل المميزة بنجمة";
+
+/* Class = "UILabel"; text = "No recent secret chats. Kindly tap on  📝 icon to start secret chating"; ObjectID = "8xa-fh-4ta"; */
+"8xa-fh-4ta.text" = "لا محادثات سرية حديثة. يرجى النقر على أيقونة 📝 لبدء الدردشة السرية";
+
+/* Class = "UILabel"; text = "Calls"; ObjectID = "9ed-Y6-L9q"; */
+"9ed-Y6-L9q.text" = "المكالمات";
+
+/* Class = "UILabel"; text = "Add Participants"; ObjectID = "9l7-21-h7I"; */
+"9l7-21-h7I.text" = "أضف مشاركين";
+
+/* Class = "UIButton"; normalTitle = "Archive"; ObjectID = "9R6-il-e43"; */
+"9R6-il-e43.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = ".  Delete your account from Scimbo"; ObjectID = "32i-Vn-aRe"; */
+"32i-Vn-aRe.text" = ".  حذف حسابك من رعد";
+
+/* Class = "UILabel"; text = "Contact ringtone"; ObjectID = "39t-1f-5lf"; */
+"39t-1f-5lf.text" = "نغمة الاتصال";
+
+/* Class = "UILabel"; text = "Privacy"; ObjectID = "63V-j7-bs3"; */
+"63V-j7-bs3.text" = "الخصوصية";
+
+/* Class = "UITextField"; placeholder = "Recovery Email id"; ObjectID = "67R-km-Utg"; */
+"67R-km-Utg.placeholder" = "استرجاع البريد الإلكتروني";
+
+/* Class = "UIButton"; normalTitle = "India"; ObjectID = "98A-os-zS6"; */
+"98A-os-zS6.normalTitle" = "الهند";
+
+/* Class = "UILabel"; text = "Chat Wallpaper"; ObjectID = "aas-Bw-ACf"; */
+"aas-Bw-ACf.text" = "خلفية الدردشة";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "Abr-7u-A4k"; */
+"Abr-7u-A4k.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "abu-Bi-bt7"; */
+"abu-Bi-bt7.text" = "Title";
+
+/* Class = "UILabel"; text = "Verification Successful"; ObjectID = "ABz-vq-EN7"; */
+"ABz-vq-EN7.text" = "تم التحقق بنجاح";
+
+/* Class = "UILabel"; text = "Share Info"; ObjectID = "aEb-ba-Mn2"; */
+"aEb-ba-Mn2.text" = "مشاركة بيانات";
+
+/* Class = "UILabel"; text = "Vaigunda Anand"; ObjectID = "AmF-ld-C1S"; */
+"AmF-ld-C1S.text" = "Vaigunda Anand";
+
+/* Class = "UIButton"; normalTitle = "Read"; ObjectID = "AoT-ja-vAs"; */
+"AoT-ja-vAs.normalTitle" = "تمت القراءه";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "aqp-qX-Wap"; */
+"aqp-qX-Wap.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ATR-wi-xoE"; */
+"ATR-wi-xoE.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Resend code"; ObjectID = "AUD-7L-ola"; */
+"AUD-7L-ola.normalTitle" = "اعادة ارسال الكود";
+
+/* Class = "UIButton"; normalTitle = "  Available"; ObjectID = "axt-QK-U2Y"; */
+"axt-QK-U2Y.normalTitle" = "  متاح";
+
+/* Class = "UILabel"; text = "asdadsadsad"; ObjectID = "B4l-ZZ-mdu"; */
+"B4l-ZZ-mdu.text" = "asdadsadsad";
+
+/* Class = "UILabel"; text = "System status"; ObjectID = "B8h-Zs-w1b"; */
+"B8h-Zs-w1b.text" = "حاله النظام";
+
+/* Class = "UILabel"; text = "Tap + to share documents"; ObjectID = "B28-eA-kLb"; */
+"B28-eA-kLb.text" = "اضغط + لمشاركة المستندات";
+
+/* Class = "UIButton"; normalTitle = "Change"; ObjectID = "BfD-SV-qgl"; */
+"BfD-SV-qgl.normalTitle" = "تغيير";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "BFK-Cd-dtX"; */
+"BFK-Cd-dtX.text" = "+966";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "Bl6-bz-QnJ"; */
+"Bl6-bz-QnJ.text" = "حاله";
+
+/* Class = "UILabel"; text = "Default(Note)"; ObjectID = "BnR-bp-QTK"; */
+"BnR-bp-QTK.text" = "الافتراضي";
+
+/* Class = "UILabel"; text = "VOICE CALL"; ObjectID = "boO-2J-uEd"; */
+"boO-2J-uEd.text" = "VOICE CALL";
+
+/* Class = "UILabel"; text = "Sound"; ObjectID = "Bte-5e-J1E"; */
+"Bte-5e-J1E.text" = "الصوت";
+
+/* Class = "UILabel"; text = "  STATUS"; ObjectID = "bVY-XT-Zd2"; */
+"bVY-XT-Zd2.text" = "  الحالة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c6d-If-1DI"; */
+"c6d-If-1DI.text" = "Label";
+
+/* Class = "UILabel"; text = "Chat Application"; ObjectID = "c6s-YJ-Njd"; */
+"c6s-YJ-Njd.text" = "تطبيق الدردشة";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "C57-hB-5gY"; */
+"C57-hB-5gY.normalTitle" = "الرجوع";
+
+/* Class = "UIButton"; normalTitle = "LOG OUT"; ObjectID = "Cbf-U4-ypD"; */
+"Cbf-U4-ypD.normalTitle" = "خروج";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "CCo-9u-Lu7"; */
+"CCo-9u-Lu7.normalTitle" = "الغاء";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "cd8-Cj-6P0"; */
+"cd8-Cj-6P0.normalTitle" = "حذف";
+
+/* Class = "UILabel"; text = "Decline"; ObjectID = "cPH-lo-3hb"; */
+"cPH-lo-3hb.text" = "Decline";
+
+/* Class = "UIButton"; normalTitle = "DELETE MY ACCOUNT"; ObjectID = "crT-Hl-qYP"; */
+"crT-Hl-qYP.normalTitle" = "حذف حسابي";
+
+/* Class = "UILabel"; text = "Doc Name"; ObjectID = "cVx-Qz-kS2"; */
+"cVx-Qz-kS2.text" = "Doc Name";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "d1Z-Se-V77"; */
+"d1Z-Se-V77.text" = "الدردشة";
+
+/* Class = "UIButton"; normalTitle = "New Group"; ObjectID = "D5I-Y0-Lw2"; */
+"D5I-Y0-Lw2.normalTitle" = "مجموعة جديدة";
+
+/* Class = "UILabel"; text = "We will send you a one time SMS. Carrier charges may apply"; ObjectID = "Da4-LR-htV"; */
+"Da4-LR-htV.text" = "We will send you a one time SMS. Carrier charges may apply";
+
+/* Class = "UILabel"; text = "Enter your name and add an optional profile picture"; ObjectID = "dNw-pi-meP"; */
+"dNw-pi-meP.text" = "أدخل اسمك وأضف صورة ملف شخصي اختيارية";
+
+/* Class = "UISegmentedControl"; dWP-jA-F1l.segmentTitles[0] = "Media"; ObjectID = "dWP-jA-F1l"; */
+"dWP-jA-F1l.segmentTitles[0]" = "Media";
+
+/* Class = "UISegmentedControl"; dWP-jA-F1l.segmentTitles[1] = "Links"; ObjectID = "dWP-jA-F1l"; */
+"dWP-jA-F1l.segmentTitles[1]" = "Links";
+
+/* Class = "UISegmentedControl"; dWP-jA-F1l.segmentTitles[2] = "Docs"; ObjectID = "dWP-jA-F1l"; */
+"dWP-jA-F1l.segmentTitles[2]" = "Docs";
+
+/* Class = "UILabel"; text = "We hate to see you go! Why are you leaving?"; ObjectID = "E2b-MO-Wdy"; */
+"E2b-MO-Wdy.text" = "نحن نكره رؤيتك تذهب! لماذا انت مغادر؟";
+
+/* Class = "UILabel"; text = "No Documents"; ObjectID = "Ebh-2W-Qs3"; */
+"Ebh-2W-Qs3.text" = "لا يوجد ملفات";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "eEJ-sU-JnG"; */
+"eEJ-sU-JnG.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Disagree"; ObjectID = "ely-yK-cpd"; */
+"ely-yK-cpd.normalTitle" = "Disagree";
+
+/* Class = "UITextView"; text = "No longer available.set custom notification by tapping the name at the top of a chat."; ObjectID = "ENU-CP-00r"; */
+"ENU-CP-00r.text" = "لم يعد متاحًا. حدد إشعارًا مخصصًا من خلال النقر على الاسم في الجزء العلوي من الدردشة.";
+
+/* Class = "UILabel"; text = "Popup notification"; ObjectID = "EOh-QU-72o"; */
+"EOh-QU-72o.text" = "اشعار";
+
+/* Class = "UIButton"; normalTitle = "Want to change number instead?"; ObjectID = "EUm-N9-LWK"; */
+"EUm-N9-LWK.normalTitle" = "هل تريد تغيير رقمك ؟";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "fb7-bw-KQh"; */
+"fb7-bw-KQh.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "your phone number"; ObjectID = "fFe-ZJ-gwD"; */
+"fFe-ZJ-gwD.placeholder" = "your phone number";
+
+/* Class = "UILabel"; text = "Subject"; ObjectID = "fIt-FS-KkM"; */
+"fIt-FS-KkM.text" = "Subject";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "FMc-lA-Ius"; */
+"FMc-lA-Ius.normalTitle" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "fQE-m8-fwL"; */
+"fQE-m8-fwL.normalTitle" = "حذف";
+
+/* Class = "UITextView"; text = "When possible ,the messages you send and your calls are secured with end-to-end encryption,which means Scimbo and third parties can't read or listen to them."; ObjectID = "fQx-e2-tmD"; */
+"fQx-e2-tmD.text" = "When possible ,the messages you send and your calls are secured with end-to-end encryption,which means Scimbo and third parties can't read or listen to them.";
+
+/* Class = "UIButton"; normalTitle = "Create"; ObjectID = "Fsd-2q-8CR"; */
+"Fsd-2q-8CR.normalTitle" = "انشاء";
+
+/* Class = "UILabel"; text = "Vibrate"; ObjectID = "ft3-W0-oUc"; */
+"ft3-W0-oUc.text" = "Vibrate";
+
+/* Class = "UILabel"; text = "Country code and enter your phone number"; ObjectID = "FUg-O9-I8P"; */
+"FUg-O9-I8P.text" = "رمز البلد وأدخل رقم هاتفك";
+
+/* Class = "UITextField"; placeholder = "Verification Code"; ObjectID = "g59-Mm-ZpH"; */
+"g59-Mm-ZpH.placeholder" = "Verification Code";
+
+/* Class = "UILabel"; text = "speaker"; ObjectID = "gdg-Fn-sCl"; */
+"gdg-Fn-sCl.text" = "speaker";
+
+/* Class = "UIButton"; normalTitle = "T"; ObjectID = "gJb-tv-mcH"; */
+"gJb-tv-mcH.normalTitle" = "T";
+
+/* Class = "UILabel"; text = "Reply"; ObjectID = "gK8-te-pe1"; */
+"gK8-te-pe1.text" = "رد";
+
+/* Class = "UILabel"; text = "Account"; ObjectID = "gLg-hH-ZPR"; */
+"gLg-hH-ZPR.text" = "الحساب";
+
+/* Class = "UISegmentedControl"; gnW-6f-mGW.segmentTitles[0] = "Map"; ObjectID = "gnW-6f-mGW"; */
+"gnW-6f-mGW.segmentTitles[0]" = "Map";
+
+/* Class = "UISegmentedControl"; gnW-6f-mGW.segmentTitles[1] = "Hybrid"; ObjectID = "gnW-6f-mGW"; */
+"gnW-6f-mGW.segmentTitles[1]" = "Hybrid";
+
+/* Class = "UISegmentedControl"; gnW-6f-mGW.segmentTitles[2] = "Satellite"; ObjectID = "gnW-6f-mGW"; */
+"gnW-6f-mGW.segmentTitles[2]" = "Satellite";
+
+/* Class = "UILabel"; text = "Delete my account"; ObjectID = "GqQ-9P-8Xc"; */
+"GqQ-9P-8Xc.text" = "حذف حسابي";
+
+/* Class = "UILabel"; text = ".  Delete you from all of your Scimbo groups"; ObjectID = "GsN-y8-9Ue"; */
+"GsN-y8-9Ue.text" = ".  حذفك من جميع مجموعات رعد الخاصه بك";
+
+/* Class = "UIViewController"; title = "PickerVC"; ObjectID = "gyz-7A-v7U"; */
+"gyz-7A-v7U.title" = "PickerVC";
+
+/* Class = "UILabel"; text = "If you dont share last Seen, you won't be "; ObjectID = "Hdw-Pu-mmk"; */
+"Hdw-Pu-mmk.text" = "إذا كنت لا تشارك آخر ظهور ، فلن تكون كذلك ";
+
+/* Class = "UILabel"; text = "Solid Colors"; ObjectID = "hEh-7b-nsh"; */
+"hEh-7b-nsh.text" = "Solid Colors";
+
+/* Class = "UIButton"; normalTitle = "DELETE MY ACCOUNT"; ObjectID = "hfN-J6-bi5"; */
+"hfN-J6-bi5.normalTitle" = "حذف حسابي";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Hid-on-zAc"; */
+"Hid-on-zAc.normalTitle" = "الغاء";
+
+/* Class = "UITextView"; text = "Turn on this setting to receive notifications when a contact's security code has changed.Your calls and the messages you send are encrypted regardless of this setting,when possible."; ObjectID = "hLm-66-1zm"; */
+"hLm-66-1zm.text" = "Turn on this setting to receive notifications when a contact's security code has changed.Your calls and the messages you send are encrypted regardless of this setting,when possible.";
+
+/* Class = "UITextField"; placeholder = "Search or enter an address"; ObjectID = "hmM-r6-OQm"; */
+"hmM-r6-OQm.placeholder" = "ابحث أو أدخل عنوانًا";
+
+/* Class = "UILabel"; text = "Select a reason"; ObjectID = "hRF-6F-mzN"; */
+"hRF-6F-mzN.text" = "Select a reason";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "htW-2n-F4H"; */
+"htW-2n-F4H.normalTitle" = "تم";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "hw8-n6-VUh"; */
+"hw8-n6-VUh.normalTitle" = "Share";
+
+/* Class = "UITextField"; placeholder = "Group Subject"; ObjectID = "hxR-Ms-eYJ"; */
+"hxR-Ms-eYJ.placeholder" = "Group Subject";
+
+/* Class = "UILabel"; text = "mute"; ObjectID = "i4j-6b-K6y"; */
+"i4j-6b-K6y.text" = "كتم الصوت";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "i27-OH-DfU"; */
+"i27-OH-DfU.text" = "الحالة";
+
+/* Class = "UILabel"; text = "Profile photo"; ObjectID = "iab-3j-7gX"; */
+"iab-3j-7gX.text" = "صورة الحساب";
+
+/* Class = "UITextField"; placeholder = "Your Phone Number"; ObjectID = "ifZ-FV-eBa"; */
+"ifZ-FV-eBa.placeholder" = "رقم جوالك";
+
+/* Class = "UIButton"; normalTitle = "Delete All"; ObjectID = "IGI-Qh-sd8"; */
+"IGI-Qh-sd8.normalTitle" = "حذف الكل";
+
+/* Class = "UILabel"; text = "No Starred Messages"; ObjectID = "IHa-zy-ajt"; */
+"IHa-zy-ajt.text" = "لا توجد رسائل مميزة بنجمة";
+
+/* Class = "UILabel"; text = "Secret Chats"; ObjectID = "In4-cr-LAE"; */
+"In4-cr-LAE.text" = "الدردشة السريه";
+
+/* Class = "UIButton"; normalTitle = "New Group"; ObjectID = "Io3-gk-JfG"; */
+"Io3-gk-JfG.normalTitle" = "مجموعة جديدة";
+
+/* Class = "UILabel"; text = "Network usage"; ObjectID = "iPE-zi-2Eh"; */
+"iPE-zi-2Eh.text" = "إستخدام الشبكة";
+
+/* Class = "UILabel"; text = ".  Erase your message history"; ObjectID = "IvQ-OG-wkq"; */
+"IvQ-OG-wkq.text" = ".  محو محفوظات رسالتك";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "IWf-1p-d71"; */
+"IWf-1p-d71.normalTitle" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "iYf-bN-xEC"; */
+"iYf-bN-xEC.normalTitle" = "حذف";
+
+/* Class = "UILabel"; text = "Chat Expiration Time"; ObjectID = "j1p-bm-3yY"; */
+"j1p-bm-3yY.text" = "Chat Expiration Time";
+
+/* Class = "UILabel"; text = "Version 1.5"; ObjectID = "J3H-6c-geI"; */
+"J3H-6c-geI.text" = "اصدار ١‫.‬٥";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "J4z-d3-Fme"; */
+"J4z-d3-Fme.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Update Email Settings"; ObjectID = "J5O-fl-hNw"; */
+"J5O-fl-hNw.text" = "تحديث إعدادات البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "No popup"; ObjectID = "jbg-k6-O6q"; */
+"jbg-k6-O6q.text" = "No popup";
+
+/* Class = "UIButton"; normalTitle = "HAVE YOU READ OUR FAQ YET?"; ObjectID = "jdx-Ij-247"; */
+"jdx-Ij-247.normalTitle" = "هل قرأت الأسئلة الشائعة حتى الآن؟";
+
+/* Class = "UILabel"; text = "+917896321546"; ObjectID = "JeR-df-Nkw"; */
+"JeR-df-Nkw.text" = "+917896321546";
+
+/* Class = "UILabel"; text = "DELETING YOUR ACCOUNT WILL:"; ObjectID = "jJP-Ok-ZIJ"; */
+"jJP-Ok-ZIJ.text" = "حذف حسابك سيؤدي الي";
+
+/* Class = "UILabel"; text = "You don't have any messages yet."; ObjectID = "jQH-uy-XFt"; */
+"jQH-uy-XFt.text" = "ليس لديك اي رسائل بعد";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jQI-dQ-yGf"; */
+"jQI-dQ-yGf.text" = "Label";
+
+/* Class = "UILabel"; text = "Data usage"; ObjectID = "jR1-OQ-uo4"; */
+"jR1-OQ-uo4.text" = "إستخدام البيانات";
+
+/* Class = "UIButton"; normalTitle = "Use Your Facebook Info"; ObjectID = "jRa-TN-jat"; */
+"jRa-TN-jat.normalTitle" = "Use Your Facebook Info";
+
+/* Class = "UIButton"; normalTitle = "Send Your Location"; ObjectID = "jrT-LY-pHd"; */
+"jrT-LY-pHd.normalTitle" = "إرسل موقعك";
+
+/* Class = "UILabel"; text = "searching..."; ObjectID = "jTf-Jo-8vg"; */
+"jTf-Jo-8vg.text" = "searching...";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Jzv-IV-XfI"; */
+"Jzv-IV-XfI.normalTitle" = "التالي";
+
+/* Class = "UITextView"; text = "To verify your email settings, all you have to do is click this link sent to you in the email"; ObjectID = "K6J-La-dSG"; */
+"K6J-La-dSG.text" = "للتحقق من إعدادات بريدك الإلكتروني ، كل ما عليك فعله هو النقر فوق هذا الرابط المرسل إليك في البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Loading contacts..."; ObjectID = "KEz-9P-IkL"; */
+"KEz-9P-IkL.text" = "تحميل الاسماء ‫...‬";
+
+/* Class = "UILabel"; text = "Chat Backup"; ObjectID = "kfL-lP-vEQ"; */
+"kfL-lP-vEQ.text" = "دردشة النسخ الاحتياطي";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "Khe-sC-0ir"; */
+"Khe-sC-0ir.normalTitle" = "تعديل";
+
+/* Class = "UIButton"; normalTitle = "Search or enter an address"; ObjectID = "KKD-j0-PKH"; */
+"KKD-j0-PKH.normalTitle" = "ابحث أو أدخل عنوانًا";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "kOe-BY-qgk"; */
+"kOe-BY-qgk.normalTitle" = "مشاركة";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "kRu-t3-kns"; */
+"kRu-t3-kns.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "To delete your account,confirm your"; ObjectID = "ksv-mA-NRU"; */
+"ksv-mA-NRU.text" = "لحذف حسابك برجاد تاكيد";
+
+/* Class = "UILabel"; text = "Group Info"; ObjectID = "KZ5-p3-L4O"; */
+"KZ5-p3-L4O.text" = "بيانات المجموعة";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "L4C-JL-Clb"; */
+"L4C-JL-Clb.normalTitle" = "الرجوع";
+
+/* Class = "UILabel"; text = "Red"; ObjectID = "l4m-nz-PmM"; */
+"l4m-nz-PmM.text" = "Red";
+
+/* Class = "UILabel"; text = "Everyone"; ObjectID = "l7d-AK-5j3"; */
+"l7d-AK-5j3.text" = "الكل";
+
+/* Class = "UILabel"; text = "Scan Code"; ObjectID = "LEp-G0-EOi"; */
+"LEp-G0-EOi.text" = "مسح الكود";
+
+/* Class = "UITextField"; placeholder = "Add a caption..."; ObjectID = "ljB-tp-VjE"; */
+"ljB-tp-VjE.placeholder" = "إضافة تسمية توضيحية";
+
+/* Class = "UILabel"; text = "Edit Profile"; ObjectID = "LRF-ln-fdA"; */
+"LRF-ln-fdA.text" = "تعديل الحساب";
+
+/* Class = "UILabel"; text = "Secret Chat"; ObjectID = "lTy-Ka-VNd"; */
+"lTy-Ka-VNd.text" = "الدردشة السرية";
+
+/* Class = "UILabel"; text = "We will send you a one time SMS. Carrier charges may apply"; ObjectID = "lWk-IV-WeY"; */
+"lWk-IV-WeY.text" = "We will send you a one time SMS. Carrier charges may apply";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "lY2-eW-lP7"; */
+"lY2-eW-lP7.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "Change number"; ObjectID = "LyD-BJ-nzE"; */
+"LyD-BJ-nzE.text" = "Change number";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "LZA-pK-dy8"; */
+"LZA-pK-dy8.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "ENTER CHAT"; ObjectID = "m1q-iX-vvS"; */
+"m1q-iX-vvS.normalTitle" = "أدخل الدردشة";
+
+/* Class = "UILabel"; text = "mute"; ObjectID = "m7K-ev-2Xw"; */
+"m7K-ev-2Xw.text" = "كتم الصوت";
+
+/* Class = "UITextField"; placeholder = "User Name"; ObjectID = "mC1-lg-UqT"; */
+"mC1-lg-UqT.placeholder" = "اسم المستخدم";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Mc5-8A-Ew7"; */
+"Mc5-8A-Ew7.title" = "Item";
+
+/* Class = "UILabel"; text = "ringing +91 99999 99999..."; ObjectID = "Mh0-by-gP6"; */
+"Mh0-by-gP6.text" = "ringing +91 99999 99999...";
+
+/* Class = "UILabel"; text = "Off"; ObjectID = "mkP-KE-QJX"; */
+"mkP-KE-QJX.text" = "Off";
+
+/* Class = "UILabel"; text = "You don't have archived chats yet."; ObjectID = "moJ-5Z-cN6"; */
+"moJ-5Z-cN6.text" = "ليس لديك اي دردشه محفوظة";
+
+/* Class = "UILabel"; text = "You can't send messages to this group because you're no longer a participant."; ObjectID = "moT-CS-YWs"; */
+"moT-CS-YWs.text" = "You can't send messages to this group because you're no longer a participant.";
+
+/* Class = "UIButton"; normalTitle = "Clear all"; ObjectID = "MSg-Kb-o0m"; */
+"MSg-Kb-o0m.normalTitle" = "حذف الكل";
+
+/* Class = "UILabel"; text = "Message Info"; ObjectID = "mVI-GD-bcb"; */
+"mVI-GD-bcb.text" = "بيانات الرسالة";
+
+/* Class = "UILabel"; text = "2P service is operating normally"; ObjectID = "MyI-3A-MDp"; */
+"MyI-3A-MDp.text" = "خدمات شركه العرض المتقن تعمل بشكل طبيعي";
+
+/* Class = "UILabel"; text = "Last seen"; ObjectID = "MZV-QU-6jW"; */
+"MZV-QU-6jW.text" = " اخر ظهور";
+
+/* Class = "UITextView"; text = "Your recovery phone is used to reach you incase we detect unusual activity in your account or you accidentally get locked out"; ObjectID = "mZZ-w6-cxv"; */
+"mZZ-w6-cxv.text" = "يتم استخدام هاتف الاسترداد للوصول إليك إذا اكتشفنا نشاطًا غير عادي في حسابك أو تم قفله عن طريق الخطأ";
+
+/* Class = "UILabel"; text = "camera"; ObjectID = "n2p-ft-OpQ"; */
+"n2p-ft-OpQ.text" = "الكاميرا";
+
+/* Class = "UITextView"; text = "Your email is used to reach you incase you accidentally get locked out"; ObjectID = "n9j-YM-jk2"; */
+"n9j-YM-jk2.text" = "يتم استخدام بريدك الإلكتروني للوصول إليك في حالة حظر دخولك عن طريق الخطأ";
+
+/* Class = "UILabel"; text = "All rights reserved"; ObjectID = "nDG-N5-tAR"; */
+"nDG-N5-tAR.text" = "حميع الحقوق محفوظة";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "nJo-DP-M6v"; */
+"nJo-DP-M6v.text" = "الحالة";
+
+/* Class = "UILabel"; text = "Status Privacy"; ObjectID = "nNs-ee-pZJ"; */
+"nNs-ee-pZJ.text" = "خصوصية الحالة";
+
+/* Class = "UILabel"; text = "  PARTICIPANTS: 3 OF 253"; ObjectID = "Nq5-w7-4YN"; */
+"Nq5-w7-4YN.text" = "  PARTICIPANTS: 3 OF 253";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "nqe-LY-dRY"; */
+"nqe-LY-dRY.normalTitle" = "تعديل";
+
+/* Class = "UILabel"; text = "Off"; ObjectID = "NvD-aq-aSA"; */
+"NvD-aq-aSA.text" = "مغلق";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "NXf-Zg-phc"; */
+"NXf-Zg-phc.normalTitle" = "تعديل";
+
+/* Class = "UILabel"; text = "(Feedback is optional)"; ObjectID = "nxW-ee-k9G"; */
+"nxW-ee-k9G.text" = "(Feedback is optional)";
+
+/* Class = "UILabel"; text = "PARTICIPANTS: 1 OF 256"; ObjectID = "nYM-A2-XVw"; */
+"nYM-A2-XVw.text" = "PARTICIPANTS: 1 OF 256";
+
+/* Class = "UITextField"; placeholder = "Recovery Mobile No."; ObjectID = "o4b-Ok-7D0"; */
+"o4b-Ok-7D0.placeholder" = "Recovery Mobile No.";
+
+/* Class = "UILabel"; text = "No Blocked Contacts"; ObjectID = "o7p-wS-y6o"; */
+"o7p-wS-y6o.text" = "لا توجد جهات اتصال محظورة";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "o24-E0-zEk"; */
+"o24-E0-zEk.normalTitle" = "تعديل";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "Og1-4t-I6b"; */
+"Og1-4t-I6b.normalTitle" = "إلغاء";
+
+/* Class = "UIButton"; normalTitle = "Archived Chats (0)"; ObjectID = "OHL-xF-FfF"; */
+"OHL-xF-FfF.normalTitle" = "  ‬الدردشة المحفوظة(0) ";
+
+/* Class = "UILabel"; text = "Group In Common"; ObjectID = "OhS-DY-D8X"; */
+"OhS-DY-D8X.text" = "المجموعة المشتركة";
+
+/* Class = "UIButton"; normalTitle = "Who can see my personal info"; ObjectID = "ORK-Jg-6lx"; */
+"ORK-Jg-6lx.normalTitle" = "من يمكنه رؤية معلوماتي الشخصية";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "oWH-bM-G64"; */
+"oWH-bM-G64.text" = "1";
+
+/* Class = "UILabel"; text = "Vaigunda Anand"; ObjectID = "oXA-mC-EIU"; */
+"oXA-mC-EIU.text" = "Vaigunda Anand";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "ozv-4e-Fhj"; */
+"ozv-4e-Fhj.normalTitle" = "تعديل";
+
+/* Class = "UILabel"; text = "No popup"; ObjectID = "p07-L2-UiQ"; */
+"p07-L2-UiQ.text" = "No popup";
+
+/* Class = "UILabel"; text = "Chats"; ObjectID = "p9o-OH-pkQ"; */
+"p9o-OH-pkQ.text" = "الدردشة";
+
+/* Class = "UILabel"; text = "This is the sample text for testing."; ObjectID = "p70-Bj-huF"; */
+"p70-Bj-huF.text" = "This is the sample text for testing.";
+
+/* Class = "UISegmentedControl"; PG2-RS-aSI.segmentTitles[0] = "All"; ObjectID = "PG2-RS-aSI"; */
+"PG2-RS-aSI.segmentTitles[0]" = "الكل";
+
+/* Class = "UISegmentedControl"; PG2-RS-aSI.segmentTitles[1] = "Missed"; ObjectID = "PG2-RS-aSI"; */
+"PG2-RS-aSI.segmentTitles[1]" = "مكالمه فائتة";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "PK9-dM-noJ"; */
+"PK9-dM-noJ.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Accept"; ObjectID = "PlF-lR-JKJ"; */
+"PlF-lR-JKJ.text" = "موافق";
+
+/* Class = "UISegmentedControl"; pO5-dD-vhu.segmentTitles[0] = "Map"; ObjectID = "pO5-dD-vhu"; */
+"pO5-dD-vhu.segmentTitles[0]" = "خريطة";
+
+/* Class = "UISegmentedControl"; pO5-dD-vhu.segmentTitles[1] = "Hybrid"; ObjectID = "pO5-dD-vhu"; */
+"pO5-dD-vhu.segmentTitles[1]" = " هجين ";
+
+/* Class = "UISegmentedControl"; pO5-dD-vhu.segmentTitles[2] = "Satellite"; ObjectID = "pO5-dD-vhu"; */
+"pO5-dD-vhu.segmentTitles[2]" = "الأقمار الصناعية";
+
+/* Class = "UILabel"; text = "Your Status(139)"; ObjectID = "pXs-XV-kWJ"; */
+"pXs-XV-kWJ.text" = "Your Status(139)";
+
+/* Class = "UILabel"; text = "Notification tone"; ObjectID = "qhd-Pd-ViD"; */
+"qhd-Pd-ViD.text" = "نغمة الأشعارات";
+
+/* Class = "UILabel"; text = "Everyone"; ObjectID = "qhU-Zp-xXT"; */
+"qhU-Zp-xXT.text" = "الكل";
+
+/* Class = "UITextField"; placeholder = "Enter your mobile number"; ObjectID = "QlT-fF-kWg"; */
+"QlT-fF-kWg.placeholder" = "من فضلك ادخل رقم الجوال";
+
+/* Class = "UIButton"; normalTitle = "3D"; ObjectID = "QtR-Xv-0cr"; */
+"QtR-Xv-0cr.normalTitle" = "3D";
+
+/* Class = "UILabel"; text = "Group Name "; ObjectID = "qu4-t8-IET"; */
+"qu4-t8-IET.text" = "اسم المجموعة ";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "QUj-XG-cpB"; */
+"QUj-XG-cpB.normalTitle" = "تم";
+
+/* Class = "UILabel"; text = "Call notifications"; ObjectID = "Qxs-Nx-QL1"; */
+"Qxs-Nx-QL1.text" = "اشعارات المكالمه";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Req-NR-nlk"; */
+"Req-NR-nlk.title" = "Item";
+
+/* Class = "UILabel"; text = "Change number"; ObjectID = "rmk-Oz-TsW"; */
+"rmk-Oz-TsW.text" = "تغيير الرقم";
+
+/* Class = "UILabel"; text = "Kar . Status"; ObjectID = "RnP-uf-A6r"; */
+"RnP-uf-A6r.text" = "Kar . Status";
+
+/* Class = "UILabel"; text = "OTP verification"; ObjectID = "Rnr-Rc-VqU"; */
+"Rnr-Rc-VqU.text" = "كود التفعيل";
+
+/* Class = "UILabel"; text = "Tap status to edit "; ObjectID = "rU4-aA-qGg"; */
+"rU4-aA-qGg.text" = "إضغط لتعديل وضعك";
+
+/* Class = "UITextView"; text = "YOUR NEW COUNTRY CODE AND PHONE NUMBER"; ObjectID = "s4W-m6-Cjh"; */
+"s4W-m6-Cjh.text" = "رمز بلدك الجديد ورقم الهاتف";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "s8i-BW-xtE"; */
+"s8i-BW-xtE.normalTitle" = "تم";
+
+/* Class = "UITextView"; text = "Changing your phone number will migrate your account info,groups and settings.                                   "; ObjectID = "SBY-gh-hAo"; */
+"SBY-gh-hAo.text" = "Changing your phone number will migrate your account info,groups and settings.                                   ";
+
+/* Class = "UITextView"; text = "No longer available.set custom notification by tapping the name at the top of a chat."; ObjectID = "Soh-0d-7uA"; */
+"Soh-0d-7uA.text" = "No longer available.set custom notification by tapping the name at the top of a chat.";
+
+/* Class = "UILabel"; text = "VIDEO CALL"; ObjectID = "sQ2-NX-TqH"; */
+"sQ2-NX-TqH.text" = "مكالمه فيديو";
+
+/* Class = "UILabel"; text = "ringing +91 99999 99999..."; ObjectID = "SSQ-VW-9aG"; */
+"SSQ-VW-9aG.text" = "ringing +91 99999 99999...";
+
+/* Class = "UILabel"; text = "Start Messaging"; ObjectID = "sWT-LE-kxh"; */
+"sWT-LE-kxh.text" = "ابدأ المراسلة";
+
+/* Class = "UILabel"; text = "Go to .com on your computrr and scan the QR Code"; ObjectID = "T9Q-jk-iaB"; */
+"T9Q-jk-iaB.text" = "Go to .com on your computrr and scan the QR Code";
+
+/* Class = "UILabel"; text = "Blocked contacts"; ObjectID = "TBv-Rm-mc1"; */
+"TBv-Rm-mc1.text" = "الاسماء المحظورة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tCS-eZ-mIZ"; */
+"tCS-eZ-mIZ.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "If you have both a new phone and a new number ,first  change your number on your old phone.                                 "; ObjectID = "thP-EJ-1Qi"; */
+"thP-EJ-1Qi.text" = "إذا كان لديك رقم هاتف جديد ورقم جديد ، فقم أولاً بتغيير رقمك على هاتفك القديم.                             ";
+
+/* Class = "UIButton"; normalTitle = "Forward"; ObjectID = "Tj1-zj-JB3"; */
+"Tj1-zj-JB3.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Security"; ObjectID = "TKr-dN-3xF"; */
+"TKr-dN-3xF.text" = "الامان";
+
+/* Class = "UILabel"; text = "Favorites"; ObjectID = "tm6-Xx-InL"; */
+"tm6-Xx-InL.text" = " المفضلة ";
+
+/* Class = "UILabel"; text = "Call Info"; ObjectID = "TNG-Lo-Spm"; */
+"TNG-Lo-Spm.text" = "بيانات المكالمه";
+
+/* Class = "UILabel"; text = "25"; ObjectID = "tPv-gT-N9E"; */
+"tPv-gT-N9E.text" = "25";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "tqt-yc-eC0"; */
+"tqt-yc-eC0.text" = "الحالة";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "TYD-Hb-1pC"; */
+"TYD-Hb-1pC.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Agree"; ObjectID = "tZB-SK-gYz"; */
+"tZB-SK-gYz.normalTitle" = "موافق";
+
+/* Class = "UILabel"; text = "Contacts"; ObjectID = "UBc-Xv-fv3"; */
+"UBc-Xv-fv3.text" = "الاسماء";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "Uc2-JP-bxo"; */
+"Uc2-JP-bxo.text" = "الإشعارات";
+
+/* Class = "UILabel"; text = "Custom Notifications"; ObjectID = "UhY-oC-7ZV"; */
+"UhY-oC-7ZV.text" = "الإشعارات";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "umu-t3-TPv"; */
+"umu-t3-TPv.normalTitle" = "إلغاء";
+
+/* Class = "UITextField"; placeholder = "your phone number"; ObjectID = "UTY-8r-vPe"; */
+"UTY-8r-vPe.placeholder" = "رقم الجوال";
+
+/* Class = "UILabel"; text = "Contact Us"; ObjectID = "V3r-xA-Yd6"; */
+"V3r-xA-Yd6.text" = "اتصل بنا";
+
+/* Class = "UITextField"; placeholder = "Email id"; ObjectID = "vcG-Ty-gpW"; */
+"vcG-Ty-gpW.placeholder" = "البريد الألكتروني";
+
+/* Class = "UILabel"; text = "Contact ringtone"; ObjectID = "VDg-x3-IP4"; */
+"VDg-x3-IP4.text" = "نغمه الآسم";
+
+/* Class = "UILabel"; text = "About and help"; ObjectID = "vFK-Vl-ttJ"; */
+"vFK-Vl-ttJ.text" = "اتصل بنا";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "VhT-sB-VZM"; */
+"VhT-sB-VZM.normalTitle" = "الغاء";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "viG-5b-yIz"; */
+"viG-5b-yIz.normalTitle" = "إلغاء";
+
+/* Class = "UIButton"; normalTitle = "Messaging"; ObjectID = "vkh-TC-xoY"; */
+"vkh-TC-xoY.normalTitle" = "الرسائل";
+
+/* Class = "UISearchBar"; scopeButtonTitles = "Title"; ObjectID = "vqz-kq-bxn"; */
+"vqz-kq-bxn.scopeButtonTitles" = "العنوان";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "VYV-hU-66j"; */
+"VYV-hU-66j.normalTitle" = "الغاء";
+
+/* Class = "UILabel"; text = "Popup notification"; ObjectID = "waf-Px-p05"; */
+"waf-Px-p05.text" = "اشعار";
+
+/* Class = "UILabel"; text = "Notifications"; ObjectID = "wEB-9j-sr8"; */
+"wEB-9j-sr8.text" = "الأشعارات";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "WfN-i5-caR"; */
+"WfN-i5-caR.normalTitle" = "إلغاء";
+
+/* Class = "UIButton"; normalTitle = "     Message Sound"; ObjectID = "WFs-XW-t3A"; */
+"WFs-XW-t3A.normalTitle" = "     صوت الرساله";
+
+/* Class = "UITextField"; placeholder = "Enter Name"; ObjectID = "WIE-q1-Bd6"; */
+"WIE-q1-Bd6.placeholder" = "ادخل الاسم";
+
+/* Class = "UITextField"; placeholder = "Tell us how can we improve"; ObjectID = "wMx-Qj-dkY"; */
+"wMx-Qj-dkY.placeholder" = "أخبرنا كيف يمكننا أن نتحسن";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "wp5-V9-eNV"; */
+"wp5-V9-eNV.text" = "الإعدادات";
+
+/* Class = "UITextField"; placeholder = "Enter Email"; ObjectID = "wPh-Us-4Yh"; */
+"wPh-Us-4Yh.placeholder" = "أدخل البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "Show security notification"; ObjectID = "WWq-00-rvL"; */
+"WWq-00-rvL.text" = "عرض أمان الإشعارات";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Wy5-B0-nQu"; */
+"Wy5-B0-nQu.normalTitle" = "التالي";
+
+/* Class = "UIButton"; normalTitle = "Learn more about Scimbo security"; ObjectID = "wyj-Mc-ldc"; */
+"wyj-Mc-ldc.normalTitle" = "تعرف على المزيد حول رعد للأمن";
+
+/* Class = "UILabel"; text = "New Chat"; ObjectID = "X5k-ow-jjd"; */
+"X5k-ow-jjd.text" = "شات جديد";
+
+/* Class = "UILabel"; text = "Status"; ObjectID = "X9e-oa-2mo"; */
+"X9e-oa-2mo.text" = "الحالة";
+
+/* Class = "UITextView"; text = "Your recovery e-mail is used to reach you incase we detect unusual activity in your account or you accidentally get locked out"; ObjectID = "X9L-Ui-0Jb"; */
+"X9L-Ui-0Jb.text" = "يتم استخدام البريد الإلكتروني الخاص بالاسترداد للوصول إليك إذا اكتشفنا نشاطًا غير عادي في حسابك أو تم قفله عن طريق الخطأ";
+
+/* Class = "UILabel"; text = "Conversation tones"; ObjectID = "X34-al-zqz"; */
+"X34-al-zqz.text" = "نغمة المحادثة";
+
+/* Class = "UILabel"; text = "Verification Code"; ObjectID = "Xch-ro-4ts"; */
+"Xch-ro-4ts.text" = "Verification Code";
+
+/* Class = "UILabel"; text = "Accept"; ObjectID = "xck-hP-K55"; */
+"xck-hP-K55.text" = "موافق";
+
+/* Class = "UILabel"; text = "Message notifications"; ObjectID = "XEF-ts-Ls9"; */
+"XEF-ts-Ls9.text" = "إشعارات الرسالة";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "XeK-hT-cLW"; */
+"XeK-hT-cLW.normalTitle" = "التالي";
+
+/* Class = "UIBarButtonItem"; title = "Previous"; ObjectID = "xtg-FD-F8h"; */
+"xtg-FD-F8h.title" = "السابق";
+
+/* Class = "UILabel"; text = "Default ringtone(Water Drop)"; ObjectID = "xu4-gX-fDd"; */
+"xu4-gX-fDd.text" = "النغمة الأفتراضية";
+
+/* Class = "UITextView"; text = "Say some thing..."; ObjectID = "xVM-wX-c3y"; */
+"xVM-wX-c3y.text" = "قل شيئا...";
+
+/* Class = "UILabel"; text = "Terms And Conditions"; ObjectID = "XwU-g8-QjD"; */
+"XwU-g8-QjD.text" = "Terms And Conditions";
+
+/* Class = "UILabel"; text = "You don't have any calls yet."; ObjectID = "xxl-0u-gXn"; */
+"xxl-0u-gXn.text" = "ليس لديك أي مكالمات حتى الآن.";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "XXp-8S-RMz"; */
+"XXp-8S-RMz.normalTitle" = "مشاركة";
+
+/* Class = "UILabel"; text = "Welcome to Scimbo"; ObjectID = "Y9d-z5-y2m"; */
+"Y9d-z5-y2m.text" = "Welcome to Scimbo";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "Yon-8h-8eo"; */
+"Yon-8h-8eo.text" = "الإعدادات";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YqC-b7-0Cj"; */
+"YqC-b7-0Cj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Feeling lazy? Import your profile from Facebook"; ObjectID = "Yri-9S-6me"; */
+"Yri-9S-6me.text" = "Feeling lazy? Import your profile from Facebook";
+
+/* Class = "UILabel"; text = "Decline"; ObjectID = "yRl-Fo-Iam"; */
+"yRl-Fo-Iam.text" = "رفض";
+
+/* Class = "UILabel"; text = "Add screenshots (optional):"; ObjectID = "yZy-LM-JcK"; */
+"yZy-LM-JcK.text" = "لقطة شاشة (اختياري)";
+
+/* Class = "UILabel"; text = "My Updates"; ObjectID = "Z64-P8-0hq"; */
+"Z64-P8-0hq.text" = "My Updates";
+
+/* Class = "UIButton"; normalTitle = "Send this location"; ObjectID = "zaF-ZD-6XD"; */
+"zaF-ZD-6XD.normalTitle" = "ارسل هذا الموقع";
+
+/* Class = "UILabel"; text = "able to see other people's last seen"; ObjectID = "zdn-8S-1Yx"; */
+"zdn-8S-1Yx.text" = "قادر على رؤية آخر مرة شوهد فيها أشخاص آخرون";
+
+/* Class = "UILabel"; text = "  PHONE NUMBER"; ObjectID = "zJ4-4B-sIR"; */
+"zJ4-4B-sIR.text" = "  رقم الجوال";
+
+/* Class = "UILabel"; text = "New Group"; ObjectID = "zLc-dQ-iuO"; */
+"zLc-dQ-iuO.text" = "مجموعة جديدة";
+
+/* Class = "UILabel"; text = "Wallpaper Preview"; ObjectID = "zsM-rR-T59"; */
+"zsM-rR-T59.text" = "معاينة الخلفية";
+
+/* Class = "UITextView"; text = "Play sounds for incoming and outgoing messages"; ObjectID = "zWf-JF-kgn"; */
+"zWf-JF-kgn.text" = "تشغيل الأصوات للرسائل الواردة والصادرة";
+
+/* Class = "UIButton"; normalTitle = "edit"; ObjectID = "zxi-gK-Jxg"; */
+"zxi-gK-Jxg.normalTitle" = "تعديل";
+

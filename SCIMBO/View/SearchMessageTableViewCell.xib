@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SearchMessageTableViewCellID" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchMessageTableViewCell" id="7x2-i6-EES" customClass="SearchMessageTableViewCell" customModule="Now_Lets_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7x2-i6-EES" id="WLG-Tx-gV2">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cO-Ii-cUq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="84"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eX-eY-iy7">
+                                <rect key="frame" x="10" y="8" width="0.0" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mg8-rf-CNx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWP-df-eUo">
+                                <rect key="frame" x="312" y="8" width="0.0" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="R5v-5r-EwZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMO-U8-6Th">
+                                <rect key="frame" x="43" y="49" width="269" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="oxc-OC-4cP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSq-GO-NwA">
+                                <rect key="frame" x="10" y="49" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="2YU-K7-2UK"/>
+                                    <constraint firstAttribute="width" constant="25" id="OGd-UY-N8Y"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kMO-U8-6Th" firstAttribute="leading" secondItem="WSq-GO-NwA" secondAttribute="trailing" constant="8" id="0v9-2g-fDI"/>
+                            <constraint firstAttribute="bottom" secondItem="WSq-GO-NwA" secondAttribute="bottom" constant="10" id="4PQ-dI-sY9"/>
+                            <constraint firstItem="1eX-eY-iy7" firstAttribute="top" secondItem="5cO-Ii-cUq" secondAttribute="top" constant="8" id="5HM-LP-C9J"/>
+                            <constraint firstItem="fWP-df-eUo" firstAttribute="top" secondItem="5cO-Ii-cUq" secondAttribute="top" constant="8" id="D2y-4l-f84"/>
+                            <constraint firstAttribute="bottom" secondItem="kMO-U8-6Th" secondAttribute="bottom" constant="10" id="kVW-nR-mje"/>
+                            <constraint firstItem="WSq-GO-NwA" firstAttribute="leading" secondItem="5cO-Ii-cUq" secondAttribute="leading" constant="10" id="rdd-Gg-WRi"/>
+                            <constraint firstAttribute="trailing" secondItem="fWP-df-eUo" secondAttribute="trailing" constant="8" id="rxZ-oa-Wln"/>
+                            <constraint firstAttribute="trailing" secondItem="kMO-U8-6Th" secondAttribute="trailing" constant="8" id="yZd-o5-hgI"/>
+                            <constraint firstItem="1eX-eY-iy7" firstAttribute="leading" secondItem="5cO-Ii-cUq" secondAttribute="leading" constant="10" id="ywE-pS-rjG"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5cO-Ii-cUq" firstAttribute="top" secondItem="WLG-Tx-gV2" secondAttribute="top" id="oKA-Vy-AuU"/>
+                    <constraint firstAttribute="trailing" secondItem="5cO-Ii-cUq" secondAttribute="trailing" id="unx-ZX-EMd"/>
+                    <constraint firstItem="5cO-Ii-cUq" firstAttribute="leading" secondItem="WLG-Tx-gV2" secondAttribute="leading" id="z0D-0e-PtS"/>
+                    <constraint firstAttribute="bottom" secondItem="5cO-Ii-cUq" secondAttribute="bottom" id="zuf-8Q-CS8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="image_button" destination="WSq-GO-NwA" id="IkK-dQ-ms5"/>
+                <outlet property="message" destination="kMO-U8-6Th" id="nTo-yx-Cpp"/>
+                <outlet property="name" destination="1eX-eY-iy7" id="skA-Wl-38P"/>
+                <outlet property="timestamp" destination="fWP-df-eUo" id="beT-fb-9Mw"/>
+            </connections>
+            <point key="canvasLocation" x="-113" y="-318.5"/>
+        </tableViewCell>
+    </objects>
+</document>

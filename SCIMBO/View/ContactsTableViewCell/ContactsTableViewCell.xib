@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<objects>
+<placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+<placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactsTableViewCell" rowHeight="62" id="CRM-dN-E3a" customClass="ContactsTableViewCell" customModule="RAAD" customModuleProvider="target">
+<rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
+<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CRM-dN-E3a" id="VIO-D7-P93">
+<rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
+<autoresizingMask key="autoresizingMask"/>
+<subviews>
+<stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1t7-KT-bgC">
+<rect key="frame" x="12" y="4" width="259" height="53.5"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbu-ED-daH">
+<rect key="frame" x="0.0" y="0.0" width="71.5" height="14.5"/>
+<fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eg-Jj-Jk4">
+<rect key="frame" x="0.0" y="19.5" width="50" height="14.5"/>
+<fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41A-jo-klw">
+<rect key="frame" x="0.0" y="39" width="0.0" height="14.5"/>
+<fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="11"/>
+<color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+</stackView>
+<imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PuR-vK-52O">
+<rect key="frame" x="279" y="18.5" width="25" height="25"/>
+<constraints>
+<constraint firstAttribute="width" secondItem="PuR-vK-52O" secondAttribute="height" multiplier="1:1" id="BFA-wp-NBb"/>
+<constraint firstAttribute="height" constant="25" id="WQc-jk-QVC"/>
+</constraints>
+</imageView>
+</subviews>
+<constraints>
+<constraint firstItem="1t7-KT-bgC" firstAttribute="top" secondItem="VIO-D7-P93" secondAttribute="top" constant="4" id="1ts-GY-jZb"/>
+<constraint firstItem="PuR-vK-52O" firstAttribute="leading" secondItem="1t7-KT-bgC" secondAttribute="trailing" constant="8" id="AAl-j4-0BG"/>
+<constraint firstItem="PuR-vK-52O" firstAttribute="trailing" secondItem="VIO-D7-P93" secondAttribute="trailingMargin" id="GIf-t7-Pcz"/>
+<constraint firstItem="1t7-KT-bgC" firstAttribute="leading" secondItem="VIO-D7-P93" secondAttribute="leading" constant="12" id="Q96-fm-JWT"/>
+<constraint firstAttribute="bottom" secondItem="1t7-KT-bgC" secondAttribute="bottom" constant="4" id="cxD-kJ-EfP"/>
+<constraint firstItem="PuR-vK-52O" firstAttribute="centerY" secondItem="VIO-D7-P93" secondAttribute="centerY" id="f57-oc-Uy5"/>
+</constraints>
+</tableViewCellContentView>
+<connections>
+<outlet property="name_Lbl" destination="Qbu-ED-daH" id="2tK-M2-be9"/>
+<outlet property="phone_Lbl" destination="6eg-Jj-Jk4" id="Nqd-Uc-PVz"/>
+<outlet property="status_Lbl" destination="41A-jo-klw" id="Vau-Lg-8BR"/>
+<outlet property="user_ImageView" destination="PuR-vK-52O" id="7sd-iN-PQN"/>
+</connections>
+<point key="canvasLocation" x="-9" y="-145"/>
+</tableViewCell>
+</objects>
+</document>

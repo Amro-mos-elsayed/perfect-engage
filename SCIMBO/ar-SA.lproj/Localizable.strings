@@ -1,0 +1,556 @@
+/* SELECT YOUR NEW STATUS */
+"  SELECT YOUR NEW STATUS" = "حدد حالتك الجديدة ";
+
+/* YOUR CURRENT STATUS IS : */
+"  YOUR CURRENT STATUS IS :" = "حالتك الحالية هي ‫:‬";
+
+/* no */
+" No Contacts" = "لا يوجد آسماء ";
+
+/* note */
+" Unable to load contacts. Kindly tap on 🔃 icon to try again." = "تعذر تحميل جهات الاتصال. يرجى النقر على أيقونة 🔃 للمحاولة مرة أخرى.";
+
+/* unRead */
+" Unread" = " لم تتم قرائته";
+
+/* No comment provided by engineer. */
+"☎︎ Missed Video call at" = "مكالمة فيديو فائتة في ☎︎";
+
+/* No comment provided by engineer. */
+"☎︎ Missed Voice call at" = "مكالمة صوتية فائتة في ☎︎";
+
+/* df */
+"🔒 Messages to this chat and calls are now secured with end-to-end encryption" = "الرسائل إلى هذه الدردشة والمكالمات مؤمنة الآن من خلال التشفير من طرف إلى طرف 🔒";
+
+/* dfd */
+"🔒 Messages to this groups are now secured with end-to-end encryption" = " الرسائل إلى هذه المجموعات مؤمنة الآن بتشفير من طرف إلى طرف 🔒";
+
+/* About */
+"About" = "عن الشركة";
+
+/* note */
+"About and Help" = " عن التطبيق";
+
+/* note */
+"Account" = "الحساب";
+
+/* Add Participant */
+"Add Participant" = "إضافة المشتركين";
+
+/* com */
+"Add to Contacts" = " اضف إلي الأسماء";
+
+/* COM */
+"ALERT TONES" = "نغمات التنبيه ";
+
+/* No comment provided by engineer. */
+"An error occured whilst validating the phone number." = "حدث خطأ أثناء التحقق من رقم الهاتف.";
+
+/* Archive */
+"Archive" = "حفظ";
+
+/* Archive All */
+"Archive All" = "أرشفة الكل ";
+
+/* comm */
+"Archive all Chats" = " أرشفة كافة الدردشات";
+
+/* Archived Chats ( */
+"Archived Chats (" = "الدردشة المحفوظة‫(‬";
+
+/* Archived Chats (0) */
+"Archived Chats (0)" = "  الدردشة المحفوظة(0) ";
+
+/* at */
+"at" = " في ";
+
+/* ava */
+"At the gym" = "في النادي الرياضي";
+
+/* ava */
+"At the movies" = "في قاعة السينما ";
+
+/* ava */
+"At work" = "في العمل ";
+
+/* com */
+"Audio" = "الصوت";
+
+/* ava */
+"Available" = "متاح ";
+
+/* ava */
+"Battery About to die" = "البطارية على وشك النفاذ";
+
+/* Block */
+"Block" = "حظر";
+
+/* note */
+"Blocked Contacts:" = "جهات الآتصال المحظورة";
+
+/* ava */
+"Busy" = "مشغول";
+
+/* Bytes Received
+   Sent */
+"Bytes Received" = "البيانات المستلمة";
+
+/* Bytes Sent
+   Received
+   Sent */
+"Bytes Sent" = "البيانات المرسلة";
+
+/* Camera */
+"Camera" = " الكاميرا";
+
+/* ava */
+"Can't talk" = "لا أستطيع الكلام";
+
+/* Cancel
+   cancelChat
+   CancelClear
+   com
+   comment
+   tes */
+"Cancel" = "إلغاء";
+
+/* note */
+"Change Settings" = "تغيير الإعدادات";
+
+/* com */
+"CHAT MEDIA" = "وسائط الدردشة";
+
+/* comm */
+"Chat Wallpaper" = "خلفية الدردشة";
+
+/* note */
+"Chats" = "الدردشة";
+
+/* comment */
+"Choose an Option" = "اختر ";
+
+/* No comment provided by engineer. */
+"Choose Image" = "اختر صورة ";
+
+/* com
+   comment
+   ds */
+"Choose Option" = "اختر ";
+
+/* com */
+"Choose Photo" = "اختر صورة ";
+
+/* COM */
+"CLASSIC" = " تقليدي";
+
+/* comm */
+"Clear all Chats" = "حذف كل الدردشات";
+
+/* note */
+"Clear All Chats" = "حذف كل الدردشات";
+
+/* note */
+"Clear All Chats except starred" = "امسح كل الدردشات باستثناء المميزة بنجمة";
+
+/* com */
+"Clear all of your chats?" = "حذف كل ملفات الدردشة ";
+
+/* Clear chat
+   com */
+"Clear chat" = "حذف الدردشة ";
+
+/* Clear Chat
+   com */
+"Clear Chat" = "حذف الدردشة";
+
+/* Clear for Everyone */
+"Clear for Everyone" = " حذف للكل";
+
+/* Clear for Me */
+"Clear for Me" = "حذف بالنسبة لي";
+
+/* co
+   Contact Info */
+"Contact Info" = "بيانات الاتصال ";
+
+/* Contact Us */
+"Contact Us" = "إتصل بنا";
+
+/* Copy */
+"Copy" = "نسخ";
+
+/* note */
+"Data Usage" = " استخدام البيانات";
+
+/* note */
+"Default" = "الافتراضي ";
+
+/* com
+   Delete */
+"Delete" = "حذف ";
+
+/* comm */
+"Delete all Chats" = "مسح جميع الدردشات";
+
+/* com */
+"Delete All Chats" = "حذف جميع الدردشة ";
+
+/* com
+   hj */
+"Delete all except starred" = "حذف الكل ما عدا المميزة بنجمة ";
+
+/* com
+   d */
+"Delete all messages" = " حذف جميع الرسائل ";
+
+/* com */
+"Delete all of your chats?" = " حذف جميع الدردشة الخاصة بك ";
+
+/* comment */
+"Delete all status" = " حذف جميع حالات المجموعة";
+
+/* com */
+"Delete Chat" = "حذف الدردشة ";
+
+/* com */
+"Delete Chat with" = "حذف الدردشة مع";
+
+/* Delete for Everyone */
+"Delete for Everyone" = "حذف للجميع";
+
+/* Delete for Me */
+"Delete for Me" = "حذف بالنسبة لي";
+
+/* com */
+"Delete group" = " حذف المجموعة";
+
+/* DELIVERED */
+"DELIVERED" = "تم التوصيل";
+
+/* com */
+"Documents" = "الملفات";
+
+/* com */
+"Done" = " تم";
+
+/* Edit */
+"Edit" = "تعديل";
+
+/* note */
+"Email Settings" = "إعدادات البريد الإلكتروني";
+
+/* not */
+"Enter Email id" = "أدخل معرف البريد الإلكتروني";
+
+/* Everyone */
+"Everyone" = "الكل";
+
+/* com
+   Exit group */
+"Exit group" = "الخروج من المجموعة ";
+
+/* tes */
+"Exit Group" = "الخروج من المجموعة ";
+
+/* Clear chat
+   com
+   Export Chat */
+"Export Chat" = "تصدير الدردشة";
+
+/* FAQ */
+"FAQ" = "التعليمات";
+
+/* Forward
+   ForwardNext */
+"Forward" = "تحويل";
+
+/* note */
+"Friends " = "الاصدقاء";
+
+/* note */
+"Gallery" = "الاستديو";
+
+/* note */
+"Go to" = " اذهب الي";
+
+/* No comment provided by engineer. */
+"Group Info" = "بيانات المجموعة";
+
+/* COM */
+"GROUP NOTIFICATION" = "إشعارات المجموعة";
+
+/* note
+   test */
+"Hey there! I am using" = " مرحبا انا آستخدم";
+
+/* Hey there! I am using */
+"Hey there! I am using " = " مرحبا انا آستخدم";
+
+/* ava */
+"In a meeting" = " في الاجتماع";
+
+/* COM */
+"In App Notifications" = "إشعارات التطبيق";
+
+/* Incoming */
+"Incoming" = "مكالمة واردة";
+
+/* Info */
+"Info" = "بيانات";
+
+/* last seen */
+"last seen" = " أخر ظهور";
+
+/* com
+   Lock Chat */
+"Lock Chat" = "قفل الشات";
+
+/* comment */
+"Log out" = "خروج";
+
+/* com */
+"Make Group Admin" = "جعل مسؤول الجروب";
+
+/* com */
+"MEDIA AUTO-DOWNLOAD" = "تنزيل الوسائط تلقائيًا";
+
+/* COM */
+"MESSAGE NOTIFICATION" = "إشعارات الرسالة";
+
+/* com */
+"MESSAGES" = " الرسائل";
+
+/* Missed */
+"Missed" = "مكالمة فائتة";
+
+/* Moreeeee */
+"More" = "إضافي";
+
+/* Mute */
+"Mute" = "كتم الصوت";
+
+/* My Contacts */
+"My Contacts" = "جهات الاتصال";
+
+/* com */
+"Network Usage" = "إستخدام الشبكة";
+
+/* never
+   Never */
+"Never" = "آبدا";
+
+/* Next
+   not
+   note */
+"Next" = "التالي";
+
+/* note */
+"No Wallpaper" = "بدون خلفية";
+
+/* note */
+"Notifications" = " الإشعارات";
+
+/* no */
+"on your computer and scan the QR code" = "علي جهازك وامسح الكود";
+
+/* Online */
+"Online" = "متصل الآن";
+
+/* ava */
+"only" = " فقط";
+
+/* Outgoing */
+"Outgoing" = "مكالمة صادرة";
+
+/* No comment provided by engineer. */
+"Phone number type is unknown." = " رقم الجوال غير متعرف عليه";
+
+/* Photo & Video Library */
+"Photo & Video Library" = "مكتبة الصور والفيديو";
+
+/* com */
+"Photos" = "الصور";
+
+/* note */
+"Privacy" = "الخصوصية";
+
+/* Read
+   Readcommernt */
+"Read" = "تمت قرائته";
+
+/* Received
+   Sent */
+"Received" = "المستلمه";
+
+/* not */
+"Recovery Email id" = "معرف البريد الإلكتروني للاسترداد";
+
+/* not */
+"Recovery Mobile No." = "رقم هاتف الاسترداد";
+
+/* tesr */
+"Remove from Group" = "إزالة من المجموعة";
+
+/* Reply */
+"Reply" = "رد";
+
+/* com */
+"Reset Auto-Download Settings" = "إعادة تعيين إعدادات التنزيل التلقائي";
+
+/* COM */
+"Reset Notification" = "إعادة تعيين الإشعار";
+
+/* Scan Document */
+"Scan Document" = "مسح المستند ضوئيًا";
+
+/* SEEN */
+"SEEN" = "تمت رؤيته";
+
+/* comm */
+"Send Message" = "ارسل رسالة";
+
+/* Sent */
+"Sent" = "إرسال";
+
+/* Share Contact */
+"Share Contact" = "شارك جهة الإتصال";
+
+/* Share Document */
+"Share Document" = "مشاركة المستندات";
+
+/* Share Location */
+"Share Location" = "مشاركة الموقع";
+
+/* COM */
+"Show Notifications" = "إظهار الإشعارات";
+
+/* ava */
+"Sleeping" = "نائم";
+
+/* not */
+"Solid Colors" = "الالون الثابتة";
+
+/* COM */
+"Sound" = "الصوت";
+
+/* COM */
+"Sounds" = "الأصوات";
+
+/* Star */
+"Star" = "نجمة";
+
+/* note */
+"Starred Messages" = "الرسائل المميزة بنجمة";
+
+/* System Status */
+"System Status" = "حالة النظام";
+
+/* com */
+"Take Photo" = "إختر صورة";
+
+/* note */
+"Tell a Friend" = " اخبر صديق";
+
+/* Terms and Privacy Policy */
+"Terms and Privacy Policy" = "الشروط وسياسة الخصوصية";
+
+/* No comment provided by engineer. */
+"The country code is invalid." = " كود الدوله غير صحيح";
+
+/* No comment provided by engineer. */
+"The number provided is invalid." = " هذا الرقم غير صحيح";
+
+/* No comment provided by engineer. */
+"The number provided is too long." = " رقم الجوال غير صحيح";
+
+/* No comment provided by engineer. */
+"The number provided is too short." = " رقم الجوال غير صحيح";
+
+/* No comment provided by engineer. */
+"This function is deprecated." = " هذه الميزه غير متاحه حاليا";
+
+/* Today */
+"Today" = "اليوم ";
+
+/* com */
+"TOTAL BYTES" = "إجمالي بايت";
+
+/* tes */
+"Unarchive" = "أخرج من الأرشيف ";
+
+/* UnArchive All */
+"UnArchive All" = "إلغاء أرشفة الكل";
+
+/* comm */
+"UnArchive all Chats" = "إلغاء أرشفة كافة الدردشات";
+
+/* tes */
+"UnArchive Instead" = "قم بإلغاء الأرشفة بدلاً من ذلك";
+
+/* Unblock */
+"Unblock" = "رفع الحظر";
+
+/* com
+   Export Chat */
+"Unlock Chat" = "فتح الدردشة";
+
+/* Unmute */
+"Unmute" = "فتح الصوت";
+
+/* Unread */
+"Unread" = "لم تتم قرأته";
+
+/* ava */
+"Urgent calls only" = "مكالمات الطواريء فقط";
+
+/* COM */
+"Vibrate" = " وضع الهزاز";
+
+/* com */
+"Video Call" = "مكالمة فيديو";
+
+/* com */
+"Videos" = "مقاطع الفيديوهات";
+
+/* comment */
+"Voice Call" = "مكامله صوتية";
+
+/* com */
+"Voice Messages are always automatically downloaded for the best communication experience." = "يتم دائمًا تنزيل الرسائل الصوتية تلقائيًا للحصول على أفضل تجربة اتصال";
+
+/* note */
+"Web logout" = "خروج الويب";
+
+/* oo */
+"Web/Desktop" = "الويب / سطح المكتب";
+
+/* never
+   Wi-Fi */
+"Wi-Fi" = "واي فاي ";
+
+/* never
+   Wi-Fi */
+"Wi-Fi and Cellular" = "واي فاي وخلوي ";
+
+/* Yesterday */
+"Yesterday" = "أمس";
+
+/* You are */
+"You" = "أنت";
+
+/* note */
+"Your email is used to reach you incase you accidentally get locked out" = "يتم استخدام بريدك الإلكتروني للوصول إليك في حالة حظر دخولك عن طريق الخطأ";
+
+/* note */
+"Your recovery e-mail is used to reach you incase we detect unusual activity in your account or you accidentally get locked out" = "يتم استخدام البريد الإلكتروني الخاص بالاسترداد للوصول إليك إذا اكتشفنا نشاطًا غير عادي في حسابك أو تم قفله عن طريق الخطأ";
+
+/* note */
+"Your recovery phone is used to reach you incase we detect unusual activity in your account or you accidentally get locked out" = "يتم استخدام هاتف الاسترداد للوصول إليك إذا اكتشفنا نشاطًا غير عادي في حسابك أو تم قفله عن طريق الخطأ";
+
+"Resend" = "اعادة ارسال";
+"After" = "بعد";
+"sec" = "ث";
+
+"Please Make sure you back up your History" = "من فضلك تأكد من عمل نسخة احتياطية من السجل الخاص بك";
+
+"error has been occurred" = "حدث خطأ ما";
