@@ -1,0 +1,2 @@
+app_identifier "com.casperon.scimbo" # the bundle identifier of your app
+apple_id "payment@casperon.com" # Your Apple ID

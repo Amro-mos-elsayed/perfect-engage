@@ -1,0 +1,6 @@
+framework module DynatraceTVOS {
+    umbrella header "Framework.h"
+    
+    export *
+    module * { export * }
+}

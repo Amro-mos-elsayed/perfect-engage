@@ -1,0 +1,29 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "name" : "DynatraceTVOS",
+      "hash" : "0d58aec620411b7bbff493ec113e3531dda35855cfc96fe3733d0db84b5426a3",
+      "linking" : "dynamic"
+    }
+  ],
+  "commitish" : "8.197.1",
+  "iOS" : [
+    {
+      "name" : "Dynatrace",
+      "hash" : "a54bc9466ad9804fd9a13b76c49623e4f0d41533b669027a41ab4c4ed7c7eaef",
+      "linking" : "dynamic"
+    },
+    {
+      "hash" : "a08bdc927b91a17a209216dbbe11fac4138ec38e9783abc826497bee779f1ecd",
+      "name" : "DynatraceSessionReplay",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)"
+    }
+  ]
+}

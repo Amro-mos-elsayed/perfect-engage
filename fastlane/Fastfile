@@ -1,0 +1,13 @@
+default_platform :ios
+
+lane :beta do
+#   build your iOS app
+    build_app(
+ 	    scheme: "SCIMBO",
+ 	    export_method: "app-store"
+    )
+
+#   upload to TestFlight
+    pilot(skip_waiting_for_build_processing: true)
+
+end
