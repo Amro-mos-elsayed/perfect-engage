@@ -20,10 +20,25 @@ extension AppDelegate: PKPushRegistryDelegate {
         Themes.sharedInstance.saveCallToken(DeviceToken: token)
     }
     
+    
+    func fakeCall() {
+        let config = CXProviderConfiguration(localizedName: "My App")
+        config.iconTemplateImageData = #imageLiteral(resourceName: "gallery_ic").pngData()
+        config.ringtoneSound = "tone.mp3"
+        config.includesCallsInRecents = false;
+        config.supportsVideo = true;
+        let provider = CXProvider(configuration: config)
+        provider.setDelegate(self.providerDelegate, queue: nil)
+        let update = CXCallUpdate()
+        update.remoteHandle = CXHandle(type: .generic, value: "Unknown Number")
+        update.hasVideo = false
+        provider.reportNewIncomingCall(with: UUID(), update: update, completion: { error in })
+    }
+    
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
-        
-        
-        
+        #if DEBUG
+        //fakeCall()
+        #endif
         print(payload.dictionaryPayload)
         let strany = payload.dictionaryPayload as! [String: Any]
         guard let payloadObject = parsedPayloadObject(payload: strany) else {
@@ -39,9 +54,7 @@ extension AppDelegate: PKPushRegistryDelegate {
         update.hasVideo = false
         let remoteName = payloadObject.sendername ?? "unknown number".localized()
         providerDelegate.reportIncomingCall(uuid: uuid, handle: remoteName) { error in
-            let p = payload.dictionaryPayload
-            print(p as NSDictionary)
-            let c = 0
+            
         }
         //return if its not of type .voIP
         guard type == .voIP   else { return }

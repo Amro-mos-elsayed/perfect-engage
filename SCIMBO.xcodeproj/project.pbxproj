@@ -94,6 +94,8 @@
 		7BB66E061FBB26C4002EC451 /* CryptLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB66E051FBB2203002EC451 /* CryptLib.m */; };
 		7BB66E081FBB26CA002EC451 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB66E021FBB2202002EC451 /* NSData+Base64.m */; };
 		7BE9582C1FB05F1B0090CBE4 /* TermAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9582B1FB05F1B0090CBE4 /* TermAndConditionViewController.swift */; };
+		7C35ED3326F0DCD3006BB3B4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C35ED3226F0DCD3006BB3B4 /* NotificationService.swift */; };
+		7C35ED3726F0DCD3006BB3B4 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C42985426BFC18000D819C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42985226BFC18000D819C1 /* LoginViewController.swift */; };
 		7C5BE17826CA6ADD00FBDA66 /* AppDelegate+VOIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BE17726CA6ADD00FBDA66 /* AppDelegate+VOIP.swift */; };
 		7CD1C55326C0014300650610 /* SWCC_OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55126C0014300650610 /* SWCC_OTPViewController.swift */; };
@@ -630,6 +632,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7C35ED3526F0DCD3006BB3B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5328A6A1E07E386000572F2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7C35ED2F26F0DCD3006BB3B4;
+			remoteInfo = NotificationService;
+		};
 		C5FBE3B5221ADDBC006DC947 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C5328A6A1E07E386000572F2 /* Project object */;
@@ -657,6 +666,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				C5FBE3B7221ADDBC006DC947 /* RaadEX.appex in Embed App Extensions */,
+				7C35ED3726F0DCD3006BB3B4 /* NotificationService.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,6 +765,10 @@
 		7BB66E041FBB2203002EC451 /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		7BB66E051FBB2203002EC451 /* CryptLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptLib.m; sourceTree = "<group>"; };
 		7BE9582B1FB05F1B0090CBE4 /* TermAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionViewController.swift; sourceTree = "<group>"; };
+		7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C35ED3226F0DCD3006BB3B4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		7C35ED3426F0DCD3006BB3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C35ED3B26F20CA6006BB3B4 /* NotificationService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationService.entitlements; sourceTree = "<group>"; };
 		7C42985226BFC18000D819C1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C5BE17726CA6ADD00FBDA66 /* AppDelegate+VOIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+VOIP.swift"; sourceTree = "<group>"; };
 		7C5BE17926CA913000FBDA66 /* ARDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDConstants.h; sourceTree = "<group>"; };
@@ -1396,6 +1410,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7C35ED2D26F0DCD3006BB3B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5328A6F1E07E386000572F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1846,6 +1867,16 @@
 				7BE9582B1FB05F1B0090CBE4 /* TermAndConditionViewController.swift */,
 			);
 			path = TermsAndConditionViewController;
+			sourceTree = "<group>";
+		};
+		7C35ED3126F0DCD3006BB3B4 /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				7C35ED3B26F20CA6006BB3B4 /* NotificationService.entitlements */,
+				7C35ED3226F0DCD3006BB3B4 /* NotificationService.swift */,
+				7C35ED3426F0DCD3006BB3B4 /* Info.plist */,
+			);
+			path = NotificationService;
 			sourceTree = "<group>";
 		};
 		7C42985126BFC14900D819C1 /* SWCC Login */ = {
@@ -2317,6 +2348,7 @@
 				C309F1142552B0DF00F31DA6 /* RaadRelease.entitlements */,
 				C5328A741E07E389000572F2 /* SCIMBO */,
 				C5FBE3AE221ADDBC006DC947 /* SCIMBOEx */,
+				7C35ED3126F0DCD3006BB3B4 /* NotificationService */,
 				C5328A731E07E389000572F2 /* Products */,
 				0130F018786259F6856CCD5B /* Pods */,
 				449973CE4F3092B4AD14EEA6 /* Frameworks */,
@@ -2328,6 +2360,7 @@
 			children = (
 				C5328A721E07E389000572F2 /* Raad.app */,
 				C5FBE3AD221ADDBC006DC947 /* RaadEX.appex */,
+				7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4200,6 +4233,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7C35ED2F26F0DCD3006BB3B4 /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C35ED3826F0DCD3006BB3B4 /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				7C35ED2C26F0DCD3006BB3B4 /* Sources */,
+				7C35ED2D26F0DCD3006BB3B4 /* Frameworks */,
+				7C35ED2E26F0DCD3006BB3B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			productName = NotificationService;
+			productReference = 7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C5328A711E07E386000572F2 /* Raad */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5328A871E07E38A000572F2 /* Build configuration list for PBXNativeTarget "Raad" */;
@@ -4217,6 +4267,7 @@
 			);
 			dependencies = (
 				C5FBE3B6221ADDBC006DC947 /* PBXTargetDependency */,
+				7C35ED3626F0DCD3006BB3B4 /* PBXTargetDependency */,
 			);
 			name = Raad;
 			productName = SCIMBO;
@@ -4248,13 +4299,18 @@
 		C5328A6A1E07E386000572F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = CASPERON;
 				TargetAttributes = {
+					7C35ED2F26F0DCD3006BB3B4 = {
+						CreatedOnToolsVersion = 12.5.1;
+						DevelopmentTeam = 69QNL7X9JV;
+						ProvisioningStyle = Automatic;
+					};
 					C5328A711E07E386000572F2 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = F5Z3FJ6PTF;
+						DevelopmentTeam = 69QNL7X9JV;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -4277,7 +4333,7 @@
 					};
 					C5FBE3AC221ADDBC006DC947 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = F5Z3FJ6PTF;
+						DevelopmentTeam = 69QNL7X9JV;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -4316,11 +4372,19 @@
 			targets = (
 				C5328A711E07E386000572F2 /* Raad */,
 				C5FBE3AC221ADDBC006DC947 /* RaadEx */,
+				7C35ED2F26F0DCD3006BB3B4 /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7C35ED2E26F0DCD3006BB3B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5328A701E07E386000572F2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4646,6 +4710,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7C35ED2C26F0DCD3006BB3B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C35ED3326F0DCD3006BB3B4 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C5328A6E1E07E386000572F2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -5094,6 +5166,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7C35ED3626F0DCD3006BB3B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7C35ED2F26F0DCD3006BB3B4 /* NotificationService */;
+			targetProxy = 7C35ED3526F0DCD3006BB3B4 /* PBXContainerItemProxy */;
+		};
 		C5FBE3B6221ADDBC006DC947 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C5FBE3AC221ADDBC006DC947 /* RaadEx */;
@@ -5222,6 +5299,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7C35ED3926F0DCD3006BB3B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		7C35ED3A26F0DCD3006BB3B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = NotificationService/NotificationService.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MARKETING_VERSION = 1.1;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		C5328A851E07E38A000572F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5358,9 +5492,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
+				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5385,7 +5519,7 @@
 					"$(PROJECT_DIR)/SCIMBO/Utilities/OtherResources/VoiceLib",
 					"${SDKROOT}/usr/include/libxml2",
 				);
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -5480,7 +5614,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5502,8 +5636,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5530,7 +5664,7 @@
 					"$(PROJECT_DIR)/SCIMBO/Utilities/OtherResources/VoiceLib",
 					"${SDKROOT}/usr/include/libxml2",
 				);
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -5625,7 +5759,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5651,8 +5785,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5662,10 +5796,10 @@
 				INFOPLIST_FILE = SCIMBOEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc.alex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5692,8 +5826,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
-				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5703,9 +5837,9 @@
 				INFOPLIST_FILE = SCIMBOEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1;
+				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc.alex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5720,6 +5854,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7C35ED3826F0DCD3006BB3B4 /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C35ED3926F0DCD3006BB3B4 /* Debug */,
+				7C35ED3A26F0DCD3006BB3B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C5328A6D1E07E386000572F2 /* Build configuration list for PBXProject "SCIMBO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

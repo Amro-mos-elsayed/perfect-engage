@@ -7,7 +7,7 @@
 //
 
 import Foundation
-let BaseURLArray = ["https://swcc-engage.2p.com.sa"]
+let BaseURLArray = ["https://devswccengage.perfect-engage.com"]
 //let BaseURLArray = ["https://swccengage.perfect-engage.com"]
 
 var BaseUrl : String {
@@ -80,8 +80,8 @@ class Constant : NSObject
             return "\(BaseUrl.replacingOccurrences(of: "/api", with: ""))/startFileuploadNotification"
         }
     }
-    let AppGroupID = "group.com.2p.swcc"
-   // let AppGroupID = "group.com.2p.Engage"
+//    let AppGroupID = "group.com.2p.swcc"
+    let AppGroupID = "group.com.2p.Engage"
     let GoogleMapKey = "AIzaSyBJkky3R5AzhiINV-_WhxSCWYi4K69jyBU"
     let Connect:String = "connect"
     let network_disconnect:String = "disconnect"
@@ -112,6 +112,7 @@ class Constant : NSObject
     let sc_message_ack:String = "sc_message_ack"
     let sc_contacts:String = "sc_contacts"
     let GetPhoneContact:String = "GetPhoneContact"
+    let getAllContacts = "GetAllContacts"
     let sc_online_status:String = "getCurrentTimeStatus"
     let sc_change_status:String = "sc_change_status"
     let sc_change_online_status:String = "sc_change_online_status"

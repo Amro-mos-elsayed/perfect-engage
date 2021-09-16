@@ -125,7 +125,7 @@ class ContactHandler: NSObject {
                     DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Contact_add, FetchString: contactPhno, attribute: "contact_mobilenum", UpdationElements: ["is_changed" : "0"] as NSDictionary)
                 }
                 
-                if(Checkcontact.count > 0 || Checkcontact1.count > 0)
+                if(Checkcontact.count > 0 || Checkcontact1.count > 0 || true)
                 {
                     Checkcontact = Checkcontact.count == 0 ? Checkcontact1 : Checkcontact
                     var name:String=String()
@@ -139,7 +139,7 @@ class ContactHandler: NSObject {
                     let last_seen:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "last_seen"))
                     let profile_photo:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "profile_photo"))
                     let profile_status:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "status"))
-                    let contactUserList : NSData = NSKeyedArchiver.archivedData(withRootObject: privacy_dict.value(forKey: "contactUserList") as! [String]) as NSData
+                    let contactUserList : NSData =  NSData.init()
                     
                     let security_code:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "security_code"))
                     
@@ -165,8 +165,8 @@ class ContactHandler: NSObject {
                         DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Favourite_Contact, Predicatefromat: predic2, Deletestring:_id , AttributeName: "id")
                     }
                     
-                    name = Themes.sharedInstance.CheckNullvalue(Passed_value: Checkcontact[0].value(forKey: "contact_name"))
-                    contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: Checkcontact[0].value(forKey: "contact_id"))
+                    name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
+                    contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
                     
                     var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))
                     if(image_Url != "")

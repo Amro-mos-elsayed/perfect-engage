@@ -718,7 +718,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let state = UIApplication.shared.applicationState
         if(state == .background)
         {
-            UIApplication.shared.applicationIconBadgeNumber = Themes.sharedInstance.getUnreadChatCount(true)
+            let count = Themes.sharedInstance.getUnreadChatCount(true)
+            UIApplication.shared.applicationIconBadgeNumber = count
+            let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+            defaults?.set(count, forKey: "BadgeCount")
         }
     }
     func waitingForNetwork(_ isNetwork:Bool , state:Bool){
@@ -961,7 +964,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             Filemanager.sharedinstance.DeleteFile(foldername: Constant.sharedinstance.wallpaperpath)
             Filemanager.sharedinstance.DeleteFile(foldername: Constant.sharedinstance.statuspath)
 
-            UIApplication.shared.applicationIconBadgeNumber = Themes.sharedInstance.getUnreadChatCount(true)
+            let count = Themes.sharedInstance.getUnreadChatCount(true)
+            UIApplication.shared.applicationIconBadgeNumber = count
+            let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+            defaults?.set(count, forKey: "BadgeCount")
             self.MovetoRooVC()
             self.pushRegistrySetup()
             self.pushnotificationSetup()
@@ -1401,8 +1407,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         else
         {
-            let signinVC = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVCID") as! LoginVC
-            //let signinVC = LoginViewController.init()
+            //let signinVC = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVCID") as! LoginVC
+            let signinVC = LoginViewController.init()
             navigationController?.viewControllers = [signinVC]
             self.window!.rootViewController = navigationController
         }
@@ -1491,7 +1497,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func setBadgeCount()
     {
-        UIApplication.shared.applicationIconBadgeNumber = Themes.sharedInstance.getUnreadChatCount(true)
+        let count = Themes.sharedInstance.getUnreadChatCount(true)
+        UIApplication.shared.applicationIconBadgeNumber = count
+        let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+        defaults?.set(count, forKey: "BadgeCount")
     }
     
     func ReachabilityListener()
