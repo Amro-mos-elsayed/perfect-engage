@@ -1062,7 +1062,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             {
                 let DayStr:String = ReturnDateTimeFormat(timestamp: time_stamp)
                 let TimeStr:String = ReturnTimeForChat(timestamp: time_stamp)
-                txt = NSLocalizedString("last seen", comment: "last seen") + " " + (DayStr) + " " + NSLocalizedString("at", comment: "at") + (TimeStr)
+                txt = NSLocalizedString("last seen", comment: "last seen") + " " + (DayStr) + " " + NSLocalizedString("at", comment: "at") + " " + (TimeStr)
             }
         }
         if(is_online != "") {

@@ -85,58 +85,21 @@ class AccountViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.pop(animated: true)
     }
     @IBAction func logoutAction(_ sender: UIButton) {
-        
-                    let alertview = JSSAlertView().show(
-                        self,
-                        title: NSLocalizedString("Please Make sure you back up your History",comment: "Please Make sure you back your History"),
-                        text: nil ,
-                        buttonText: "Log out".localized(),
-                        cancelButtonText: "Cancel".localized(),
-                        color: CustomColor.sharedInstance.alertColor
-                    )
-                    alertview.addAction(self.OpenactionSheet)
+        self.OpenactionSheet()
     }
 
     func OpenactionSheet()
     {
         let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-//        let webLogout: UIAlertAction = UIAlertAction(title : NSLocalizedString("Web logout", comment: "note"), style: .default) { action -> Void in
-//            self.Logout()
-//        }
         let Logout: UIAlertAction = UIAlertAction(title: NSLocalizedString("Log out", comment: "comment"), style: .default) { action -> Void in
             
             (UIApplication.shared.delegate as! AppDelegate).Logout()
-            
-//            let alertview = JSSAlertView().show(
-//                self,
-//                title: Themes.sharedInstance.GetAppname(),
-//                text: "Are you sure, you want to Logout?",
-//                buttonText: "Yes",
-//                cancelButtonText: "No",
-//                color: CustomColor.sharedInstance.alertColor
-//            )
-//            alertview.addAction((UIApplication.shared.delegate as! AppDelegate).Logout)
         }
-       
         let CancelAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel) { action -> Void in
         }
-        //sheet_action.addAction(webLogout)
         sheet_action.addAction(Logout)
         sheet_action.addAction(CancelAction)
         self.presentView(sheet_action, animated: true, completion: nil)
-        
-    }
-    
-    func Logout()
-    {
-        #if DEBUG
-        (UIApplication.shared.delegate as! AppDelegate).Logout()
-        #else
-        let Dict:NSDictionary = ["from":Themes.sharedInstance.Getuser_id()]
-        SocketIOManager.sharedInstance.mobileToWebLogout(Param: Dict as! [String : Any])
-        #endif
-        
         
     }
     

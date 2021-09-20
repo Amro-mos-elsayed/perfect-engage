@@ -4305,12 +4305,12 @@
 				TargetAttributes = {
 					7C35ED2F26F0DCD3006BB3B4 = {
 						CreatedOnToolsVersion = 12.5.1;
-						DevelopmentTeam = 69QNL7X9JV;
+						DevelopmentTeam = F5Z3FJ6PTF;
 						ProvisioningStyle = Automatic;
 					};
 					C5328A711E07E386000572F2 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 69QNL7X9JV;
+						DevelopmentTeam = F5Z3FJ6PTF;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -4333,7 +4333,7 @@
 					};
 					C5FBE3AC221ADDBC006DC947 = {
 						CreatedOnToolsVersion = 10.1;
-						DevelopmentTeam = 69QNL7X9JV;
+						DevelopmentTeam = F5Z3FJ6PTF;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -5310,16 +5310,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5339,15 +5339,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5492,9 +5492,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 15;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5519,7 +5519,7 @@
 					"$(PROJECT_DIR)/SCIMBO/Utilities/OtherResources/VoiceLib",
 					"${SDKROOT}/usr/include/libxml2",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -5614,7 +5614,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5636,8 +5636,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5664,7 +5664,7 @@
 					"$(PROJECT_DIR)/SCIMBO/Utilities/OtherResources/VoiceLib",
 					"${SDKROOT}/usr/include/libxml2",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -5759,7 +5759,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5785,8 +5785,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5796,10 +5796,10 @@
 				INFOPLIST_FILE = SCIMBOEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc.exal;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5826,8 +5826,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 69QNL7X9JV;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_TEAM = F5Z3FJ6PTF;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5837,9 +5837,9 @@
 				INFOPLIST_FILE = SCIMBOEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.swcc.exal;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

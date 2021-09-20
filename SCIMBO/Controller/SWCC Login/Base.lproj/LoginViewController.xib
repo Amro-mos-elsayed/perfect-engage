@@ -80,7 +80,7 @@
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="123456" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f54-vh-Xy7">
                                                     <rect key="frame" x="34.5" y="0.0" width="339.5" height="50"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="username"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="U" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-Wu-vLz">
                                                     <rect key="frame" x="24" y="0.0" width="10.5" height="50"/>
@@ -226,7 +226,7 @@
         <image name="padlock" width="14" height="18.5"/>
         <image name="user" width="18.5" height="18.5"/>
         <namedColor name="themeColor">
-            <color red="0.0039215686274509803" green="0.34901960784313724" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.019607843137254902" green="0.39215686274509803" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
