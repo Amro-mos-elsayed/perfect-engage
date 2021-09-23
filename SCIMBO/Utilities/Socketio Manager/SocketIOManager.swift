@@ -482,7 +482,7 @@
     
     func GetFavContact(Dict:NSDictionary)
     {
-        emitEvent(Constant.sharedinstance.GetPhoneContact, Dict)
+        emitEvent(Constant.sharedinstance.getAllContacts, Dict)
     }
     func Removeuser(param:[String:Any])
     {
@@ -1489,13 +1489,7 @@
         }
         
         
-        socket.on(Constant.sharedinstance.GetPhoneContact as String) {data, ack in
-            let data = self.returnDataFromEncryption(data)
-            let ErrorStr:String=Themes.sharedInstance.CheckNullvalue(Passed_value: (data  ).object(forKey: "err"));
-            if(ErrorStr == "1")
-            {
-            }
-        }
+       
         
         socket.on(Constant.sharedinstance.sc_typing as String) {data, ack in
             let data = self.returnDataFromEncryption(data)
@@ -3053,22 +3047,17 @@
                 
             }
         }
-        socket.on(Constant.sharedinstance.sc_contacts as String) {data, ack in
+        socket.on(Constant.sharedinstance.getAllContacts as String) {data, ack in
             let data = self.returnDataFromEncryption(data)
             let ResponseDict:NSDictionary! = data;
             if(ResponseDict.count > 0)
             {
                 let ErrorStr:String = Themes.sharedInstance.CheckNullvalue(Passed_value: (data).object(forKey: "err"));
-                if(ErrorStr == "1")
-                {
-                }
-                else{
-                    let ResponseDictArr:NSArray = ResponseDict.value(forKey: "Favorites") as! NSArray
-                    //                    ContactHandler.sharedInstance.SaveFavContactFromServer(ResponseArr: ResponseDictArr)
+                if(ErrorStr == "1") {
                     
-                    let IndexAt = Int(Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "indexAt")))
-                    ContactHandler.sharedInstance.SaveFavContactFromServer(ResponseArr: ResponseDictArr, Index: IndexAt!)
-                    
+                } else{
+                    let ResponseDictArr:NSArray = ResponseDict.value(forKey: "usersData") as! NSArray
+                    ContactHandler.sharedInstance.SaveFavContactFromServer(ResponseArr: ResponseDictArr, Index: 0)
                 }
             }
         }

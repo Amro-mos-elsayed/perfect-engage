@@ -108,13 +108,6 @@ class ContactHandler: NSObject {
                 let contactName:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "contactName"))
                 let PhnoPred = NSPredicate(format: "contact_mobilenum == %@", contactPhno)
                 let NamePred = NSPredicate(format: "contact_name == %@", contactName)
-                let CheckContact = NSCompoundPredicate(andPredicateWithSubpredicates: [PhnoPred,NamePred])
-                let CheckContact1 = NSCompoundPredicate(andPredicateWithSubpredicates: [PhnoPred])
-                
-                var Checkcontact = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Contact_add, SortDescriptor: nil, predicate: CheckContact, Limit: 0) as! [NSManagedObject]
-                
-                let Checkcontact1 = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Contact_add, SortDescriptor: nil, predicate: CheckContact1, Limit: 0) as! [NSManagedObject]
-                
                 
                 let ChangePred = NSPredicate(format: "is_changed == %@", "1")
                 let isChangedPred = NSCompoundPredicate(andPredicateWithSubpredicates: [PhnoPred, NamePred, ChangePred])
@@ -125,83 +118,109 @@ class ContactHandler: NSObject {
                     DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Contact_add, FetchString: contactPhno, attribute: "contact_mobilenum", UpdationElements: ["is_changed" : "0"] as NSDictionary)
                 }
                 
-                if(Checkcontact.count > 0 || Checkcontact1.count > 0)
+                
+                var name:String=String()
+                var contact_ID:String = String()
+                
+                let Phonenumber:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "PhNumber"))
+                var msisdn: String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn"))
+                let _id:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "_id"))
+                let status1:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Status"))
+                let privacy_dict:NSDictionary = FavDict.object(forKey: "privacy") as! NSDictionary
+                let last_seen:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "last_seen"))
+                let profile_photo:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "profile_photo"))
+                let profile_status:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "status"))
+                let contactUserList : NSData =  NSData.init()
+                
+                let security_code:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "security_code"))
+                
+                if(_id == Themes.sharedInstance.Getuser_id()){
+                    let param=["last_seen":last_seen,"profile_photo":profile_photo,"show_status":profile_status]
+                    DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail, FetchString: Themes.sharedInstance.Getuser_id(), attribute: "user_id", UpdationElements: param as NSDictionary)
+                }
+                
+                if(CheckFav.count > 0)
                 {
-                    Checkcontact = Checkcontact.count == 0 ? Checkcontact1 : Checkcontact
-                    var name:String=String()
-                    var contact_ID:String = String()
+                    let predic3 = NSPredicate(format: "msisdn contains[c] %@", msisdn)
+                    DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Favourite_Contact, Predicatefromat:predic3 , Deletestring: "1", AttributeName: "is_fav")
                     
-                    let Phonenumber:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "PhNumber"))
-                    let msisdn:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn"))
-                    let _id:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "_id"))
-                    let status1:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Status"))
-                    let privacy_dict:NSDictionary = FavDict.object(forKey: "privacy") as! NSDictionary
-                    let last_seen:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "last_seen"))
-                    let profile_photo:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "profile_photo"))
-                    let profile_status:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "status"))
-                    let contactUserList : NSData = NSKeyedArchiver.archivedData(withRootObject: privacy_dict.value(forKey: "contactUserList") as! [String]) as NSData
-                    
-                    let security_code:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "security_code"))
-                    
-                    if(_id == Themes.sharedInstance.Getuser_id()){
-                        let param=["last_seen":last_seen,"profile_photo":profile_photo,"show_status":profile_status]
-                        DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail, FetchString: Themes.sharedInstance.Getuser_id(), attribute: "user_id", UpdationElements: param as NSDictionary)
-                    }
-                    
-                    if(CheckFav.count > 0)
+                }
+                
+                let p1 = NSPredicate(format: "id = %@", _id)
+                let p2 = NSPredicate(format: "is_fav = %@", "0")
+                let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [p1, p2])
+                let nonFavcontactArr=DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: predicate,Limit:0) as! NSArray
+                if(nonFavcontactArr.count > 0)
+                {
+                    let predic2 = NSPredicate(format: "id == %@",_id)
+                    DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Favourite_Contact, Predicatefromat: predic2, Deletestring:_id , AttributeName: "id")
+                }
+                if let showMobileNumber = FavDict["showNumber"] as? Bool, !showMobileNumber {
+                    msisdn = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email"))
+                }else {
+                    msisdn = msisdn.parseNumber
+                }
+                
+                name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
+                contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
+                
+                var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))
+                if(image_Url != "")
+                {
+                    if(image_Url.substring(to: 1) == ".")
                     {
-                        let predic3 = NSPredicate(format: "msisdn contains[c] %@", msisdn)
-                        DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Favourite_Contact, Predicatefromat:predic3 , Deletestring: "1", AttributeName: "is_fav")
-                        
+                        image_Url.remove(at: image_Url.startIndex)
                     }
+                    image_Url = ("\(ImgUrl)\(image_Url)")
                     
-                    let p1 = NSPredicate(format: "id = %@", _id)
-                    let p2 = NSPredicate(format: "is_fav = %@", "0")
-                    let predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [p1, p2])
-                    let nonFavcontactArr=DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: predicate,Limit:0) as! NSArray
-                    if(nonFavcontactArr.count > 0)
-                    {
-                        let predic2 = NSPredicate(format: "id == %@",_id)
-                        DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Favourite_Contact, Predicatefromat: predic2, Deletestring:_id , AttributeName: "id")
-                    }
-                    
-                    name = Themes.sharedInstance.CheckNullvalue(Passed_value: Checkcontact[0].value(forKey: "contact_name"))
-                    contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: Checkcontact[0].value(forKey: "contact_id"))
-                    
-                    var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))
-                    if(image_Url != "")
-                    {
-                        if(image_Url.substring(to: 1) == ".")
-                        {
-                            image_Url.remove(at: image_Url.startIndex)
-                        }
-                        image_Url = ("\(ImgUrl)\(image_Url)")
-                        
-                    }
-                    let mute_status = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "opponent_id", fetchString: _id, returnStr: "is_mute")
-                    
-                    let ConvDict:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":_id,"type":"single","chat_type":"normal"]
-                    self.EmitConvDetails(ConvDict: ConvDict)
-                    image_Url = image_Url == "" ? "photo" : image_Url
-                    let Dict:Dictionary = ["name":name,"countrycode":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "CountryCode")),"id":_id,"is_add":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "is_add")),"msisdn":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn")),"phnumber":Phonenumber,"contact_id":contact_ID,"profilepic":image_Url,"status":status1,"user_id":Themes.sharedInstance.Getuser_id(),"is_fav":"1","is_online":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "is_online")),"time_stamp":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "time_stamp")),"is_mute":mute_status,"security_code":security_code, "last_seen":last_seen, "profile_photo":profile_photo, "show_status":profile_status, "contactUserList" : contactUserList, "formatted" : Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn")).parseNumber] as [String : Any]
-                    
-                    let msisdnPred = NSPredicate(format: "NOT (msisdn contains[c] %@)", msisdn)
-                    let idPred = NSPredicate(format: "id == %@", _id)
-                    let CheckPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPred, msisdnPred])
-                    let Checkfav = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: CheckPredicate, Limit: 0) as! NSArray
-                    if(Checkfav.count < 1)
-                    {
-                        if(_id != Themes.sharedInstance.Getuser_id()){
-                            DatabaseHandler.sharedInstance.InserttoDatabase(Dict: Dict as NSDictionary, Entityname: Constant.sharedinstance.Favourite_Contact)
-                        }
-                    }
-                    else
-                    {
-                        if(_id != Themes.sharedInstance.Getuser_id()){
-                            DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Favourite_Contact, FetchString: _id, attribute: "id", UpdationElements: Dict as NSDictionary)
-                        }
+                }
+                print("❎   \(name) \(image_Url)")
+                let mute_status = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "opponent_id", fetchString: _id, returnStr: "is_mute")
+                
+                let ConvDict:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":_id,"type":"single","chat_type":"normal"]
+                self.EmitConvDetails(ConvDict: ConvDict)
+                image_Url = image_Url == "" ? "photo" : image_Url
+                let Dict:Dictionary = [
+                    "name":name,
+                    "countrycode":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "CountryCode")),
+                    "id":_id,
+                    "is_add":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "is_add")),
+                    "msisdn":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn")),
+                    "phnumber":Phonenumber,
+                    "contact_id":contact_ID,
+                    "profilepic":image_Url,
+                    "status":status1,
+                    "user_id":Themes.sharedInstance.Getuser_id(),
+                    "is_fav":"1",
+                    "is_online":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "is_online")),
+                    "time_stamp":Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "time_stamp")),
+                    "is_mute":mute_status,
+                    "security_code":security_code,
+                    "last_seen":last_seen,
+                    "profile_photo":profile_photo,
+                    "show_status":profile_status,
+                    "contactUserList" : contactUserList,
+                    "formatted" : msisdn,
+                    "email_address":"mail@mail.com"
+                ] as [String : Any]
+                
+                let msisdnPred = NSPredicate(format: "NOT (msisdn contains[c] %@)", msisdn)
+                let idPred = NSPredicate(format: "id == %@", _id)
+                let CheckPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [idPred, msisdnPred])
+                let Checkfav = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: CheckPredicate, Limit: 0) as! NSArray
+                if(Checkfav.count < 1)
+                {
+                    if(_id != Themes.sharedInstance.Getuser_id()){
+                        DatabaseHandler.sharedInstance.InserttoDatabase(Dict: Dict as NSDictionary, Entityname: Constant.sharedinstance.Favourite_Contact)
                     }
                 }
+                else
+                {
+                    if(_id != Themes.sharedInstance.Getuser_id()){
+                        DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Favourite_Contact, FetchString: _id, attribute: "id", UpdationElements: Dict as NSDictionary)
+                    }
+                }
+                
                 
             }
             self.doNextAction(Index: Index)

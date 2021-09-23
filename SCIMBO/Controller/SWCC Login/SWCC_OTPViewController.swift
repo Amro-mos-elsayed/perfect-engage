@@ -180,7 +180,7 @@ class SWCC_OTPViewController: UIViewController {
 
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict:  self.DetailDic , Entityname: Constant.sharedinstance.User_detail)
                     
-                    let alertview = JSSAlertView().show(self,title: Themes.sharedInstance.GetAppname(),text:"Your number has been registered successfully",buttonText: "OK",color: CustomColor.sharedInstance.alertColor)
+                    let alertview = JSSAlertView().show(self,title: Themes.sharedInstance.GetAppname(),text:"Your number has been registered successfully",buttonText: "OK",color: CustomColor.sharedInstance.themeColor)
                     alertview.addAction(self.closeCallback)
                 }
                 else{

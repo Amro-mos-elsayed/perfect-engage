@@ -2096,22 +2096,6 @@ extension UILabel {
         }
         self.text = status
     }
-    
-    func setPhoneTxt(_ id: String) {
-        var msisdn = ""
-        if id == Themes.sharedInstance.Getuser_id() {
-            msisdn = Themes.sharedInstance.base64ToString(Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "mobilenumber")).parseNumber
-        }
-        else {
-            if(Themes.sharedInstance.contactExist(id)) {
-                msisdn = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Favourite_Contact, attrib_name: "id", fetchString: id, returnStr: "formatted")
-            }
-            else {
-                msisdn = Themes.sharedInstance.getPhoneFromGroup(id)
-            }
-        }
-        self.text = msisdn
-    }
 }
 
 extension UIButton
