@@ -19,8 +19,9 @@ class NotificationService: UNNotificationServiceExtension {
         bestAttemptContent = (request.content.mutableCopy() as! UNMutableNotificationContent)
         var count: Int = defaults?.value(forKey: "BadgeCount") as! Int
         if let bestAttemptContent = bestAttemptContent {
-            bestAttemptContent.badge = count as NSNumber
             count = count + 1
+            bestAttemptContent.badge = count as NSNumber
+            //count = count + 1
             defaults?.set(count, forKey: "BadgeCount")
             contentHandler(bestAttemptContent)
         }
