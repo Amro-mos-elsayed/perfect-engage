@@ -59,15 +59,16 @@ class LoginViewController: UIViewController {
         loginRequest(uid: uid, password: password) { user in
             let fullMobileNum = user.mobile!
             let mobileNum = fullMobileNum.substring(from: 3)
-            
-            self.navigateToLoginVC(phoneNumber: mobileNum, code: "", userName: user.fullName)
+            let email: String = user.fullName ?? ""
+            self.navigateToLoginVC(phoneNumber: mobileNum, code: "", userName: user.fullName,email: email)
         }
     }
     
-    func navigateToLoginVC(phoneNumber: String?, code: String?, userName: String?) {
+    func navigateToLoginVC(phoneNumber: String?, code: String?, userName: String?, email: String) {
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVCID") as! LoginVC
         vc.phoneNo = phoneNumber
+        vc.userEmail = email
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -90,7 +91,7 @@ class LoginViewController: UIViewController {
                 }else {
                     Themes.sharedInstance.ShowNotification(loginModel?.resultMessage ?? "error has been occurred".localized() , false)
                     #if DEBUG
-                    self.navigateToLoginVC(phoneNumber: "", code: "", userName: "")
+                    self.navigateToLoginVC(phoneNumber: "", code: "", userName: "", email: "email@email.com")
                     #endif
                 }
                 break
@@ -98,7 +99,7 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
                 Themes.sharedInstance.ShowNotification("error has been occurred".localized(), false)
                 #if DEBUG
-                self.navigateToLoginVC(phoneNumber: "", code: "", userName: "")
+                self.navigateToLoginVC(phoneNumber: "", code: "", userName: "", email: "email@email.com")
                 #endif
             }
         }

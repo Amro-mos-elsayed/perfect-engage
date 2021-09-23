@@ -26,6 +26,7 @@ class SWCC_OTPViewController: UIViewController {
     var  statusList_Array = NSMutableArray()
     var isFromProduction:Bool = Bool()
     var PhNumber:String = String()
+    var userEmail: String?
     var CountryCode:String = String()
     
     var imageUrl:String=String()
@@ -206,6 +207,7 @@ class SWCC_OTPViewController: UIViewController {
         ProfileVC.username = self.Name
         ProfileVC.msisdn=self.mssidn_No
         ProfileVC.user_id=self.User_id
+        ProfileVC.email = userEmail ?? ""
         self.pushView(ProfileVC, animated: true)
     }
     @IBAction func backAction(_ sender: UIButton) {

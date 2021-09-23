@@ -14,6 +14,7 @@ class LoginVC: UIViewController {
     @IBOutlet weak var flag_imgView: UIImageView!
     var country_Code = String()
     var phoneNo: String?
+    var userEmail: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarView?.backgroundColor = CustomColor.sharedInstance.themeColor
@@ -40,6 +41,7 @@ class LoginVC: UIViewController {
         self.view.endEditing(true)
         if let VC = self.storyboard?.instantiateViewController(withIdentifier: "SecondLoginVCID") as? SecondLoginVC{
             VC.phoneNo = phoneNo
+            VC.userEmail = userEmail
             if self.navigationController != nil {
                 self.navigationController?.pushViewController(VC, animated: false)
             }else{

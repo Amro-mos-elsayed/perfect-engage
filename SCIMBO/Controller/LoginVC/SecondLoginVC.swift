@@ -34,6 +34,7 @@ class SecondLoginVC: UIViewController,MICountryPickerDelegate,UITextFieldDelegat
     var signUp = SignUp()
     var country_Code:String = String()
     var phoneNo: String?
+    var userEmail: String?
     var customColor = CustomColor()
     
     
@@ -253,7 +254,7 @@ class SecondLoginVC: UIViewController,MICountryPickerDelegate,UITextFieldDelegat
                     KeychainService.savePassword(service: user_id, data: token)
                     Themes.sharedInstance.savesecurityToken(DeviceToken: token)
                     
-                    let email = Themes.sharedInstance.CheckNullvalue(Passed_value: result["Email"])
+                    let email = self.userEmail ?? Themes.sharedInstance.CheckNullvalue(Passed_value: result["Email"])
                     let DetailDic=["user_id":user_id,"status":status,"mobilenumber":mssidn_No,"name":Name,"profilepic":image_Url,"current_call_status":"0","call_id":"","wallpaper_type" : "default", "wallpaper" : "", "status_privacy" : "0", "otp" : otp, "email" : email] as [String : Any]
                     
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict: DetailDic as NSDictionary, Entityname: Constant.sharedinstance.User_detail)

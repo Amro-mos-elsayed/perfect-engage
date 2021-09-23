@@ -36,6 +36,7 @@ class ProfileInfoViewController: UIViewController,UIImagePickerControllerDelegat
         super.viewDidLoad()
         Entername_field.text=username
         Enteremail_field.text=email
+        Enteremail_field.isUserInteractionEnabled = false
         if UIDevice.isIphoneX {
             HeightConstraint.constant = 250
         } else {
