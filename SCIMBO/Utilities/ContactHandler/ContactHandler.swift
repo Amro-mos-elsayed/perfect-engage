@@ -117,11 +117,6 @@ class ContactHandler: NSObject {
                 {
                     DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Contact_add, FetchString: contactPhno, attribute: "contact_mobilenum", UpdationElements: ["is_changed" : "0"] as NSDictionary)
                 }
-                
-                
-                var name:String=String()
-                var contact_ID:String = String()
-                
                 let Phonenumber:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "PhNumber"))
                 var msisdn: String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn"))
                 let _id:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "_id"))
@@ -161,9 +156,9 @@ class ContactHandler: NSObject {
                     msisdn = msisdn.parseNumber
                 }
                 
-                name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
-                contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
-                
+                let name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
+                let contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
+                let email = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email_address"))
                 var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))
                 print("❌   \(name) \(image_Url)")
                 if(image_Url != "")
@@ -203,7 +198,7 @@ class ContactHandler: NSObject {
                     "show_status":profile_status,
                     "contactUserList" : contactUserList,
                     "formatted" : msisdn,
-                    "email_address":"mail@mail.com"
+                    "email_address":email
                 ] as [String : Any]
                 
                 let msisdnPred = NSPredicate(format: "NOT (msisdn contains[c] %@)", msisdn)

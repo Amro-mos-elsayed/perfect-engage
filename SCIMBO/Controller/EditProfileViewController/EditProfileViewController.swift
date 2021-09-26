@@ -22,6 +22,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var nameCount_Lbl: UILabel!
     @IBOutlet weak var statusBtn: UIButton!
     @IBOutlet weak var phoneLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
+    @IBOutlet weak var emailAddressLbl: UILabel!
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var profileImg: UIButton!
     @IBOutlet weak var profileImg_Btn: UIImageView!
@@ -85,6 +87,13 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         lblBorderTop.borderWidth = lblBorderWidth
         phoneLbl.layer.addSublayer(lblBorderTop)
         phoneLbl.layer.masksToBounds = true
+        
+        let lblBorderTop2 = CALayer()
+        lblBorderTop2.borderColor = customColor.lightgrayColor.cgColor
+        lblBorderTop2.frame = CGRect(x: 0, y: 0, width: Themes.sharedInstance.screenSize.width, height: 1)
+        lblBorderTop2.borderWidth = lblBorderWidth
+        emailAddressLbl.layer.addSublayer(lblBorderTop2)
+        emailAddressLbl.layer.masksToBounds = true
     }
     
     
