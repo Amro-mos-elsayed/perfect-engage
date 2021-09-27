@@ -720,7 +720,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         {
             let count = Themes.sharedInstance.getUnreadChatCount(true)
             UIApplication.shared.applicationIconBadgeNumber = count
-            let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+            let defaults = UserDefaults(suiteName: Constant.sharedinstance.AppGroupID)
             defaults?.set(count, forKey: "BadgeCount")
         }
     }
@@ -966,7 +966,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
             let count = Themes.sharedInstance.getUnreadChatCount(true)
             UIApplication.shared.applicationIconBadgeNumber = count
-            let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+            let defaults = UserDefaults(suiteName: Constant.sharedinstance.AppGroupID)
             defaults?.set(count, forKey: "BadgeCount")
             self.MovetoRooVC()
             self.pushRegistrySetup()
@@ -1499,7 +1499,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     {
         let count = Themes.sharedInstance.getUnreadChatCount(true)
         UIApplication.shared.applicationIconBadgeNumber = count
-        let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+        let defaults = UserDefaults(suiteName: Constant.sharedinstance.AppGroupID)
         defaults?.set(count, forKey: "BadgeCount")
     }
     
