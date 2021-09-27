@@ -66,16 +66,16 @@ class PrivacyViewController: UIViewController {
     }
     @IBAction func profileInfo(_ sender: UIButton) {
         
-        if sender.tag == 0
-        {
-            moveToOptionsVC("Last Seen")
-        }
-        else if sender.tag == 1{
-            moveToOptionsVC("Profile")
-        }
-        else if sender.tag == 2{
-            moveToOptionsVC("Status")
-        }
+//        if sender.tag == 0
+//        {
+//            moveToOptionsVC("Last Seen")
+//        }
+//        else if sender.tag == 1{
+//            moveToOptionsVC("Profile")
+//        }
+//        else if sender.tag == 2{
+//            moveToOptionsVC("Status")
+//        }
     }
     
     func loadData(){

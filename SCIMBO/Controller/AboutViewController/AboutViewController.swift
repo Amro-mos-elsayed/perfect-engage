@@ -27,7 +27,7 @@ class AboutViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let nibName = UINib(nibName: "AboutTableViewCell", bundle: nil)
         aboutTableView.register(nibName, forCellReuseIdentifier: "AboutTableViewCell")
         aboutTableView.tableFooterView = UIView()
-        optionsArray = [/*NSLocalizedString("FAQ", comment: "FAQ"),*/NSLocalizedString("Contact Us", comment: "Contact Us") , NSLocalizedString("System Status", comment: "System Status")/*,NSLocalizedString("Terms and Privacy Policy", comment: "Terms and Privacy Policy") */, NSLocalizedString("About", comment: "About")]
+        optionsArray = [/*NSLocalizedString("FAQ", comment: "FAQ"),*/NSLocalizedString("Contact Us", comment: "Contact Us") /*,NSLocalizedString("System Status", comment: "System Status"),NSLocalizedString("Terms and Privacy Policy", comment: "Terms and Privacy Policy") */, NSLocalizedString("About", comment: "About")]
         aboutTableView.estimatedRowHeight = 75
         // Do any additional setup after loading the view.
     }
@@ -44,7 +44,7 @@ class AboutViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.options_Lbl.text = optionsArray[indexPath.row] as? String
         if indexPath.row == 1
         {
-            cell.needHelp_Lbl.isHidden  = false
+            cell.needHelp_Lbl.isHidden  = true
         }
         else
         {
@@ -61,14 +61,14 @@ class AboutViewController: UIViewController,UITableViewDelegate,UITableViewDataS
 //        else if(indexPath.row == 3){
 //            UIApplication.shared.open(URL(string: SocketCreateRoomUrl + "/privacy-policy")!, options: [:], completionHandler: nil)
 //        }
-        if(indexPath.row == 1){
+        if(indexPath.row == 2){
             let systemStatus = storyboard?.instantiateViewController(withIdentifier: "SystemStatusViewController") as! SystemStatusViewController
             self.pushView(systemStatus, animated: true)
         }else if(indexPath.row == 0){
             let contact = storyboard?.instantiateViewController(withIdentifier: "ContactUsViewController") as! ContactUsViewController
             
             self.pushView(contact, animated: true)
-        }else if(indexPath.row == 2){
+        }else if(indexPath.row == 1){
             let about = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
             self.pushView(about, animated: true)
         }

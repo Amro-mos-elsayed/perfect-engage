@@ -65,9 +65,16 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func changeArray(){
         //let web = NSLocalizedString("Web/Desktop", comment: "oo")
-        starredMess_Arry = [NSLocalizedString("Starred Messages", comment: "note"),NSLocalizedString("Account", comment: "note") ,NSLocalizedString("Chats", comment: "note"), NSLocalizedString("Notifications", comment: "note"),NSLocalizedString("Data Usage", comment: "note"),NSLocalizedString("Email Settings", comment: "note"),NSLocalizedString("About and Help", comment: "note")]//,NSLocalizedString("Tell a Friend", comment: "note")]//"Web Logout"
+        starredMess_Arry = [NSLocalizedString("Starred Messages", comment: "note"),
+                            NSLocalizedString("Privacy", comment: "note"),
+                            NSLocalizedString("Chats", comment: "note"),
+                            NSLocalizedString("Notifications", comment: "note"),
+                            NSLocalizedString("Data Usage", comment: "note"),
+                            NSLocalizedString("Email Settings", comment: "note"),
+                            NSLocalizedString("About and Help", comment: "note"),
+                            NSLocalizedString("Log out", comment: "note")]//,NSLocalizedString("Tell a Friend", comment: "note")]//"Web Logout"
         
-        starredImag_Arry = ["star","account","chats","notification","datausage","mail","about"]//,"tellafriend"]//,"logout"
+        starredImag_Arry = ["star","account","chats","notification","datausage","mail","about","logout",]//,"tellafriend"]//,"logout"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -210,8 +217,8 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
             }
             else if indexPath.row == 1{
                 
-                let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
-                self.pushView(accountVC, animated: true)
+                let  privacyVC = storyboard?.instantiateViewController(withIdentifier: "PrivacyViewController") as! PrivacyViewController
+                self.pushView(privacyVC, animated: true)
             }
             else if indexPath.row == 2
             {
@@ -239,7 +246,7 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.pushView(aboutVC, animated: true)
             }
             else if indexPath.row == 7{
-                OpenactionSheet()
+                logout()
             }
                 
 //            else if indexPath.row == 9{
@@ -257,88 +264,17 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         
     }
     
-    func OpenactionSheet()
-    {
+    func logout() {
         let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        var index:Int!
-        
-        let MailAction: UIAlertAction = UIAlertAction(title: "Mail", style: .default) { action -> Void in
-            index = 0
-            self.PresentSheet(index:index)
+        let Logout: UIAlertAction = UIAlertAction(title: NSLocalizedString("Log out", comment: "comment"), style: .default) { action -> Void in
             
+            (UIApplication.shared.delegate as! AppDelegate).Logout()
         }
-        let MessageAction: UIAlertAction = UIAlertAction(title: "Message", style: .default) { action -> Void in
-            index = 1
-            
-            self.PresentSheet(index:index)
-            
+        let CancelAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel) { action -> Void in
         }
-        let TwitterAction: UIAlertAction = UIAlertAction(title: "Twitter", style: .default) { action -> Void in
-            index = 2
-            self.PresentSheet(index:index)
-            
-        }
-        let FacebookAction: UIAlertAction = UIAlertAction(title: "Facebook", style: .default) { action -> Void in
-            index = 3
-            self.PresentSheet(index:index)
-            
-        }
-        let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
-            index = 0
-            
-        }
-        sheet_action.addAction(MailAction)
-        sheet_action.addAction(MessageAction)
-        sheet_action.addAction(TwitterAction)
-        sheet_action.addAction(FacebookAction)
+        sheet_action.addAction(Logout)
         sheet_action.addAction(CancelAction)
         self.presentView(sheet_action, animated: true, completion: nil)
-        
-    }
-    
-    func PresentSheet(index:Int)
-        
-    {
-        if(index == 0)
-        {
-            if !MFMailComposeViewController.canSendMail() {
-                self.view.makeToast(message: "Please login to a mail account to share", duration: 3, position: HRToastActivityPositionDefault)
-                return
-            }
-            else
-            {
-                let composeVC = MFMailComposeViewController()
-                composeVC.mailComposeDelegate = self
-                // Configure the fields of the interface.
-                composeVC.setSubject(Constant.sharedinstance.Subtext)
-                composeVC.setMessageBody(Constant.sharedinstance.ShareText, isHTML: false)
-                // Present the view controller modally.
-                self.presentView(composeVC, animated: true)
-            }
-        }
-        if(index == 1)
-        {
-            
-            if (MFMessageComposeViewController.canSendText()) {
-                let controller = MFMessageComposeViewController()
-                controller.body = Constant.sharedinstance.ShareText
-                controller.recipients = []
-                controller.messageComposeDelegate = self
-                self.presentView(controller, animated: true)
-            }
-            else
-            {
-                self.view.makeToast(message: "Message service not available", duration: 3, position: HRToastActivityPositionDefault)
-            }
-        }
-        if(index == 2)
-        {
-            Themes.sharedInstance.shareOnTwitter()
-        }
-        if(index == 3)
-        {
-            Themes.sharedInstance.shareOnFacebook()
-        }
     }
     
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
