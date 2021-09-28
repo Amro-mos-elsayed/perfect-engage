@@ -603,14 +603,14 @@
         emitEvent(Constant.sharedinstance.sc_mute_status, param)
     }
     
-    func changeName(name:String,from:String,email: String){
+    func changeName(name:String,from:String,email: String,showNumber:Bool? = false){
         if (socket.status == .notConnected)
         {
             
         }
         else
         {
-            let param = ["name":name.decoded,"from":from,"email":email];
+            let param = ["name":name.decoded,"from":from,"email":email,"showNumber":showNumber!] as [String : Any];
             emitEvent(Constant.sharedinstance.sc_changeName, param)
         }
     }
@@ -3379,9 +3379,10 @@
                     if(user_ID == Themes.sharedInstance.Getuser_id())
                     {
                         let name = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "name"))
+                        let isShowNumber = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "showNumber"))
                         let CheckUser:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.User_detail, attribute: "user_id", FetchString:user_ID as String?)
                         if (CheckUser){
-                            let UpdateDic:[String:Any]=["name": name]
+                            let UpdateDic:[String:Any]=["name": name,"showNumber": isShowNumber]
                             DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail , FetchString:user_ID, attribute:"user_id", UpdationElements: UpdateDic as NSDictionary?)
                         }
                         if(self.Delegate?.statusUpdated?(_Updated: "CHECK") != nil)

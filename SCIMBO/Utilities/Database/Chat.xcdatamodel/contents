@@ -383,6 +383,7 @@
         <attribute name="serverDiff" optional="YES" attributeType="String"/>
         <attribute name="serverTime" optional="YES" attributeType="String"/>
         <attribute name="show_status" optional="YES" attributeType="String"/>
+        <attribute name="showNumber" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="status" optional="YES" attributeType="String"/>
         <attribute name="status_except" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
         <attribute name="status_only_with" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
@@ -420,6 +421,6 @@
         <element name="Status_one_one" positionX="171" positionY="270" width="128" height="524"/>
         <element name="Status_Upload_Details" positionX="180" positionY="279" width="128" height="435"/>
         <element name="Upload_Details" positionX="-9" positionY="36" width="128" height="435"/>
-        <element name="User_detail" positionX="0" positionY="45" width="128" height="404"/>
+        <element name="User_detail" positionX="0" positionY="45" width="128" height="419"/>
     </elements>
 </model>

@@ -18,7 +18,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var imageView_Detail: UIImageView!
     @IBOutlet weak var imageShow_View: UIView!
-    
+    @IBOutlet weak var switchControl: UISwitch!
     @IBOutlet weak var nameCount_Lbl: UILabel!
     @IBOutlet weak var statusBtn: UIButton!
     @IBOutlet weak var phoneLbl: UILabel!
@@ -58,6 +58,17 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         profileImg_Btn.layer.borderColor = UIColor.lightGray.cgColor
         doneBtn.isHidden = true
     }
+    
+    @IBAction func switchButtonChanged(_ sender: UISwitch) {
+        if let user = Themes.sharedInstance.GetuserDetails() {
+            let id = Themes.sharedInstance.Getuser_id()
+            let name = user.name ?? ""
+            let email = user.email ?? ""
+            let showNumber = switchControl.isOn
+            SocketIOManager.sharedInstance.changeName(name: name, from:id , email: email,showNumber: showNumber)
+        }
+    }
+    
     func setBorderColor()
     {
         let borderBottom = CALayer()
@@ -98,29 +109,33 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
     
     
     func setUserDetails(){
-        phoneLbl.text = " " + Themes.sharedInstance.setPhoneTxt(Themes.sharedInstance.Getuser_id())
         
-        nameTxt.text = Themes.sharedInstance.setNameTxt(Themes.sharedInstance.Getuser_id(), "")
-        
-        profileImg_Btn.setProfilePic(Themes.sharedInstance.Getuser_id(), "single")
-        
-        let status = Themes.sharedInstance.setStatusTxt(Themes.sharedInstance.Getuser_id())
-        var lang = Locale.preferredLanguages[0].substring(to: 2)
-        if lang == "ar"{
-            statusBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
-        }else{
-               statusBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
-        }
-        
-        if  status != ""{
+        if let user = Themes.sharedInstance.GetuserDetails() {
+            phoneLbl.text = " " + (user.mobilenumber ?? "")
+            nameTxt.text = user.name ?? "You"
+            profileImg_Btn.setProfilePic(Themes.sharedInstance.Getuser_id(), "single")
+            emailAddressLbl.text = user.email ?? ""
+            let isShowNumber = user.showNumber
+            switchControl.setOn(isShowNumber, animated: false)
             
-            statusBtn.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 10, bottom: 0.0, right: 0.0)
-            statusBtn.setTitle(status, for: UIControl.State.normal)
-        }
-        else
-        {
-            statusBtn.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 10, bottom: 0.0, right: 0.0)
-            statusBtn.setTitle(NSLocalizedString("Hey there! I am using", comment: "test")  + " " + Themes.sharedInstance.GetAppname(), for: UIControl.State.normal)
+            let status = user.status ?? ""
+            var lang = Locale.preferredLanguages[0].substring(to: 2)
+            if lang == "ar"{
+                statusBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
+            }else{
+                statusBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+            }
+            
+            if  status != ""{
+                
+                statusBtn.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 10, bottom: 0.0, right: 0.0)
+                statusBtn.setTitle(status, for: UIControl.State.normal)
+            }
+            else
+            {
+                statusBtn.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 10, bottom: 0.0, right: 0.0)
+                statusBtn.setTitle(NSLocalizedString("Hey there! I am using", comment: "test")  + " " + Themes.sharedInstance.GetAppname(), for: UIControl.State.normal)
+            }
         }
         
     }
@@ -459,10 +474,14 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         nameTxt.resignFirstResponder()
         
         if doneBtn.titleLabel?.text == "Done"{
+            
             if nameTxt.text?.trimmingCharacters(in: .whitespaces).isEmpty == false{
                 Themes.sharedInstance.activityView(View: self.view)
                 SocketIOManager.sharedInstance.Delegate = self
-                SocketIOManager.sharedInstance.changeName(name: nameTxt.text! , from: Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.Getuser_id()), email: "")
+                guard let user = Themes.sharedInstance.GetuserDetails() else {
+                    return
+                }
+                SocketIOManager.sharedInstance.changeName(name: nameTxt.text! , from: Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.Getuser_id()), email: user.email ?? "")
                 
             }else{
                 Themes.sharedInstance.ShowNotification("Name field cannot be empty", false)

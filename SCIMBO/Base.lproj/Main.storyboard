@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -4313,11 +4314,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+917896321546" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeR-df-Nkw">
-                                                        <rect key="frame" x="0.0" y="149" width="320" height="42"/>
+                                                        <rect key="frame" x="0.0" y="149" width="250" height="42"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="42" id="2GP-FC-BSy"/>
-                                                            <constraint firstAttribute="width" constant="320" id="rNc-8c-L3S"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                         <color key="textColor" red="0.18209505079999999" green="0.22354599829999999" blue="0.29894363880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4345,12 +4345,31 @@
                                                         <color key="textColor" red="0.18209505079999999" green="0.22354599829999999" blue="0.29894363880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRW-Am-yfC">
+                                                        <rect key="frame" x="250" y="149" width="70" height="42"/>
+                                                        <subviews>
+                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0RN-Hm-1Hn">
+                                                                <rect key="frame" x="10.5" y="5.5" width="51" height="31"/>
+                                                                <color key="onTintColor" name="themeColor"/>
+                                                                <connections>
+                                                                    <action selector="switchButtonChanged:" destination="aAe-1L-GC0" eventType="valueChanged" id="adJ-tC-GqC"/>
+                                                                </connections>
+                                                            </switch>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="0RN-Hm-1Hn" firstAttribute="centerX" secondItem="LRW-Am-yfC" secondAttribute="centerX" id="LME-bg-4MN"/>
+                                                            <constraint firstAttribute="width" constant="70" id="Z9B-m1-oui"/>
+                                                            <constraint firstItem="0RN-Hm-1Hn" firstAttribute="centerY" secondItem="LRW-Am-yfC" secondAttribute="centerY" id="haU-pq-8Wh"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.958909452" green="0.95963555570000003" blue="0.95902186629999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="296" id="3xv-o2-idI"/>
                                                     <constraint firstItem="axt-QK-U2Y" firstAttribute="top" secondItem="bVY-XT-Zd2" secondAttribute="bottom" constant="7" id="5BK-Uy-oVi"/>
                                                     <constraint firstItem="bVY-XT-Zd2" firstAttribute="leading" secondItem="sBp-E9-oJF" secondAttribute="leading" id="75m-2v-aLL"/>
+                                                    <constraint firstItem="LRW-Am-yfC" firstAttribute="bottom" secondItem="JeR-df-Nkw" secondAttribute="bottom" id="7Zl-KJ-KPR"/>
                                                     <constraint firstItem="WWo-bM-cGP" firstAttribute="top" secondItem="JeR-df-Nkw" secondAttribute="bottom" constant="28" id="AM6-bC-12E"/>
                                                     <constraint firstItem="bVY-XT-Zd2" firstAttribute="top" secondItem="sBp-E9-oJF" secondAttribute="top" constant="28" id="BGu-k0-D9v"/>
                                                     <constraint firstItem="t8x-E9-cbG" firstAttribute="top" secondItem="bVY-XT-Zd2" secondAttribute="bottom" constant="8" id="Bjl-Hq-emH"/>
@@ -4361,6 +4380,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="zJ4-4B-sIR" secondAttribute="trailing" id="HGt-cl-iTa"/>
                                                     <constraint firstAttribute="trailing" secondItem="axt-QK-U2Y" secondAttribute="trailing" constant="35" id="Kbf-cU-aY4"/>
                                                     <constraint firstItem="zJ4-4B-sIR" firstAttribute="top" secondItem="cwP-KA-6Ic" secondAttribute="bottom" constant="40" id="RgP-Jc-EgZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LRW-Am-yfC" secondAttribute="trailing" id="SCD-YU-ZAi"/>
                                                     <constraint firstItem="t8x-E9-cbG" firstAttribute="leading" secondItem="sBp-E9-oJF" secondAttribute="leading" id="URt-zK-puk"/>
                                                     <constraint firstAttribute="trailing" secondItem="t8x-E9-cbG" secondAttribute="trailing" id="VQa-GA-PZe"/>
                                                     <constraint firstAttribute="trailing" secondItem="bVY-XT-Zd2" secondAttribute="trailing" id="YbP-Ni-UPA"/>
@@ -4368,12 +4388,13 @@
                                                     <constraint firstItem="zJ4-4B-sIR" firstAttribute="leading" secondItem="sBp-E9-oJF" secondAttribute="leading" id="cAW-HP-5y5"/>
                                                     <constraint firstAttribute="trailing" secondItem="WWo-bM-cGP" secondAttribute="trailing" id="d0Z-WH-eNA"/>
                                                     <constraint firstItem="TXJ-X6-Y4o" firstAttribute="leading" secondItem="sBp-E9-oJF" secondAttribute="leading" id="dzv-mn-IPO"/>
-                                                    <constraint firstAttribute="trailing" secondItem="JeR-df-Nkw" secondAttribute="trailing" id="fCf-0f-XUn"/>
                                                     <constraint firstItem="cwP-KA-6Ic" firstAttribute="top" secondItem="bVY-XT-Zd2" secondAttribute="bottom" constant="19" id="gdb-PZ-sdo"/>
                                                     <constraint firstAttribute="trailing" secondItem="cwP-KA-6Ic" secondAttribute="trailing" constant="10" id="jvz-u6-xf9"/>
+                                                    <constraint firstItem="LRW-Am-yfC" firstAttribute="top" secondItem="JeR-df-Nkw" secondAttribute="top" id="kyC-5j-xYW"/>
                                                     <constraint firstItem="TXJ-X6-Y4o" firstAttribute="top" secondItem="WWo-bM-cGP" secondAttribute="bottom" constant="6" id="lQ9-dR-zq1"/>
                                                     <constraint firstItem="axt-QK-U2Y" firstAttribute="leading" secondItem="sBp-E9-oJF" secondAttribute="leading" id="nKU-ym-kUu"/>
                                                     <constraint firstItem="TXJ-X6-Y4o" firstAttribute="top" secondItem="WWo-bM-cGP" secondAttribute="bottom" constant="6" id="whw-f5-mJG"/>
+                                                    <constraint firstItem="LRW-Am-yfC" firstAttribute="leading" secondItem="JeR-df-Nkw" secondAttribute="trailing" id="xTu-px-IcF"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -4430,6 +4451,7 @@
                         <outlet property="profileImg" destination="kUU-TG-Gbb" id="I8d-Vm-dpY"/>
                         <outlet property="profileImg_Btn" destination="YXs-Og-6WS" id="bCS-qS-Qb1"/>
                         <outlet property="statusBtn" destination="axt-QK-U2Y" id="1UY-yb-MKs"/>
+                        <outlet property="switchControl" destination="0RN-Hm-1Hn" id="2VA-iA-PzH"/>
                         <outlet property="topViewHeightConstraint" destination="OeQ-La-f5a" id="R2H-Bu-A9G"/>
                     </connections>
                 </viewController>
@@ -5364,7 +5386,7 @@
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-nJ-PCG">
-                                        <rect key="frame" x="63" y="21" width="204" height="24"/>
+                                        <rect key="frame" x="63" y="21" width="204" height="23.5"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -12588,6 +12610,9 @@
         </systemColor>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

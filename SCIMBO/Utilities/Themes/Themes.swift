@@ -3166,6 +3166,22 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             WithFlag.image = UIImage(named: "\(bundle)\("SA")\(".png")", in:Bundle (for: type(of: self)), compatibleWith: nil)!
         }
     }
+    
+    func GetuserDetails() -> User_detail?
+    {
+        
+        var ManagedObj = NSManagedObject()
+        let USerArr:NSArray = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.User_detail, attribute: nil, FetchString: nil, SortDescriptor: nil) as! NSArray
+        if(USerArr.count > 0)
+        {
+            for i in 0..<USerArr.count
+            {
+                ManagedObj=USerArr[i] as! NSManagedObject
+                
+            }
+        }
+        return ManagedObj as? User_detail
+    }
 }
 
 

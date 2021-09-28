@@ -114,7 +114,9 @@ class ProfileInfoViewController: UIViewController,UIImagePickerControllerDelegat
     
     func UpdateUserInfo(name:String,imagedata:String,base64data:String, email: String)
     {
-        
+        guard let user = Themes.sharedInstance.GetuserDetails() else {
+            return
+        }
         SocketIOManager.sharedInstance.changeName(name: Themes.sharedInstance.CheckNullvalue(Passed_value: name), from: Themes.sharedInstance.Getuser_id(), email: Themes.sharedInstance.CheckNullvalue(Passed_value: email))
         
         let updateDict=["name":Themes.sharedInstance.CheckNullvalue(Passed_value: name), "email":Themes.sharedInstance.CheckNullvalue(Passed_value: email)]

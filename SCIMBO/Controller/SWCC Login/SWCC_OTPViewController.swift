@@ -174,10 +174,22 @@ class SWCC_OTPViewController: UIViewController {
                     Themes.sharedInstance.savesecurityToken(DeviceToken: "")
 
                     let token = Themes.sharedInstance.CheckNullvalue(Passed_value: result["token"])
+                    let isShowNumber = Themes.sharedInstance.CheckNullvalue(Passed_value: result["showNumber"])
                     KeychainService.removePassword()
                     KeychainService.savePassword(service: user_id, data: token)
                     Themes.sharedInstance.savesecurityToken(DeviceToken: token)
-                    self.DetailDic=["user_id":user_id,"status":self.status,"mobilenumber":self.mssidn_No,"name":self.Name,"profilepic":self.imageUrl,"current_call_status":"0","call_id":"","wallpaper_type" : "default", "wallpaper" : "", "status_privacy" : "0", "otp" : Themes.sharedInstance.CheckNullvalue(Passed_value: self.otpString)]
+                    self.DetailDic=["user_id":user_id,
+                                    "status":self.status,
+                                    "mobilenumber":self.mssidn_No,
+                                    "name":self.Name,
+                                    "profilepic":self.imageUrl,
+                                    "current_call_status":"0",
+                                    "call_id":"",
+                                    "wallpaper_type" : "default",
+                                    "wallpaper" : "",
+                                    "status_privacy" : "0",
+                                    "showNumber" : isShowNumber,
+                                    "otp" : Themes.sharedInstance.CheckNullvalue(Passed_value: self.otpString)]
 
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict:  self.DetailDic , Entityname: Constant.sharedinstance.User_detail)
                     
@@ -228,9 +240,7 @@ class SWCC_OTPViewController: UIViewController {
         }
         else
         {
-            let resendAfter =
-            
-                timeLabel = "\("Resend".localized()) \("After".localized()) \(Int(seconds)) \("sec".localized())"
+            timeLabel = "\("Resend".localized()) \("After".localized()) \(Int(seconds)) \("sec".localized())"
         }
         seconds -= 1
     }
