@@ -117,7 +117,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
 //        {
 //            section3Arr = ["Share Contact","Export Chat","Clear Chat","Block this Contact"]
 //        }
-        section3Arr = ["Share Contact","Export Chat","Clear Chat","Block this Contact"]
+        section3Arr = ["Share Contact","Clear Chat"]
 
         if(GroupRecordArr.count == 0)
         {
@@ -662,8 +662,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
                 }
                 if indexPath.row == section3Arr.count-1
                 {
-                    let TitleStr = Themes.sharedInstance.checkBlock(id: self.user_id) ? "Unblock Contact" : "Block Contact"
-                    cell.propertyTitle_Lbl.text = TitleStr
+                    cell.propertyTitle_Lbl.text = section3Arr[indexPath.row]
                     cell.subDesc_Lbl.isHidden = true
                     cell.rightArrow_ImgView.isHidden = true
                     cell.propertyTitle_Lbl.textColor = UIColor.red
@@ -895,7 +894,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
                 }
                 if indexPath.row == 3{
                     let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.user_id
-                    Themes.sharedInstance.savetoCameraRollUpdate(user_common_id)
+                    //Themes.sharedInstance.savetoCameraRollUpdate(user_common_id)
                 }
             }
             var index:Int = 0
@@ -948,14 +947,16 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
                 }
                 
                 if indexPath.row == section3Arr.count-2{
-                    self.clearchat()
+                    //self.clearchat()
                 }
                 
                 if indexPath.row == section3Arr.count-1{
-                    blockchat()
+                    //blockchat()
+                    self.clearchat()
                 }
             }
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     func movetosecretchat()
     {

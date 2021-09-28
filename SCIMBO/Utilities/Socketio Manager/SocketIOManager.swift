@@ -1656,15 +1656,15 @@
             let data = self.returnDataFromEncryption(data)
             let message = data["msg"] as? String
             if let obj =  data.object(forKey: "obj") as? [String: Any], let isDeleted = obj["isDeleted"] as? String, isDeleted == "1"{
-                
-                let alertview = JSSAlertView().show(
-                    (AppDelegate.sharedInstance.navigationController?.topViewController)!,
-                    title: Themes.sharedInstance.GetAppname(),
-                    text: message,
-                    buttonText: "Ok".localized(),
-                    cancelButtonText: nil
-                )
-                alertview.addAction(self.LogOut)
+                self.LogOut()
+//                _ = JSSAlertView().show(
+//                    (AppDelegate.sharedInstance.navigationController?.topViewController)!,
+//                    title: Themes.sharedInstance.GetAppname(),
+//                    text: message,
+//                    buttonText: "Ok".localized(),
+//                    cancelButtonText: nil
+//                )
+                //alertview.addAction(self.LogOut)
                 
             }
         }

@@ -5166,6 +5166,7 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PG2-RS-aSI">
                                         <rect key="frame" x="92" y="32" width="128" height="32"/>
+                                        <color key="backgroundColor" red="0.10501661625160817" green="0.45567860327270726" blue="0.8200908899307251" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <segments>
                                             <segment title="All"/>
                                             <segment title="Missed"/>
@@ -5306,7 +5307,7 @@
                                             <constraint firstAttribute="width" constant="55" id="sfl-R3-y4x"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="5" minY="35" maxX="22" maxY="10"/>
-                                        <state key="normal" title="Back" image="goarr_white">
+                                        <state key="normal" image="goarr_white">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -5348,23 +5349,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFP-qH-PDK">
                                 <rect key="frame" x="0.0" y="77" width="320" height="65"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p6l-D0-F2n">
-                                        <rect key="frame" x="8" y="12" width="50" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p6l-D0-F2n">
+                                        <rect key="frame" x="8" y="7" width="51" height="51"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nze-9q-ZIG">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nze-9q-ZIG">
+                                                <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
                                             </imageView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Nze-9q-ZIG" secondAttribute="bottom" id="5Vq-wJ-lQf"/>
+                                            <constraint firstItem="Nze-9q-ZIG" firstAttribute="top" secondItem="p6l-D0-F2n" secondAttribute="top" id="qFE-yW-DU2"/>
+                                            <constraint firstAttribute="width" secondItem="p6l-D0-F2n" secondAttribute="height" multiplier="1:1" id="s3c-3L-FNM"/>
+                                            <constraint firstItem="Nze-9q-ZIG" firstAttribute="leading" secondItem="p6l-D0-F2n" secondAttribute="leading" id="w4T-cZ-2ha"/>
+                                        </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-nJ-PCG">
-                                        <rect key="frame" x="62" y="22" width="195" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ck-nJ-PCG">
+                                        <rect key="frame" x="63" y="21" width="204" height="24"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-od-wig">
-                                        <rect key="frame" x="266" y="11" width="46" height="41"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJQ-od-wig">
+                                        <rect key="frame" x="271" y="11" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SJQ-od-wig" secondAttribute="height" multiplier="1:1" id="2ck-3T-EiY"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
                                         <state key="normal" image="call_icon"/>
                                         <connections>
@@ -5374,7 +5382,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SJQ-od-wig" secondAttribute="trailing" constant="8" id="0Pz-QL-eUM"/>
+                                    <constraint firstItem="1Ck-nJ-PCG" firstAttribute="leading" secondItem="p6l-D0-F2n" secondAttribute="trailing" constant="4" id="353-hc-UyF"/>
+                                    <constraint firstItem="1Ck-nJ-PCG" firstAttribute="centerY" secondItem="MFP-qH-PDK" secondAttribute="centerY" id="ENS-Qs-Zd0"/>
                                     <constraint firstAttribute="height" constant="65" id="Gup-oG-a2u"/>
+                                    <constraint firstAttribute="bottom" secondItem="p6l-D0-F2n" secondAttribute="bottom" constant="7" id="KKq-ZU-Nrr"/>
+                                    <constraint firstItem="SJQ-od-wig" firstAttribute="leading" secondItem="1Ck-nJ-PCG" secondAttribute="trailing" constant="4" id="Vah-41-rpZ"/>
+                                    <constraint firstItem="SJQ-od-wig" firstAttribute="top" secondItem="MFP-qH-PDK" secondAttribute="top" constant="11" id="Z3E-eH-v3E"/>
+                                    <constraint firstAttribute="bottom" secondItem="SJQ-od-wig" secondAttribute="bottom" constant="13" id="cwo-0n-W8T"/>
+                                    <constraint firstItem="p6l-D0-F2n" firstAttribute="top" secondItem="MFP-qH-PDK" secondAttribute="top" constant="7" id="iAf-2c-taJ"/>
+                                    <constraint firstItem="p6l-D0-F2n" firstAttribute="leading" secondItem="MFP-qH-PDK" secondAttribute="leading" constant="8" id="s7o-7M-Qkm"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -9305,7 +9322,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or6-XP-diO">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="or6-XP-diO">
                                         <rect key="frame" x="283" y="38" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="4KP-89-nxD"/>

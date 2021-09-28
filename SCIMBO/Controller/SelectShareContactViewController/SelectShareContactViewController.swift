@@ -298,6 +298,25 @@ class SelectShareContactViewController: UIViewController,UITableViewDelegate,UIT
             
             
         }
+        
+        for item in ChatPrerecordArr {
+            if let item = item as? Chatpreloadrecord {
+                if item.opponentid == contactID{
+                    ChatPrerecordArr.remove(item)
+                    break // very important
+                }
+            }
+        }
+        
+        for item in countSortArr {
+            if let item = item as? Chatpreloadrecord {
+                if item.opponentid == contactID{
+                    countSortArr.remove(item)
+                    break // very important
+                }
+            }
+        }
+        
         shareContact_TableView.reloadData()
     }
     
@@ -337,8 +356,11 @@ class SelectShareContactViewController: UIViewController,UITableViewDelegate,UIT
                 favRecord.type = "single"
                 
                 favRecord.status = Themes.sharedInstance.base64ToString(Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "status")))
-                if(favRecord.name == ""){
-                    SortedArr.add(favRecord)
+                
+                favRecord.contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "contact_id"))
+                
+                if(favRecord.contact_ID == contactID){
+                    //SortedArr.add(favRecord)
                 }else{
                     SortedArr.add(favRecord)
                 }
