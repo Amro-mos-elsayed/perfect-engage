@@ -98,6 +98,10 @@
 		7C35ED3726F0DCD3006BB3B4 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C42985426BFC18000D819C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42985226BFC18000D819C1 /* LoginViewController.swift */; };
 		7C5BE17826CA6ADD00FBDA66 /* AppDelegate+VOIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BE17726CA6ADD00FBDA66 /* AppDelegate+VOIP.swift */; };
+		7C6702F127033E36003D5724 /* FullLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6702EF27033E36003D5724 /* FullLoginViewController.swift */; };
+		7C6702F227033E36003D5724 /* FullLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6702F027033E36003D5724 /* FullLoginViewController.xib */; };
+		7C6702F527058F46003D5724 /* LoginTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6702F327058F46003D5724 /* LoginTypeViewController.swift */; };
+		7C6702F627058F46003D5724 /* LoginTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6702F427058F46003D5724 /* LoginTypeViewController.xib */; };
 		7CD1C55326C0014300650610 /* SWCC_OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55126C0014300650610 /* SWCC_OTPViewController.swift */; };
 		7CD1C55A26C0060E00650610 /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55726C0060E00650610 /* OTPFieldView.swift */; };
 		7CD1C55B26C0060E00650610 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55826C0060E00650610 /* OTPTextField.swift */; };
@@ -772,6 +776,10 @@
 		7C42985226BFC18000D819C1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C5BE17726CA6ADD00FBDA66 /* AppDelegate+VOIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+VOIP.swift"; sourceTree = "<group>"; };
 		7C5BE17926CA913000FBDA66 /* ARDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDConstants.h; sourceTree = "<group>"; };
+		7C6702EF27033E36003D5724 /* FullLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullLoginViewController.swift; sourceTree = "<group>"; };
+		7C6702F027033E36003D5724 /* FullLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullLoginViewController.xib; sourceTree = "<group>"; };
+		7C6702F327058F46003D5724 /* LoginTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTypeViewController.swift; sourceTree = "<group>"; };
+		7C6702F427058F46003D5724 /* LoginTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginTypeViewController.xib; sourceTree = "<group>"; };
 		7CD1C55126C0014300650610 /* SWCC_OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCC_OTPViewController.swift; sourceTree = "<group>"; };
 		7CD1C55626C0060E00650610 /* OTPFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPFieldView.h; sourceTree = "<group>"; };
 		7CD1C55726C0060E00650610 /* OTPFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPFieldView.swift; sourceTree = "<group>"; };
@@ -1891,6 +1899,17 @@
 			path = "SWCC Login";
 			sourceTree = "<group>";
 		};
+		7C6702EE27033DF2003D5724 /* PerfectEngage Login */ = {
+			isa = PBXGroup;
+			children = (
+				7C6702EF27033E36003D5724 /* FullLoginViewController.swift */,
+				7C6702F027033E36003D5724 /* FullLoginViewController.xib */,
+				7C6702F327058F46003D5724 /* LoginTypeViewController.swift */,
+				7C6702F427058F46003D5724 /* LoginTypeViewController.xib */,
+			);
+			path = "PerfectEngage Login";
+			sourceTree = "<group>";
+		};
 		7CD1C55526C0060E00650610 /* OTPFieldView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2420,6 +2439,7 @@
 		C5328A8B1E07E3EF000572F2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7C6702EE27033DF2003D5724 /* PerfectEngage Login */,
 				7C42985126BFC14900D819C1 /* SWCC Login */,
 				C527D8DE22D0ADEE001E3CF8 /* DeleteView */,
 				C5AD3E8122CB97B600867BB4 /* ConnectingView */,
@@ -4432,6 +4452,7 @@
 				C5EDF51820AF061D0075A3D3 /* DetailHeadertableViewCell.xib in Resources */,
 				C56141142110760100F1BBBD /* sha256.js in Resources */,
 				C51FFC4D1F8673BC002B6DB2 /* ic_settings_black_24dp.png in Resources */,
+				7C6702F227033E36003D5724 /* FullLoginViewController.xib in Resources */,
 				C5328AAB1E07E711000572F2 /* CallsTableViewCell.xib in Resources */,
 				C51FFC541F8673BC002B6DB2 /* iPhone6@2x.png in Resources */,
 				C38F75AF24F5AD9300EC2B3F /* MyStatusTableViewCell.xib in Resources */,
@@ -4506,6 +4527,7 @@
 				C54C05591E3B59A800E1BE7D /* chat_animation_white3.png in Resources */,
 				4391C7EF20FDBCAE00E10132 /* ReciveDocTableViewCell.xib in Resources */,
 				C54C058C1E3B5B1100E1BE7D /* Avenir-Next-LT-Pro-Bold_5182.ttf in Resources */,
+				7C6702F627058F46003D5724 /* LoginTypeViewController.xib in Resources */,
 				4391C7E820FDBCAE00E10132 /* DocTableViewCell.xib in Resources */,
 				C5F0BD25221D45D9002A0BE2 /* Norican-Regular.ttf in Resources */,
 				C54C05511E3B59A800E1BE7D /* anim2.png in Resources */,
@@ -4807,6 +4829,7 @@
 				C53D5CF3207D2C6C00002084 /* StatusDownloadHandler.swift in Sources */,
 				C57777FE206BD75500B8AE2F /* ExpandableLabel.swift in Sources */,
 				C5770B3B1E0A878500EA815D /* AccountTableViewCell.swift in Sources */,
+				7C6702F127033E36003D5724 /* FullLoginViewController.swift in Sources */,
 				C5328AAA1E07E711000572F2 /* CallsTableViewCell.swift in Sources */,
 				C501C3C52077CC94009AF914 /* GroupChatTableViewCell.swift in Sources */,
 				C50B1FE32078031600F76AEC /* NSTimeInterval+Util.swift in Sources */,
@@ -4859,6 +4882,7 @@
 				C51FFC371F8673BC002B6DB2 /* ARDRegisterResponse.m in Sources */,
 				436C60F52073CAD80048FC47 /* AssetManager.swift in Sources */,
 				C54C05751E3B59A800E1BE7D /* UUAVAudioPlayer.m in Sources */,
+				7C6702F527058F46003D5724 /* LoginTypeViewController.swift in Sources */,
 				4379D79920750DCE00562351 /* StatusPrivacySettingViewController.swift in Sources */,
 				C50B1FDA2078031600F76AEC /* AutoLayout.swift in Sources */,
 				C58F5F351F136FB200D73E76 /* DocViewController.swift in Sources */,

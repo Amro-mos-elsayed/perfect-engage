@@ -110,7 +110,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         self.MovetoRooVC()
-       // moveTO_SWCC_Login()
         
         Themes.sharedInstance.getCurrentLocationCountryCode()
         self.pushRegistrySetup()
@@ -1348,17 +1347,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         SocketIOManager.sharedInstance.EmitCallRetry(param: callRetryDict as! [String : Any])
     }
     
-    func moveTO_SWCC_Login() {
-        
-        let vc = LoginViewController.init()
-        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        navigationController = mainStoryBoard.instantiateViewController(withIdentifier: "RootNavControllerID") as? RootNavController
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.viewControllers = [vc]
-        var CheckLogin = false
-        self.window?.rootViewController = navigationController
-    }
-    
     func MovetoRooVC()
     {
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -1407,8 +1395,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         else
         {
-            //let signinVC = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVCID") as! LoginVC
-            let signinVC = LoginViewController.init()
+            let signinVC = LoginTypeViewController.init()
             navigationController?.viewControllers = [signinVC]
             self.window!.rootViewController = navigationController
         }

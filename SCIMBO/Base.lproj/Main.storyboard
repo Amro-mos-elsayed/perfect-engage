@@ -12023,15 +12023,10 @@
                     </view>
                     <connections>
                         <outlet property="BottomViewBottom" destination="2Po-nE-nuq" id="VU6-9r-gcr"/>
-                        <outlet property="CancelButton" destination="RoO-CD-G88" id="Jds-4k-hVW"/>
                         <outlet property="CancelView" destination="IAo-Th-eV6" id="ekW-mx-BRA"/>
                         <outlet property="CountryCode" destination="Wrm-lG-D0J" id="dv1-Bp-BM7"/>
                         <outlet property="CountryFlag" destination="85R-KR-LVS" id="94V-dk-0aA"/>
                         <outlet property="HeaderBarHeight" destination="HYN-Jl-iGe" id="FHv-lB-Hcj"/>
-                        <outlet property="HeaderLabel" destination="4gh-Uo-MIR" id="7Ep-cx-xo2"/>
-                        <outlet property="HeaderView" destination="kpu-I0-fKi" id="5Xf-qD-VAz"/>
-                        <outlet property="InstructionLabel" destination="lWk-IV-WeY" id="QOc-pG-myQ"/>
-                        <outlet property="MobileNumberView" destination="6Qo-rS-Ejg" id="bgO-eq-SGJ"/>
                         <outlet property="MobileTextField" destination="1Nn-fx-2bc" id="oKw-l6-pao"/>
                         <outlet property="NextButton" destination="Lal-b7-Wdb" id="Hio-l7-GRt"/>
                         <outlet property="NextView" destination="D3W-Qf-jb7" id="Ny6-Xe-4PA"/>
@@ -12603,7 +12598,7 @@
         <image name="videocallattend" width="75" height="76"/>
         <image name="zoomedLogo" width="151" height="225"/>
         <namedColor name="themeColor">
-            <color red="0.019607843137254902" green="0.39215686274509803" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
