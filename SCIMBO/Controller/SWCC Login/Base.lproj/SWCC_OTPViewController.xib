@@ -30,19 +30,19 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="441"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-TE-e2T">
-                    <rect key="frame" x="0.0" y="522" width="414" height="340"/>
+                    <rect key="frame" x="0.0" y="588.5" width="414" height="273.5"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLu-G3-r57">
-                            <rect key="frame" x="0.0" y="15" width="414" height="51.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLu-G3-r57">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="51.5" id="ciI-Qk-KbP"/>
+                                <constraint firstAttribute="height" id="ciI-Qk-KbP"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                             <color key="textColor" name="themeColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXX-F5-lx3">
-                            <rect key="frame" x="20" y="290" width="374" height="50"/>
+                            <rect key="frame" x="20" y="223.5" width="374" height="50"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="7mj-2J-uld"/>
@@ -56,7 +56,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gI-Th-exX">
-                            <rect key="frame" x="20" y="225" width="374" height="50"/>
+                            <rect key="frame" x="20" y="158.5" width="374" height="50"/>
                             <color key="backgroundColor" name="themeColor"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="vz4-WI-loU"/>
@@ -70,13 +70,13 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMU-z4-1vo" customClass="OTPFieldView" customModule="Raad" customModuleProvider="target">
-                            <rect key="frame" x="20" y="145" width="374" height="70"/>
+                            <rect key="frame" x="20" y="78.5" width="374" height="70"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="vyA-vQ-3iX"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter your OTP code which sent to your Mobile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIw-Ku-qt0">
-                            <rect key="frame" x="20" y="86.5" width="374" height="38.5"/>
+                            <rect key="frame" x="20" y="20" width="374" height="38.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
@@ -90,16 +90,16 @@
                         <constraint firstItem="wMU-z4-1vo" firstAttribute="leading" secondItem="fmk-TE-e2T" secondAttribute="leading" constant="20" id="Bu8-AV-fNS"/>
                         <constraint firstAttribute="trailing" secondItem="YLu-G3-r57" secondAttribute="trailing" id="Ept-LB-8Xb"/>
                         <constraint firstItem="fIw-Ku-qt0" firstAttribute="leading" secondItem="fmk-TE-e2T" secondAttribute="leading" constant="20" id="GbC-3b-WEK"/>
+                        <constraint firstAttribute="height" constant="273.5" id="HqI-O0-Jid"/>
                         <constraint firstItem="wMU-z4-1vo" firstAttribute="top" secondItem="fIw-Ku-qt0" secondAttribute="bottom" constant="20" id="Rgj-4o-ULN"/>
                         <constraint firstItem="wMU-z4-1vo" firstAttribute="top" secondItem="YLu-G3-r57" secondAttribute="bottom" constant="78.5" id="U01-R8-ZkH"/>
                         <constraint firstItem="9gI-Th-exX" firstAttribute="leading" secondItem="fmk-TE-e2T" secondAttribute="leading" constant="20" id="UiW-H9-iFh"/>
                         <constraint firstItem="fIw-Ku-qt0" firstAttribute="top" secondItem="YLu-G3-r57" secondAttribute="bottom" constant="20" id="VvP-Zv-XhN"/>
-                        <constraint firstItem="YLu-G3-r57" firstAttribute="top" secondItem="fmk-TE-e2T" secondAttribute="top" constant="15" id="bzS-Hd-9Pt"/>
+                        <constraint firstItem="YLu-G3-r57" firstAttribute="top" secondItem="fmk-TE-e2T" secondAttribute="top" id="bzS-Hd-9Pt"/>
                         <constraint firstItem="mXX-F5-lx3" firstAttribute="leading" secondItem="fmk-TE-e2T" secondAttribute="leading" constant="20" id="eCI-N7-5ec"/>
                         <constraint firstAttribute="trailing" secondItem="mXX-F5-lx3" secondAttribute="trailing" constant="20" id="jgg-Z8-Rdl"/>
                         <constraint firstAttribute="bottom" secondItem="mXX-F5-lx3" secondAttribute="bottom" id="jny-v8-xNt"/>
                         <constraint firstItem="9gI-Th-exX" firstAttribute="top" secondItem="wMU-z4-1vo" secondAttribute="bottom" constant="10" id="oVk-AD-oiJ"/>
-                        <constraint firstAttribute="height" constant="340" id="pEA-WZ-2GD"/>
                         <constraint firstAttribute="trailing" secondItem="wMU-z4-1vo" secondAttribute="trailing" constant="20" id="u8T-oC-7IT"/>
                         <constraint firstAttribute="trailing" secondItem="9gI-Th-exX" secondAttribute="trailing" constant="20" id="xtI-Lw-5X4"/>
                     </constraints>
@@ -121,7 +121,7 @@
     <resources>
         <image name="login_bg" width="375" height="441"/>
         <namedColor name="themeColor">
-            <color red="0.019607843137254902" green="0.39215686274509803" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

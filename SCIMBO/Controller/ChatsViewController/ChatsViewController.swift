@@ -1983,70 +1983,18 @@
                     expansionSettings.fillOnTrigger = true;
                     expansionSettings.threshold = 1.1;
                     
-                    let color1 = CustomColor.sharedInstance.themeColor;
-                    let color2 = UIColor.lightGray;
-                    let color3 = UIColor.red;
+                    //let color1 = CustomColor.sharedInstance.themeColor;
+                    let color2 = UIColor.lightGray
                     
-                    let trash = `MGSwipeButton`(title:NSLocalizedString("Archive", comment: "Archive") ,icon: UIImage(named: "archive"), backgroundColor: color1, callback: { (cell) -> Bool in
-                        guard let indexPath = self.chats_Tblview.indexPath(for: cell) else{return true}
-                        cell.hideSwipe(animated: true)
-                        cell.refreshContentView()
-                        self.ExecuteArchiveChat(indexpath:indexPath)
-                        return false;
-                    });
-                    trash.centerIconOverText()
-                            // removeDeleteAction
-//                    let delete = MGSwipeButton(title: NSLocalizedString("Delete", comment:"Delete" ) ,icon: UIImage(named: "delete_white"), backgroundColor: color3, callback: { (cell) -> Bool in
+//                    let trash = `MGSwipeButton`(title:NSLocalizedString("Archive", comment: "Archive") ,icon: UIImage(named: "archive"), backgroundColor: color1, callback: { (cell) -> Bool in
 //                        guard let indexPath = self.chats_Tblview.indexPath(for: cell) else{return true}
-//
-//
 //                        cell.hideSwipe(animated: true)
 //                        cell.refreshContentView()
-//                        let chatpreloadRecord:Chatpreloadrecord = self.ChatPrerecordArr[indexPath.row] as! Chatpreloadrecord
-//                        let optionMenu = UIAlertController(title: nil, message: " Are you sure you want to delete the chat with \(chatpreloadRecord.opponentname)?", preferredStyle: .actionSheet)
-//                        var name = ""
-//                        if chatpreloadRecord.opponentname == "" {
-//                            name = chatpreloadRecord.oppopnentnumber
-//                        }else {
-//                            name = chatpreloadRecord.opponentname
-//                        }
-//                        let deleteStarredAction = UIAlertAction(title: "Delete for me and \(name)", style: .default, handler: {
-//                            (alert: UIAlertAction!) -> Void in
-//                            var timestamp  = ""
-//                            if chatpreloadRecord.opponentlastmessageDate != ""{
-//                                timestamp = chatpreloadRecord.opponentlastmessageDate
-//                            }else{
-//                                timestamp = "0"
-//                            }
-//                            Themes.sharedInstance.showDeleteView(self.view, true)
-//                            Themes.sharedInstance.executeDeleteHistory("1", chatpreloadRecord.opponentid, true, timestamp)
-//
-//                        })
-//                        let deleteMessageAction = UIAlertAction(title: "Delete just for me", style: .default, handler: {
-//                            (alert: UIAlertAction!) -> Void in
-//                            Themes.sharedInstance.showDeleteView(self.view, true)
-//                            var timestamp  = ""
-//                            if chatpreloadRecord.opponentlastmessageDate != ""{
-//                                timestamp = chatpreloadRecord.opponentlastmessageDate
-//                            }else{
-//                                timestamp = "0"
-//                            }
-//                            Themes.sharedInstance.executeDeleteHistory("0", chatpreloadRecord.opponentid, false, timestamp)
-//                        })
-//                        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-//                            (alert: UIAlertAction!) -> Void in
-//                        })
-//                        optionMenu.addAction(deleteStarredAction)
-//                        optionMenu.addAction(deleteMessageAction)
-//                        optionMenu.addAction(cancelAction)
-//                        self.searchController.dismissView(animated:true, completion:nil)
-//                        self.presentView(optionMenu, animated: true, completion: nil)
-//
-//
+//                        self.ExecuteArchiveChat(indexpath:indexPath)
 //                        return false;
 //                    });
-//                    delete.centerIconOverText()
-//
+//                    trash.centerIconOverText()
+                         
                     let more = MGSwipeButton(title: NSLocalizedString("More", comment: "Moreeeee") ,icon: UIImage(named: "more"), backgroundColor: color2, callback: { (cell) -> Bool in
                         guard let indexPath = self.chats_Tblview.indexPath(for: cell) else{return true}
                         self.showMoreActions(indexpath: indexPath, callback: { (cancelled, deleted, index) in
@@ -2118,7 +2066,7 @@
                     more.centerIconOverText()
                     cell.rightSwipeSettings.transition = .border
                     cell.leftSwipeSettings.transition = .border
-                    return [trash, more];
+                    return [more];
                 }
             }
             else{
@@ -3148,23 +3096,23 @@
         self.searchController.dismissView(animated:true, completion:nil)
         self.presentView(activityController, animated: true)
     }
-    func exportChat(indexpath: IndexPath){
-        let sheet_action: UIAlertController = UIAlertController(title: nil, message: "Choose option", preferredStyle: .actionSheet)
-        let MediaAction: UIAlertAction = UIAlertAction(title: "Attach Media", style: .default) { action -> Void in
-            self.attach_media(indexpath: indexpath)
-        }
-        let noMediaAction: UIAlertAction = UIAlertAction(title: "Without Media", style: .default) { action -> Void in
-            self.attach_without_media(indexpath: indexpath)
-        }
-        let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
-            
-        }
-        sheet_action.addAction(MediaAction)
-        sheet_action.addAction(noMediaAction)
-        sheet_action.addAction(CancelAction)
-        self.searchController.dismissView(animated:true, completion:nil)
-        self.presentView(sheet_action, animated: true, completion: nil)
-    }
+//    func exportChat(indexpath: IndexPath){
+//        let sheet_action: UIAlertController = UIAlertController(title: nil, message: "Choose option", preferredStyle: .actionSheet)
+//        let MediaAction: UIAlertAction = UIAlertAction(title: "Attach Media", style: .default) { action -> Void in
+//            self.attach_media(indexpath: indexpath)
+//        }
+//        let noMediaAction: UIAlertAction = UIAlertAction(title: "Without Media", style: .default) { action -> Void in
+//            self.attach_without_media(indexpath: indexpath)
+//        }
+//        let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+//
+//        }
+//        sheet_action.addAction(MediaAction)
+//        sheet_action.addAction(noMediaAction)
+//        sheet_action.addAction(CancelAction)
+//        self.searchController.dismissView(animated:true, completion:nil)
+//        self.presentView(sheet_action, animated: true, completion: nil)
+//    }
     func showMoreActions(indexpath: IndexPath, callback: @escaping MoreActionCallback)
     {
         actionCallback = callback;
@@ -3204,10 +3152,10 @@
                 
                 
             }
-            let ExportAction: UIAlertAction = UIAlertAction(title:NSLocalizedString("Export Chat", comment: "Export Chat") , style: .default) { action -> Void in
-                index = 2
-                self.exportChat(indexpath: indexpath)
-            }
+//            let ExportAction: UIAlertAction = UIAlertAction(title:NSLocalizedString("Export Chat", comment: "Export Chat") , style: .default) { action -> Void in
+//                index = 2
+//                self.exportChat(indexpath: indexpath)
+//            }
             
             let actionTitle = Themes.sharedInstance.isChatLocked(id: chatprerecord.opponentid, type: "single") ? NSLocalizedString("Unlock Chat", comment: "Export Chat")  : NSLocalizedString("Lock Chat", comment: "Lock Chat")
 
@@ -3230,7 +3178,7 @@
             }
             sheet_action.addAction(MuteAction)
             sheet_action.addAction(ContactAction)
-            sheet_action.addAction(ExportAction)
+           // sheet_action.addAction(ExportAction)
             sheet_action.addAction(LockAction)
             sheet_action.addAction(CancelAction)
             self.searchController.dismissView(animated:true, completion:nil)
@@ -3269,10 +3217,10 @@
                 
                 
             }
-            let ExportAction: UIAlertAction = UIAlertAction(title: "Export Chat", style: .default) { action -> Void in
-                index = 2
-                self.exportChat(indexpath: indexpath)
-            }
+//            let ExportAction: UIAlertAction = UIAlertAction(title: "Export Chat", style: .default) { action -> Void in
+//                index = 2
+//                self.exportChat(indexpath: indexpath)
+//            }
             let ClearAction: UIAlertAction = UIAlertAction(title: "Clear Chat", style: .default) { action -> Void in
                 index = 3
                 isDeleteBtn = false
@@ -3290,17 +3238,17 @@
             
             let is_deleted = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Group_details, attrib_name: "id", fetchString: chatprerecord.id, returnStr: "is_deleted")
             
-            let LockAction: UIAlertAction = UIAlertAction(title: actionTitle, style: .default) { action -> Void in
-                index = 4
-                if(is_deleted == "1")
-                {
-                    Themes.sharedInstance.ShowNotification("You have left the group so this conversation can't be locked", false)
-                }
-                else
-                {
-                    Themes.sharedInstance.LockAction(id: chatprerecord.id, type: "group")
-                }
-            }
+//            let LockAction: UIAlertAction = UIAlertAction(title: actionTitle, style: .default) { action -> Void in
+//                index = 4
+//                if(is_deleted == "1")
+//                {
+//                    Themes.sharedInstance.ShowNotification("You have left the group so this conversation can't be locked", false)
+//                }
+//                else
+//                {
+//                    Themes.sharedInstance.LockAction(id: chatprerecord.id, type: "group")
+//                }
+//            }
             
             var DelAction: UIAlertAction!
 
@@ -3350,9 +3298,9 @@
             }
             sheet_action.addAction(MuteAction)
             sheet_action.addAction(ContactAction)
-            sheet_action.addAction(ExportAction)
+//            sheet_action.addAction(ExportAction)
             sheet_action.addAction(ClearAction)
-            sheet_action.addAction(LockAction)
+//            sheet_action.addAction(LockAction)
             sheet_action.addAction(DelAction)
             sheet_action.addAction(CancelAction)
             self.searchController.dismissView(animated:true, completion:nil)

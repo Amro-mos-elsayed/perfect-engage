@@ -1,23 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "Prefect_Engage_v.png",
       "idiom" : "universal",
-      "filename" : "115x171.png",
       "scale" : "1x"
     },
     {
+      "filename" : "Prefect_Engage_v-1.png",
       "idiom" : "universal",
-      "filename" : "115x2.png",
       "scale" : "2x"
     },
     {
+      "filename" : "Prefect_Engage_v-2.png",
       "idiom" : "universal",
-      "filename" : "115x3.png",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

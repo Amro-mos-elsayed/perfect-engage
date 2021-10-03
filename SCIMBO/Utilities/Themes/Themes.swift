@@ -2242,147 +2242,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         }
     }
     
-    func LockAction(id:String, type: String)
-    {
-        if(SocketIOManager.sharedInstance.socket.status == .connected)
-        {
-            let attribute = (type == "single") ? "id" : "groupId"
-            let lockedArr = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Lock_Details, attribute: attribute, FetchString: id, SortDescriptor: nil) as! [Lock_Details]
-            var convId:String = ""
-            var encrypt_password:String = ""
-            if(lockedArr.count > 0)
-            {
-                let response = lockedArr[0]
-                convId = CheckNullvalue(Passed_value: response.convId)
-                encrypt_password = CheckNullvalue(Passed_value: response.encrypt_password)
-            }
-            else
-            {
-                convId = GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "opponent_id", fetchString: id, returnStr: "conv_id")
-            }
-            
-            let emailSettings = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.User_detail, attribute: "user_id", FetchString: Getuser_id(), SortDescriptor: nil) as! [User_detail]
-            var email:String = ""
-            var recovery_email:String = ""
-            var recovery_phone:String = ""
-            if(emailSettings.count > 0){
-                let response = emailSettings[0]
-                email = CheckNullvalue(Passed_value: response.email)
-                recovery_email = CheckNullvalue(Passed_value: response.recovery_email)
-                recovery_phone = CheckNullvalue(Passed_value: response.recovery_phone)
-            }
-            if(email == "" || recovery_email == "" || recovery_phone == ""){
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-                let mailVC = storyboard.instantiateViewController(withIdentifier: "UpdateEmailSettingsViewController") as! UpdateEmailSettingsViewController
-                mailVC.delegate = self
-                mailVC.id = id
-                mailVC.type = type
-                AppDelegate.sharedInstance.navigationController?.pushView(mailVC, animated: true)
-            }else{
-                
-                if(encrypt_password == ""){
-                    let alert = UIAlertController(title: "Lock Chat", message: "Set Chat Password", preferredStyle: .alert)
-                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
-                    }
-                    
-                    alert.addTextField(configurationHandler: {
-                        (newPassword) in
-                        newPassword.placeholder = "New Password"
-                        newPassword.isSecureTextEntry = true
-                    }
-                    )
-                    alert.addTextField(configurationHandler: {
-                        (textField) in
-                        textField.placeholder = "Confirm Password"
-                        textField.isSecureTextEntry = true
-                    }
-                    )
-                    let confirmAction = UIAlertAction(title: "Lock", style: .default) { (_) in
-                        print((alert.textFields?[0].text!)!)
-                        print((alert.textFields?[1].text!)!)
-                        if((alert.textFields?[0].text!)! == (alert.textFields?[1].text!)!){
-                            if((alert.textFields?[0].text!.length)! >= 8 as Int){
-                                let password:String = (alert.textFields?[0].text!)!
-                                let str:NSData = password.data(using: String.Encoding.utf8)! as NSData
-                                let key:NSData = convId.data(using: String.Encoding.utf8)! as NSData
-                                let iv:NSData = (self.GetAppname()).data(using: String.Encoding.utf8)! as NSData
-                                var base64:String = ""
-                                do{
-                                    let encrypt:NSData = try CC.crypt(.encrypt, blockMode: .cbc, algorithm: .aes, padding: .pkcs7Padding, data: str as Data, key: key as Data, iv: iv as Data) as NSData
-                                    let encrypted:NSData = encrypt.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0)) as NSData
-                                    base64 = NSString(data: encrypted as Data, encoding: String.Encoding.utf8.rawValue)! as String
-                                    print(base64)
-                                }catch{
-                                    
-                                }
-                                
-                                self.activityView(View: (AppDelegate.sharedInstance.window?.view)!)
-                                
-                                SocketIOManager.sharedInstance.chatLock(from: self.Getuser_id(), to: id, password: (alert.textFields?[0].text!)!, convId: convId, type: type, confirm_password: (alert.textFields?[0].text!)!, mobile_password: base64, mode: "phone", status: "1")
-                               
-                            }else{
-                                Themes.sharedInstance.ShowNotification("Password length must be greater than 8", false)
-                                AppDelegate.sharedInstance.navigationController?.presentView(alert, animated: true)
-                            }
-                            
-                        }else{
-                            Themes.sharedInstance.ShowNotification("Password does not match", false)
-                            AppDelegate.sharedInstance.navigationController?.presentView(alert, animated: true)
-                        }
-                    }
-                    alert.addAction(cancelAction)
-                    alert.addAction(confirmAction)
-                    AppDelegate.sharedInstance.navigationController?.presentView(alert, animated: true)
-                }else{
-                    let alert = UIAlertController(title: "Unlock Chat", message: "Enter Password", preferredStyle: .alert)
-                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in
-                    }
-                    
-                    alert.addTextField(configurationHandler: {
-                        (textField) in
-                        textField.placeholder = "Enter Chat Password"
-                        textField.isSecureTextEntry = true
-                    }
-                    )
-                    
-                    let confirmAction = UIAlertAction(title: "Unlock", style: .default) { (_) in
-                        print((alert.textFields?[0].text!)!)
-                        
-                        let password:String = (alert.textFields?[0].text!)!
-                        let str:NSData = password.data(using: String.Encoding.utf8)! as NSData
-                        let key:NSData = convId.data(using: String.Encoding.utf8)! as NSData
-                        let iv:NSData = (self.GetAppname()).data(using: String.Encoding.utf8)! as NSData
-                        var base64:String = ""
-                        do{
-                            let encrypt:NSData = try CC.crypt(.encrypt, blockMode: .cbc, algorithm: .aes, padding: .pkcs7Padding, data: str as Data, key: key as Data, iv: iv as Data) as NSData
-                            let encrypted:NSData = encrypt.base64EncodedData(options: NSData.Base64EncodingOptions(rawValue: 0)) as NSData
-                            base64 = NSString(data: encrypted as Data, encoding: String.Encoding.utf8.rawValue)! as String
-                            print(base64)
-                            
-                            let decrypted = String(data: (try CC.crypt(.decrypt, blockMode: .cbc, algorithm: .aes, padding: .pkcs7Padding, data: Data(base64Encoded: encrypt_password, options: [])!, key: key as Data, iv: iv as Data)), encoding: String.Encoding.utf8)
-                            print(decrypted ?? "error")
-                        }catch{
-                            
-                        }
-                        if(base64 == encrypt_password){
-                            self.activityView(View: (AppDelegate.sharedInstance.window?.view)!)
-                            SocketIOManager.sharedInstance.chatLock(from: self.Getuser_id(), to: id, password: (alert.textFields?[0].text!)!, convId: convId, type: type, confirm_password: (alert.textFields?[0].text!)!, mobile_password: encrypt_password, mode: "phone",status:"0")
-                        }else{
-                            Themes.sharedInstance.ShowNotification("Password does not match", false)
-                        }
-                    }
-                    alert.addAction(cancelAction)
-                    alert.addAction(confirmAction)
-                    AppDelegate.sharedInstance.navigationController?.presentView(alert, animated: true)
-                }
-            }
-        }
-        else
-        {
-            AppDelegate.sharedInstance.window?.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
-        }
-    }
+    func LockAction(id:String, type: String){}
     
     func enterTochat(id: String, type: String, completion: @escaping (_ success: Bool) -> Void)
     {
@@ -3189,7 +3049,7 @@ extension Themes : openLock {
     func openLock(updated: Bool, id: String, type: String) {
         if(updated)
         {
-            self.LockAction(id: id, type: type)
+            //self.LockAction(id: id, type: type)
         }
     }
 }

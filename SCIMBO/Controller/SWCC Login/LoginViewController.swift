@@ -41,6 +41,9 @@ class LoginViewController: UIViewController {
             view.layer.cornerRadius = 25
             view.layer.borderWidth = 1
             view.layer.borderColor = UIColor.lightGray.cgColor
+            if view is UIButton {
+                view.layer.borderWidth = 0
+            }
         }
         let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
@@ -61,6 +64,9 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
         login(uid: userIdTextField.text ?? "" , password: PasswordIdTextField.text ?? "")
+    }
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        self.pop(animated: false)
     }
     
     func login(uid: String, password: String) {

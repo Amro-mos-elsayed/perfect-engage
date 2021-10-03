@@ -19,6 +19,8 @@ class FullLoginViewController: UIViewController {
     
     @IBOutlet var borderedViews: [UIView]!
     @IBOutlet weak var CountryFlag: UIImageView!
+    @IBOutlet weak var emailView: UIView!
+    @IBOutlet weak var userNameView: UIView!
     @IBOutlet weak var CountryCode: UILabel!
     @IBOutlet weak var MobileTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -32,7 +34,7 @@ class FullLoginViewController: UIViewController {
     var userEmail: String?
     var userName: String?
     var customColor = CustomColor()
-    
+    var loginTypeEmployee: Bool = true
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,6 +49,8 @@ class FullLoginViewController: UIViewController {
         ContactHandler.sharedInstance.GetPermission()
         self.SetUI()
         self.listenToKeyboard()
+        emailView.isHidden = !loginTypeEmployee
+        userNameView.isHidden = !loginTypeEmployee
     }
     
     func listenToKeyboard() {
@@ -69,7 +73,7 @@ class FullLoginViewController: UIViewController {
     func SetUI(){
         emailTextField.isUserInteractionEnabled = false
         emailTextField.text = self.userEmail
-        MobileTextField.placeholder = "08123456789"
+        MobileTextField.placeholder = "Enter your mobile number".localized()
         MobileTextField.textAlignment = .natural
         userNameTextField.text = userName
         CountryCode.adjustsFontSizeToFitWidth = true
@@ -79,6 +83,9 @@ class FullLoginViewController: UIViewController {
             view.layer.cornerRadius = 25
             view.layer.borderWidth = 1
             view.layer.borderColor = UIColor.lightGray.cgColor
+            if view is UIButton {
+                view.layer.borderWidth = 0
+            }
         }
         let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
@@ -348,7 +355,7 @@ class FullLoginViewController: UIViewController {
             return false
         }
 
-        if(userNameTextField.text?.removingWhitespaces() == "") {
+        if(userNameTextField.text?.removingWhitespaces() == "" && loginTypeEmployee) {
             Themes.sharedInstance.ShowNotification("Please enter your name".localized(), false)
             return false
         }

@@ -65,6 +65,11 @@
                                         <constraint firstItem="LZz-zp-7kw" firstAttribute="leading" secondItem="6nr-pb-zSm" secondAttribute="leading" id="vla-OB-HR6"/>
                                         <constraint firstAttribute="width" secondItem="6nr-pb-zSm" secondAttribute="height" multiplier="1:1" id="ynJ-pJ-VdV"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="22"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XJ-OP-R9c">
                                     <rect key="frame" x="197" y="0.0" width="177" height="177"/>
@@ -72,7 +77,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYY-EG-ajT">
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="177"/>
                                             <connections>
-                                                <action selector="userLogin:" destination="-1" eventType="touchUpInside" id="xc2-vH-l6V"/>
+                                                <action selector="userLoginGuest:" destination="-1" eventType="touchUpInside" id="5mM-83-fQ3"/>
                                             </connections>
                                         </button>
                                         <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YC0-kD-YZL">
@@ -81,7 +86,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="currentuser" translatesAutoresizingMaskIntoConstraints="NO" id="f3O-tA-7JF">
                                                     <rect key="frame" x="0.0" y="0.0" width="145" height="68.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login as Guest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jf-9M-Pyh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login as        Guest" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jf-9M-Pyh">
                                                     <rect key="frame" x="0.0" y="68.5" width="145" height="68.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,6 +107,11 @@
                                         <constraint firstAttribute="width" secondItem="9XJ-OP-R9c" secondAttribute="height" multiplier="1:1" id="nXa-DS-QFd"/>
                                         <constraint firstItem="YC0-kD-YZL" firstAttribute="leading" secondItem="9XJ-OP-R9c" secondAttribute="leading" constant="16" id="qq7-yQ-9IM"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="22"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                             </subviews>
                             <constraints>

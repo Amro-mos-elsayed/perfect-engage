@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,7 +18,9 @@
                 <outlet property="CountryFlag" destination="oVg-m5-rqY" id="065-hu-eAb"/>
                 <outlet property="MobileTextField" destination="olc-nq-tw6" id="RKd-Go-LVM"/>
                 <outlet property="emailTextField" destination="ngu-yd-qKq" id="ruH-7o-uQl"/>
+                <outlet property="emailView" destination="fyO-by-8PP" id="s9r-HD-YqJ"/>
                 <outlet property="userNameTextField" destination="7vj-fp-vPW" id="wdh-Br-sgh"/>
+                <outlet property="userNameView" destination="yMt-Tc-Dr8" id="rjr-9w-LQZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="borderedViews" destination="FHe-lQ-nAX" collectionClass="NSMutableArray" id="smu-6g-J6m"/>
                 <outletCollection property="borderedViews" destination="AJ9-uJ-Waa" collectionClass="NSMutableArray" id="h9x-qU-ZJy"/>
@@ -54,7 +57,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L7w-yR-Que">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="19"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone.homebutton" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eVl-pq-4EF">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smartphone-call2p" translatesAutoresizingMaskIntoConstraints="NO" id="eVl-pq-4EF">
                                                     <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -170,8 +173,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyg-va-NCJ">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="19"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lK5-DH-q1o">
-                                                    <rect key="frame" x="0.0" y="0.5" width="19" height="18"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user2p" translatesAutoresizingMaskIntoConstraints="NO" id="lK5-DH-q1o">
+                                                    <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="lK5-DH-q1o" secondAttribute="height" multiplier="1:1" id="jB6-vi-KII"/>
@@ -232,8 +235,8 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMw-ce-lZX">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="19"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="plw-Z5-oue">
-                                                    <rect key="frame" x="0.0" y="1.5" width="19" height="15.5"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope2p" translatesAutoresizingMaskIntoConstraints="NO" id="plw-Z5-oue">
+                                                    <rect key="frame" x="0.0" y="0.0" width="19" height="19"/>
                                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="plw-Z5-oue" secondAttribute="height" multiplier="1:1" id="Ppw-bE-Hhd"/>
@@ -323,12 +326,17 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8H-hL-I3q">
-                    <rect key="frame" x="20" y="44" width="40" height="40"/>
+                    <rect key="frame" x="20" y="44" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="KYm-YL-S4V"/>
-                        <constraint firstAttribute="width" constant="40" id="zxX-XR-paJ"/>
+                        <constraint firstAttribute="height" constant="50" id="KYm-YL-S4V"/>
+                        <constraint firstAttribute="width" constant="50" id="zxX-XR-paJ"/>
                     </constraints>
-                    <state key="normal" image="Back_White"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="tintColor" name="themeColor"/>
+                    <state key="normal">
+                        <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                    </state>
                     <connections>
                         <action selector="didclickCancelButton:" destination="-1" eventType="touchUpInside" id="x5o-kk-gay"/>
                     </connections>
@@ -350,11 +358,11 @@
         </view>
     </objects>
     <resources>
-        <image name="Back_White" width="75" height="75"/>
-        <image name="envelope" catalog="system" width="128" height="93"/>
-        <image name="iphone.homebutton" catalog="system" width="108" height="128"/>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="envelope2p" width="69" height="52"/>
         <image name="login_bg" width="375" height="441"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="smartphone-call2p" width="36" height="61"/>
+        <image name="user2p" width="56" height="56"/>
         <namedColor name="themeColor">
             <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

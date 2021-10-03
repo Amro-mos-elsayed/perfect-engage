@@ -26,7 +26,7 @@ class SWCC_OTPViewController: UIViewController {
     var  statusList_Array = NSMutableArray()
     var isFromProduction:Bool = Bool()
     var PhNumber:String = String()
-    var userEmail: String?
+    var userEmail: String!
     var CountryCode:String = String()
     
     var imageUrl:String=String()
@@ -103,7 +103,6 @@ class SWCC_OTPViewController: UIViewController {
     
     @IBAction func nextAction(_ sender: UIButton) {
         print(otpNo)
-        // moveHomeVC()
         if otpString == ""{
             Themes.sharedInstance.ShowNotification("Please enter OTP number", false)
         }
@@ -174,7 +173,8 @@ class SWCC_OTPViewController: UIViewController {
                     Themes.sharedInstance.savesecurityToken(DeviceToken: "")
 
                     let token = Themes.sharedInstance.CheckNullvalue(Passed_value: result["token"])
-                    let isShowNumber = Themes.sharedInstance.CheckNullvalue(Passed_value: result["showNumber"])
+                    let isShowNumber: Bool =  (result["showNumber"] as? Bool) ?? false
+                    let email = self.userEmail ?? Themes.sharedInstance.CheckNullvalue(Passed_value: result["Email"])
                     KeychainService.removePassword()
                     KeychainService.savePassword(service: user_id, data: token)
                     Themes.sharedInstance.savesecurityToken(DeviceToken: token)
@@ -189,12 +189,13 @@ class SWCC_OTPViewController: UIViewController {
                                     "wallpaper" : "",
                                     "status_privacy" : "0",
                                     "showNumber" : isShowNumber,
+                                    "email" : email,
                                     "otp" : Themes.sharedInstance.CheckNullvalue(Passed_value: self.otpString)]
 
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict:  self.DetailDic , Entityname: Constant.sharedinstance.User_detail)
                     
-                    let alertview = JSSAlertView().show(self,title: Themes.sharedInstance.GetAppname(),text:"Your number has been registered successfully",buttonText: "OK",color: CustomColor.sharedInstance.themeColor)
-                    alertview.addAction(self.closeCallback)
+                    //let alertview = JSSAlertView().show(self,title: Themes.sharedInstance.GetAppname(),text:"Your number has been registered successfully",buttonText: "OK".localized(),color: CustomColor.sharedInstance.themeColor)
+                    self.closeCallback(name: self.Name, email: email, isSowNumber: isShowNumber)
                 }
                 else{
                     
@@ -209,19 +210,31 @@ class SWCC_OTPViewController: UIViewController {
         print(detail)
     }
     
-    func moveHomeVC(){
+    func moveHomeVC(name: String,email:String,isSowNumber: Bool) {
+        
         SDWebImageDownloader.shared().setValue(Themes.sharedInstance.getToken(), forHTTPHeaderField: "authorization")
         SDWebImageDownloader.shared().setValue(Themes.sharedInstance.Getuser_id(), forHTTPHeaderField: "userid")
         SDWebImageDownloader.shared().setValue("site", forHTTPHeaderField: "requesttype")
         SDWebImageDownloader.shared().setValue(ImgUrl, forHTTPHeaderField: "referer")
-        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        let ProfileVC = storyBoard.instantiateViewController(withIdentifier:"ProfileInfoID" ) as! ProfileInfoViewController
-        ProfileVC.username = self.Name
-        ProfileVC.msisdn=self.mssidn_No
-        ProfileVC.user_id=self.User_id
-        ProfileVC.email = userEmail ?? ""
-        self.pushView(ProfileVC, animated: true)
+        
+        UpdateUserInfo(name: Name, email: email,isSowNumber: isSowNumber)
     }
+    
+    func UpdateUserInfo(name:String, email: String,isSowNumber: Bool)
+    {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            SocketIOManager.sharedInstance.changeName(name:  name, from: Themes.sharedInstance.Getuser_id(), email:  email,showNumber: isSowNumber)
+                
+        let updateDict=["name":Themes.sharedInstance.CheckNullvalue(Passed_value: name), "email":Themes.sharedInstance.CheckNullvalue(Passed_value: email)]
+        
+        DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail, FetchString: Themes.sharedInstance.Getuser_id(), attribute: "user_id", UpdationElements: updateDict as NSDictionary?)
+        SocketIOManager.sharedInstance.isFromLogin = false
+        SocketIOManager.sharedInstance.EmitforGetOfflineDetails(Nickname: Themes.sharedInstance.Getuser_id() as NSString)
+        }
+        (UIApplication.shared.delegate as! AppDelegate).MovetoRooVC()
+    }
+    
     @IBAction func backAction(_ sender: UIButton) {
         self.pop(animated: true)
     }
@@ -251,12 +264,12 @@ class SWCC_OTPViewController: UIViewController {
         }
     }
     
-    func closeCallback() {
+    func closeCallback(name: String, email: String, isSowNumber: Bool) {
         self.storeStatus()
         SocketIOManager.sharedInstance.isFromLogin = false
         (UIApplication.shared.delegate as! AppDelegate).IntitialiseSocket()
         DispatchQueue.main.async {
-            self.moveHomeVC()
+            self.moveHomeVC(name: name, email: email, isSowNumber: isSowNumber)
         }
     }
     
@@ -315,7 +328,7 @@ extension SWCC_OTPViewController: OTPFieldViewDelegate {
         borderedViews.forEach { view in
             view.layer.cornerRadius = 25
             view.layer.borderWidth = 1
-            view.layer.borderColor = PlumberThemeColor.cgColor
+            view.layer.borderColor = CustomColor.sharedInstance.themeColor.cgColor
         }
         let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
                 
@@ -326,7 +339,7 @@ extension SWCC_OTPViewController: OTPFieldViewDelegate {
         otpTextFieldView.fieldsCount = 6
         otpTextFieldView.fieldBorderWidth = 2
         otpTextFieldView.defaultBorderColor = UIColor.lightGray
-        otpTextFieldView.filledBorderColor = UIColor.init(hexString: "66B1F0")
+        otpTextFieldView.filledBorderColor = UIColor.init(hexString: "E99A2A")
         otpTextFieldView.requireCursor = false
         otpTextFieldView.displayType = .underlinedBottom
         otpTextFieldView.fieldSize = 50
