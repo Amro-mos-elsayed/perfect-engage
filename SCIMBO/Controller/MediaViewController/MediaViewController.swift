@@ -154,7 +154,7 @@ class MediaViewController: UIViewController,UITableViewDataSource,UITableViewDel
             else
             {
                 nodata_Lbl.isHidden = false
-                nodata_detailLbl.isHidden = false
+                nodata_detailLbl.isHidden = true
                 
                 MediaCollectionView.isHidden = true
                 nodata_Lbl.text = "No Media"
@@ -256,7 +256,7 @@ class MediaViewController: UIViewController,UITableViewDataSource,UITableViewDel
                 else
                 {
                     nodata_Lbl.isHidden = false
-                    nodata_detailLbl.isHidden = false
+                    nodata_detailLbl.isHidden = true
                     detailtableView.isHidden = true
                     nodata_Lbl.text = "No Documents"
                     nodata_detailLbl.text = "Tap + to add document"
@@ -301,7 +301,7 @@ class MediaViewController: UIViewController,UITableViewDataSource,UITableViewDel
                         
                     }else{
                         nodata_Lbl.isHidden = false
-                        nodata_detailLbl.isHidden = false
+                        nodata_detailLbl.isHidden = true
                         detailtableView.isHidden = true
                         nodata_Lbl.text = "No Links"
                         nodata_detailLbl.text = ""
@@ -309,7 +309,7 @@ class MediaViewController: UIViewController,UITableViewDataSource,UITableViewDel
                     
                 }else{
                     nodata_Lbl.isHidden = false
-                    nodata_detailLbl.isHidden = false
+                    nodata_detailLbl.isHidden = true
                     detailtableView.isHidden = true
                     nodata_Lbl.text = "No Links"
                     nodata_detailLbl.text = ""

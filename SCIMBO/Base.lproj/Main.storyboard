@@ -1517,7 +1517,7 @@
                                                             <constraint firstItem="i27-OH-DfU" firstAttribute="top" secondItem="65j-PZ-KPg" secondAttribute="top" constant="6" id="rzJ-DQ-ZU6"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-CS-ECl">
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bj-CS-ECl">
                                                         <rect key="frame" x="0.0" y="233" width="320" height="57"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you dont share last Seen, you won't be " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdw-Pu-mmk">

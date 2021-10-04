@@ -4376,7 +4376,7 @@
             {
                 var Chattype:String=""
                 Chattype="group"
-                let User_dict:[AnyHashable: Any] = ["user_common_id": user_common_id,"user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "_id")),"timestamp":timestamp,"opponent_id":"\(id)","chat_count":"0","is_read":"0"]
+                let User_dict:[AnyHashable: Any] = ["user_common_id": user_common_id,"user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "_id")),"timestamp":timestamp,"opponent_id":"\(id)","chat_count":"0","is_read":"0","isSavetocamera": "0"]
                 DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: Constant.sharedinstance.Chat_intiated_details)
             }
             else

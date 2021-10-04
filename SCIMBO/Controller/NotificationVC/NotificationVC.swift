@@ -218,8 +218,9 @@ extension NotificationVC:UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let Cell:UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "CellID")
         Cell.textLabel?.font = UIFont.systemFont(ofSize: 16.0)
-        Cell.textLabel?.textColor = UIColor(displayP3Red: 0.0, green: 122.0/255.0, blue: 1.0, alpha: 1.0)
+        Cell.textLabel?.textColor = CustomColor.sharedInstance.themeColor
         let switchView = UISwitch(frame: CGRect.zero)
+        switchView.onTintColor = CustomColor.sharedInstance.themeColor
         Cell.accessoryType = .none
         //Cell.accessoryView = nil
         if (indexPath.section == 0)

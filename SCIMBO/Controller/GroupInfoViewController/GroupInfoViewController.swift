@@ -242,10 +242,10 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
         
         if(is_you_removed){
-            Action_Array = [NSLocalizedString("Clear chat", comment: "com") ,NSLocalizedString("Export Chat", comment: "com")  ,NSLocalizedString("Delete group", comment: "com") ]
+            Action_Array = [NSLocalizedString("Clear chat", comment: "com"),  NSLocalizedString("Delete group", comment: "com") ]
         }
         else{
-            Action_Array = [NSLocalizedString("Clear chat", comment: "com"), NSLocalizedString("Export Chat", comment: "com"), NSLocalizedString("Exit group", comment: "com") ]
+            Action_Array = [NSLocalizedString("Clear chat", comment: "com"), NSLocalizedString("Exit group", comment: "com") ]
         }
         
         groupProperties_tblView.reloadData()
@@ -449,8 +449,8 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                 }
             }
             if indexPath.row == 4{
-                let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.group_convId
-                Themes.sharedInstance.savetoCameraRollUpdate(user_common_id)
+                //let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.group_convId
+                //Themes.sharedInstance.savetoCameraRollUpdate(user_common_id)
             }
 
         }

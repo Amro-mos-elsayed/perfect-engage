@@ -75,7 +75,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         addNotificationListener()
         checkFav = "Existing"
         
-        
+        editBtn.isHidden = true
         propertiesTableView.tableFooterView = UIView()
                         
 
@@ -893,7 +893,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
                     }
                 }
                 if indexPath.row == 3{
-                    let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.user_id
+                   // let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.user_id
                     //Themes.sharedInstance.savetoCameraRollUpdate(user_common_id)
                 }
             }

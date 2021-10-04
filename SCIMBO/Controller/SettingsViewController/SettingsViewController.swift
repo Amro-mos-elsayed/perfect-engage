@@ -71,10 +71,10 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                             NSLocalizedString("Notifications", comment: "note"),
                             NSLocalizedString("Data Usage", comment: "note"),
                             //NSLocalizedString("Email Settings", comment: "note"),
-                            NSLocalizedString("About and Help", comment: "note"),
-                            NSLocalizedString("Log out", comment: "note")]//,NSLocalizedString("Tell a Friend", comment: "note")]//"Web Logout"
+                            NSLocalizedString("About", comment: "About")
+        ]//,NSLocalizedString("Tell a Friend", comment: "note")]//"Web Logout"
         
-        starredImag_Arry = ["star","account","chats","notification","datausage"/*,"mail"*/,"about","logout",]//,"tellafriend"]//,"logout"
+        starredImag_Arry = ["star","account","chats","notification","datausage"/*,"mail"*/,"about"]//,"tellafriend"]//,"logout"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -235,31 +235,16 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 self.pushView(datausageVC, animated: true)
                 
             }
-//            else if indexPath.row == 5{
-//                let mailVC = self.storyboard?.instantiateViewController(withIdentifier: "UpdateEmailSettingsViewController") as! UpdateEmailSettingsViewController
-//                self.pushView(mailVC, animated: true)
-//
-//            }
             else if indexPath.row == 5{
-                let aboutVC = self.storyboard?.instantiateViewController(withIdentifier: "AboutViewController") as! AboutViewController
+                
+                
+                let aboutVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
                 SocketIOManager.sharedInstance.chatSettings(id: Themes.sharedInstance.Getuser_id(), mode: "phone", chat_type: "single")
                 self.pushView(aboutVC, animated: true)
             }
             else if indexPath.row == 6{
                 logout()
             }
-                
-//            else if indexPath.row == 9{
-//                let alertview = JSSAlertView().show(
-//                    self,
-//                    title: Themes.sharedInstance.GetAppname(),
-//                    text: "Are you sure, you want to Logout?",
-//                    buttonText: "Yes",
-//                    cancelButtonText: "No"
-//                )
-//                alertview.addAction(self.Logout)
-//            }
-            
         }
         
     }

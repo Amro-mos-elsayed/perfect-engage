@@ -199,7 +199,7 @@ class MessageHandler: NSObject {
                 let CheckUser:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Chat_intiated_details, attribute: "user_common_id", FetchString: "\(ChatInterlinkID)-\(Themes.sharedInstance.Getuser_id())")
                 if(!CheckUser)
                 {
-                    let User_dict:[AnyHashable: Any] = ["user_common_id": "\(ChatInterlinkID)-\(Themes.sharedInstance.Getuser_id())","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"2"]
+                    let User_dict:[AnyHashable: Any] = ["user_common_id": "\(ChatInterlinkID)-\(Themes.sharedInstance.Getuser_id())","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"0"]
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: Constant.sharedinstance.Chat_intiated_details)
                 }else{
                     
@@ -211,7 +211,7 @@ class MessageHandler: NSObject {
                 let CheckUser:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Chat_intiated_details, attribute: "user_common_id", FetchString: "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)")
                 if(!CheckUser)
                 {
-                    let User_dict:[AnyHashable: Any] = ["user_common_id": "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"2"]
+                    let User_dict:[AnyHashable: Any] = ["user_common_id": "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"0"]
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: Constant.sharedinstance.Chat_intiated_details)
                 }else{
                     let User_dict:[AnyHashable: Any] = ["conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"is_read":"0","user_id":Themes.sharedInstance.Getuser_id()]
@@ -587,7 +587,7 @@ class MessageHandler: NSObject {
             {
                 var Chattype:String=""
                 Chattype="group"
-                let User_dict:[AnyHashable: Any] = ["user_common_id":  Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.Getuser_id() + "-" + groupId),"user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "groupId")),"timestamp":timestamp,"opponent_id":groupId,"chat_count":"0","is_read":"0","isSavetocamera":"2"]
+                let User_dict:[AnyHashable: Any] = ["user_common_id":  Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.Getuser_id() + "-" + groupId),"user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "groupId")),"timestamp":timestamp,"opponent_id":groupId,"chat_count":"0","is_read":"0","isSavetocamera":"0"]
                 DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: "\(Constant.sharedinstance.Chat_intiated_details) ")
             }
             else
@@ -994,7 +994,7 @@ class MessageHandler: NSObject {
                         
                         if(!CheckUser)
                         {
-                            let User_dict:[AnyHashable: Any] = ["user_common_id": "\(ChatInterlinkID)-\(Themes.sharedInstance.Getuser_id())","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"2"]
+                            let User_dict:[AnyHashable: Any] = ["user_common_id": "\(ChatInterlinkID)-\(Themes.sharedInstance.Getuser_id())","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"0"]
                             DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: Constant.sharedinstance.Chat_intiated_details)
                         }else{
                             let FetchCount:String = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "user_common_id", fetchString: "\(ChatInterlinkID)-\(Themes.sharedInstance.Getuser_id())", returnStr: "chat_count")
@@ -1011,7 +1011,7 @@ class MessageHandler: NSObject {
                         let CheckUser:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Chat_intiated_details, attribute: "user_common_id", FetchString: "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)")
                         if(!CheckUser)
                         {
-                            let User_dict:[AnyHashable: Any] = ["user_common_id": "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"2"]
+                            let User_dict:[AnyHashable: Any] = ["user_common_id": "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id":"\(ChatInterlinkID)","chat_count":"1","is_read":"0","isSavetocamera":"0"]
                             DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: Constant.sharedinstance.Chat_intiated_details)
                         }else{
                             let FetchCount:String = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "user_common_id", fetchString: "\(Themes.sharedInstance.Getuser_id())-\(ChatInterlinkID)", returnStr: "chat_count")
@@ -1144,7 +1144,7 @@ class MessageHandler: NSObject {
                             ServerPath_path = ("\(ImgUrl)\(ServerPath_path)")
                         }
                         let thumbnail_data = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "thumbnail_data"))
-                        let Dict:[String:Any] = ["failure_status":"0","total_byte_count":"0","upload_byte_count":"0","upload_count":"1","upload_data_id":ThumbnailID,"upload_Path":"","upload_status":"1","serverpath":ServerPath_path,"data_count":"0","compressed_data":thumbnail_data,"to_id":"\(ChatInterlinkID)","message_status":"1","user_common_id":user_common_id,"user_id":Themes.sharedInstance.Getuser_id(),"download_status":"0","upload_type":"\(type)","is_uploaded":"0", "upload_paused":"0","isSavetocamera":"2"]
+                        let Dict:[String:Any] = ["failure_status":"0","total_byte_count":"0","upload_byte_count":"0","upload_count":"1","upload_data_id":ThumbnailID,"upload_Path":"","upload_status":"1","serverpath":ServerPath_path,"data_count":"0","compressed_data":thumbnail_data,"to_id":"\(ChatInterlinkID)","message_status":"1","user_common_id":user_common_id,"user_id":Themes.sharedInstance.Getuser_id(),"download_status":"0","upload_type":"\(type)","is_uploaded":"0", "upload_paused":"0","isSavetocamera":"0"]
                         DatabaseHandler.sharedInstance.InserttoDatabase(Dict: Dict as NSDictionary, Entityname: Constant.sharedinstance.Upload_Details);
                         DownloadHandler.sharedinstance.handleDownLoad(false)
                         
@@ -1483,7 +1483,7 @@ class MessageHandler: NSObject {
                     {
                         var Chattype:String=""
                         Chattype="group"
-                        let User_dict:[AnyHashable: Any] = ["user_common_id": "\(Themes.sharedInstance.Getuser_id())-\(groupId)","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "groupId")),"timestamp":timestamp,"opponent_id":groupId,"chat_count":"1","is_read":"0","isSavetocamera":"2"]
+                        let User_dict:[AnyHashable: Any] = ["user_common_id": "\(Themes.sharedInstance.Getuser_id())-\(groupId)","user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "groupId")),"timestamp":timestamp,"opponent_id":groupId,"chat_count":"1","is_read":"0","isSavetocamera":"0"]
                         DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: Constant.sharedinstance.Chat_intiated_details)
                     }
                     else

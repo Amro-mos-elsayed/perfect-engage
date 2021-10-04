@@ -52,7 +52,7 @@ class GeneralStatusListViewController: UIViewController, UIViewControllerTransit
         center = self.view.center
         statusTableView.dataSource = self
         statusTableView.delegate = self
-        
+        privacyButton.isHidden = true
         registerCell()
     }
     

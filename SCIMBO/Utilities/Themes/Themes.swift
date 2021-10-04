@@ -2417,7 +2417,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         
         let defaultAction = UIAlertAction(title: "Default(On)", style: .default, handler: {
             (alert: UIAlertAction!) -> Void in
-            let UpdateDict:NSDictionary =  ["isSavetocamera":"2"]
+            let UpdateDict:NSDictionary =  ["isSavetocamera":"0"]
             DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Chat_intiated_details, FetchString: id, attribute: "user_common_id", UpdationElements: UpdateDict)
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.reloadData), object: nil , userInfo: nil)
