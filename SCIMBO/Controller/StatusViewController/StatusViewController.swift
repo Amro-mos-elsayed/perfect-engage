@@ -760,7 +760,9 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
             {
                 contentSheet.CollapsedHeightRatio = CGFloat(ratio)
             }
-            self.presentView(contentSheet, animated: true)
+            let vc = UIViewController.init()
+            vc.view = content as? UIView
+            self.presentView(vc, animated: true)
             
         }else{
             replayViewSetter()

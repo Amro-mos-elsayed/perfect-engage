@@ -157,7 +157,7 @@
                                     <constraint firstAttribute="bottom" secondItem="IJL-oH-Jgc" secondAttribute="bottom" constant="8" id="uiV-HM-bFs"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="06C-gB-Qd1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="06C-gB-Qd1">
                                 <rect key="frame" x="0.0" y="105" width="320" height="463"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="N5H-uh-Ukk"/>

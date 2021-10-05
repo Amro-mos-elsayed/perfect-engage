@@ -7611,7 +7611,7 @@
             objRecord.path_extension = Pathextension.lowercased()
             objRecord.docName = cico.lastPathComponent.lowercased()
         }
-        else if (Pathextension.uppercased() == "TXT" || Pathextension.uppercased() == "DOC" || Pathextension.uppercased() == "DATA" || Pathextension.uppercased() == "TEXT" || Pathextension.uppercased() == "DAT" || Pathextension.uppercased() == "DOCX")
+        else if (Pathextension.uppercased() == "TXT" || Pathextension.uppercased() == "DOC" || Pathextension.uppercased() == "DATA" || Pathextension.uppercased() == "TEXT" || Pathextension.uppercased() == "DAT" || Pathextension.uppercased() == "DOCX" || Pathextension.uppercased() == "XLSX" || Pathextension.uppercased() == "NUMBERS")
         {
             objRecord.docPageCount = ""
             objRecord.docType = "2"
