@@ -29,7 +29,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if(checkArchived)
         {
-            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup"], "2" : [NSLocalizedString("Archive all Chats", comment: "comm"), NSLocalizedString("Clear all Chats", comment: "comm"), NSLocalizedString("Delete all Chats", comment: "comm")]]
+            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup"], "2" : [NSLocalizedString("Clear all Chats", comment: "comm"), NSLocalizedString("Delete all Chats", comment: "comm")]]
             
         }
         else
@@ -137,25 +137,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         case 2:
             print("\(indexPath.row)")
             switch indexPath.row {
+            
             case 0:
-                print("\(indexPath.row)")
-                var checkArchived : Bool = true
-                if(cell.textLabel?.text == "Archive all Chats")
-                {
-                    checkArchived = false
-                }
-                let alert : UIAlertController = UIAlertController.init(title: (!checkArchived) ? "Archive all of your chats?" : "UnArchive all of your chats?", message: "", preferredStyle: .actionSheet)
-                let archive_all_action = UIAlertAction(title: (!checkArchived) ? NSLocalizedString("Archive All", comment: "Archive All")  :  NSLocalizedString("UnArchive All", comment: "UnArchive All"), style: .destructive, handler: { (alert: UIAlertAction!) in
-                    self.ExecuteArchiveChat(isArchived: checkArchived)
-                })
-                let cancel_action = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel, handler: { (alert: UIAlertAction!) in
-                    print("Cancelled")
-                })
-                alert.addAction(archive_all_action)
-                alert.addAction(cancel_action)
-                self.presentView(alert, animated: true, completion: nil)
-                break
-            case 1:
                 print("\(indexPath.row)")
                 let alert : UIAlertController = UIAlertController.init(title: NSLocalizedString("Clear all of your chats?", comment: "com") , message: "", preferredStyle: .actionSheet)
                 let clearStarredAction = UIAlertAction(title: NSLocalizedString("Clear All Chats except starred", comment: "note") , style: .default, handler: {
@@ -174,7 +157,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 alert.addAction(cancel_action)
                 self.presentView(alert, animated: true, completion: nil)
                 break
-            case 2:
+            case 1:
                 print("\(indexPath.row)")
                 let alert : UIAlertController = UIAlertController.init(title: NSLocalizedString("Delete all of your chats?", comment: "com"), message: "", preferredStyle: .actionSheet)
                 let delete_all_action = UIAlertAction(title: NSLocalizedString("Delete All Chats", comment: "com") , style: .destructive, handler: { (alert: UIAlertAction!) in

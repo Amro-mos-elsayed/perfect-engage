@@ -94,12 +94,25 @@ class ContactHandler: NSObject {
         SocketIOManager.sharedInstance.EmitConvSetting(Dict: ConvDict)
     }
     
+    func getAllContactsIds(from contactsList: NSArray) -> [String] {
+        let Arrss: [String] = contactsList.map { con -> String in
+            if let con = con as? NSDictionary {
+                return Themes.sharedInstance.CheckNullvalue(Passed_value: con.object(forKey: "_id"))
+            }else{
+                return ""
+            }
+        }
+        return Arrss
+    }
+    
     func SaveFavContactFromServer(ResponseArr:NSArray, Index : Int)
     {
         let predicate = NSPredicate(format: "is_fav != %@", "2")
         let CheckFav = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: predicate, Limit: 0) as! NSArray
         if(ResponseArr.count > 0)
         {
+            
+            let contactsList = [Themes.sharedInstance.Getuser_id()]
             for i in 0..<ResponseArr.count
             {
                 let FavDict:NSDictionary=ResponseArr[i] as! NSDictionary
@@ -125,8 +138,7 @@ class ContactHandler: NSObject {
                 let last_seen:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "last_seen"))
                 let profile_photo:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "profile_photo"))
                 let profile_status:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "status"))
-                let contactUserList : NSData =  NSData.init()
-                
+                let contactUserList : NSData =  NSKeyedArchiver.archivedData(withRootObject: contactsList) as NSData
                 let security_code:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "security_code"))
                 
                 if(_id == Themes.sharedInstance.Getuser_id()){

@@ -122,11 +122,11 @@
         self.read.isUserInteractionEnabled = false
         self.searchController.hidesNavigationBarDuringPresentation = false
         //
-        let ChatPrerecord : NSSet = NSSet(array: ChatPrerecordArr as! [Any])
-        if ChatPrerecord.count > 0 {
-        ChatPrerecordArr = ChatPrerecord.allObjects as! NSMutableArray
+        //let ChatPrerecord : NSSet = NSSet(array: ChatPrerecordArr as! [Any])
+        ///if ChatPrerecord.count > 0 {
+        //ChatPrerecordArr = ChatPrerecord.allObjects as! NSMutableArray
        // ChatPrerecordArr  = [[NSSet setWithArray:ChatPrerecordArr] allObjects];
-        }
+        //}
        // ReloadTable()
     }
         
@@ -1048,13 +1048,13 @@
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let ChatPrerecord : NSSet = NSSet(array: ChatPrerecordArr as! [Any])
+        //let ChatPrerecord : NSSet = NSSet(array: ChatPrerecordArr as! [Any])
         
-         if ChatPrerecord.count > 0 {
-            let allObjects = ChatPrerecord.allObjects as! [ChatBaseModel]
-            let sortedObjects = allObjects.sorted{Double($0.opponentlastmessageDate)! > Double($1.opponentlastmessageDate)!}
-            ChatPrerecordArr = NSMutableArray(array: sortedObjects)
-         }
+//         if ChatPrerecord.count > 0 {
+//            let allObjects = ChatPrerecord.allObjects as! [ChatBaseModel]
+//            let sortedObjects = allObjects.sorted{Double($0.opponentlastmessageDate)! > Double($1.opponentlastmessageDate)!}
+//            ChatPrerecordArr = NSMutableArray(array: sortedObjects)
+//         }
        // Phonenumber = Themes.sharedInstance.CheckNullvalue(Passed_value: (($0.value ).value(forKey: "digits") as! String))
         
         if(searchActive == true && (self.section[section] as! String == "Chats" || self.section[section] as! String == "Other Chats")){
