@@ -171,6 +171,7 @@
                     favRecord.name=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "name"))
                     favRecord.msisdn=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "msisdn"))
                     favRecord.phnumber=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "phnumber"))
+                    favRecord.isEmployee = (ResponseDict as! Favourite_Contact).isUserTypeEmployee
                     favArray.add(favRecord)
                     
                 }
@@ -255,10 +256,10 @@
             cell.selectionStyle = .none
             cell.nameLbl.setNameTxt(favRecord.id, "single")
             cell.profileImage.setProfilePic(favRecord.id, "single")
+            cell.isEmployeeImage.image = favRecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
             cell.profile.tag = indexPath.row
             cell.profile.addTarget(self, action: #selector(self.openImage(sender:)), for: .touchUpInside)
             cell.statusLbl.setStatusTxt(favRecord.id)
-            cell.statusLbl.isHidden = cell.statusLbl.text == ""
             cell.profileImage.contentMode = .scaleAspectFill
             cell.nameLbl.font = UIFont.boldSystemFont(ofSize: 16.0)
             return cell
@@ -267,10 +268,11 @@
             cell.selectionStyle = .none
             cell.nameLbl.setNameTxt(favRecord.id, "single")
             cell.profileImage.setProfilePic(favRecord.id, "single")
+            cell.isEmployeeImage.image = favRecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
             cell.profile.tag = indexPath.row
             cell.profile.addTarget(self, action: #selector(self.openImage(sender:)), for: .touchUpInside)
             cell.statusLbl.setStatusTxt(favRecord.id)
-            cell.statusLbl.isHidden = cell.statusLbl.text == ""
+            
             cell.profileImage.contentMode = .scaleAspectFill
             cell.nameLbl.font = UIFont.boldSystemFont(ofSize: 16.0)
             return cell

@@ -33,6 +33,7 @@ class Chatpreloadrecord: ChatBaseModel {
     var encrypt_password:String = String()
     var info_type:String = String()
     var isTyping:Bool = Bool()
+    var isEmployee:Bool = Bool()
 }
 
 class ChatBaseModel: NSObject {

@@ -14,7 +14,7 @@ class ChatsTableViewCell: MGSwipeTableCell {
     @IBOutlet weak var message_Lbl:UILabel!
     @IBOutlet weak var user: UIButton!
     @IBOutlet weak var user_Images: UIImageView!
-    
+    @IBOutlet weak var isEmployeeImage: UIImageView!
     @IBOutlet weak var is_locked: UIButton!
     @IBOutlet weak var chat_status: UIButton!
     @IBOutlet weak var time_Lbl:UILabel!

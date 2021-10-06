@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,11 +19,18 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-53-A9R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="66.5"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-qY-Im6">
+                                <rect key="frame" x="216" y="12" width="21" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AVE-Ja-GlJ"/>
+                                    <constraint firstAttribute="width" constant="21" id="TMh-Pr-3kZ"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="laron" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LsZ-oq-6se" customClass="CustomLblFont" customModule="Raad" customModuleProvider="target">
                                 <rect key="frame" x="82" y="12" width="128" height="21"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" systemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3BQ-gP-NDH">
@@ -38,9 +45,12 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="08:12 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-NE-Fgj">
-                                <rect key="frame" x="192" y="12" width="104" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:12 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFa-NE-Fgj">
+                                <rect key="frame" x="241" y="12" width="55" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JEn-Sn-bga"/>
+                                    <constraint firstAttribute="width" constant="55" id="xgI-Je-mnt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                 <color key="textColor" red="0.72156862745098038" green="0.72156862745098038" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -66,20 +76,31 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR4-ke-gu5">
-                                <rect key="frame" x="268" y="31" width="25" height="25"/>
+                                <rect key="frame" x="268" y="30" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoX-7h-kG3">
                                 <rect key="frame" x="49" y="33" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Goarr_red" translatesAutoresizingMaskIntoConstraints="NO" id="ipz-nz-I8f">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Goarr_red" translatesAutoresizingMaskIntoConstraints="NO" id="ipz-nz-I8f">
                                 <rect key="frame" x="304" y="0.0" width="6" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                 <color key="tintColor" red="1" green="0.3411764706" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="6" id="k6k-Kl-sq0"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dGR-qY-Im6" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" constant="12" id="0Lc-G8-ltC"/>
+                            <constraint firstAttribute="bottom" secondItem="ipz-nz-I8f" secondAttribute="bottom" constant="0.5" id="ReJ-JW-zVh"/>
+                            <constraint firstAttribute="trailing" secondItem="ipz-nz-I8f" secondAttribute="trailing" constant="10" id="Rwr-9e-0lR"/>
+                            <constraint firstItem="ipz-nz-I8f" firstAttribute="leading" secondItem="aFa-NE-Fgj" secondAttribute="trailing" constant="8" symbolic="YES" id="SYb-LS-xwS"/>
+                            <constraint firstItem="aFa-NE-Fgj" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" constant="12" id="Xdy-Nz-2Hd"/>
+                            <constraint firstItem="ipz-nz-I8f" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" id="pgW-Cz-1bh"/>
+                            <constraint firstItem="aFa-NE-Fgj" firstAttribute="leading" secondItem="dGR-qY-Im6" secondAttribute="trailing" constant="4" id="r8v-4Y-EuI"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -91,6 +112,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="chat_status" destination="IR4-ke-gu5" id="GiN-Gc-oa8"/>
+                <outlet property="isEmployeeImage" destination="dGR-qY-Im6" id="Q1m-KB-w6l"/>
                 <outlet property="is_locked" destination="yoX-7h-kG3" id="i0P-4f-3k5"/>
                 <outlet property="messageCount_Lbl" destination="aW4-Yy-AeR" id="ddT-eA-nAa"/>
                 <outlet property="message_Lbl" destination="nv2-F1-94w" id="FPz-Hm-HWk"/>
@@ -106,5 +128,8 @@
     <resources>
         <image name="Goarr_red" width="45" height="78"/>
         <image name="avatar" width="179" height="179"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

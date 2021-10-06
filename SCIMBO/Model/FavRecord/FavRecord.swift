@@ -25,6 +25,7 @@ class FavRecord: NSObject {
     var conv_id:String = String()
     var is_locked:String = String()
     var encrypt_password:String = String()
+    var isEmployee: Bool = true
 }
 
 func returnFavRecord(_ id : String) -> FavRecord {

@@ -134,6 +134,7 @@ class ContactHandler: NSObject {
                 var msisdn: String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "msisdn"))
                 let _id:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "_id"))
                 let status1:String = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Status"))
+                let userType = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "userType"))
                 let privacy_dict:NSDictionary = FavDict.object(forKey: "privacy") as! NSDictionary
                 let last_seen:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "last_seen"))
                 let profile_photo:String = Themes.sharedInstance.CheckNullvalue(Passed_value: privacy_dict.value(forKey: "profile_photo"))
@@ -210,7 +211,8 @@ class ContactHandler: NSObject {
                     "show_status":profile_status,
                     "contactUserList" : contactUserList,
                     "formatted" : msisdn,
-                    "email_address":email
+                    "email_address":email,
+                    "isUserTypeEmployee" : (userType == "Employee")
                 ] as [String : Any]
                 
                 let msisdnPred = NSPredicate(format: "NOT (msisdn contains[c] %@)", msisdn)

@@ -13,6 +13,7 @@ class FavouriteTableViewCell: UITableViewCell {
     @IBOutlet weak var content_view: UIView!
     @IBOutlet weak var profile: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var isEmployeeImage: UIImageView!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
  

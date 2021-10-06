@@ -487,6 +487,7 @@
                                     chatprerecord.is_online = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "is_online"))
                                     chatprerecord.timestamp = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "time_stamp"))
                                     chatprerecord.opponentname=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "name"))
+                                    chatprerecord.isEmployee = (ResponseDict as! Favourite_Contact).isUserTypeEmployee
                                     chatprerecord.opponentimage=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "profilepic"))
                                     chatprerecord.oppopnentnumber=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "msisdn"))
                                     
@@ -1207,7 +1208,7 @@
                 {
                     cell.startTyping(chat_type: "single", objRecord: chatprerecord)
                 }
-                
+                cell.isEmployeeImage.image = chatprerecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
                 cell.time_Lbl.text=Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.ConverttimeStamp(timestamp: chatprerecord.opponentlastmessageDate))
                 NSLog("timestmp \(chatprerecord.opponentlastmessageDate)")
                // cell.time_Lbl.textColor = UIColor.red
@@ -1423,7 +1424,7 @@
                     }
                     cell.chat_status.frame.x = cell.messageCount_Lbl.frame.x - cell.messageCount_Lbl.frame.width
                 }
-                
+                cell.isEmployeeImage.image = chatprerecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
                 cell.time_Lbl.text=Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.ConverttimeStamp(timestamp: chatprerecord.opponentlastmessageDate))
                 tableView.separatorStyle = .singleLine
                 tableView.separatorColor = nil
