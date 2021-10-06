@@ -1,13 +1,13 @@
 {
   "images" : [
     {
+      "filename" : "whatsapp_background-1.png",
       "idiom" : "universal",
-      "filename" : "Layer 1.png",
       "scale" : "1x"
     },
     {
+      "filename" : "whatsapp_background.png",
       "idiom" : "universal",
-      "filename" : "Layer 1@2x.png",
       "scale" : "2x"
     },
     {
@@ -16,7 +16,7 @@
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

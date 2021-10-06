@@ -1069,7 +1069,7 @@ extension GeneralStatusListViewController: MyStatusTableViewCellDelegate, TextSt
         imagePickerController.view.backgroundColor = .black
         imagePickerController.imageLimit = 10
         imagePickerController.transitioningDelegate = self
-        imagePickerController.modalPresentationStyle = .custom
+        imagePickerController.modalPresentationStyle = .currentContext
         statusBarHidden = true
         setNeedsStatusBarAppearanceUpdate()
         delegate?.isStatusBarHidden(true)
@@ -1137,43 +1137,45 @@ extension GeneralStatusListViewController: ImagePickerDelegate{
     }
     
     func didclickGallery(_ imagePicker: ImagePickerController) {
-        imagePicker.dismissView(animated: true, completion: nil)
-        let pickerController = DKImagePickerController()
-        pickerController.maxSelectableCount = 10
-        pickerController.assetType = .allAssets
-        pickerController.sourceType = .photo
-        pickerController.isFromChat = true
-        pickerController.didSelectAssets = { (assets: [DKAsset]) in
-            self.delegate?.isStatusBarHidden(false)
-            if(assets.count > 0)
-            {
-                self.selectedAssets = assets
-                Themes.sharedInstance.activityView(View: self.view)
-                AssetHandler.sharedInstance.isgroup = false
-                AssetHandler.sharedInstance.ProcessAsset(assets: assets,oppenentID: "",isFromStatus: true, completionHandler: { [weak self] (AssetArr, error) -> ()? in
-                    if((AssetArr?.count)! > 0)
-                    {     DispatchQueue.main.async {
-                        Themes.sharedInstance.RemoveactivityView(View: (self?.view)!)
-                        let EditVC = self?.storyboard?.instantiateViewController(withIdentifier: "EditViewControllerID") as! EditViewController
-                        EditVC.AssetArr = AssetArr!
-                        EditVC.isfromStatus = true
-                        EditVC.Delegate = self
-                        EditVC.selectedAssets = (self?.selectedAssets)!
-                        self?.pushView(EditVC, animated: true)
+        imagePicker.dismissView(animated: true) {
+            
+            let pickerController = DKImagePickerController()
+            pickerController.maxSelectableCount = 10
+            pickerController.assetType = .allAssets
+            pickerController.sourceType = .photo
+            pickerController.isFromChat = true
+            pickerController.didSelectAssets = { (assets: [DKAsset]) in
+                self.delegate?.isStatusBarHidden(false)
+                if(assets.count > 0)
+                {
+                    self.selectedAssets = assets
+                    Themes.sharedInstance.activityView(View: self.view)
+                    AssetHandler.sharedInstance.isgroup = false
+                    AssetHandler.sharedInstance.ProcessAsset(assets: assets,oppenentID: "",isFromStatus: true, completionHandler: { [weak self] (AssetArr, error) -> ()? in
+                        if((AssetArr?.count)! > 0)
+                        {     DispatchQueue.main.async {
+                            Themes.sharedInstance.RemoveactivityView(View: (self?.view)!)
+                            let EditVC = self?.storyboard?.instantiateViewController(withIdentifier: "EditViewControllerID") as! EditViewController
+                            EditVC.AssetArr = AssetArr!
+                            EditVC.isfromStatus = true
+                            EditVC.Delegate = self
+                            EditVC.selectedAssets = (self?.selectedAssets)!
+                            self?.pushView(EditVC, animated: true)
+                            }
                         }
-                    }
-                    return ()
-                })
+                        return ()
+                    })
+                }
             }
+            pickerController.didClickGif = {
+                self.delegate?.isStatusBarHidden(false)
+                let picker = SwiftyGiphyViewController()
+                picker.delegate = self
+                let navigation = UINavigationController(rootViewController: picker)
+                self.presentView(navigation, animated: true)
+            }
+            self.presentView(pickerController, animated: true)
         }
-        pickerController.didClickGif = {
-            self.delegate?.isStatusBarHidden(false)
-            let picker = SwiftyGiphyViewController()
-            picker.delegate = self
-            let navigation = UINavigationController(rootViewController: picker)
-            self.presentView(navigation, animated: true)
-        }
-        self.presentView(pickerController, animated: true)
     }
 }
 

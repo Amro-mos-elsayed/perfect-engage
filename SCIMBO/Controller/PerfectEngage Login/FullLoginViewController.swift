@@ -117,7 +117,8 @@ class FullLoginViewController: UIViewController {
         let param:NSDictionary = ["msisdn":"\(country_Code)\(MobileTextField.text!)","manufacturer":"Apple","OS":"ios","Version":"\(Themes.sharedInstance.osVersion)","DeviceId":Themes.sharedInstance.getDeviceToken(),"DateTime":"\(Themes.sharedInstance.current_Time)","PhNumber":"\(MobileTextField.text!)","CountryCode":"\(country_Code)", "callToken":Themes.sharedInstance.getCallToken()]
         Themes.sharedInstance.activityView(View: self.view)
         
-        URLhandler.sharedinstance.makeCall(url:Constant.sharedinstance.RegisterNo as String, param: param, completionHandler: {(responseObject, error) ->  () in
+        let url = loginTypeEmployee ? Constant.sharedinstance.RegisterNo : Constant.sharedinstance.RegisterGuestNo
+        URLhandler.sharedinstance.makeCall(url:url as String, param: param, completionHandler: {(responseObject, error) ->  () in
             Themes.sharedInstance.RemoveactivityView(View: self.view)
             if(error != nil)
             {
@@ -132,7 +133,7 @@ class FullLoginViewController: UIViewController {
                 let errNo = result["errNum"] as! String
                 let message = result["message"]
                 if errNo == "0"{
-                    URLhandler.sharedinstance.makeGetCall(url: Constant.sharedinstance.Settings, param: [:], completionHandler: {(Object, error) ->  () in
+                    URLhandler.sharedinstance.makeGetCall(url: Constant.sharedinstance.Settings, param: [:], completionHandler: { [self](Object, error) ->  () in
                         if(error != nil)
                         {
                             self.view.makeToast(message: Constant.sharedinstance.ErrorMessage , duration: 3, position: HRToastActivityPositionDefault)
@@ -165,13 +166,21 @@ class FullLoginViewController: UIViewController {
                                     {
                                         DatabaseHandler.sharedInstance.truncateDataForTable(Entityname: Constant.sharedinstance.User_detail)
                                     }
+                                    var userName: String
+                                    if loginTypeEmployee {
+                                        userName = userNameTextField.text!
+                                    }else{
+                                        userName = Themes.sharedInstance.CheckNullvalue(Passed_value: result["Name"])
+                                    }
+                                    
+                                    
                                     let otpVC = SWCC_OTPViewController.init()
                                     otpVC.otpNo = self.signUp.code
                                     otpVC.mssidn_No = "\(self.country_Code)\(self.MobileTextField.text!)"
                                     otpVC.User_id =  self.signUp.user_Id
                                     otpVC.profilePic =  self.signUp.profilePic
                                     otpVC.isFromProduction = true
-                                    otpVC.Name=Themes.sharedInstance.CheckNullvalue(Passed_value: result["Name"])
+                                    otpVC.Name=userName
                                     otpVC.status=Themes.sharedInstance.CheckNullvalue(Passed_value: result["Status"])
                                     otpVC.PhNumber = self.MobileTextField.text!
                                     otpVC.CountryCode = self.country_Code

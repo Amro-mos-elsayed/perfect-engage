@@ -146,7 +146,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>This lets you take photos and videos right from within Raad</string>
 	<key>NSContactsUsageDescription</key>
-	<string>Upload your contacts to Scimbo&apos;s servers to help you quickly get in touch with your friends and help us provide a better experience.</string>
+	<string>Upload your contacts to Scimbo's servers to help you quickly get in touch with your friends and help us provide a better experience.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This lets you send your current location or nearby place.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

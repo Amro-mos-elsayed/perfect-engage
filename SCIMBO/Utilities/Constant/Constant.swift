@@ -50,6 +50,11 @@ class Constant : NSObject
             return "\(BaseUrl)/Login"
         }
     }
+    var RegisterGuestNo : String {
+        get {
+            return "\(BaseUrl)/loginAsAGuest"
+        }
+    }
     var confirmOTP : String {
         get {
             return "\(BaseUrl)/VerifyMsisdn"

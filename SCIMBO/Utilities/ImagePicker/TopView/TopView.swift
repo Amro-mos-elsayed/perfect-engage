@@ -68,7 +68,8 @@ open class TopView: UIView {
     open lazy var closeButton: UIButton = { [unowned self] in
         let button = UIButton()
         button.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
-        button.setImage(AssetManager.getImage("closeCamera"), for: UIControl.State())
+        
+        button.setImage(AssetManager.getImage("close_view"), for: UIControl.State())
         button.addTarget(self, action: #selector(cancelButtonDidPressed(_:)), for: .touchUpInside)
         button.imageView?.contentMode = .center
         button.imageView?.contentMode = .scaleAspectFit

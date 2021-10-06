@@ -176,11 +176,11 @@ extension TopView {
         
         addConstraint(NSLayoutConstraint(item: closeButton, attribute: .width,
                                          relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-                                         multiplier: 1, constant: 15))
+                                         multiplier: 1, constant: 40))
         
         addConstraint(NSLayoutConstraint(item: closeButton, attribute: .height,
                                          relatedBy: .equal, toItem: nil, attribute: .notAnAttribute,
-                                         multiplier: 1, constant: 15))
+                                         multiplier: 1, constant: 40))
         
         
         //MARK:- changed by ragu
@@ -241,7 +241,7 @@ extension ImagePickerController {
             if UIDevice.isIphoneX &&  attribute == .top{
                 view.addConstraint(NSLayoutConstraint(item: topView, attribute: attribute,
                                                       relatedBy: .equal, toItem: self.view, attribute: attribute,
-                                                      multiplier: 1, constant: 20))
+                                                      multiplier: 1, constant: 44))
             } else {
                 view.addConstraint(NSLayoutConstraint(item: topView, attribute: attribute,
                                                       relatedBy: .equal, toItem: self.view, attribute: attribute,

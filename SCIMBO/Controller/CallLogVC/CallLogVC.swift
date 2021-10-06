@@ -59,6 +59,24 @@ class CallLogVC: UIViewController,UISearchControllerDelegate,UISearchResultsUpda
     
     @objc func ClearAll(Button:UIButton)
     {
+        
+        let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let clearAll: UIAlertAction = UIAlertAction(title: NSLocalizedString("Clear All", comment: "comment"), style: .destructive) { action -> Void in
+            self.clearAllCalls()
+            
+        }
+        let CancelAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel) { action -> Void in
+        }
+        sheet_action.addAction(clearAll)
+        sheet_action.addAction(CancelAction)
+        self.presentView(sheet_action, animated: true, completion: nil)
+        
+        
+        
+        
+    }
+    
+    func clearAllCalls() {
         tableView.setEditing(false, animated: true)
         isbeginEdit = false
         clearall_Btn.isHidden = true
@@ -70,6 +88,8 @@ class CallLogVC: UIViewController,UISearchControllerDelegate,UISearchResultsUpda
             ReloadData()
         }
     }
+    
+    
     @objc func segmentedControlValueChanged(segment: UISegmentedControl) {
         if segment.selectedSegmentIndex == 0 {
             ismissedCall = false

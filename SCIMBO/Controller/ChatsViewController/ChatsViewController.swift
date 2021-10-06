@@ -85,7 +85,7 @@
         searchController.searchBar.backgroundImage = UIImage()
         btn_View.backgroundColor = UIColor.white
         chats_Tblview.backgroundColor = UIColor.white
-        //
+        chats_Tblview.allowsSelectionDuringEditing = true
         let searchField : UITextField = searchController.searchBar.value(forKey: "searchField") as! UITextField
         searchField.backgroundColor =  UIColor.lightGray
         searchField.alpha = 0.5
@@ -1214,6 +1214,16 @@
                 tableView.separatorStyle = .none
                 cell.messageCount_Lbl.adjustsFontSizeToFitWidth = true
                 cell.name_Lbl.font = UIFont.boldSystemFont(ofSize: 16.0)
+                
+                if isBeginEditing{
+                    
+                    if  ChatActionIndex.contains(indexPath.row) {
+                       // cell.isSelected = true
+                        cell.setEditing(true, animated: false)
+                    }
+                }
+                
+                
                 return cell
             }
             else
