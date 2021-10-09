@@ -30,7 +30,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
     @IBOutlet weak var userImg: UIButton!
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var userImg_View: UIImageView!
-    
+    @IBOutlet weak var isEmployeeImage: UIView!
     
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
@@ -62,6 +62,8 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
     var isfromsecretChat:Bool = Bool()
     var isCalling:Bool = Bool()
     var dataSource:NSMutableArray = NSMutableArray()
+    
+    var contactDetails: Favourite_Contact!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -78,11 +80,19 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         editBtn.isHidden = true
         propertiesTableView.tableFooterView = UIView()
                         
-
+        getContactDetails()
         isCalling = false
         scrollView.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    func getContactDetails() {
+        let contacts = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Favourite_Contact, attribute: "id", FetchString: user_id, SortDescriptor: nil) as! NSArray
+        contactDetails = (contacts.object(at: 0) as! Favourite_Contact)
+        
+        isEmployeeImage.isHidden = contactDetails.isUserTypeEmployee
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         DispatchQueue.main.async {
@@ -501,6 +511,11 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         cell.groupName_TxtField.setNameTxt(user_id, "single")
         headerLbl.setNameTxt(user_id, "single")
         cell.phoneLbl.setPhoneTxt(user_id)
+        let showNumber = contactDetails.showNumber
+        if showNumber{
+            cell.phoneLbl.text = ""
+        }
+        cell.emailLbl.text = contactDetails.email_address
         cell.statusLbl.setStatusTxt(user_id)
         
         if(section == 0)
@@ -538,7 +553,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         
         if(section == 0)
         {
-            return 127
+            return 147
             
         }
         return 30

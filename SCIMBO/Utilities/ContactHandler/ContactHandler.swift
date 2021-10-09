@@ -163,17 +163,13 @@ class ContactHandler: NSObject {
                     let predic2 = NSPredicate(format: "id == %@",_id)
                     DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Favourite_Contact, Predicatefromat: predic2, Deletestring:_id , AttributeName: "id")
                 }
-                if let showMobileNumber = FavDict["showNumber"] as? Bool, !showMobileNumber {
-                    msisdn = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email"))
-                }else {
-                    msisdn = msisdn.parseNumber
-                }
-                
+                let showMobileNumber = FavDict["showNumber"] as? Bool
+                msisdn = msisdn.parseNumber
                 let name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
                 let contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
-                let email = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email_address"))
+                let email = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email"))
                 var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))
-                print("❌   \(name) \(image_Url)")
+                print("❌   \(name) - \(email) - \(msisdn)")
                 if(image_Url != "")
                 {
                     if(image_Url.substring(to: 1) == ".")
@@ -184,7 +180,6 @@ class ContactHandler: NSObject {
                     image_Url = ("\(ImgUrl)/\(image_Url)")
                     
                 }
-                print("❎   \(name) \(image_Url)")
                 let mute_status = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "opponent_id", fetchString: _id, returnStr: "is_mute")
                 
                 let ConvDict:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":_id,"type":"single","chat_type":"normal"]
@@ -212,7 +207,8 @@ class ContactHandler: NSObject {
                     "contactUserList" : contactUserList,
                     "formatted" : msisdn,
                     "email_address":email,
-                    "isUserTypeEmployee" : (userType == "Employee")
+                    "isUserTypeEmployee" : (userType == "Employee"),
+                    "showNumber" : showMobileNumber ?? true
                 ] as [String : Any]
                 
                 let msisdnPred = NSPredicate(format: "NOT (msisdn contains[c] %@)", msisdn)

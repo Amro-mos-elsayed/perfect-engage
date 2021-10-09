@@ -29,7 +29,7 @@ class AccountViewController: UIViewController,UITableViewDelegate,UITableViewDat
         account_TblView.register(nibName, forCellReuseIdentifier:"AccountTableViewCell")
         account_TblView.estimatedRowHeight = 72
         account_TblView.tableFooterView = UIView()
-        optionsArray = [NSLocalizedString("Privacy", comment: "note")]
+        optionsArray = []//NSLocalizedString("Privacy", comment: "note")]
        // optionsArray = ["Privacy","Delete my account"]
         // Do any additional setup after loading the view.
     }
@@ -91,7 +91,7 @@ class AccountViewController: UIViewController,UITableViewDelegate,UITableViewDat
     func OpenactionSheet()
     {
         let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let Logout: UIAlertAction = UIAlertAction(title: NSLocalizedString("Log out", comment: "comment"), style: .default) { action -> Void in
+        let Logout: UIAlertAction = UIAlertAction(title: NSLocalizedString("Logout", comment: "comment"), style: .destructive) { action -> Void in
             
             (UIApplication.shared.delegate as! AppDelegate).Logout()
         }

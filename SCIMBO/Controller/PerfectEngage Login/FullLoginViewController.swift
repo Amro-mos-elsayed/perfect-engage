@@ -181,6 +181,7 @@ class FullLoginViewController: UIViewController {
                                     otpVC.profilePic =  self.signUp.profilePic
                                     otpVC.isFromProduction = true
                                     otpVC.Name=userName
+                                    otpVC.userEmail = self.userEmail
                                     otpVC.status=Themes.sharedInstance.CheckNullvalue(Passed_value: result["Status"])
                                     otpVC.PhNumber = self.MobileTextField.text!
                                     otpVC.CountryCode = self.country_Code
@@ -204,7 +205,10 @@ class FullLoginViewController: UIViewController {
     }
     func NavigateToProfileWithOutOTP(otp:String, mssidn_No:String, User_id: String, profilepic: String, Name: String, status: String, PhNumber: String, CountryCode : String)
     {
-        
+        var finalUserName = userNameTextField.text!
+        if finalUserName == ""{
+            finalUserName = Name
+        }
         let param:NSDictionary = ["code":otp,"msisdn":mssidn_No,"manufacturer":"Apple","OS":"ios","Version":"\(Themes.sharedInstance.osVersion)","DeviceId":Themes.sharedInstance.getDeviceToken(),"DateTime":"\(Themes.sharedInstance.current_Time)","PhNumber":PhNumber,"CountryCode":CountryCode,"pushToken":User_id, "callToken":Themes.sharedInstance.getCallToken()]
         
         let Checkfav:Bool=DatabaseHandler.sharedInstance.countForDataForTable(Entityname: "\(Constant.sharedinstance.Login_details)", attribute: "user_id", FetchString: Themes.sharedInstance.Getuser_id())
@@ -280,7 +284,7 @@ class FullLoginViewController: UIViewController {
                     SocketIOManager.sharedInstance.isFromLogin = true
                     (UIApplication.shared.delegate as! AppDelegate).IntitialiseSocket()
                     DispatchQueue.main.async {
-                        self.moveHomeVC(Name: self.userNameTextField.text!, mssidn_No: mssidn_No, User_id: user_id, imageUrl: image_Url, email: email)
+                        self.moveHomeVC(Name: finalUserName, mssidn_No: mssidn_No, User_id: user_id, imageUrl: image_Url, email: email)
                     }
                 }
             }

@@ -14,6 +14,7 @@ class DetailtableViewCell: UITableViewCell {
     @IBOutlet weak var msgBtn: CustomButton!
     @IBOutlet weak var statusLbl: UILabel!
     @IBOutlet weak var phoneLbl: UILabel!
+    @IBOutlet weak var emailLbl: UILabel!
     
     @IBOutlet weak var groupName_TxtField: UILabel!
 

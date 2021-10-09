@@ -306,7 +306,7 @@
 "Lock Chat" = "قفل الشات";
 
 /* comment */
-"Log out" = "خروج";
+"Logout" = "خروج";
 
 /* com */
 "Make Group Admin" = "جعل مسؤول الجروب";
@@ -560,3 +560,5 @@
 "OK" = "حسناً";
 
 "Clear All" = "حذف الكل";
+
+"Show your mobile number" = "إخفاء رقم الهاتف";

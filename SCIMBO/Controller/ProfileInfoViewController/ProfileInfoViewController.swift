@@ -35,7 +35,7 @@ class ProfileInfoViewController: UIViewController,UIImagePickerControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         Entername_field.text=username
-        Enteremail_field.text=email
+        Enteremail_field.text="Guest"
         Enteremail_field.isUserInteractionEnabled = false
         if UIDevice.isIphoneX {
             HeightConstraint.constant = 250

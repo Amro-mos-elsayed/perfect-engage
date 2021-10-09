@@ -23,7 +23,7 @@ class LoginTypeViewController: UIViewController {
     
     @IBAction func userLoginGuest(_ sender: UIButton) {
         let vc = FullLoginViewController.init()
-        vc.userEmail = ""
+        vc.userEmail = "Guest"
         vc.loginTypeEmployee = false
         self.navigationController?.pushViewController(vc, animated: true)
     }

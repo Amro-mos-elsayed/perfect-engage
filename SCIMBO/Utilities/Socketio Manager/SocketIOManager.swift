@@ -1657,15 +1657,6 @@
             let message = data["msg"] as? String
             if let obj =  data.object(forKey: "obj") as? [String: Any], let isDeleted = obj["isDeleted"] as? String, isDeleted == "1"{
                 self.LogOut()
-//                _ = JSSAlertView().show(
-//                    (AppDelegate.sharedInstance.navigationController?.topViewController)!,
-//                    title: Themes.sharedInstance.GetAppname(),
-//                    text: message,
-//                    buttonText: "Ok".localized(),
-//                    cancelButtonText: nil
-//                )
-                //alertview.addAction(self.LogOut)
-                
             }
         }
 
@@ -1693,14 +1684,7 @@
                     {
                         if(Int(login_key)! > Int(my_login_key)!)
                         {
-                            let alertview = JSSAlertView().show(
-                                (AppDelegate.sharedInstance.navigationController?.topViewController)!,
-                                title: Themes.sharedInstance.GetAppname(),
-                                text: "Your account has been logged in another device.",
-                                buttonText: "Ok",
-                                cancelButtonText: nil
-                            )
-                            alertview.addAction(self.LogOut)
+                            self.LogOut()
                         }
                     }
                 }

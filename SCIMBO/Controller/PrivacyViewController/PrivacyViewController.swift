@@ -9,6 +9,7 @@
 import UIKit
 
 class PrivacyViewController: UIViewController {
+    
     @IBOutlet weak var privacyLbl:UILabel!
     @IBOutlet weak var lastSeenLbl:UILabel!
     @IBOutlet weak var profilePhotoLbl:UILabel!
@@ -23,6 +24,9 @@ class PrivacyViewController: UIViewController {
     @IBOutlet weak var  listofBlockLbl:UILabel!
 
     @IBOutlet weak var checkBoxBtn: UIButton!
+    @IBOutlet weak var showNumberLabel: UILabel!
+    @IBOutlet weak var showNumberSwitch: UISwitch!
+    
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var scrollView_Height: NSLayoutConstraint!
     @IBOutlet weak var descriptionLbl: UILabel!
@@ -32,6 +36,7 @@ class PrivacyViewController: UIViewController {
     var setImageString:NSString = NSString()
     var optionsArray:NSArray = NSArray()
     var favArray:NSMutableArray = NSMutableArray()
+    var user: User_detail!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -51,6 +56,10 @@ class PrivacyViewController: UIViewController {
                 personalInfoBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
                 messagingLbl.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
              }
+        
+        user = Themes.sharedInstance.GetuserDetails()!
+        showNumberSwitch.isOn = user.showNumber
+        showNumberLabel.text = "Hide your mobile number".localized()
     }
     
     func reloadData(){
@@ -64,6 +73,18 @@ class PrivacyViewController: UIViewController {
         self.pushView(blockedVC, animated: true)
         
     }
+    
+    @IBAction func switchTapped(_ sender: UISwitch) {
+        let id = Themes.sharedInstance.Getuser_id()
+        let name = user.name ?? ""
+        let email = user.email ?? ""
+        let showNumber = showNumberSwitch.isOn
+        SocketIOManager.sharedInstance.changeName(name: name, from:id , email: email,showNumber: showNumber)
+        
+    }
+    
+    
+    
     @IBAction func profileInfo(_ sender: UIButton) {
         
 //        if sender.tag == 0

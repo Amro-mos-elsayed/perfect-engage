@@ -19,6 +19,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCF-UW-mCm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLc-N9-MQ6">
+                                <rect key="frame" x="284" y="19" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="20U-6J-swq"/>
+                                    <constraint firstAttribute="width" secondItem="hLc-N9-MQ6" secondAttribute="height" multiplier="1:1" id="BP6-dh-4Mz"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zlK-pD-D0H">
                                 <rect key="frame" x="72" y="5" width="240" height="56"/>
                                 <subviews>
@@ -26,17 +33,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="28"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Endry Harrel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0v-GQ-Edn" customClass="CustomLblFont" customModule="Raad" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="212" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="28"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                 <color key="textColor" systemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hLc-N9-MQ6">
-                                                <rect key="frame" x="212" y="0.0" width="28" height="28"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="hLc-N9-MQ6" secondAttribute="height" multiplier="1:1" id="BP6-dh-4Mz"/>
-                                                </constraints>
-                                            </imageView>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's begin,it will more over" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBp-LQ-bkB">
@@ -69,8 +70,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hLc-N9-MQ6" firstAttribute="centerY" secondItem="FCF-UW-mCm" secondAttribute="centerY" id="5EG-RN-s6U"/>
                             <constraint firstItem="A6W-Q2-zna" firstAttribute="leading" secondItem="FCF-UW-mCm" secondAttribute="leading" constant="8" id="7Mf-e6-CU3"/>
                             <constraint firstItem="KKi-Cn-WBR" firstAttribute="leading" secondItem="FCF-UW-mCm" secondAttribute="leading" constant="8" id="8nM-K1-Dv9"/>
+                            <constraint firstAttribute="trailing" secondItem="hLc-N9-MQ6" secondAttribute="trailing" constant="8" id="9AQ-Cx-KZ6"/>
                             <constraint firstItem="zlK-pD-D0H" firstAttribute="bottom" secondItem="KKi-Cn-WBR" secondAttribute="bottom" id="Ils-mB-EYu"/>
                             <constraint firstAttribute="trailing" secondItem="zlK-pD-D0H" secondAttribute="trailing" constant="8" id="RsV-zO-dWV"/>
                             <constraint firstItem="zlK-pD-D0H" firstAttribute="leading" secondItem="A6W-Q2-zna" secondAttribute="trailing" constant="8" id="WyP-oi-qkR"/>

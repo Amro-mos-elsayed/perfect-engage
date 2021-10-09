@@ -5156,7 +5156,7 @@
                         self.ShowToolBar()
                         
                     }
-                    else  if(action == NSLocalizedString("Star", comment: "Star"))
+                    else  if(action == NSLocalizedString("Flag", comment: "Star"))
                     {
                         messageFrame.message.isStar = "1"
                         self.StarMessage(status: "1", DocId: messageFrame.message.doc_id,convId:messageFrame.message.conv_id,recordId:messageFrame.message.recordId)
@@ -5165,7 +5165,7 @@
                         }
                         
                     }
-                    else  if(action == NSLocalizedString("Unstar", comment: "Unstar"))
+                    else  if(action == NSLocalizedString("Unflag", comment: "Unstar"))
                     {
                         messageFrame.message.isStar = "0"
                         self.StarMessage(status: "0", DocId: messageFrame.message.doc_id,convId:messageFrame.message.conv_id,recordId:messageFrame.message.recordId )
@@ -5206,11 +5206,11 @@
         var StarString:String = ""
         if(messageFrame.message.isStar == "1")
         {
-            StarString = NSLocalizedString("Unstar", comment: "Unstar")
+            StarString = NSLocalizedString("Unflag", comment: "Unstar")
         }
         else
         {
-            StarString = NSLocalizedString("Star", comment: "Star")
+            StarString = NSLocalizedString("Flag", comment: "Star")
         }
         if(messageFrame.message.from == MessageFrom(rawValue: 1))
         {

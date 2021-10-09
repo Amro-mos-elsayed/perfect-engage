@@ -256,7 +256,7 @@
             cell.selectionStyle = .none
             cell.nameLbl.setNameTxt(favRecord.id, "single")
             cell.profileImage.setProfilePic(favRecord.id, "single")
-            cell.isEmployeeImage.image = favRecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
+            cell.isEmployeeImage.image = favRecord.isEmployee ? UIImage() : #imageLiteral(resourceName: "guest-icon")
             cell.profile.tag = indexPath.row
             cell.profile.addTarget(self, action: #selector(self.openImage(sender:)), for: .touchUpInside)
             cell.statusLbl.setStatusTxt(favRecord.id)
@@ -268,7 +268,7 @@
             cell.selectionStyle = .none
             cell.nameLbl.setNameTxt(favRecord.id, "single")
             cell.profileImage.setProfilePic(favRecord.id, "single")
-            cell.isEmployeeImage.image = favRecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
+            cell.isEmployeeImage.image = favRecord.isEmployee ? UIImage() : #imageLiteral(resourceName: "guest-icon")
             cell.profile.tag = indexPath.row
             cell.profile.addTarget(self, action: #selector(self.openImage(sender:)), for: .touchUpInside)
             cell.statusLbl.setStatusTxt(favRecord.id)

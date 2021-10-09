@@ -143,9 +143,10 @@ class TableviewCellGenerator{
             let dateStr:String = Themes.sharedInstance.ReturnTimeForChat(timestamp: messageFrame.message.timestamp!)
             if(messageFrame.message.isStar == "1")
             {
-                return "★\(dateStr)"
+                return "🚩\(dateStr)"
             }
             else
+            
             {
                 return dateStr
             }

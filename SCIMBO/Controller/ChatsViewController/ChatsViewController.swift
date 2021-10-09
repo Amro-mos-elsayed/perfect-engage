@@ -1208,7 +1208,7 @@
                 {
                     cell.startTyping(chat_type: "single", objRecord: chatprerecord)
                 }
-                cell.isEmployeeImage.image = chatprerecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
+                cell.isEmployeeImage.image = chatprerecord.isEmployee ? UIImage() : #imageLiteral(resourceName: "guest-icon")
                 cell.time_Lbl.text=Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.ConverttimeStamp(timestamp: chatprerecord.opponentlastmessageDate))
                 NSLog("timestmp \(chatprerecord.opponentlastmessageDate)")
                // cell.time_Lbl.textColor = UIColor.red
@@ -1424,7 +1424,7 @@
                     }
                     cell.chat_status.frame.x = cell.messageCount_Lbl.frame.x - cell.messageCount_Lbl.frame.width
                 }
-                cell.isEmployeeImage.image = chatprerecord.isEmployee ? #imageLiteral(resourceName: "employee-icon") : #imageLiteral(resourceName: "guest-icon")
+                cell.isEmployeeImage.image = chatprerecord.isEmployee ? UIImage() : #imageLiteral(resourceName: "guest-icon")
                 cell.time_Lbl.text=Themes.sharedInstance.CheckNullvalue(Passed_value: Themes.sharedInstance.ConverttimeStamp(timestamp: chatprerecord.opponentlastmessageDate))
                 tableView.separatorStyle = .singleLine
                 tableView.separatorColor = nil
