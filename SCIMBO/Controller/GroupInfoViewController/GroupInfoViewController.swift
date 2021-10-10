@@ -69,7 +69,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         activity_IndicatorView.isHidden = true
         activity_IndicatorView.hidesWhenStopped = true
         self.editBtn.isHidden = true
-        propertyNameArray = ["Media,Links and Docs","Starred Messsages","Mute", "Save to Camera Roll"]
+        propertyNameArray = ["Media,Links and Docs","Tasks","Mute", "Save to Camera Roll"]
         propertyImgArray = [#imageLiteral(resourceName: "media"),#imageLiteral(resourceName: "star"),#imageLiteral(resourceName: "infomute"),#imageLiteral(resourceName: "gallery_ic")]
         GetStarmessageCount()
         getRecord()
@@ -660,7 +660,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                 let optionMenu = UIAlertController(title: nil, message: NSLocalizedString("Choose Option", comment: "com") , preferredStyle: .actionSheet)
                 
                 // 2
-                let deleteStarredAction = UIAlertAction(title:NSLocalizedString("Delete all except starred", comment: "com") , style: .default, handler: {
+                let deleteStarredAction = UIAlertAction(title:NSLocalizedString("Delete all except flagged", comment: "com") , style: .default, handler: {
                     (alert: UIAlertAction!) -> Void in
                     print("File Deleted")
                     Themes.sharedInstance.executeClearChat("1", self.GroupDetailRec.id, false)

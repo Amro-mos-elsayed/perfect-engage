@@ -145,7 +145,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.user_id
         let saveToGallery = Themes.sharedInstance.saveToGallryOption(id: user_common_id)
         
-        section1Arr = [["name":"Media,Links and Docs","image":#imageLiteral(resourceName: "media"),"desc":""],["name":"Starred Messages","image":#imageLiteral(resourceName: "star"),"desc" : GetStarmessageCount()],["name":"Mute","image":#imageLiteral(resourceName: "infomute"),"desc":time], ["name": "Save to Camera Roll","image":#imageLiteral(resourceName: "gallery_ic"),"desc":saveToGallery]]
+        section1Arr = [["name":"Media,Links and Docs","image":#imageLiteral(resourceName: "media"),"desc":""],["name":"Tasks".localized(),"image":#imageLiteral(resourceName: "star"),"desc" : GetStarmessageCount()],["name":"Mute","image":#imageLiteral(resourceName: "infomute"),"desc":time], ["name": "Save to Camera Roll","image":#imageLiteral(resourceName: "gallery_ic"),"desc":saveToGallery]]
         
         notExtUser_Arr = ["Invite To \(Themes.sharedInstance.GetAppname())","Share Contact","Variation"]
         propertiesTableView.reloadData()
@@ -512,7 +512,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         headerLbl.setNameTxt(user_id, "single")
         cell.phoneLbl.setPhoneTxt(user_id)
         let showNumber = contactDetails.showNumber
-        if showNumber{
+        if !showNumber{
             cell.phoneLbl.text = ""
         }
         cell.emailLbl.text = contactDetails.email_address

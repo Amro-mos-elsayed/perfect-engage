@@ -59,7 +59,7 @@ class PrivacyViewController: UIViewController {
         
         user = Themes.sharedInstance.GetuserDetails()!
         showNumberSwitch.isOn = user.showNumber
-        showNumberLabel.text = "Hide your mobile number".localized()
+        showNumberLabel.text = "Show your mobile number".localized()
     }
     
     func reloadData(){

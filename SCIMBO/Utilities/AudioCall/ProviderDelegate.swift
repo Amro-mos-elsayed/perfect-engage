@@ -57,7 +57,7 @@ class ProviderDelegate: NSObject, SocketIOManagerDelegate {
         
         providerConfiguration.supportedHandleTypes = [.phoneNumber]
         
-        providerConfiguration.iconTemplateImageData = #imageLiteral(resourceName: "call_logo").pngData()
+        providerConfiguration.iconTemplateImageData = #imageLiteral(resourceName: "logo").pngData()
         
         providerConfiguration.ringtoneSound = "tone.mp3"
         
@@ -276,6 +276,7 @@ extension ProviderDelegate: CXProviderDelegate {
             }
         }
     }
+    
     
     func provider(_ provider: CXProvider, didActivate audioSession: AVAudioSession) {
         startAudio()

@@ -10683,11 +10683,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="7YD-4j-ArE">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="247"/>
+                                                <rect key="frame" x="0.0" y="2" width="320" height="245"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBe-0a-Fy8">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="247"/>
+                                                <rect key="frame" x="0.0" y="2" width="320" height="245"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <action selector="didClickuserimg:" destination="MEO-q1-Bj4" eventType="touchUpInside" id="XkL-R5-s03"/>
