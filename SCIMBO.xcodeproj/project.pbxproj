@@ -94,6 +94,8 @@
 		7BB66E061FBB26C4002EC451 /* CryptLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB66E051FBB2203002EC451 /* CryptLib.m */; };
 		7BB66E081FBB26CA002EC451 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB66E021FBB2202002EC451 /* NSData+Base64.m */; };
 		7BE9582C1FB05F1B0090CBE4 /* TermAndConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9582B1FB05F1B0090CBE4 /* TermAndConditionViewController.swift */; };
+		7C1BB6C627148F8500312940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C569F22522B9442100680A80 /* Assets.xcassets */; };
+		7C32882627144B8D00049BDC /* Launch Screen2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C32882527144B8D00049BDC /* Launch Screen2.storyboard */; };
 		7C35ED3326F0DCD3006BB3B4 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C35ED3226F0DCD3006BB3B4 /* NotificationService.swift */; };
 		7C35ED3726F0DCD3006BB3B4 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C42985426BFC18000D819C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42985226BFC18000D819C1 /* LoginViewController.swift */; };
@@ -438,7 +440,6 @@
 		C5679EF81F7A8E7A00B63B94 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5679EF71F7A8E7A00B63B94 /* Security.framework */; };
 		C569BBCB1E9E576200A17DC9 /* RootNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C569BBCA1E9E576100A17DC9 /* RootNavController.swift */; };
 		C569F22622B9442100680A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C569F22522B9442100680A80 /* Assets.xcassets */; };
-		C569F22722B9442100680A80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C569F22522B9442100680A80 /* Assets.xcassets */; };
 		C56C17931E24E435004175C9 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C17921E24E435004175C9 /* DatabaseHandler.swift */; };
 		C56C179C1E24EE50004175C9 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56C179B1E24EE50004175C9 /* UserDetail.swift */; };
 		C56E02921E63F05A00F08BF7 /* ChatInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C56E02901E63F05A00F08BF7 /* ChatInfoCell.swift */; };
@@ -769,6 +770,7 @@
 		7BB66E041FBB2203002EC451 /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		7BB66E051FBB2203002EC451 /* CryptLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CryptLib.m; sourceTree = "<group>"; };
 		7BE9582B1FB05F1B0090CBE4 /* TermAndConditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermAndConditionViewController.swift; sourceTree = "<group>"; };
+		7C32882527144B8D00049BDC /* Launch Screen2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen2.storyboard"; sourceTree = "<group>"; };
 		7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C35ED3226F0DCD3006BB3B4 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		7C35ED3426F0DCD3006BB3B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2399,6 +2401,7 @@
 				C5328A791E07E389000572F2 /* Main.storyboard */,
 				C569F22522B9442100680A80 /* Assets.xcassets */,
 				C5328A811E07E38A000572F2 /* LaunchScreen.storyboard */,
+				7C32882527144B8D00049BDC /* Launch Screen2.storyboard */,
 				C5328A841E07E38A000572F2 /* Info.plist */,
 				C38F75AC24F3F9A800EC2B3F /* InfoPlist.strings */,
 				C38F75A924F3BE0E00EC2B3F /* Localizable.strings */,
@@ -4511,6 +4514,7 @@
 				4391C7F520FDBCAE00E10132 /* ReplayTableViewCell.xib in Resources */,
 				4379D79520750D1A00562351 /* StatusPrivacyTableViewCell.xib in Resources */,
 				C51FFC551F8673BC002B6DB2 /* iPhone6p@3x.png in Resources */,
+				7C32882627144B8D00049BDC /* Launch Screen2.storyboard in Resources */,
 				C54C05621E3B59A800E1BE7D /* chatto_bg_normal.png in Resources */,
 				7B2C38C01F7E4B6700698B3F /* SearchMessageTableViewCell.xib in Resources */,
 				C56141132110760100F1BBBD /* md5.js in Resources */,
@@ -4572,8 +4576,8 @@
 				C3DF21F9250103B40036440B /* Localizable.strings in Resources */,
 				C564F96B226DA5DE006090D3 /* PhoneNumberMetadata.json in Resources */,
 				C5FBE3E0221AE295006DC947 /* MainInterface.storyboard in Resources */,
+				7C1BB6C627148F8500312940 /* Assets.xcassets in Resources */,
 				C5FBE3C9221AE220006DC947 /* ShareMediaCollectionViewCell.xib in Resources */,
-				C569F22722B9442100680A80 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5343,7 +5347,7 @@
 				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5371,7 +5375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5638,7 +5642,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5783,7 +5787,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5823,7 +5827,7 @@
 				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5863,7 +5867,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

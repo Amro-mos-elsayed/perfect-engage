@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="IuW-nZ-poJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mWe-0K-g0E">
+                                <rect key="frame" x="41.5" y="324" width="331" height="248"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mWe-0K-g0E" secondAttribute="height" multiplier="40:30" id="ODv-eV-HLR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                        <color key="backgroundColor" name="themeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IuW-nZ-poJ" secondAttribute="bottom" id="06P-kC-w7i"/>
+                            <constraint firstItem="mWe-0K-g0E" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="5P7-GH-jNS"/>
+                            <constraint firstItem="IuW-nZ-poJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="7cZ-dE-0UW"/>
+                            <constraint firstItem="IuW-nZ-poJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8QV-cB-UHy"/>
+                            <constraint firstAttribute="trailing" secondItem="IuW-nZ-poJ" secondAttribute="trailing" id="V7r-8P-uEg"/>
+                            <constraint firstItem="mWe-0K-g0E" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Wg2-2W-ftH"/>
+                            <constraint firstItem="mWe-0K-g0E" firstAttribute="width" secondItem="mWe-0K-g0E" secondAttribute="height" multiplier="40:30" id="x28-EY-4wI"/>
+                            <constraint firstItem="mWe-0K-g0E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zqR-4R-k9Z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="launchBackGround" width="810" height="1440"/>
+        <image name="logo" width="941" height="526.5"/>
+        <namedColor name="themeColor">
+            <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

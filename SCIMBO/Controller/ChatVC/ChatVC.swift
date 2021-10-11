@@ -34,7 +34,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         else
         {
-            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup"], "2" : [NSLocalizedString("UnArchive all Chats", comment: "comm"), NSLocalizedString("Clear all Chats", comment: "comm"), NSLocalizedString("Delete all Chats", comment: "comm")]]
+            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup"], "2" : [NSLocalizedString("Clear all Chats", comment: "comm"), NSLocalizedString("Delete all Chats", comment: "comm")]]
         }
         table.reloadData()
     }
@@ -96,7 +96,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 print("\(indexPath.row)")
-                cell.textLabel?.textColor = CustomColor.sharedInstance.themeColor
+                cell.textLabel?.textColor = .red
                 break
             case 1:
                 print("\(indexPath.row)")

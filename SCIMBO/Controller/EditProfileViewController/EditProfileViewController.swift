@@ -26,6 +26,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
     @IBOutlet weak var emailAddressLbl: UILabel!
     @IBOutlet weak var doneBtn: UIButton!
     @IBOutlet weak var profileImg: UIButton!
+    @IBOutlet weak var logoutBtn: UIButton!
     @IBOutlet weak var profileImg_Btn: UIImageView!
 
     @IBOutlet weak var nameTxt: UITextField!
@@ -57,6 +58,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         profileImg_Btn.layer.borderWidth = 1
         profileImg_Btn.layer.borderColor = UIColor.lightGray.cgColor
         doneBtn.isHidden = true
+        logoutBtn.setTitle("Logout", for: .normal)
     }
     
     @IBAction func switchButtonChanged(_ sender: UISwitch) {
@@ -667,6 +669,25 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
     
     deinit {
         removeNotificationListener()
+    }
+    
+    @IBAction func logoutAction(_ sender: UIButton) {
+        self.OpenactionSheet()
+    }
+
+    func OpenactionSheet()
+    {
+        let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let Logout: UIAlertAction = UIAlertAction(title: NSLocalizedString("Logout", comment: "comment"), style: .destructive) { action -> Void in
+            
+            (UIApplication.shared.delegate as! AppDelegate).Logout()
+        }
+        let CancelAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel) { action -> Void in
+        }
+        sheet_action.addAction(Logout)
+        sheet_action.addAction(CancelAction)
+        self.presentView(sheet_action, animated: true, completion: nil)
+        
     }
 
 }

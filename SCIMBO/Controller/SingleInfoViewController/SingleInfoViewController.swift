@@ -83,14 +83,16 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         getContactDetails()
         isCalling = false
         scrollView.delegate = self
-        // Do any additional setup after loading the view.
+        SocketIOManager.sharedInstance.EmituserDetails(Param: ["userId":contactDetails.id! as String])
     }
+    
+    
     
     func getContactDetails() {
         let contacts = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Favourite_Contact, attribute: "id", FetchString: user_id, SortDescriptor: nil) as! NSArray
         contactDetails = (contacts.object(at: 0) as! Favourite_Contact)
-        
         isEmployeeImage.isHidden = contactDetails.isUserTypeEmployee
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -104,6 +106,11 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         self.reloaddata()
+        NotificationCenter.default.addObserver(self, selector: #selector(userDataUpdated(_:)), name: NSNotification.Name.init("UpdateUserData"), object: nil)
+    }
+    
+    @objc func userDataUpdated(_ notification: Notification) {
+        getContactDetails()
     }
 
     func reloaddata() {

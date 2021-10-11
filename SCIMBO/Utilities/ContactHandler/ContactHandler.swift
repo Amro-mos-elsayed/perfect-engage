@@ -107,6 +107,9 @@ class ContactHandler: NSObject {
     
     func SaveFavContactFromServer(ResponseArr:NSArray, Index : Int)
     {
+        
+        DatabaseHandler.sharedInstance.truncateDataForTables([Constant.sharedinstance.Favourite_Contact])
+        
         let predicate = NSPredicate(format: "is_fav != %@", "2")
         let CheckFav = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: predicate, Limit: 0) as! NSArray
         if(ResponseArr.count > 0)
@@ -116,6 +119,11 @@ class ContactHandler: NSObject {
             for i in 0..<ResponseArr.count
             {
                 let FavDict:NSDictionary=ResponseArr[i] as! NSDictionary
+                
+                let name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
+                if name.count == 0{
+                    continue
+                }
                 
                 let contactPhno:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "contactPhno"))
                 let contactName:String=Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "contactName"))
@@ -165,7 +173,7 @@ class ContactHandler: NSObject {
                 }
                 let showMobileNumber = FavDict["showNumber"] as? Bool
                 msisdn = msisdn.parseNumber
-                let name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
+                //let name = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "Name"))
                 let contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
                 let email = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email"))
                 var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))

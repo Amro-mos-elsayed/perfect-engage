@@ -277,7 +277,7 @@ class FullLoginViewController: UIViewController {
                     
                     let email = self.userEmail ?? Themes.sharedInstance.CheckNullvalue(Passed_value: result["Email"])
                     let isShowNumber = Themes.sharedInstance.CheckNullvalue(Passed_value: result["showNumber"])
-                    let DetailDic=["user_id":user_id,"status":status,"mobilenumber":mssidn_No,"name":Name,"profilepic":image_Url,"current_call_status":"0","call_id":"","wallpaper_type" : "default", "wallpaper" : "", "status_privacy" : "0", "otp" : otp, "email" : email,"showNumber": isShowNumber] as [String : Any]
+                    let DetailDic=["user_id":user_id,"status":status,"mobilenumber":mssidn_No,"name":finalUserName,"profilepic":image_Url,"current_call_status":"0","call_id":"","wallpaper_type" : "default", "wallpaper" : "", "status_privacy" : "0", "otp" : otp, "email" : email,"showNumber": isShowNumber] as [String : Any]
                     
                     DatabaseHandler.sharedInstance.InserttoDatabase(Dict: DetailDic as NSDictionary, Entityname: Constant.sharedinstance.User_detail)
                     self.storeStatus(User_id: user_id, status: status)

@@ -48,6 +48,7 @@ class GeneralStatusListViewController: UIViewController, UIViewControllerTransit
         } else {
             topViewHeightConstraint.constant = Constant.sharedinstance.NavigationBarHeight
         }
+        statusLabel.text = "Stories".localized()
         addNotificationListener()
         center = self.view.center
         statusTableView.dataSource = self

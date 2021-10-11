@@ -47,7 +47,7 @@ class TextStatusViewController: UIViewController {
     
     fileprivate let fontArray = [UIFont(name: "Roboto-Medium", size: 40.0), UIFont(name: "TimesNewRomanPSMT", size: 40.0), UIFont(name: "Norican-Regular", size: 40.0), UIFont(name: "Bryndan-Write", size: 40.0), UIFont(name: "Oswald-Heavy", size: 40.0)]
 
-    fileprivate let placeholderText = languageHandler.ApplicationLanguage() == "ar" ?  "اكتب حالتك": "Type a status"
+    fileprivate let placeholderText = languageHandler.ApplicationLanguage() == "ar" ?  "اكتب قصتك": "Type a story"
     weak var delegate: TextStatusViewControllerDelegate?
     
     var selectedColorIndex = 0{

@@ -7,8 +7,9 @@
 //
 
 import Foundation
-let BaseURLArray = ["https://dev2pengage.perfect-engage.com"]
-//let BaseURLArray = ["https://swccengage.perfect-engage.com"]
+
+let BaseURLArray = ["https://pee.perfect-engage.com"]
+//let BaseURLArray = ["https://dev2pengage.perfect-engage.com"]
 
 var BaseUrl : String {
     get {
@@ -86,7 +87,8 @@ class Constant : NSObject
         }
     }
     //let AppGroupID = "group.com.2p.swcc"
-    let AppGroupID = "group.com.2p.Engage"
+    //let AppGroupID = "group.com.2p.Engage"
+    let AppGroupID = "group.com.2p.EngageProd"
     let GoogleMapKey = "AIzaSyBJkky3R5AzhiINV-_WhxSCWYi4K69jyBU"
     let Connect:String = "connect"
     let network_disconnect:String = "disconnect"

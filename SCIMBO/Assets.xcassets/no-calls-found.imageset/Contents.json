@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "no_message.png",
+      "filename" : "no-calls-found.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "no_message@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "no_message@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

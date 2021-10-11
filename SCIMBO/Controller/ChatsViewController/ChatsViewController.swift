@@ -2130,14 +2130,14 @@
                     let color1 = CustomColor.sharedInstance.themeColor;
                     let color2 = UIColor.lightGray;
                     
-                    let trash = MGSwipeButton(title: "Archive", icon: UIImage(named: "archive"), backgroundColor: color1, callback: { (cell) -> Bool in
-                        guard let indexPath = self.chats_Tblview.indexPath(for: cell) else{return true}
-                        cell.hideSwipe(animated: true)
-                        cell.refreshContentView()
-                        self.ExecuteArchiveChat(indexpath:indexPath)
-                        return false;
-                    });
-                    trash.centerIconOverText()
+//                    let trash = MGSwipeButton(title: "Archive", icon: UIImage(named: "archive"), backgroundColor: color1, callback: { (cell) -> Bool in
+//                        guard let indexPath = self.chats_Tblview.indexPath(for: cell) else{return true}
+//                        cell.hideSwipe(animated: true)
+//                        cell.refreshContentView()
+//                        self.ExecuteArchiveChat(indexpath:indexPath)
+//                        return false;
+//                    });
+//                    trash.centerIconOverText()
                     
                     let more = MGSwipeButton(title: "More", icon: UIImage(named: "more"), backgroundColor: color2, callback: { (cell) -> Bool in
                         guard let indexPath = self.chats_Tblview.indexPath(for: cell) else{return true}
@@ -2282,7 +2282,7 @@
                     more.centerIconOverText()
                     cell.rightSwipeSettings.transition = .border
                     cell.leftSwipeSettings.transition = .border
-                    return [trash, more];
+                    return [more];
                 }
             }
         }
@@ -3190,7 +3190,7 @@
             sheet_action.addAction(MuteAction)
             sheet_action.addAction(ContactAction)
            // sheet_action.addAction(ExportAction)
-            sheet_action.addAction(LockAction)
+            //sheet_action.addAction(LockAction)
             sheet_action.addAction(CancelAction)
             self.searchController.dismissView(animated:true, completion:nil)
             self.presentView(sheet_action, animated: true, completion: nil)

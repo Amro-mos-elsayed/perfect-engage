@@ -61,13 +61,13 @@
                                     <constraint firstAttribute="width" secondItem="FsI-Oz-rw3" secondAttribute="height" multiplier="1:1" id="Blp-kC-yC4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQg-Dc-WdJ">
-                                <rect key="frame" x="81" y="11.5" width="76.5" height="23.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQg-Dc-WdJ">
+                                <rect key="frame" x="81" y="11" width="69.5" height="24"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to my status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF5-LW-f7o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to my story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF5-LW-f7o">
                                 <rect key="frame" x="81" y="40" width="232" height="18"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="13"/>
                                 <color key="textColor" red="0.62488341331481934" green="0.62537038326263428" blue="0.62495881319046021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -173,7 +173,7 @@
         <image name="edit_blue" width="32" height="32"/>
         <image name="roundcamera" width="75" height="75"/>
         <namedColor name="themeColor">
-            <color red="0.0039215686274509803" green="0.46274509803921571" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

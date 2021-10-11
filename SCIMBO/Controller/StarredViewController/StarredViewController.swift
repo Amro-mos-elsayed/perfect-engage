@@ -78,6 +78,8 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
     
     @IBOutlet weak var chattableview: UITableView!
     @IBOutlet weak var no_doc_Lbl: UILabel!
+    @IBOutlet weak var no_doc_View: UIView!
+    @IBOutlet weak var titleLbl: UILabel!
     var user_common_id:String = String()
     var isallStarredmessages:Bool = Bool()
     var chatModel:ChatModel=ChatModel()
@@ -98,8 +100,10 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
         } else {
             topViewHeightConstraint.constant = Constant.sharedinstance.NavigationBarHeight
         }
+        no_doc_Lbl.text = "There are no tasks".localized()
+        titleLbl.text = "Tasks".localized()
         addNotificationListener()
-        no_doc_Lbl.isHidden = true
+        no_doc_View.isHidden = true
         chattableview.tableFooterView = UIView()
         loadDatasource(isallStarredmessages: isallStarredmessages)
         chattableview.delegate = self
@@ -246,14 +250,18 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
                         }
                     }
                 }
-                
+                if self.chatModel.dataSource.count > 0{
                 chattableview.isHidden = false
-                no_doc_Lbl.isHidden = true
+                no_doc_View.isHidden = true
+                }else {
+                    chattableview.isHidden = true
+                    no_doc_View.isHidden = false
+                }
             }
             else
             {
                 chattableview.isHidden = true
-                no_doc_Lbl.isHidden = false
+                no_doc_View.isHidden = false
             }
         }
         else
@@ -363,12 +371,12 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
                     self.dealTheFunctionData(dic)
                 }
                 chattableview.isHidden = false
-                no_doc_Lbl.isHidden = true
+                no_doc_View.isHidden = true
             }
             else
             {
                 chattableview.isHidden = true
-                no_doc_Lbl.isHidden = false
+                no_doc_View.isHidden = false
                 
             }
             

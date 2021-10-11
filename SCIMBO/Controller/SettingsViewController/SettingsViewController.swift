@@ -66,7 +66,7 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     func changeArray(){
         //let web = NSLocalizedString("Web/Desktop", comment: "oo")
         starredMess_Arry = [NSLocalizedString("Tasks", comment: "note"),
-                            NSLocalizedString("Account", comment: "note"),
+                            //NSLocalizedString("Account", comment: "note"),
                             NSLocalizedString("Privacy", comment: "note"),
                             NSLocalizedString("Chats", comment: "note"),
                             NSLocalizedString("Notifications", comment: "note"),
@@ -75,7 +75,7 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                             NSLocalizedString("About", comment: "About")
         ]//,NSLocalizedString("Tell a Friend", comment: "note")]//"Web Logout"
         
-        starredImag_Arry = ["star","account","icons8-privacy-90","chats","notification","datausage"/*,"mail"*/,"about"]//,"tellafriend"]//,"logout"
+        starredImag_Arry = ["star","account","chats","notification","datausage"/*,"mail"*/,"about"]//,"tellafriend"]//,"logout"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -215,38 +215,38 @@ class SettingsViewController: UIViewController,UITableViewDelegate,UITableViewDa
                 }
                 
                 
-            }else if indexPath.row == 1{
+            }else if indexPath.row == 144{
                 
                 let  privacyVC = storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
                 self.pushView(privacyVC, animated: true)
             }
-            else if indexPath.row == 2{
+            else if indexPath.row == 1{
                 
                 let  privacyVC = storyboard?.instantiateViewController(withIdentifier: "PrivacyViewController") as! PrivacyViewController
                 self.pushView(privacyVC, animated: true)
             }
-            else if indexPath.row == 3 {
+            else if indexPath.row == 2 {
                 let chatVC  = self.storyboard?.instantiateViewController(withIdentifier: "ChatVCID") as! ChatVC
                 self.pushView(chatVC, animated: true)
             }
-            else if indexPath.row == 4{
+            else if indexPath.row == 3{
                 let notificationVC = self.storyboard?.instantiateViewController(withIdentifier: "NotificationVCID") as! NotificationVC
                 self.pushView(notificationVC, animated: true)
                 
             }
-            else if indexPath.row == 5{
+            else if indexPath.row == 4{
                 let datausageVC = self.storyboard?.instantiateViewController(withIdentifier: "DataUsageID") as! DataUsageViewController
                 self.pushView(datausageVC, animated: true)
                 
             }
-            else if indexPath.row == 6{
+            else if indexPath.row == 5{
                 
                 
                 let aboutVC = storyboard?.instantiateViewController(withIdentifier: "AboutPageViewController") as! AboutPageViewController
                 SocketIOManager.sharedInstance.chatSettings(id: Themes.sharedInstance.Getuser_id(), mode: "phone", chat_type: "single")
                 self.pushView(aboutVC, animated: true)
             }
-            else if indexPath.row == 7{
+            else if indexPath.row == 6{
                 logout()
             }
         }
