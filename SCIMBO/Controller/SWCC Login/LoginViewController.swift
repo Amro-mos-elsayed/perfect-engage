@@ -103,7 +103,7 @@ class LoginViewController: UIViewController {
             case .success(let data):
                 let jsondecoder = JSONDecoder.init()
                 let loginModel = try? jsondecoder.decode(LoginModel.self, from: data)
-                if let user = loginModel?.resultObject {
+                if let user = loginModel?.resultObject, loginModel?.authorized == true {
                     completion(user)
                 }else {
                     Themes.sharedInstance.ShowNotification("error has been occurred".localized() , false)

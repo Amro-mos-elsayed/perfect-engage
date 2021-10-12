@@ -595,7 +595,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
             if(indexPath.section == 1)
             {
                 let cell:SettingsTableViewCell = propertiesTableView.dequeueReusableCell(withIdentifier:"SettingsTableViewCell" ) as! SettingsTableViewCell
-                cell.rightArrow_ImgView.isHidden = false
+                cell.rightArrow_ImgView.isHidden = indexPath.row == 3
                 cell.subDesc_Lbl.isHidden = false
                 let dict:[String:Any] = section1Arr[indexPath.row]
                 cell.setting_Lbl.text = Themes.sharedInstance.CheckNullvalue(Passed_value: dict["name"])

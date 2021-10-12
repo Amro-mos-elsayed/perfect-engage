@@ -2394,6 +2394,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
     }
     
     func saveToGallryOption(id:String) -> String{
+        DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Chat_intiated_details, FetchString: id, attribute: "user_common_id", UpdationElements: ["isSavetocamera":"0"])
         let muteArr = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Chat_intiated_details, attribute: "user_common_id", FetchString: id, SortDescriptor: nil) as! [Chat_intiated_details]
         if muteArr.count > 0 {
             let options = CheckNullvalue(Passed_value: muteArr[0].isSavetocamera)
@@ -2405,7 +2406,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             case "2":
                 return "Default"
             default:
-                return "Default"
+                return "Never"
             }
         }
         return "Default"

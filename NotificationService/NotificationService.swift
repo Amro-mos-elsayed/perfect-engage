@@ -12,7 +12,7 @@ class NotificationService: UNNotificationServiceExtension {
     
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
-    let defaults = UserDefaults(suiteName: "group.com.2p.Engage")
+    let defaults = UserDefaults(suiteName: AppGroupConstants.AppGroupID)
     
     override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
         self.contentHandler = contentHandler

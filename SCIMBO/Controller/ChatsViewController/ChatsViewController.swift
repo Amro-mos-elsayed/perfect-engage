@@ -128,6 +128,7 @@
        // ChatPrerecordArr  = [[NSSet setWithArray:ChatPrerecordArr] allObjects];
         //}
        // ReloadTable()
+        
     }
         
     override func viewWillDisappear(_ animated: Bool) {
@@ -1890,7 +1891,7 @@
         else
             
         {
-            Themes.sharedInstance.jssAlertView(viewController: self, title: Themes.sharedInstance.GetAppname(), text: "No Contact kindly invite friends", buttonTxt: "Ok", color: CustomColor.sharedInstance.alertColor)
+            Themes.sharedInstance.jssAlertView(viewController: self, title: Themes.sharedInstance.GetAppname(), text: "No Contact kindly invite friends", buttonTxt: "Ok", color: CustomColor.sharedInstance.themeColor)
         }
     }
     
