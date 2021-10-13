@@ -242,10 +242,10 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
         
         if(is_you_removed){
-            Action_Array = [NSLocalizedString("Clear chat", comment: "com"),  NSLocalizedString("Delete group", comment: "com") ]
+            Action_Array = [NSLocalizedString("Delete group", comment: "com") ]
         }
         else{
-            Action_Array = [NSLocalizedString("Clear chat", comment: "com"), NSLocalizedString("Exit group", comment: "com") ]
+            Action_Array = [NSLocalizedString("Exit group", comment: "com")]
         }
         
         groupProperties_tblView.reloadData()

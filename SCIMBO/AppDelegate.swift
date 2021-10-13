@@ -1314,7 +1314,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 self.isVideoViewPresented = true
                 providerDelegate.objcallrecord = CallRecord
                 providerDelegate.responseDict = nil
-                let handle = Themes.sharedInstance.CheckNullvalue(Passed_value: CallRecord.ContactMsisdn)
+                let senderName = CallRecord.sendername.count > 0 ? CallRecord.sendername : CallRecord.ContactMsisdn
+                let handle = Themes.sharedInstance.CheckNullvalue(Passed_value: senderName)
                 if CallRecord.reconnecting == "1" {
                     if providerDelegate.objVC != nil {
                         self.dismissView(providerDelegate?.objVC?.view ?? UIView())

@@ -730,7 +730,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
             {
                 let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
                 let viewedArray = messageObj.value(forKey: "viewed_by")
-                if(viewedArray != nil)
+                if let _ = viewedArray as? NSArray
                 {
                     view.datasource = viewedArray as! NSArray
                     let height = (55 * Double(view.datasource.count)) + 75
@@ -934,7 +934,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                         let viewedArray = messageObj.value(forKey: "viewed_by")
                         if(viewedArray != nil)
                         {
-                            self.replyLbl.text = "👁 \((viewedArray as! NSArray).count)"
+                            self.replyLbl.text = "👁 \(((viewedArray as? NSArray)?.count) ?? 0)"
                             
                         }
                         else

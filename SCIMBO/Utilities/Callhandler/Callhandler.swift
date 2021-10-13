@@ -81,6 +81,7 @@ class Callhandler: NSObject {
         let objcallrecord:Call_record = Call_record()
         if(responseDict.count > 0)
         {
+            objcallrecord.sendername = Themes.sharedInstance.CheckNullvalue(Passed_value: responseDict.object(forKey: "sendername"))
             objcallrecord.ContactMsisdn = Themes.sharedInstance.CheckNullvalue(Passed_value: responseDict.object(forKey: "ContactMsisdn"))
             objcallrecord.From_avatar = Themes.sharedInstance.CheckNullvalue(Passed_value: responseDict.object(forKey: "From_avatar"))
             objcallrecord.To_avatar = Themes.sharedInstance.CheckNullvalue(Passed_value: responseDict.object(forKey: "To_avatar"))

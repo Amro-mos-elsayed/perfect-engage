@@ -354,8 +354,11 @@ extension MyStatusViewController: UITableViewDataSource, UITableViewDelegate{
             let viewedArray = messageObj.value(forKey: "viewed_by")
             if(viewedArray != nil)
             {
-                cell.viewsLabel.text = "\((viewedArray as! NSArray).count)"
-                
+                if let viewedArray = viewedArray as? NSArray {
+                    cell.viewsLabel.text = "\(viewedArray.count)"
+                }else{
+                    cell.viewsLabel.text = "0"
+                }
             }
             else
             {

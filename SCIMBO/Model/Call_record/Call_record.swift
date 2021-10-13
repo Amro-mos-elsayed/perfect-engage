@@ -28,7 +28,7 @@ class Call_record: NSObject,Codable
     var user_busy:String = String()
     var roomid:String = String()
     var reconnecting:String = String()
-    
+    var sendername: String = String()
     
     
     enum CodingKeys: String, CodingKey {
@@ -47,6 +47,7 @@ class Call_record: NSObject,Codable
         case to_device_type
         case from_device_type
         case reconnecting
+        case sendername
     }
     
 }

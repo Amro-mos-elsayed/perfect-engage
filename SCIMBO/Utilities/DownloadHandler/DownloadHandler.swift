@@ -65,7 +65,7 @@ class DownloadHandler: NSObject,URLhandlerDelegate {
                                 let chat = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Chat_intiated_details, attribute: "user_common_id", FetchString: user_common_id, SortDescriptor: nil) as! [Chat_intiated_details]
                                 if(chat.count > 0) {
                                     let dict = chat[0]
-                                    let save_type = Themes.sharedInstance.CheckNullvalue(Passed_value: dict.isSavetocamera)
+                                    let save_type = "0"// Themes.sharedInstance.CheckNullvalue(Passed_value: dict.isSavetocamera)
                                     let chat_type = Themes.sharedInstance.CheckNullvalue(Passed_value: dict.chat_type)
 
                                     if(save_type != "0" && chat_type != "secret")

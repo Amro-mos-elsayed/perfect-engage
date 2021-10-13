@@ -1854,6 +1854,10 @@
                     if(!Checkfav) {
                         ContactHandler.sharedInstance.savenonfavArr(ResponseDict: ResponseDict)
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.reloadData), object: nil , userInfo: nil)
+                    }else{
+                        let showNum = ResponseDict.object(forKey: "showNumber") as? Bool ?? false
+                        DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Favourite_Contact, FetchString: from, attribute: "id", UpdationElements: ["showNumber":showNum])
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.showNumberUpdated), object: nil , userInfo: nil)
                     }
                 }
             }

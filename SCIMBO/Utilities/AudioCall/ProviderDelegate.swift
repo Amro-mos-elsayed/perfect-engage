@@ -68,7 +68,7 @@ class ProviderDelegate: NSObject, SocketIOManagerDelegate {
         if objcallrecord?.reconnecting == "0" {
             let update = CXCallUpdate()
             CallerName = handle
-            update.remoteHandle = CXHandle(type: .phoneNumber, value: handle)
+            update.remoteHandle = CXHandle.init(type: .generic, value: handle)
             update.hasVideo = hasVideo
             
             provider.reportNewIncomingCall(with: uuid, update: update) { error in

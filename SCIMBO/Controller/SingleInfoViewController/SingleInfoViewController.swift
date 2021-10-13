@@ -94,7 +94,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         isEmployeeImage.isHidden = contactDetails.isUserTypeEmployee
         
     }
-    
+    //966556299553
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         DispatchQueue.main.async {
@@ -106,11 +106,12 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         self.reloaddata()
-        NotificationCenter.default.addObserver(self, selector: #selector(userDataUpdated(_:)), name: NSNotification.Name.init("UpdateUserData"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(userDataUpdated(_:)), name: NSNotification.Name(rawValue: Constant.sharedinstance.showNumberUpdated), object: nil)
     }
     
     @objc func userDataUpdated(_ notification: Notification) {
         getContactDetails()
+        propertiesTableView.reloadData()
     }
 
     func reloaddata() {
@@ -134,7 +135,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
 //        {
 //            section3Arr = ["Share Contact","Export Chat","Clear Chat","Block this Contact"]
 //        }
-        section3Arr = ["Share Contact","Clear Chat"]
+        section3Arr = ["Share Contact"]
 
         if(GroupRecordArr.count == 0)
         {
@@ -974,7 +975,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
                 
                 if indexPath.row == section3Arr.count-1{
                     //blockchat()
-                    self.clearchat()
+                    //self.clearchat()
                 }
             }
         }

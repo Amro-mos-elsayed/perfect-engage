@@ -82,6 +82,7 @@
         chats_Tblview.backgroundView?.backgroundColor = UIColor.white
         searchController.searchBar.backgroundColor = UIColor.white
         searchController.searchBar.barTintColor = UIColor.white
+        searchController.view.tintColor = CustomColor.sharedInstance.themeColor
         searchController.searchBar.backgroundImage = UIImage()
         btn_View.backgroundColor = UIColor.white
         chats_Tblview.backgroundColor = UIColor.white
@@ -128,6 +129,7 @@
        // ChatPrerecordArr  = [[NSSet setWithArray:ChatPrerecordArr] allObjects];
         //}
        // ReloadTable()
+        ContactHandler.sharedInstance.sendRecentlyUpdatedContacts(index: 0)
         
     }
         
@@ -139,7 +141,10 @@
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       // ReloadTable()
+        super.viewDidAppear(animated)
+        let GetContactNumber:String = Themes.sharedInstance.setPhoneTxt(Themes.sharedInstance.Getuser_id())
+        let CheckFavDict:[String:String]=["msisdn":"\(GetContactNumber)","indexAt" : "\(0)"]
+        SocketIOManager.sharedInstance.GetFavContact(Dict: CheckFavDict as NSDictionary)
     }
     
     @IBAction func archive_message(_ sender: UIButton) {
@@ -708,7 +713,7 @@
                         self.reloadMessages()
                         self.Nochat_view.isHidden=true
                         self.chats_Tblview.isHidden=false
-                        self.editBtn.isHidden = false
+                        self.editBtn.isHidden = true
                     }
                     else
                     {
@@ -3555,7 +3560,7 @@
             chats_Tblview.reloadData()
         }else{
             searchActive = false;
-            editBtn.isHidden = false
+            editBtn.isHidden = true
             btn_View.isHidden = false
             filterMessage = []
             allArray = []
