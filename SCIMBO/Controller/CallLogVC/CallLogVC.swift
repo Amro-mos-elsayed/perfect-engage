@@ -104,7 +104,10 @@ class CallLogVC: UIViewController,UISearchControllerDelegate,UISearchResultsUpda
         if SearchSourceDictArr != nil , SearchSourceDictArr.count >= 1 {
         SearchSourceDictArr.removeAllObjects()
         }
-        ReloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.ReloadData()
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

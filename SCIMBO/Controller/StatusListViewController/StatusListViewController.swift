@@ -68,7 +68,7 @@ class StatusListViewController: UIViewController,UITableViewDelegate,UITableView
         let app = Themes.sharedInstance.GetAppname()
         if getDic.count == 0{
             statusSelec_Arry.removeAllObjects()
-            statusSelec_Arry.add(NSLocalizedString("Hey there! I am using ", comment:"Hey there! I am using ") + " " + app )
+            
             
         }
         else{
@@ -97,7 +97,7 @@ class StatusListViewController: UIViewController,UITableViewDelegate,UITableView
                 if checkStatus == "status not found"
                 {
                     statusSelec_Arry.removeAllObjects()
-                    statusSelec_Arry.add(NSLocalizedString("Hey there! I am using ", comment:"Hey there! I am using ") + " " + app )
+                    
                 }
                 
                 

@@ -12,6 +12,7 @@ import SDWebImage
 import RSKImageCropper
 class EditProfileViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIPopoverControllerDelegate,UITextFieldDelegate,RSKImageCropViewControllerDelegate, SocketIOManagerDelegate{
     
+    
     @IBOutlet weak var baseView:UIView!
     @IBOutlet weak var imageDetailViewHeight: NSLayoutConstraint!
     @IBOutlet weak var activityIndctr_Image: UIActivityIndicatorView!
@@ -136,7 +137,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
             else
             {
                 statusBtn.titleEdgeInsets = UIEdgeInsets(top: 0.0, left: 10, bottom: 0.0, right: 0.0)
-                statusBtn.setTitle(NSLocalizedString("Hey there! I am using", comment: "test")  + " " + Themes.sharedInstance.GetAppname(), for: UIControl.State.normal)
+                statusBtn.setTitle(NSLocalizedString("Online", comment: "test"), for: UIControl.State.normal)
             }
         }
         

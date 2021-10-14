@@ -3222,7 +3222,8 @@
                                     {
                                         
                                         let Doc_id:String = Themes.sharedInstance.CheckNullvalue(Passed_value: messageObj.value(forKey: "doc_id"));
-                                        var viewedArray = messageObj.value(forKey: "viewed_by")
+                                        let data = messageObj.value(forKey: "viewed_by") as? Data
+                                        var viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSMutableArray
                                         
                                         if(viewedArray != nil)
                                         {

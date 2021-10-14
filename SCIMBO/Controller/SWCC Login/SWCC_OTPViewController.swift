@@ -51,7 +51,14 @@ class SWCC_OTPViewController: UIViewController {
         self.resend_button.isUserInteractionEnabled = false
         seconds = 60
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector:  #selector(OTPViewController.updateTimerLabel), userInfo: nil, repeats: true)
-        statusList_Array = ["Available","At work","At the movies","Battery About to die","Busy","Can't talk,\(Themes.sharedInstance.GetAppname()) only","In a meeting","At the gym","Sleeping","Urgent calls only"]
+        statusList_Array = [NSLocalizedString("Online", comment: "ava"),
+                            NSLocalizedString("Away", comment: "ava"),
+                            NSLocalizedString("Busy", comment: "ava"),
+                            NSLocalizedString("In a meeting", comment: "ava") ,
+                            NSLocalizedString("Do not disturb", comment: "ava") ,
+                            NSLocalizedString("Business trip", comment: "ava") ,
+                            NSLocalizedString("On vacation", comment: "ava"),
+                            NSLocalizedString("Offline", comment: "ava")]
         
         if(status != "")
         {
@@ -154,7 +161,7 @@ class SWCC_OTPViewController: UIViewController {
                     }
                     if(self.status == "")
                     {
-                        self.status = "Hey there! I am using \(Themes.sharedInstance.GetAppname())"
+                        self.status = "Online"
                         
                     }
                    

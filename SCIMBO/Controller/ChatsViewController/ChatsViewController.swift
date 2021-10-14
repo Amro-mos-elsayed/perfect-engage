@@ -143,7 +143,7 @@
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let GetContactNumber:String = Themes.sharedInstance.setPhoneTxt(Themes.sharedInstance.Getuser_id())
-        let CheckFavDict:[String:String]=["msisdn":"\(GetContactNumber)","indexAt" : "\(0)"]
+        let CheckFavDict:[String:String]=["msisdn":"\(GetContactNumber)","indexAt" : "\(1)"]
         SocketIOManager.sharedInstance.GetFavContact(Dict: CheckFavDict as NSDictionary)
     }
     

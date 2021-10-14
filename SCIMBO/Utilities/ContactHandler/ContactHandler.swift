@@ -306,33 +306,34 @@ class ContactHandler: NSObject {
     func StoreContacts()
     {
         DispatchQueue.main.async {
-            Themes.sharedInstance.showWaitingNetwork(false, state: false)
+            //Themes.sharedInstance.showWaitingNetwork(false, state: false)
         }
         if(self.CheckCheckPermission())
         {
             self.StorecontactInProgress = true
-            DispatchQueue.global(qos: .background).async {
-                
-                self.fetchContactsFromPhone(completionHandler: { (total, success) in
-                    if(total == self.contacts.count)
-                    {
-                        self.SaveContact(completionHandler: { (totalcontact) in
-//                            let RecentContactArr : NSArray = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil) as! NSArray
-                            DatabaseHandler.sharedInstance.FetchFromDBWithCompletion(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil, completion: { (result) in
-                                let RecentContactArr = result as! NSArray
-                                if(RecentContactArr.count > 0) {
-                                    self.sendRecentlyUpdatedContactArray(index: 0, ContactArr: RecentContactArr)
-                                } else {
-                                    self.CheckFavArray(index: 0, RecentContactArr: RecentContactArr, ContactArr: totalcontact)
-                                }
-                                DispatchQueue.main.async {
-                                    Themes.sharedInstance.showWaitingNetwork(false, state: true)
-                                }
-                            })
-                        })
-                    }
-                })
-            }
+            self.sendRecentlyUpdatedContacts(index: 0)
+//            DispatchQueue.global(qos: .background).async {
+//                
+//                self.fetchContactsFromPhone(completionHandler: { (total, success) in
+//                    if(total == self.contacts.count)
+//                    {
+//                        self.SaveContact(completionHandler: { (totalcontact) in
+////                            let RecentContactArr : NSArray = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil) as! NSArray
+//                            DatabaseHandler.sharedInstance.FetchFromDBWithCompletion(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil, completion: { (result) in
+//                                let RecentContactArr = result as! NSArray
+//                                if(RecentContactArr.count > 0) {
+//                                    self.sendRecentlyUpdatedContactArray(index: 0, ContactArr: RecentContactArr)
+//                                } else {
+//                                    self.CheckFavArray(index: 0, RecentContactArr: RecentContactArr, ContactArr: totalcontact)
+//                                }
+//                                DispatchQueue.main.async {
+//                                    Themes.sharedInstance.showWaitingNetwork(false, state: true)
+//                                }
+//                            })
+//                        })
+//                    }
+//                })
+//            }
         }
     }
     
@@ -828,9 +829,9 @@ class ContactHandler: NSObject {
             let CheckLogin:Bool=DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.User_detail, attribute: "user_id", FetchString: nil)
             if(CheckLogin) {
                 let CheckContact:Bool=DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Contact_add, attribute: nil, FetchString: nil);
-                if(CheckContact) {
+                if(true) {
                     let ContactArr : NSArray = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil) as! NSArray
-                    if(ContactArr.count > 0) {
+                    if(true) {
                         let CheckFavcontactArr:NSMutableArray=NSMutableArray()
                         _ = ContactArr.map {
                             let ChatFavObj = $0 as! NSManagedObject
@@ -841,21 +842,12 @@ class ContactHandler: NSObject {
                             CheckFavcontactArr.add(dict_contact as NSDictionary)
                         }
                         
-                        if(CheckFavcontactArr.count > 0) {
-                            var dictFromJSONArr:Any!
+                        if(true) {
                             let GetContactNumber:String = Themes.sharedInstance.setPhoneTxt(Themes.sharedInstance.Getuser_id())
                             
-                            do {
-                                let jsonData = try JSONSerialization.data(withJSONObject: CheckFavcontactArr, options: .prettyPrinted)
-                                if let JSONString = String(data: jsonData, encoding: String.Encoding.utf8) {
-                                    dictFromJSONArr=JSONString
-                                    dictFromJSONArr = (dictFromJSONArr as! NSString).trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
-                                }
-                            } catch {
-                                print(error.localizedDescription)
-                            }
                             
-                            let CheckFavDict:[String:String]=["msisdn":"\(GetContactNumber)","Contacts": dictFromJSONArr as! String, "indexAt" : "\(index)"]
+                            
+                            let CheckFavDict:[String:String]=["msisdn":"\(GetContactNumber)", "indexAt" : "\(index)"]
                             
                             isRecent = true
                             SocketIOManager.sharedInstance.GetFavContact(Dict: CheckFavDict as NSDictionary)

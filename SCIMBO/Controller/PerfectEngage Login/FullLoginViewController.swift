@@ -252,8 +252,7 @@ class FullLoginViewController: UIViewController {
                     var status = status
                     if(status == "")
                     {
-                        let state = NSLocalizedString("Hey there! I am using", comment: "note" )
-                        status = state + " " + Themes.sharedInstance.GetAppname()
+                        let state = NSLocalizedString("Online", comment: "note" )
                         
                     }
                     
@@ -296,7 +295,14 @@ class FullLoginViewController: UIViewController {
         let app = Themes.sharedInstance.GetAppname()
         var  statusList_Array = NSMutableArray()
         
-        statusList_Array = [NSLocalizedString("Available", comment: "ava") , NSLocalizedString("At work", comment: "ava"), NSLocalizedString("At the movies", comment: "ava"),NSLocalizedString("Battery About to die", comment: "ava") ,NSLocalizedString("Busy", comment: "ava") , NSLocalizedString("Can't talk", comment: "ava") + app + NSLocalizedString("only", comment: "ava"), NSLocalizedString("In a meeting", comment: "ava") , NSLocalizedString("At the gym", comment: "ava"),NSLocalizedString("Sleeping", comment: "ava") , NSLocalizedString("Urgent calls only", comment: "ava")]
+        statusList_Array = [NSLocalizedString("Online", comment: "ava"),
+                            NSLocalizedString("Away", comment: "ava"),
+                            NSLocalizedString("Busy", comment: "ava"),
+                            NSLocalizedString("In a meeting", comment: "ava") ,
+                            NSLocalizedString("Do not disturb", comment: "ava") ,
+                            NSLocalizedString("Business trip", comment: "ava") ,
+                            NSLocalizedString("On vacation", comment: "ava"),
+                            NSLocalizedString("Offline", comment: "ava")]
         
         if(status != "")
         {
@@ -307,7 +313,7 @@ class FullLoginViewController: UIViewController {
         {
             statusList_Array.add(status)
         }
-        let appName = NSLocalizedString("Hey there! I am using", comment: "test") + Themes.sharedInstance.GetAppname()
+        let appName = NSLocalizedString("Online", comment: "test")
         if(!statusList_Array.contains(appName)) {
             statusList_Array.add(appName)
         }

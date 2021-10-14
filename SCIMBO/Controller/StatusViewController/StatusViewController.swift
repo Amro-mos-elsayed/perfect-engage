@@ -729,10 +729,11 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
             if(FetchMessageArr.count > 0)
             {
                 let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
-                let viewedArray = messageObj.value(forKey: "viewed_by")
-                if let _ = viewedArray as? NSArray
+                let data = messageObj.value(forKey: "viewed_by") as? Data
+                let viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSArray
+                if let _ = viewedArray
                 {
-                    view.datasource = viewedArray as! NSArray
+                    view.datasource = viewedArray!
                     let height = (55 * Double(view.datasource.count)) + 75
                     ratio = height/Double(self.view.frame.size.height)
                 }
@@ -850,10 +851,11 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     if(FetchMessageArr.count > 0)
                     {
                         let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
-                        let viewedArray = messageObj.value(forKey: "viewed_by")
+                        let data = messageObj.value(forKey: "viewed_by") as? Data
+                        let viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSArray
                         if(viewedArray != nil)
                         {
-                            self.replyLbl.text = "👁 \((viewedArray as! NSArray).count)"
+                            self.replyLbl.text = "👁 \(((viewedArray) ?? NSArray.init()).count)"
                             
                         }
                         else
@@ -931,10 +933,11 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     if(FetchMessageArr.count > 0)
                     {
                         let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
-                        let viewedArray = messageObj.value(forKey: "viewed_by")
+                        let data = messageObj.value(forKey: "viewed_by") as? Data
+                        let viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSArray
                         if(viewedArray != nil)
                         {
-                            self.replyLbl.text = "👁 \(((viewedArray as? NSArray)?.count) ?? 0)"
+                            self.replyLbl.text = "👁 \(((viewedArray)?.count) ?? 0)"
                             
                         }
                         else
@@ -1016,10 +1019,11 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     if(FetchMessageArr.count > 0)
                     {
                         let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
-                        let viewedArray = messageObj.value(forKey: "viewed_by")
+                        let data = messageObj.value(forKey: "viewed_by") as? Data
+                        let viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSArray
                         if(viewedArray != nil)
                         {
-                            self.replyLbl.text = "👁 \((viewedArray as! NSArray).count)"
+                            self.replyLbl.text = "👁 \(((viewedArray) ?? NSArray.init()).count)"
                             
                         }
                         else
@@ -1219,10 +1223,11 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                 if(FetchMessageArr.count > 0)
                 {
                     let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
-                    let viewedArray = messageObj.value(forKey: "viewed_by")
+                    let data = messageObj.value(forKey: "viewed_by") as? Data
+                    let viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSArray
                     if(viewedArray != nil)
                     {
-                        weak.replyLbl.text = "👁 \((viewedArray as! NSArray).count)"
+                        weak.replyLbl.text = "👁 \(((viewedArray) ?? NSArray.init()).count)"
                         
                     }
                     else
