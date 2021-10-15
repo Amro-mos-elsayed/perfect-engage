@@ -103,6 +103,7 @@
 		7C35ED3726F0DCD3006BB3B4 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7C35ED3026F0DCD3006BB3B4 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7C42985426BFC18000D819C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C42985226BFC18000D819C1 /* LoginViewController.swift */; };
 		7C5BE17826CA6ADD00FBDA66 /* AppDelegate+VOIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5BE17726CA6ADD00FBDA66 /* AppDelegate+VOIP.swift */; };
+		7C611A032719ADAF00D29931 /* MessageHandlerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C611A022719ADAF00D29931 /* MessageHandlerExtension.swift */; };
 		7C6702F127033E36003D5724 /* FullLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6702EF27033E36003D5724 /* FullLoginViewController.swift */; };
 		7C6702F227033E36003D5724 /* FullLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6702F027033E36003D5724 /* FullLoginViewController.xib */; };
 		7C6702F527058F46003D5724 /* LoginTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6702F327058F46003D5724 /* LoginTypeViewController.swift */; };
@@ -782,6 +783,7 @@
 		7C42985226BFC18000D819C1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7C5BE17726CA6ADD00FBDA66 /* AppDelegate+VOIP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+VOIP.swift"; sourceTree = "<group>"; };
 		7C5BE17926CA913000FBDA66 /* ARDConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDConstants.h; sourceTree = "<group>"; };
+		7C611A022719ADAF00D29931 /* MessageHandlerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHandlerExtension.swift; sourceTree = "<group>"; };
 		7C6702EF27033E36003D5724 /* FullLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullLoginViewController.swift; sourceTree = "<group>"; };
 		7C6702F027033E36003D5724 /* FullLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullLoginViewController.xib; sourceTree = "<group>"; };
 		7C6702F327058F46003D5724 /* LoginTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTypeViewController.swift; sourceTree = "<group>"; };
@@ -3355,6 +3357,7 @@
 			isa = PBXGroup;
 			children = (
 				C56140E8211043F400F1BBBD /* MessageHandler.swift */,
+				7C611A022719ADAF00D29931 /* MessageHandlerExtension.swift */,
 			);
 			path = MessageHandler;
 			sourceTree = "<group>";
@@ -5032,6 +5035,7 @@
 				C5FCDE271F83B4EC009C44BF /* aestab.c in Sources */,
 				C5FCDDF81F83B4C0009C44BF /* SSZipArchive+Swift.swift in Sources */,
 				C55192822058DACF00F6495A /* PresentationManager.swift in Sources */,
+				7C611A032719ADAF00D29931 /* MessageHandlerExtension.swift in Sources */,
 				C514A0EF1F5E8FE20037BF6E /* NotificationVC.swift in Sources */,
 				C51FFC431F8673BC002B6DB2 /* ARDMainViewController.m in Sources */,
 				436C60F72073CAD80048FC47 /* ButtonPicker.swift in Sources */,
@@ -5346,7 +5350,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
@@ -5355,7 +5359,7 @@
 				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5375,7 +5379,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
@@ -5383,7 +5387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5528,7 +5532,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
@@ -5650,7 +5654,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5672,7 +5676,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5795,7 +5799,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5821,7 +5825,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5835,7 +5839,7 @@
 				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5862,7 +5866,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20;
+				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5875,7 +5879,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageProd.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

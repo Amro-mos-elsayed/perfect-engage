@@ -830,7 +830,7 @@ class MessageHandler: NSObject {
         
     }
     
-    func StoreIncomingMessage(ResponseDict:NSDictionary,isFromoffline:Bool)
+    func StoreIncomingMessageold(ResponseDict:NSDictionary,isFromoffline:Bool)
     {
         DispatchQueue.main.async {
             
@@ -1782,125 +1782,6 @@ class MessageHandler: NSObject {
             }
         }
     }
-    
-    
-    func StoreIncomingStatusMessage(ResponseDict:NSDictionary,isFromoffline:Bool)
-    {
-        DispatchQueue.main.async {
-            
-            let timestamp:String = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "id"));
-            let from:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "from"));
-            let type:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "type"));
-            let status:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "status"));
-            var Doc_id:String = ""
-            var msisdn:String = ""
-            var Chattype:String=""
-            Chattype="single"
-            var user_common_id:String = ""
-            let info_type:String = "0"
-            if(isFromoffline)
-            {
-                Doc_id=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "docId"));
-                msisdn = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "ContactMsisdn"))
-            }
-            else
-            {
-                Doc_id=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "doc_id"));
-                msisdn = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "From_msisdn"))
-            }
-            let message_status:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "message_status"));
-            
-            var message_from:String=""
-            if(from != Themes.sharedInstance.Getuser_id())
-            {
-                
-                message_from="0";
-            }
-            else
-            {
-                message_from="1";
-            }
-            
-            user_common_id = Themes.sharedInstance.CheckNullvalue(Passed_value:from)
-            
-            if(type != "13"){
-                if(message_status == "0" || message_status == "1" || status == "1")
-                {
-                    if(from != Themes.sharedInstance.Getuser_id())
-                    {
-                        let timestamp_offlinemessages:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "msgId"));
-                        SocketIOManager.sharedInstance.StatusAcknowledegmentHandler(from: Themes.sharedInstance.Getuser_id() as NSString, to: from as NSString, status: "2", doc_id: Doc_id as NSString, timestamp: timestamp_offlinemessages as NSString,isEmit_status: true, chat_type: Chattype)
-                    }
-                }
-            }
-            
-            let Check_Fav:Bool=DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Favourite_Contact, attribute: "id", FetchString: from)
-            if(!Check_Fav)
-            {
-                if(from != Themes.sharedInstance.Getuser_id())
-                {
-                    let param_userDetails:[String:Any]=["userId":from]
-                    SocketIOManager.sharedInstance.EmituserDetails(Param: param_userDetails)
-                }
-            }
-            let CheckUser:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: "\(Constant.sharedinstance.Status_initiated_details)", attribute: "user_common_id", FetchString: from)
-            if(!CheckUser)
-            {
-                let User_dict:[AnyHashable: Any] = ["user_common_id": from, "user_to_dp":"0" ,"user_id":Themes.sharedInstance.Getuser_id(),"chat_type":Chattype,"is_archived":"0","conv_id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"opponent_id": "","chat_count":"1","is_read":"0"]
-                DatabaseHandler.sharedInstance.InserttoDatabase(Dict: User_dict as NSDictionary,Entityname: "\(Constant.sharedinstance.Status_initiated_details)")
-            }else{
-                let FetchCount:String = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Status_initiated_details, attrib_name: "user_common_id", fetchString: from, returnStr: "chat_count")
-                let count:Int = Int(FetchCount)!+1
-                let User_dict:[AnyHashable: Any]=["timestamp":timestamp,"chat_count":"\(count)","is_read":"0","user_id":Themes.sharedInstance.Getuser_id(), "is_archived" : "0"]
-                let checkMessage = DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Status_one_one, attribute: "msgId", FetchString: Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "msgId")))
-                if(!checkMessage)
-                {
-                    DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Status_initiated_details, FetchString: from , attribute: "user_common_id", UpdationElements: User_dict as NSDictionary?)
-                }
-            }
-            let recordId:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "recordId"));
-            
-            let CheckMessage : Bool = DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Status_one_one, attribute: "doc_id", FetchString: Doc_id)
-            
-            let Message_type:String = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "type"))
-            if(!CheckMessage)
-            {
-                var ThumbnailID:String = String()
-                if(type == "1" || type == "2")
-                {
-                    ThumbnailID = Doc_id
-                    var ServerPath_path:String =  Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "thumbnail"))
-                    if(ServerPath_path.substring(to: 1) == ".")
-                    {
-                        ServerPath_path.remove(at: ServerPath_path.startIndex)
-                        ServerPath_path = ("\(ImgUrl)\(ServerPath_path)")
-                    }
-                    let thumbnail_data = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "thumbnail_data"))
-                    let Dict:[String:Any] = ["failure_status":"0","total_byte_count":"0","upload_byte_count":"0","upload_count":"1","upload_data_id":ThumbnailID,"upload_Path":"","upload_status":"1","serverpath":ServerPath_path,"data_count":"0","compressed_data":thumbnail_data,"to_id":"","message_status":"1","user_common_id":user_common_id,"user_id":Themes.sharedInstance.Getuser_id(),"download_status":"0","upload_type":"\(type)","is_uploaded":"0", "upload_paused" : "0"]
-                    DatabaseHandler.sharedInstance.InserttoDatabase(Dict: Dict as NSDictionary, Entityname: Constant.sharedinstance.Status_Upload_Details);
-                    
-                }
-                
-                let isCallDetailPresent : Bool = DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Status_one_one, attribute: "doc_id", FetchString: Doc_id)
-                
-                let status:String = "2"
-                let message:String =  Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "payload"))
-                let dic:[AnyHashable: Any] = ["type": Message_type,"convId":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "convId")),"doc_id":Doc_id,"filesize":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "filesize")),"from":Themes.sharedInstance.CheckNullvalue(Passed_value:from
-                    ),"to":"", "isStar":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "isStar")),"message_status":status,"id":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "id")),"name":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "contact_name")),"payload":message.encoded
-                    ,"recordId":recordId,"thumbnail":ThumbnailID,"width":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "width")),"height":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "height")),"msgId":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "msgId")),"contactmsisdn":msisdn
-                    ,"user_common_id":user_common_id,"timestamp":timestamp,"message_from":message_from,"chat_type":Chattype,"info_type":info_type,"created_by":Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "from")),"is_reply":"0", "duration" : Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "duration")), "theme_color" : Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "theme_color")), "theme_font" : Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "theme_font")), "date" : Themes.sharedInstance.getTimeStamp()]
-                if(!isCallDetailPresent)
-                {
-                    DatabaseHandler.sharedInstance.InserttoDatabase(Dict: dic as NSDictionary,Entityname: Constant.sharedinstance.Status_one_one)
-                }
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.incomingstatus), object: nil , userInfo: nil)
-                
-            }
-        }
-    }
-    
-    
-    
     
 }
 

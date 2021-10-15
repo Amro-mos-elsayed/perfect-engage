@@ -312,28 +312,28 @@ class ContactHandler: NSObject {
         {
             self.StorecontactInProgress = true
             self.sendRecentlyUpdatedContacts(index: 0)
-//            DispatchQueue.global(qos: .background).async {
-//                
-//                self.fetchContactsFromPhone(completionHandler: { (total, success) in
-//                    if(total == self.contacts.count)
-//                    {
-//                        self.SaveContact(completionHandler: { (totalcontact) in
-////                            let RecentContactArr : NSArray = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil) as! NSArray
-//                            DatabaseHandler.sharedInstance.FetchFromDBWithCompletion(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil, completion: { (result) in
-//                                let RecentContactArr = result as! NSArray
-//                                if(RecentContactArr.count > 0) {
-//                                    self.sendRecentlyUpdatedContactArray(index: 0, ContactArr: RecentContactArr)
-//                                } else {
-//                                    self.CheckFavArray(index: 0, RecentContactArr: RecentContactArr, ContactArr: totalcontact)
-//                                }
-//                                DispatchQueue.main.async {
-//                                    Themes.sharedInstance.showWaitingNetwork(false, state: true)
-//                                }
-//                            })
-//                        })
-//                    }
-//                })
-//            }
+            DispatchQueue.global(qos: .background).async {
+                
+                self.fetchContactsFromPhone(completionHandler: { (total, success) in
+                    if(total == self.contacts.count)
+                    {
+                        self.SaveContact(completionHandler: { (totalcontact) in
+                            //                            let RecentContactArr : NSArray = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil) as! NSArray
+                            DatabaseHandler.sharedInstance.FetchFromDBWithCompletion(Entityname: Constant.sharedinstance.Contact_add, attribute: "is_changed", FetchString: "1", SortDescriptor: nil, completion: { (result) in
+                                let RecentContactArr = result as! NSArray
+                                if(RecentContactArr.count > 0) {
+                                    self.sendRecentlyUpdatedContactArray(index: 0, ContactArr: RecentContactArr)
+                                } else {
+                                    self.CheckFavArray(index: 0, RecentContactArr: RecentContactArr, ContactArr: totalcontact)
+                                }
+                                DispatchQueue.main.async {
+                                    //Themes.sharedInstance.showWaitingNetwork(false, state: true)
+                                }
+                            })
+                        })
+                    }
+                })
+            }
         }
     }
     
@@ -580,7 +580,12 @@ class ContactHandler: NSObject {
                     if self.PhonenumberArray.contains(phonenumber){
                         let i = self.PhonenumberArray.index(of: phonenumber)
                         if self.contactphone_Array.count > i && self.contactEmail_Array.count > i && self.contactAddress_Array.count > i && self.ContactNameArr.count > i && self.contactID_Array.count  > i{
-                            let contact_details:NSMutableDictionary = ["phone_number":self.contactphone_Array[i],"email":self.contactEmail_Array[i],"address":self.contactAddress_Array[i],"im":[],"organisation":[],"name":[]]
+                            let contact_details:NSMutableDictionary = ["phone_number":self.contactphone_Array[i],
+                                                                       "email":self.contactEmail_Array[i],
+                                                                       "address":self.contactAddress_Array[i],
+                                                                       "im":[],
+                                                                       "organisation":[],
+                                                                       "name":[]]
                             if let json = try?JSONSerialization.data(withJSONObject: contact_details, options: []) {
                                 if let content = String(data: json, encoding: String.Encoding.utf8) {
                                     let Dict:NSMutableDictionary=["contact_id":self.contactID_Array[i],"contact_mobilenum":self.PhonenumberArray[i],"contact_name":self.ContactNameArr[i],"is_fav":"0","contact_details":content]

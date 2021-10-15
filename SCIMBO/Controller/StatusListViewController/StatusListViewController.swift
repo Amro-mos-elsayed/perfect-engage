@@ -107,7 +107,7 @@ class StatusListViewController: UIViewController,UITableViewDelegate,UITableView
         if checkStatus == "status not found"
         {
             
-            let UpdateDic:[String:Any]=["status": NSLocalizedString("Hey there! I am using ", comment:"Hey there! I am using ") + " " + app]
+            let UpdateDic:[String:Any]=["status": NSLocalizedString("Online", comment:"Hey there! I am using ")]
             DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail , FetchString:Themes.sharedInstance.Getuser_id() , attribute:"user_id", UpdationElements: UpdateDic as NSDictionary?)
         }
         
@@ -269,7 +269,7 @@ class StatusListViewController: UIViewController,UITableViewDelegate,UITableView
         
         if indexPath.section ==  2{
             SocketIOManager.sharedInstance.Delegate = self
-            SocketIOManager.sharedInstance.changeStatus(status:NSLocalizedString("Hey there! I am using ", comment:"Hey there! I am using ") + Themes.sharedInstance.GetAppname() , from:Themes.sharedInstance.Getuser_id())
+            SocketIOManager.sharedInstance.changeStatus(status:NSLocalizedString("Online", comment:"Hey there! I am using "), from:Themes.sharedInstance.Getuser_id())
         }
             
         else  if indexPath.section == 0 {
@@ -320,7 +320,7 @@ class StatusListViewController: UIViewController,UITableViewDelegate,UITableView
         }
         else{
             
-            let UpdateDic:[String:Any]=["status": NSLocalizedString("Hey there! I am using ", comment:"Hey there! I am using ") + app]
+            let UpdateDic:[String:Any]=["status": NSLocalizedString("Online", comment:"Hey there! I am using ")]
             DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail , FetchString:Themes.sharedInstance.Getuser_id(), attribute:"user_id", UpdationElements: UpdateDic as NSDictionary?)
             getStatus()
         }

@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.2p.EngageProd</string>
+		<string>group.com.2p.EngageGitex</string>
 	</array>
 </dict>
 </plist>

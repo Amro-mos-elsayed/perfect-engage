@@ -7,9 +7,9 @@
 //
 
 import Foundation
-//let BaseURLArray = ["https://2ppee.perfect-engage.com"]
+let BaseURLArray = ["https://2ppee.perfect-engage.com"]// gitex
 
-let BaseURLArray = ["https://pee.perfect-engage.com"]// minister
+//let BaseURLArray = ["https://pee.perfect-engage.com"]// minister
 //let BaseURLArray = ["https://dev2pengage.perfect-engage.com"]
 
 var BaseUrl : String {

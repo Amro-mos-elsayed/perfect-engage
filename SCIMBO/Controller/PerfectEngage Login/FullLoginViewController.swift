@@ -252,7 +252,7 @@ class FullLoginViewController: UIViewController {
                     var status = status
                     if(status == "")
                     {
-                        let state = NSLocalizedString("Online", comment: "note" )
+                        status = NSLocalizedString("Online", comment: "note" )
                         
                     }
                     
