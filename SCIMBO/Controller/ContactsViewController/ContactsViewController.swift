@@ -51,7 +51,7 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         if UIDevice.isIphoneX {
             topViewHeightConstraint.constant = Constant.sharedinstance.NavigationBarHeight_iPhoneX
         } else {
@@ -62,7 +62,7 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         searchController.delegate=self
         searchController.searchBar.delegate=self
         searchController.searchResultsUpdater = self
-        //searchController
+        searchController.hidesNavigationBarDuringPresentation = true
         if let exampleType = ExampleType(rawValue: "comparison") {
             example = exampleByType(exampleType)
         }
@@ -105,7 +105,7 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
+        super.viewDidDisappear(animated)
         if(data_Source != nil)
         {
             data_Source.initwithData()
@@ -355,7 +355,8 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        super.viewWillAppear(animated)
     }
     
     fileprivate func setNativeIndexHidden(_ hidden: Bool) {
@@ -389,6 +390,10 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         }
     }
     
+    func willDismissSearchController(_ searchController: UISearchController) {
+        let cc = 44
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

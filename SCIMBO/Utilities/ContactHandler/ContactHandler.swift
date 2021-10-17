@@ -394,10 +394,10 @@ class ContactHandler: NSObject {
     
     func ArrayCreations(completionHandler: @escaping() -> Void)
     {
-        DispatchQueue.main.async {
+        DispatchQueue.global(qos: .background).async {
             
             _ =    self.contacts.map{
-                let indexofContact = (self.contacts as NSArray).index(of: $0)
+                let indexofContact = (self.contacts).index(of: $0)
                 let currentcontact = $0
                 
                 //var email:String = ""

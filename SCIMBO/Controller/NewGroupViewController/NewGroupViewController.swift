@@ -383,8 +383,9 @@ class NewGroupViewController: UIViewController,UITableViewDelegate,UITableViewDa
                     self,
                     title: Themes.sharedInstance.GetAppname(),
                     text: "Add \(personName) to \"\(GroupDetailRec.displayName)\" group?",
-                    buttonText: "Ok",
-                    cancelButtonText: "Cancel"
+                    buttonText: "Ok".localized(),
+                    cancelButtonText: "Cancel".localized(),
+                    color: CustomColor.sharedInstance.themeColor
                 )
                 alertview.addAction {
                     for person in contactRec

@@ -862,7 +862,10 @@
         let groupId:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "groupId"))
         let groupType:String = "5"
         let id = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "id"))
-        let createdBy = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "from"))
+        var createdBy = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "createdBy"))
+        if createdBy == "" {
+            createdBy = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "from"))
+        }
         let Msg = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "message"))
         let timeStamp = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.object(forKey: "id"))
         
