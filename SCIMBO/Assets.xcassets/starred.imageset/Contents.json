@@ -1,23 +1,21 @@
 {
   "images" : [
     {
-      "filename" : "Flag.png",
       "idiom" : "universal",
+      "filename" : "starred.png",
       "scale" : "1x"
     },
     {
-      "filename" : "Flag@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Flag@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
