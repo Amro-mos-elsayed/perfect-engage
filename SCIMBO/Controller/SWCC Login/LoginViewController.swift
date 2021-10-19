@@ -26,8 +26,8 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         #if DEBUG
-        userIdTextField.text = "alabeeb@2p.com.sa"
-        PasswordIdTextField.text = "Aa.2p123!"
+        userIdTextField.text = "112233"
+        PasswordIdTextField.text = "P@$$w0rd"
         #endif
     }
     
@@ -71,16 +71,17 @@ class LoginViewController: UIViewController {
     
     func login(uid: String, password: String) {
         loginRequest(uid: uid, password: password) { user in
-            var mobileNum = user.telephoneNumber!//.substring(from: 3)
+            var mobileNum = user.mobile!//.substring(from: 3)
             if mobileNum.count > 11{
                 mobileNum = mobileNum.substring(from: 3)
             }
-            let email: String = user.mail!
-            self.navigateToLoginVC(phoneNumber: mobileNum, code: "", userName: user.displayName!,email: email)
+            let email: String = user.fullName!
+            let name = user.fullName
+            self.navigateToLoginVC(phoneNumber: mobileNum, userName: name!,email: email)
         }
     }
     
-    func navigateToLoginVC(phoneNumber: String, code: String, userName: String, email: String) {
+    func navigateToLoginVC(phoneNumber: String, userName: String, email: String) {
        // let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = FullLoginViewController.init()
         vc.phoneNo = phoneNumber
@@ -95,7 +96,7 @@ class LoginViewController: UIViewController {
     func loginRequest(uid: String, password: String, completion:@escaping ((ResultObject) -> ())) {
         Themes.sharedInstance.activityView(View: self.view)
         let url = BaseUrl + "/activeDirectory"
-        let parameters: Parameters = ["email" : uid ,"password" : password]
+        let parameters: Parameters = ["employeeId" : uid ,"password" : password]
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseData { response in
             Themes.sharedInstance.RemoveactivityView(View: self.view)
@@ -103,12 +104,12 @@ class LoginViewController: UIViewController {
             case .success(let data):
                 let jsondecoder = JSONDecoder.init()
                 let loginModel = try? jsondecoder.decode(LoginModel.self, from: data)
-                if let user = loginModel?.resultObject, loginModel?.authorized == true {
+                if let user = loginModel?.resultObject {
                     completion(user)
                 }else {
-                    Themes.sharedInstance.ShowNotification("error has been occurred".localized() , false)
+                    Themes.sharedInstance.ShowNotification(loginModel?.resultMessage ?? "error has been occurred".localized() , false)
                     #if DEBUG
-                    //self.navigateToLoginVC(phoneNumber: "", code: "", userName: "", email: "email@email.com")
+                    self.navigateToLoginVC(phoneNumber: "", userName: "", email: "email@email.com")
                     #endif
                 }
                 break
@@ -116,7 +117,7 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
                 Themes.sharedInstance.ShowNotification("error has been occurred".localized(), false)
                 #if DEBUG
-                self.navigateToLoginVC(phoneNumber: "", code: "", userName: "", email: "email@email.com")
+                self.navigateToLoginVC(phoneNumber: "", userName: "", email: "email@email.com")
                 #endif
             }
         }
@@ -131,20 +132,41 @@ class LoginViewController: UIViewController {
 
 // MARK: - Welcome
 struct LoginModel: Codable {
-    let authorized: Bool
+    let resultMessage, moreDetails: String?
     let resultObject: ResultObject?
 
     enum CodingKeys: String, CodingKey {
-        case resultObject = "data"
-        case authorized
+        case resultMessage = "ResultMessage"
+        case moreDetails = "MoreDetails"
+        case resultObject = "ResultObject"
     }
 }
 
 // MARK: - ResultObject
 struct ResultObject: Codable {
-    let telephoneNumber,displayName,mail: String?
+    let firstNameAr, middleNameAr, lastNameAr, firstNameEn: String?
+    let middleNameEn, lastNameEn, fullName, gender: String?
+    let nationalID, nationality, mobile, title: String?
+    let department, departmentCode, locationAr, locationEn: String?
+    let photo: String?
 
     enum CodingKeys: String, CodingKey {
-        case telephoneNumber,displayName,mail
+        case firstNameAr = "FirstNameAr"
+        case middleNameAr = "MiddleNameAr"
+        case lastNameAr = "LastNameAr"
+        case firstNameEn = "FirstNameEn"
+        case middleNameEn = "MiddleNameEn"
+        case lastNameEn = "LastNameEn"
+        case fullName = "FullName"
+        case gender = "Gender"
+        case nationalID = "NationalId"
+        case nationality = "Nationality"
+        case mobile = "Mobile"
+        case title = "Title"
+        case department = "Department"
+        case departmentCode = "DepartmentCode"
+        case locationAr = "LocationAr"
+        case locationEn = "LocationEn"
+        case photo = "Photo"
     }
 }
