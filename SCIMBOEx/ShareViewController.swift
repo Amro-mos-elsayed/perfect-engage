@@ -363,9 +363,10 @@ class ShareViewController: UIViewController, UISearchBarDelegate, UITableViewDel
                                     userNames = NSMutableArray()
                                     for user in usersList{
                                         let getVal = user as! NSDictionary
-                                        if(getVal["ContactName"] as! String != Themes.sharedInstance.GetMyPhonenumber())
+                                        let contactName = Themes.sharedInstance.CheckNullvalue(Passed_value: getVal["ContactName"])
+                                        if(contactName != Themes.sharedInstance.GetMyPhonenumber())
                                         {
-                                            userNames.add(getVal["ContactName"] as! String)
+                                            userNames.add(Themes.sharedInstance.CheckNullvalue(Passed_value: getVal["Name"]) )
                                         }
                                         else
                                         {

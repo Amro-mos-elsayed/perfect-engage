@@ -4383,11 +4383,11 @@
                 let predic2 = NSPredicate(format: "id == %@",id)
                 
                 DatabaseHandler.sharedInstance.DeleteFromDataBase(Entityname: Constant.sharedinstance.Group_details, Predicatefromat: predic2, Deletestring: id,AttributeName: "id")
-                DatabaseHandler.sharedInstance.InserttoDatabase(Dict: param as NSDictionary, Entityname: Constant.sharedinstance.Group_details)
+                 DatabaseHandler.sharedInstance.InserttoDatabase(Dict: param as NSDictionary, Entityname: Constant.sharedinstance.Group_details)
             }
             else
             {
-                DatabaseHandler.sharedInstance.InserttoDatabase(Dict: param as NSDictionary, Entityname: Constant.sharedinstance.Group_details)
+                 DatabaseHandler.sharedInstance.InserttoDatabase(Dict: param as NSDictionary, Entityname: Constant.sharedinstance.Group_details)
             }
             if(Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "is_muted")) == "1"){
                 

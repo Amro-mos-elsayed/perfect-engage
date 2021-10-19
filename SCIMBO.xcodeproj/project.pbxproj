@@ -5359,7 +5359,7 @@
 				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5387,7 +5387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5654,7 +5654,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5799,7 +5799,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5836,10 +5836,11 @@
 				INFOPLIST_FILE = SCIMBOEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LOCALIZED_STRING_SWIFTUI_SUPPORT = YES;
 				MARKETING_VERSION = 1.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5877,9 +5878,10 @@
 				INFOPLIST_FILE = SCIMBOEx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LOCALIZED_STRING_SWIFTUI_SUPPORT = YES;
 				MARKETING_VERSION = 1.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.ex;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.ex;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

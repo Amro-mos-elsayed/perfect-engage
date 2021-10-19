@@ -9,7 +9,7 @@
 import Foundation
 
 class AppGroupConstants{
-    //static let AppGroupID = "group.com.2p.Engage"
-    //static let AppGroupID = "group.com.2p.EngageProd"
-    static let AppGroupID = "group.com.2p.EngageGitex"
+    static let AppGroupID = "group.com.2p.Engage" // dev
+    //static let AppGroupID = "group.com.2p.EngageProd" // minister
+    //static let AppGroupID = "group.com.2p.EngageGitex" // gitex
 }
