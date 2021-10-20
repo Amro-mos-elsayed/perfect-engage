@@ -72,6 +72,12 @@ class FullLoginViewController: UIViewController {
     
     func SetUI(){
         emailTextField.isUserInteractionEnabled = false
+        userNameTextField.isUserInteractionEnabled = false
+        MobileTextField.isUserInteractionEnabled = loginTypeEmployee ? false : true
+        if !loginTypeEmployee {
+            MobileTextField.backgroundColor = .clear
+        }
+        
         emailTextField.text = self.userEmail
         MobileTextField.placeholder = "Enter your mobile number".localized()
         MobileTextField.textAlignment = .natural
