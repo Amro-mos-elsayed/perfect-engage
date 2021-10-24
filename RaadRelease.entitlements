@@ -20,7 +20,7 @@
 	<string>$(TeamIdentifierPrefix)$(CFBundleIdentifier)</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.2p.swcc</string>
+		<string>group.com.2p.swcc.engage</string>
 	</array>
 	<key>keychain-access-groups</key>
 	<array>

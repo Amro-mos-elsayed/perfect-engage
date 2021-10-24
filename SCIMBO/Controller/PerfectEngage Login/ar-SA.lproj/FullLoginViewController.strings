@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Enter your name"; ObjectID = "7vj-fp-vPW"; */
+"7vj-fp-vPW.placeholder" = "ادخل اسم المستخدم";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Kcx-lU-cg9"; */
+"Kcx-lU-cg9.text" = "البريد الالكتروني";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "aU4-kP-Kwl"; */
+"aU4-kP-Kwl.normalTitle" = "التالي";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "by9-YA-IhT"; */
+"by9-YA-IhT.text" = "الاسم";
+
+/* Class = "UITextField"; placeholder = "Enter your email"; ObjectID = "ngu-yd-qKq"; */
+"ngu-yd-qKq.placeholder" = "ادخل البريد الالكتروني";
+
+/* Class = "UILabel"; text = "Mobile Number"; ObjectID = "pRV-Ps-dz5"; */
+"pRV-Ps-dz5.text" = "رقم الهاتف";

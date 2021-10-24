@@ -8231,50 +8231,50 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-Nm-eCb">
-                                <rect key="frame" x="24" y="137" width="272" height="294"/>
+                                <rect key="frame" x="24" y="131.5" width="272" height="305"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-pD-Hjt">
-                                        <rect key="frame" x="0.0" y="0.0" width="272" height="294"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="305"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mWo-JK-4SU">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mWo-JK-4SU">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="121"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="mWo-JK-4SU" secondAttribute="height" multiplier="450:200" id="JcC-EK-J6s"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Raad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-vc-xvx">
-                                                <rect key="frame" x="0.0" y="135" width="272" height="17"/>
+                                                <rect key="frame" x="0.0" y="135" width="272" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Version 1.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-6c-geI">
-                                                <rect key="frame" x="0.0" y="166" width="272" height="15"/>
+                                                <rect key="frame" x="0.0" y="169" width="272" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Regular" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wg-N1-Ser">
-                                                <rect key="frame" x="0.0" y="195" width="272" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="200.5" width="272" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Regular" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-N5-tAR">
-                                                <rect key="frame" x="0.0" y="209" width="272" height="15"/>
+                                                <rect key="frame" x="0.0" y="214.5" width="272" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTProDemi" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Powered by 2P" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiH-TI-ckw">
-                                                <rect key="frame" x="0.0" y="238" width="272" height="15"/>
+                                                <rect key="frame" x="0.0" y="246" width="272" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTProDemi" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2p-logo" translatesAutoresizingMaskIntoConstraints="NO" id="haL-FY-zyi">
-                                                <rect key="frame" x="0.0" y="267" width="272" height="27"/>
+                                                <rect key="frame" x="0.0" y="277.5" width="272" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="haL-FY-zyi" secondAttribute="height" multiplier="400:40" id="d31-O1-jfd"/>
                                                 </constraints>
@@ -12639,7 +12639,7 @@
         <image name="AddExtra" width="75" height="75"/>
         <image name="Back_White" width="75" height="75"/>
         <image name="Goarr" width="96" height="96"/>
-        <image name="about_bg" width="360" height="640.5"/>
+        <image name="about_bg" width="720" height="1281"/>
         <image name="arrow_blue" width="50" height="50"/>
         <image name="audioOff" width="75" height="75"/>
         <image name="audiocall" width="75" height="75"/>
@@ -12649,7 +12649,7 @@
         <image name="call_setting" width="100" height="100"/>
         <image name="callattend" width="75" height="75"/>
         <image name="callcut" width="75" height="74.5"/>
-        <image name="chat background" width="1080" height="1920"/>
+        <image name="chat background" width="320" height="461"/>
         <image name="chatimage" width="75" height="75"/>
         <image name="circle" width="100" height="100"/>
         <image name="clock_verify" width="105" height="130"/>
@@ -12664,24 +12664,24 @@
         <image name="edit_blue" width="32" height="32"/>
         <image name="export" width="512" height="512"/>
         <image name="facebook" width="60" height="60"/>
-        <image name="favstar" width="42.5" height="50.5"/>
+        <image name="favstar" width="127" height="152"/>
         <image name="flipcamera" width="75" height="75"/>
         <image name="goArrow" width="64" height="64"/>
         <image name="goarr_white" width="75" height="75"/>
         <image name="groupavatar" width="208" height="208"/>
-        <image name="guest-icon" width="72" height="72"/>
+        <image name="guest-icon" width="54" height="54"/>
         <image name="info_white" width="50" height="50"/>
         <image name="lock" width="96" height="96"/>
         <image name="login_bg" width="375" height="441"/>
-        <image name="logo" width="941" height="526.5"/>
+        <image name="logo" width="115" height="171"/>
         <image name="mail_settings" width="100" height="72"/>
         <image name="mobileimage" width="200" height="200"/>
         <image name="moreIcon" width="75" height="75"/>
         <image name="navigation (5)" width="50" height="50"/>
-        <image name="no-calls-found" width="172" height="172"/>
-        <image name="no-chatting" width="208" height="208"/>
-        <image name="no-tasks-found" width="146" height="172"/>
-        <image name="noChat" width="52.5" height="57.5"/>
+        <image name="no-calls-found" width="404" height="404"/>
+        <image name="no-chatting" width="404" height="411"/>
+        <image name="no-tasks-found" width="260" height="308"/>
+        <image name="noChat" width="450" height="475"/>
         <image name="noloudspeaker" width="75" height="75"/>
         <image name="pin (11)" width="25" height="25"/>
         <image name="playIcon" width="55" height="55"/>
@@ -12709,7 +12709,7 @@
         <image name="videocallattend" width="75" height="76"/>
         <image name="zoomedLogo" width="151" height="225"/>
         <namedColor name="themeColor">
-            <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.019607843137254902" green="0.39215686274509803" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
