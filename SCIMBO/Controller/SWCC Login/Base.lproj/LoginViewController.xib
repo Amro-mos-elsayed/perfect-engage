@@ -27,6 +27,12 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="kjI-wA-m6e">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="487"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="kjI-wA-m6e" secondAttribute="height" multiplier="375:441" id="aAk-ha-c2a"/>
+                    </constraints>
+                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7h4-X7-Kc2">
                     <rect key="frame" x="0.0" y="487" width="414" height="375"/>
                     <subviews>
@@ -201,12 +207,6 @@
                         <constraint firstItem="NCG-eY-L7Y" firstAttribute="leading" secondItem="7h4-X7-Kc2" secondAttribute="leading" id="ysK-FW-euG"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_bg" translatesAutoresizingMaskIntoConstraints="NO" id="kjI-wA-m6e">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="487"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="kjI-wA-m6e" secondAttribute="height" multiplier="375:441" id="aAk-ha-c2a"/>
-                    </constraints>
-                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z8-ei-PU8">
                     <rect key="frame" x="20" y="44" width="50" height="50"/>
                     <constraints>
