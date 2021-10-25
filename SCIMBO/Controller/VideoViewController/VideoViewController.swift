@@ -103,13 +103,15 @@ class VideoViewController: UIViewController,ARDAppClientDelegate, RTCEAGLVideoVi
     }
     
     @objc func draggedView(_ recognizer:UIPanGestureRecognizer){
-        self.view.bringSubviewToFront(localView)
-        let translation = recognizer.translation(in: self.view)
-        let newPos = CGPoint(x:recognizer.view!.center.x + translation.x, y:recognizer.view!.center.y + translation.y)
-        
-        if insideDraggableArea(point: newPos) {
-            localView.center =  newPos
-            recognizer.setTranslation(CGPoint.zero, in: self.view)
+        if true {
+            self.view.bringSubviewToFront(localView)
+            let translation = recognizer.translation(in: self.view)
+            let newPos = CGPoint(x:recognizer.view!.center.x + translation.x, y:recognizer.view!.center.y + translation.y)
+            
+            if insideDraggableArea(point: newPos) {
+                localView.center =  newPos
+                recognizer.setTranslation(CGPoint.zero, in: self.view)
+            }
         }
     }
     

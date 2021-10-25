@@ -214,7 +214,7 @@
                         <constraint firstAttribute="height" constant="50" id="zGS-Ml-IAB"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="tintColor" name="themeColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal">
                         <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>

@@ -19,6 +19,7 @@
                 <outlet property="MobileTextField" destination="olc-nq-tw6" id="RKd-Go-LVM"/>
                 <outlet property="emailTextField" destination="ngu-yd-qKq" id="ruH-7o-uQl"/>
                 <outlet property="emailView" destination="fyO-by-8PP" id="s9r-HD-YqJ"/>
+                <outlet property="userMobileView" destination="FHe-lQ-nAX" id="JHs-10-Ttr"/>
                 <outlet property="userNameTextField" destination="7vj-fp-vPW" id="wdh-Br-sgh"/>
                 <outlet property="userNameView" destination="yMt-Tc-Dr8" id="rjr-9w-LQZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -96,7 +97,7 @@
                                                                     <rect key="frame" x="8" y="8" width="34" height="34"/>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="oVg-m5-rqY" secondAttribute="trailing" constant="8" id="0hK-0c-6Rn"/>
                                                                 <constraint firstItem="oVg-m5-rqY" firstAttribute="leading" secondItem="G4n-Ph-vVj" secondAttribute="leading" constant="8" id="9L2-bq-bID"/>
@@ -107,6 +108,7 @@
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmk-ER-kps">
                                                             <rect key="frame" x="58" y="0.0" width="40" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="40" id="p4u-3c-TiX"/>
                                                             </constraints>
@@ -127,7 +129,7 @@
                                                             </connections>
                                                         </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="PPY-0q-YSq" firstAttribute="leading" secondItem="G4n-Ph-vVj" secondAttribute="leading" id="1JR-nY-2Or"/>
                                                         <constraint firstItem="G4n-Ph-vVj" firstAttribute="leading" secondItem="0Rp-OR-60Q" secondAttribute="leading" id="FqR-At-oEz"/>
@@ -147,7 +149,7 @@
                                                     </constraints>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="0Rp-OR-60Q" secondAttribute="trailing" id="4Km-gP-bTE"/>
                                                 <constraint firstAttribute="height" constant="50" id="JxZ-kA-jW0"/>
@@ -333,7 +335,7 @@
                         <constraint firstAttribute="width" constant="50" id="zxX-XR-paJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <color key="tintColor" name="themeColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal">
                         <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>

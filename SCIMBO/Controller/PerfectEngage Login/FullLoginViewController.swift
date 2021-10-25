@@ -21,6 +21,7 @@ class FullLoginViewController: UIViewController {
     @IBOutlet weak var CountryFlag: UIImageView!
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var userNameView: UIView!
+    @IBOutlet weak var userMobileView: UIView!
     @IBOutlet weak var CountryCode: UILabel!
     @IBOutlet weak var MobileTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -76,6 +77,7 @@ class FullLoginViewController: UIViewController {
         MobileTextField.isUserInteractionEnabled = loginTypeEmployee ? false : true
         if !loginTypeEmployee {
             MobileTextField.backgroundColor = .clear
+            userMobileView.backgroundColor = .clear
         }
         
         emailTextField.text = self.userEmail
