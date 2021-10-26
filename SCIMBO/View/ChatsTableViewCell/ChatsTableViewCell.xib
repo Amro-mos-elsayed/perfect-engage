@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-53-A9R">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" id="iIc-53-A9R">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="66.5"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGR-qY-Im6">
@@ -71,9 +71,11 @@
                                 <rect key="frame" x="8" y="6" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3v-wy-ciD">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3v-wy-ciD">
                                 <rect key="frame" x="8" y="6" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d3v-wy-ciD" secondAttribute="height" multiplier="1:1" id="EJo-9U-2mD"/>
+                                </constraints>
                             </button>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR4-ke-gu5">
                                 <rect key="frame" x="268" y="30" width="25" height="25"/>
@@ -94,9 +96,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dGR-qY-Im6" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" constant="12" id="0Lc-G8-ltC"/>
+                            <constraint firstAttribute="bottom" secondItem="d3v-wy-ciD" secondAttribute="bottom" constant="4.5" id="6xt-FV-cC6"/>
                             <constraint firstAttribute="bottom" secondItem="ipz-nz-I8f" secondAttribute="bottom" constant="0.5" id="ReJ-JW-zVh"/>
                             <constraint firstAttribute="trailing" secondItem="ipz-nz-I8f" secondAttribute="trailing" constant="10" id="Rwr-9e-0lR"/>
                             <constraint firstItem="ipz-nz-I8f" firstAttribute="leading" secondItem="aFa-NE-Fgj" secondAttribute="trailing" constant="8" symbolic="YES" id="SYb-LS-xwS"/>
+                            <constraint firstItem="d3v-wy-ciD" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" constant="6" id="V0z-GK-jsS"/>
+                            <constraint firstItem="d3v-wy-ciD" firstAttribute="leading" secondItem="iIc-53-A9R" secondAttribute="leading" constant="8" id="VRX-Ph-DLr"/>
                             <constraint firstItem="aFa-NE-Fgj" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" constant="12" id="Xdy-Nz-2Hd"/>
                             <constraint firstItem="ipz-nz-I8f" firstAttribute="top" secondItem="iIc-53-A9R" secondAttribute="top" id="pgW-Cz-1bh"/>
                             <constraint firstItem="aFa-NE-Fgj" firstAttribute="leading" secondItem="dGR-qY-Im6" secondAttribute="trailing" constant="4" id="r8v-4Y-EuI"/>

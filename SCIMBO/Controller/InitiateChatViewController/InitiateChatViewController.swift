@@ -139,6 +139,7 @@
         SecretmessageHandler.sharedInstance.delegate = self
         chatTableView.rowHeight = UITableView.automaticDimension
         chatTableView.estimatedRowHeight = 10
+        chatTableView.semanticContentAttribute = .forceLeftToRight
         chatTableView.registerCell()
         if Chat_type == "single" {
             group_user_lbl.text = "Tap here for contact info"
