@@ -813,6 +813,8 @@
 
 /* Class = "UILabel"; text = "Message notifications"; ObjectID = "XEF-ts-Ls9"; */
 "XEF-ts-Ls9.text" = "إشعارات الرسالة";
+"PiH-TI-ckw.text" = "تم التطوير بواسطة 2P";
+
 
 /* Class = "UIButton"; normalTitle = "Next"; ObjectID = "XeK-hT-cLW"; */
 "XeK-hT-cLW.normalTitle" = "التالي";
