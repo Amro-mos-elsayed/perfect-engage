@@ -73,10 +73,10 @@
                                             <action selector="DidclickArchChat:" destination="xJj-Cb-Csg" eventType="touchUpInside" id="Nq3-Y0-p2D"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-Y0-Lw2">
-                                        <rect key="frame" x="176" y="6" width="129" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5I-Y0-Lw2">
+                                        <rect key="frame" x="216" y="6" width="96" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="129" id="IEc-Ku-lPb"/>
+                                            <constraint firstAttribute="width" constant="96" id="IEc-Ku-lPb"/>
                                             <constraint firstAttribute="height" constant="30" id="tDf-bX-bxY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
@@ -93,7 +93,7 @@
                                 <constraints>
                                     <constraint firstItem="OHL-xF-FfF" firstAttribute="top" secondItem="CLP-l8-gad" secondAttribute="top" constant="6" id="7YQ-E9-Vnf"/>
                                     <constraint firstItem="OHL-xF-FfF" firstAttribute="leading" secondItem="CLP-l8-gad" secondAttribute="leading" constant="13" id="8Vd-mH-29d"/>
-                                    <constraint firstAttribute="trailing" secondItem="D5I-Y0-Lw2" secondAttribute="trailing" constant="15" id="CeS-cU-tUM"/>
+                                    <constraint firstAttribute="trailing" secondItem="D5I-Y0-Lw2" secondAttribute="trailing" constant="8" id="CeS-cU-tUM"/>
                                     <constraint firstItem="D5I-Y0-Lw2" firstAttribute="top" secondItem="CLP-l8-gad" secondAttribute="top" constant="6" id="IWx-60-PBT"/>
                                     <constraint firstAttribute="width" constant="320" id="Pe5-7b-ZmS"/>
                                     <constraint firstAttribute="bottom" secondItem="OHL-xF-FfF" secondAttribute="bottom" id="RG1-DQ-854"/>
@@ -9101,9 +9101,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOs-j6-YUX">
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="40"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tk-9D-KOg">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1tk-9D-KOg">
                                                         <rect key="frame" x="0.0" y="3" width="35" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="1tk-9D-KOg" secondAttribute="height" multiplier="35:34" id="BIh-CI-5iB"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2py-Em-Bnt">
                                                         <rect key="frame" x="18" y="17" width="20" height="20"/>
@@ -9113,7 +9115,10 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="1tk-9D-KOg" firstAttribute="top" secondItem="VOs-j6-YUX" secondAttribute="top" constant="3" id="37g-U3-QXd"/>
                                                     <constraint firstAttribute="width" constant="43" id="778-8b-CM4"/>
+                                                    <constraint firstItem="1tk-9D-KOg" firstAttribute="leading" secondItem="VOs-j6-YUX" secondAttribute="leading" id="eHG-Wh-J0E"/>
+                                                    <constraint firstAttribute="bottom" secondItem="1tk-9D-KOg" secondAttribute="bottom" constant="3" id="hPb-DA-htW"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nDy-9u-yXs">
@@ -12639,7 +12644,7 @@
         <image name="AddExtra" width="75" height="75"/>
         <image name="Back_White" width="75" height="75"/>
         <image name="Goarr" width="96" height="96"/>
-        <image name="about_bg" width="720" height="1281"/>
+        <image name="about_bg" width="360" height="640.5"/>
         <image name="arrow_blue" width="50" height="50"/>
         <image name="audioOff" width="75" height="75"/>
         <image name="audiocall" width="75" height="75"/>
@@ -12649,7 +12654,7 @@
         <image name="call_setting" width="100" height="100"/>
         <image name="callattend" width="75" height="75"/>
         <image name="callcut" width="75" height="74.5"/>
-        <image name="chat background" width="320" height="461"/>
+        <image name="chat background" width="1080" height="1920"/>
         <image name="chatimage" width="75" height="75"/>
         <image name="circle" width="100" height="100"/>
         <image name="clock_verify" width="105" height="130"/>
