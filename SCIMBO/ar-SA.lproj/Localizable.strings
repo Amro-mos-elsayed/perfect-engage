@@ -306,7 +306,7 @@
 "Lock Chat" = "قفل الشات";
 
 /* comment */
-"Logout" = "خروج";
+"Logout" = "تسجيل الخروج";
 
 /* com */
 "Make Group Admin" = "جعل مسؤول الجروب";
@@ -564,3 +564,25 @@
 "Show your mobile number" = "إظهار رقم الهاتف";
 "Tasks" = "المهام";
 "There are no tasks" = "لا يوجد مهمات";
+
+"Email Address" = "البريد الالكتروني";
+"Other Chats" = "دردشات أخرى";
+"Messages" = " الرسائل";
+"Stories" = "الحالة";
+"You" = "أنت";
+"Delete this Story update? It will also be deleted for everyone who received it." = "حذف هذة الحالة؟ سوف يتم حذفها ايضا عند كل من وصلت إليه.";
+"🕘 Sending..." = "🕘 إرسال...";
+"just now" = "الآن";
+"h" = "س";
+"m" = "د";
+"ago" = "مضت";
+"RECENT UPDATES" = "الحالات الحديثة";
+"VIEWED UPDATES" = "تم مشاهدتها";
+"MUTED UPDATES" = "تم كتمها";
+"Mute" = "كتم";
+"Unmute" = "إلغاء الكتم";
+
+"'s story updates? New status updates from" = "؟ الحالات الجديدة من";
+"will appear at the top of the stories list." = "سوف تظهر في قائمة الحالات";
+"won't appear at the top of the stories list anymore." = "لن تظهر في قائمة الحالات مجدداً";
+"Save" = "حفظ";

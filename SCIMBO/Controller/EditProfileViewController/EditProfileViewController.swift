@@ -59,7 +59,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         profileImg_Btn.layer.borderWidth = 1
         profileImg_Btn.layer.borderColor = UIColor.lightGray.cgColor
         doneBtn.isHidden = true
-        logoutBtn.setTitle("Logout", for: .normal)
+        logoutBtn.setTitle("Logout".localized(), for: .normal)
+        emailLbl.text = "Email Address".localized()
     }
     
     @IBAction func switchButtonChanged(_ sender: UISwitch) {
@@ -115,7 +116,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         
         if let user = Themes.sharedInstance.GetuserDetails() {
             phoneLbl.text = " " + (user.mobilenumber ?? "")
-            nameTxt.text = user.name ?? "You"
+            nameTxt.text = user.name ?? "You".localized()
             profileImg_Btn.setProfilePic(Themes.sharedInstance.Getuser_id(), "single")
             emailAddressLbl.text = user.email ?? ""
             let isShowNumber = user.showNumber

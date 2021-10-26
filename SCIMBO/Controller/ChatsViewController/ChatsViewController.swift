@@ -1013,7 +1013,7 @@
             }
             
         }
-        else if(searchActive == true && section[indexPath.section] as! String == "Chats"){
+        else if(searchActive == true && section[indexPath.section] as! String == "Chats".localized()){
             let searchRecord:NSArray = allArray[indexPath.section] as! NSArray
             let record = searchRecord[indexPath.row]
             if(record is Chatpreloadrecord)
@@ -1064,11 +1064,11 @@
 //         }
        // Phonenumber = Themes.sharedInstance.CheckNullvalue(Passed_value: (($0.value ).value(forKey: "digits") as! String))
         
-        if(searchActive == true && (self.section[section] as! String == "Chats" || self.section[section] as! String == "Other Chats")){
+        if(searchActive == true && (self.section[section] as! String == "Chats".localized() || self.section[section] as! String == "Other Chats".localized())){
             guard allArray.count > section else{return 0}
             let row:NSArray = allArray[section] as! NSArray
             return row.count
-        }else if(searchActive == true && self.section[section] as! String == "Messages"){
+        }else if(searchActive == true && self.section[section] as! String == "Messages".localized()){
             return filterMessage.count
         }
         return ChatPrerecordArr.count
@@ -1368,7 +1368,7 @@
                 return cell
             }
             
-        }else if(searchActive == true && section[indexPath.section] as! String == "Chats"){
+        }else if(searchActive == true && section[indexPath.section] as! String == "Chats".localized()){
             let searchRecord:NSArray = allArray[indexPath.section] as! NSArray
             if let record = searchRecord[indexPath.row] as? Chatpreloadrecord
             {
@@ -1512,7 +1512,7 @@
                 return cell
             }
             
-        }else if(searchActive == true && section[indexPath.section] as! String == "Other Chats"){
+        }else if(searchActive == true && section[indexPath.section] as! String == "Other Chats".localized()){
             let cell:FavouriteTableViewCell  = tableView.dequeueReusableCell(withIdentifier: "FavouriteTableViewCell") as! FavouriteTableViewCell
             let searchRecord:NSArray = allArray[indexPath.section] as! NSArray
             let favRecord:FavRecord=searchRecord[indexPath.row] as! FavRecord
@@ -1526,7 +1526,7 @@
             tableView.separatorColor = nil
             cell.nameLbl.font = UIFont.boldSystemFont(ofSize: 16.0)
             return cell
-        }else if(searchActive == true && section[indexPath.section] as! String == "Messages"){
+        }else if(searchActive == true && section[indexPath.section] as! String == "Messages".localized()){
             let cell:SearchMessageTableViewCell  = tableView.dequeueReusableCell(withIdentifier: "SearchMessageTableViewCell") as! SearchMessageTableViewCell
             let info_msg:SearchMessage = filterMessageContact[indexPath.row] as! SearchMessage
             let attributedText = NSMutableAttributedString(string: (filterMessage[indexPath.row] as? String)! , attributes: [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15.0)])
@@ -1741,7 +1741,7 @@
                 
             }
             
-        }else if(searchActive == true && section[indexPath.section] as! String == "Chats"){
+        }else if(searchActive == true && section[indexPath.section] as! String == "Chats".localized()){
             let searchRecord:NSArray = allArray[indexPath.section] as! NSArray
             let record  = searchRecord[indexPath.row]
             if(record is Chatpreloadrecord)
@@ -1776,7 +1776,7 @@
                     self.pushView(ObjInitiateChatViewController, animated: true)
                 }
             }
-        }else if(searchActive == true && section[indexPath.section] as! String == "Other Chats"){
+        }else if(searchActive == true && section[indexPath.section] as! String == "Other Chats".localized()){
             let searchRecord:NSArray = allArray[indexPath.section] as! NSArray
             let favRecord:FavRecord=searchRecord[indexPath.row] as! FavRecord
             if(Themes.sharedInstance.isChatLocked(id: favRecord.id, type: "single"))
@@ -1804,7 +1804,7 @@
                 self.searchController.isActive = false
                 self.pushView(ObjInitiateChatViewController, animated: true)
             }
-        }else if(searchActive == true && section[indexPath.section] as! String == "Messages"){
+        }else if(searchActive == true && section[indexPath.section] as! String == "Messages".localized()){
 
             let info_msg:SearchMessage = filterMessageContact[indexPath.row] as! SearchMessage
             
@@ -3548,14 +3548,14 @@
             btn_View.isHidden = true
             if(searchArray.count>0){
                 allArray.add(searchArray)
-                section.add("Chats")
+                section.add("Chats".localized())
             }
             if(OtherChats.count>0){
                 allArray.add(OtherChats)
-                section.add("Other Chats")
+                section.add("Other Chats".localized())
             }
             if(filterMessage.count > 0){
-                section.add("Messages")
+                section.add("Messages".localized())
             }
             chats_Tblview.reloadData()
         }else{
@@ -3602,7 +3602,7 @@
             network_loader.style = .white
             network_loader.startAnimating()
         }else{
-            chatLbl.text = "Chats"
+            chatLbl.text = "Chats".localized()
             network_loader.stopAnimating()
             network_loader.isHidden = true
         }

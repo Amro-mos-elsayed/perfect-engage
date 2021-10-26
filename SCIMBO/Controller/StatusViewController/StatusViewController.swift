@@ -553,7 +553,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
         if(isMyStatus)
         {
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            let SaveAction = UIAlertAction(title: "Save", style: .default) { (alert: UIAlertAction) in
+            let SaveAction = UIAlertAction(title: "Save".localized(), style: .default) { (alert: UIAlertAction) in
                 let PhotoPath:String = StatusUploadHandler.Sharedinstance.ReturnuploadDetails(pathid: messageFrame.message.thumbnail!, upload_detail: "upload_Path") as! String
                 
                 let photos = PHPhotoLibrary.authorizationStatus()
@@ -594,7 +594,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     self.viewIsDisplayed()
                 }
             }
-            let ForwardAction = UIAlertAction(title: "Forward", style: .default) { (alert: UIAlertAction) in
+            let ForwardAction = UIAlertAction(title: "Forward".localized(), style: .default) { (alert: UIAlertAction) in
                 if(self.progressBar.currentAnimationIndex < self.statusArray.count)
                 {
                     self.delegate?.backButtonTapped()
@@ -602,7 +602,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     self.delegate = nil
                 }
             }
-            let DeleteAction = UIAlertAction(title: "Delete", style: .destructive) { (alert: UIAlertAction) in
+            let DeleteAction = UIAlertAction(title: "Delete".localized(), style: .destructive) { (alert: UIAlertAction) in
                 if(self.progressBar.currentAnimationIndex < self.statusArray.count)
                 {
                     self.delegate?.backButtonTapped()
@@ -610,7 +610,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     self.delegate = nil
                 }
             }
-            let CancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel) { (alert: UIAlertAction) in
+            let CancelAction = UIAlertAction(title: NSLocalizedString("Cancel".localized(), comment: "comment"), style: .cancel) { (alert: UIAlertAction) in
                 if !self.fromBottomView{
                     self.viewIsDisplayed()
                 }
@@ -630,16 +630,16 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
             var title = ""
             if(checkMute == "1")
             {
-                title = "Unmute \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single"))'s status updates? New status updates from \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single")) will appear at the top of the status list."
+                title = "\("Unmute".localized()) \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single"))\("'s story updates? New status updates from".localized()) \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single")) \("will appear at the top of the stories list.".localized())"
             }
             else
             {
-                title = "Mute \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single"))'s status updates? New status updates from \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single")) won't appear at the top of the status list anymore."
+                title = "\("Mute".localized()) \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single"))\("'s story updates? New status updates from".localized()) \(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single")) \("won't appear at the top of the stories list anymore.".localized())"
                 
             }
             let alertController = UIAlertController(title: nil, message: title, preferredStyle: .actionSheet)
             
-            let muteAction = UIAlertAction(title: "Mute", style: .default, handler: { (alert: UIAlertAction) in
+            let muteAction = UIAlertAction(title: "Mute".localized(), style: .default, handler: { (alert: UIAlertAction) in
                 
                 let convId = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Status_one_one, attrib_name: "doc_id", fetchString: messageFrame.message.doc_id!, returnStr: "convId")
                 let dic:[AnyHashable: Any] = ["from":Themes.sharedInstance.Getuser_id(),"to":self.userId,"status":"1","convId":convId]
@@ -654,7 +654,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     self.viewIsDisplayed()
                 }
             })
-            let unMuteAction = UIAlertAction(title: "Unmute", style: .default, handler: { (alert: UIAlertAction) in
+            let unMuteAction = UIAlertAction(title: "Unmute".localized(), style: .default, handler: { (alert: UIAlertAction) in
                 
                 let convId = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Status_one_one, attrib_name: "doc_id", fetchString: messageFrame.message.doc_id!, returnStr: "convId")
                 let dic:[AnyHashable: Any] = ["from":Themes.sharedInstance.Getuser_id(),"to":self.userId,"status":"0","convId":convId]
@@ -669,7 +669,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                     self.viewIsDisplayed()
                 }
             })
-            let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel, handler: { (alert: UIAlertAction) in
+            let cancelAction = UIAlertAction(title: NSLocalizedString("Cancel".localized(), comment: "comment"), style: .cancel, handler: { (alert: UIAlertAction) in
                 if !self.fromBottomView{
                     self.viewIsDisplayed()
                 }

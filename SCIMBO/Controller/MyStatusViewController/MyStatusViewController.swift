@@ -333,7 +333,7 @@ extension MyStatusViewController: UITableViewDataSource, UITableViewDelegate{
         
         if(messageFrame.message.message_status == "0")
         {
-            cell.updatedTimeLabel.text = "🕘 Sending..."
+            cell.updatedTimeLabel.text = "🕘 Sending...".localized()
             cell.viewsLabel.isHidden = true
             cell.viewsImg.isHidden = true
             cell.forwardButton.isHidden = true
@@ -553,8 +553,8 @@ extension MyStatusViewController: UITableViewDataSource, UITableViewDelegate{
             
             self.tableView(MyStatusTableView, didDeselectRowAt: indexPath)
             
-            let alert = UIAlertController(title: nil, message: "Delete this status update? It will also be deleted for everyone who received it.", preferredStyle: .actionSheet)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action : UIAlertAction) in
+            let alert = UIAlertController(title: nil, message: "Delete this Story update? It will also be deleted for everyone who received it.".localized(), preferredStyle: .actionSheet)
+            let deleteAction = UIAlertAction(title: "Delete".localized(), style: .destructive) { (action : UIAlertAction) in
                 
                 let chatobj:UUMessageFrame = self.myStatusArray.object(at: indexPath.row) as! UUMessageFrame
                 
@@ -670,7 +670,7 @@ extension MyStatusViewController : StatusPageViewControllerDelegate {
     func DidClickDelete(_ messageFrame: UUMessageFrame) {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            let alert = UIAlertController(title: nil, message: "Delete this status update? It will also be deleted for everyone who received it.", preferredStyle: .actionSheet)
+            let alert = UIAlertController(title: nil, message: "Delete this Story update? It will also be deleted for everyone who received it.".localized(), preferredStyle: .actionSheet)
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action : UIAlertAction) in
                 
                 let chatobj = messageFrame

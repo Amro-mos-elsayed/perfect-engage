@@ -296,15 +296,15 @@ class GeneralStatusListViewController: UIViewController, UIViewControllerTransit
         sectionDetail.add("")
         if(Array(ChatRecorDict.keys).count > 0)
         {
-            sectionDetail.add("RECENT UPDATES")
+            sectionDetail.add("RECENT UPDATES".localized())
         }
         if(Array(ChatRecorDictViewed.keys).count > 0)
         {
-            sectionDetail.add("VIEWED UPDATES")
+            sectionDetail.add("VIEWED UPDATES".localized())
         }
         if(Array(ChatRecorDictMuted.keys).count > 0)
         {
-            sectionDetail.add("MUTED UPDATES")
+            sectionDetail.add("MUTED UPDATES".localized())
         }
         self.statusTableView.reloadData()
     }
@@ -629,11 +629,11 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
         if section == 0{
             return 1
         }
-        else if(sectionDetail.object(at: section) as! String == "RECENT UPDATES")
+        else if(sectionDetail.object(at: section) as! String == "RECENT UPDATES".localized())
         {
             return Array(self.ChatRecorDict.keys).count
         }
-        else if(sectionDetail.object(at: section) as! String == "VIEWED UPDATES")
+        else if(sectionDetail.object(at: section) as! String == "VIEWED UPDATES".localized())
         {
             return Array(self.ChatRecorDictViewed.keys).count
         }
@@ -725,7 +725,7 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
             var datasource = NSMutableArray()
             var id = String()
             var viewedstatusCount = 0
-            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES")
+            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES".localized())
             {
                 datasource = self.ChatRecorDict[Array(self.ChatRecorDict.keys)[indexPath.row]]!
                 id = Array(self.ChatRecorDict.keys)[indexPath.row]
@@ -740,7 +740,7 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
                 cell.friendStatusIndicator.isHidden = false
                 cell.blurview.isHidden = true
             }
-            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES")
+            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES".localized())
             {
                 datasource = self.ChatRecorDictViewed[Array(self.ChatRecorDictViewed.keys)[indexPath.row]]!
                 id = Array(self.ChatRecorDictViewed.keys)[indexPath.row]
@@ -797,7 +797,7 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
             cell.selectionStyle = .none
             cell.layoutIfNeeded()
             
-            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES")
+            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES".localized())
             {
                 if(indexPath.row == 0 && Array(self.ChatRecorDict.keys).count == 1)
                 {
@@ -824,7 +824,7 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
                     cell.bottomHalfLineView.isHidden = false
                 }
             }
-            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES")
+            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES".localized())
             {
                 
                 if(indexPath.row == 0 && Array(self.ChatRecorDictViewed.keys).count == 1)
@@ -925,12 +925,12 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
             center = (cell?.convert((cell?.center)!, to: self.view))!
             let vc = storyboard?.instantiateViewController(withIdentifier: "StatusPageViewController") as! StatusPageViewController
             vc.isMyStatus = false
-            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES")
+            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES".localized())
             {
                 vc.idArr = Array(self.ChatRecorDict.keys)
                 vc.ChatRecorDict = self.ChatRecorDict
             }
-            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES")
+            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES".localized())
             {
                 vc.idArr = Array(self.ChatRecorDictViewed.keys)
                 vc.ChatRecorDict = self.ChatRecorDictViewed
@@ -961,13 +961,13 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
             var messageFrame = UUMessageFrame()
             var id = String()
             
-            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES")
+            if(sectionDetail.object(at: indexPath.section) as! String == "RECENT UPDATES".localized())
             {
                 let datasource = self.ChatRecorDict[Array(self.ChatRecorDict.keys)[indexPath.row]]!
                 messageFrame = datasource.lastObject as! UUMessageFrame
                 id = Array(self.ChatRecorDict.keys)[indexPath.row]
             }
-            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES")
+            else if(sectionDetail.object(at: indexPath.section) as! String == "VIEWED UPDATES".localized())
             {
                 let datasource = self.ChatRecorDictViewed[Array(self.ChatRecorDictViewed.keys)[indexPath.row]]!
                 messageFrame = datasource.lastObject as! UUMessageFrame

@@ -40,7 +40,6 @@
 		436C61122073CB3C0048FC47 /* CustomimageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C610B2073CB3B0048FC47 /* CustomimageView.swift */; };
 		436C61132073CB3C0048FC47 /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C610C2073CB3C0048FC47 /* SegmentedProgressBar.swift */; };
 		436C61142073CB3C0048FC47 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436C610D2073CB3C0048FC47 /* CustomView.swift */; };
-		4379D79020750CFA00562351 /* MyStatusListFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4379D78E20750CF800562351 /* MyStatusListFooter.xib */; };
 		4379D79120750CFA00562351 /* MyStatusListFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D78F20750CFA00562351 /* MyStatusListFooter.swift */; };
 		4379D79520750D1A00562351 /* StatusPrivacyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4379D79320750D1900562351 /* StatusPrivacyTableViewCell.xib */; };
 		4379D79620750D1A00562351 /* StatusPrivacyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4379D79420750D1A00562351 /* StatusPrivacyTableViewCell.swift */; };
@@ -108,6 +107,7 @@
 		7C611A032719ADAF00D29931 /* MessageHandlerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C611A022719ADAF00D29931 /* MessageHandlerExtension.swift */; };
 		7C6702F127033E36003D5724 /* FullLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6702EF27033E36003D5724 /* FullLoginViewController.swift */; };
 		7C6702F527058F46003D5724 /* LoginTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6702F327058F46003D5724 /* LoginTypeViewController.swift */; };
+		7C70026D27281D8F00FB7382 /* MyStatusListFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C70026F27281D8F00FB7382 /* MyStatusListFooter.xib */; };
 		7CD1C55326C0014300650610 /* SWCC_OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55126C0014300650610 /* SWCC_OTPViewController.swift */; };
 		7CD1C55A26C0060E00650610 /* OTPFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55726C0060E00650610 /* OTPFieldView.swift */; };
 		7CD1C55B26C0060E00650610 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55826C0060E00650610 /* OTPTextField.swift */; };
@@ -717,7 +717,6 @@
 		436C610B2073CB3B0048FC47 /* CustomimageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomimageView.swift; sourceTree = "<group>"; };
 		436C610C2073CB3C0048FC47 /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
 		436C610D2073CB3C0048FC47 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
-		4379D78E20750CF800562351 /* MyStatusListFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyStatusListFooter.xib; sourceTree = "<group>"; };
 		4379D78F20750CFA00562351 /* MyStatusListFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStatusListFooter.swift; sourceTree = "<group>"; };
 		4379D79320750D1900562351 /* StatusPrivacyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusPrivacyTableViewCell.xib; sourceTree = "<group>"; };
 		4379D79420750D1A00562351 /* StatusPrivacyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusPrivacyTableViewCell.swift; sourceTree = "<group>"; };
@@ -790,6 +789,8 @@
 		7C611A022719ADAF00D29931 /* MessageHandlerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageHandlerExtension.swift; sourceTree = "<group>"; };
 		7C6702EF27033E36003D5724 /* FullLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullLoginViewController.swift; sourceTree = "<group>"; };
 		7C6702F327058F46003D5724 /* LoginTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTypeViewController.swift; sourceTree = "<group>"; };
+		7C70027027281D9A00FB7382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MyStatusListFooter.xib; sourceTree = "<group>"; };
+		7C70027127281DA300FB7382 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/MyStatusListFooter.strings"; sourceTree = "<group>"; };
 		7CD1C55126C0014300650610 /* SWCC_OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCC_OTPViewController.swift; sourceTree = "<group>"; };
 		7CD1C55626C0060E00650610 /* OTPFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTPFieldView.h; sourceTree = "<group>"; };
 		7CD1C55726C0060E00650610 /* OTPFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPFieldView.swift; sourceTree = "<group>"; };
@@ -1666,7 +1667,7 @@
 			isa = PBXGroup;
 			children = (
 				4379D78F20750CFA00562351 /* MyStatusListFooter.swift */,
-				4379D78E20750CF800562351 /* MyStatusListFooter.xib */,
+				7C70026F27281D8F00FB7382 /* MyStatusListFooter.xib */,
 			);
 			path = MyStatusListFooter;
 			sourceTree = "<group>";
@@ -4573,7 +4574,7 @@
 				C54C05581E3B59A800E1BE7D /* chat_animation_white2.png in Resources */,
 				C54C05661E3B59A800E1BE7D /* headImage.jpeg in Resources */,
 				C54C05551E3B59A800E1BE7D /* chat_animation2.png in Resources */,
-				4379D79020750CFA00562351 /* MyStatusListFooter.xib in Resources */,
+				7C70026D27281D8F00FB7382 /* MyStatusListFooter.xib in Resources */,
 				C563FF741EA5FCD3004828D7 /* SelectContactTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5237,6 +5238,15 @@
 				7C319664272560F90071938C /* ar-SA */,
 			);
 			name = LoginTypeViewController.xib;
+			sourceTree = "<group>";
+		};
+		7C70026F27281D8F00FB7382 /* MyStatusListFooter.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7C70027027281D9A00FB7382 /* Base */,
+				7C70027127281DA300FB7382 /* ar-SA */,
+			);
+			name = MyStatusListFooter.xib;
 			sourceTree = "<group>";
 		};
 		7CD1C55F26C12C6E00650610 /* SWCC_OTPViewController.xib */ = {

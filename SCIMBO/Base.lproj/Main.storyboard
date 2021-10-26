@@ -8241,10 +8241,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOb-Nm-eCb">
-                                <rect key="frame" x="24" y="137" width="272" height="294"/>
+                                <rect key="frame" x="24" y="131.5" width="272" height="305"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-pD-Hjt">
-                                        <rect key="frame" x="0.0" y="0.0" width="272" height="294"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="305"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="mWo-JK-4SU">
                                                 <rect key="frame" x="0.0" y="0.0" width="272" height="121"/>
@@ -8253,38 +8253,38 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Raad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-vc-xvx">
-                                                <rect key="frame" x="0.0" y="135" width="272" height="17"/>
+                                                <rect key="frame" x="0.0" y="135" width="272" height="20"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Bold" family="Avenir Next LT Pro" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Version 1.5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3H-6c-geI">
-                                                <rect key="frame" x="0.0" y="166" width="272" height="15"/>
+                                                <rect key="frame" x="0.0" y="169" width="272" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Regular" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wg-N1-Ser">
-                                                <rect key="frame" x="0.0" y="195" width="272" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="200.5" width="272" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTPro-Regular" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="All rights reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-N5-tAR">
-                                                <rect key="frame" x="0.0" y="209" width="272" height="15"/>
+                                                <rect key="frame" x="0.0" y="214.5" width="272" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTProDemi" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Powered by 2P" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiH-TI-ckw">
-                                                <rect key="frame" x="0.0" y="238" width="272" height="15"/>
+                                                <rect key="frame" x="0.0" y="246" width="272" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNextLTProDemi" family="Avenir Next LT Pro" pointSize="15"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2p-logo" translatesAutoresizingMaskIntoConstraints="NO" id="haL-FY-zyi">
-                                                <rect key="frame" x="0.0" y="267" width="272" height="27"/>
+                                                <rect key="frame" x="0.0" y="277.5" width="272" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="haL-FY-zyi" secondAttribute="height" multiplier="400:40" id="d31-O1-jfd"/>
                                                 </constraints>
