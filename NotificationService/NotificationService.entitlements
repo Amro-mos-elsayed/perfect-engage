@@ -6,7 +6,7 @@
 	<string>development</string>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.2p.swcc.engage</string>
+		<string>group.com.2p.swccDev1</string>
 	</array>
 </dict>
 </plist>

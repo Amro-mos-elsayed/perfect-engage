@@ -4706,10 +4706,10 @@
                     cell.date_lbl.isHidden = true
                     if(messageFrame.message.user_from! == Themes.sharedInstance.Getuser_id())
                     {
-                        infoStr = "Security code changed"
+                        infoStr = "Security code changed".localized()
                         
                     }else{
-                        infoStr = "\(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single")) changed the security code"
+                        infoStr = "\(Themes.sharedInstance.setNameTxt(Themes.sharedInstance.CheckNullvalue(Passed_value: messageFrame.message.user_from), "single")) \("changed the security code".localized())"
                     }
                 }
                     

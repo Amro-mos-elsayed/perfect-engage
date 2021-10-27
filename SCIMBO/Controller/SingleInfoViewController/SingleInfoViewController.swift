@@ -135,7 +135,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
 //        {
 //            section3Arr = ["Share Contact","Export Chat","Clear Chat","Block this Contact"]
 //        }
-        section3Arr = ["Share Contact"]
+        section3Arr = ["Share Contact".localized()]
 
         if(GroupRecordArr.count == 0)
         {
@@ -144,7 +144,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         }
         else
         {
-            section2Arr = [["name":"Groups In Common","image":#imageLiteral(resourceName: "group")]]
+            section2Arr = [["name":"Groups In Common".localized(),"image":#imageLiteral(resourceName: "group")]]
             isGroupAvaliable = true
         }
         
@@ -153,9 +153,9 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         let user_common_id = Themes.sharedInstance.Getuser_id() + "-" + self.user_id
         let saveToGallery = Themes.sharedInstance.saveToGallryOption(id: user_common_id)
         
-        section1Arr = [["name":"Media,Links and Docs","image":#imageLiteral(resourceName: "media"),"desc":""],["name":"Tasks".localized(),"image":#imageLiteral(resourceName: "star"),"desc" : GetStarmessageCount()],["name":"Mute","image":#imageLiteral(resourceName: "infomute"),"desc":time], ["name": "Save to Camera Roll","image":#imageLiteral(resourceName: "gallery_ic"),"desc":saveToGallery]]
+        section1Arr = [["name":"Media,Links and Docs".localized(),"image":#imageLiteral(resourceName: "media"),"desc":""],["name":"Tasks".localized(),"image":#imageLiteral(resourceName: "star"),"desc" : GetStarmessageCount()],["name":"Mute".localized(),"image":#imageLiteral(resourceName: "infomute"),"desc":time], ["name": "Save to Camera Roll".localized(),"image":#imageLiteral(resourceName: "gallery_ic"),"desc":saveToGallery]]
         
-        notExtUser_Arr = ["Invite To \(Themes.sharedInstance.GetAppname())","Share Contact","Variation"]
+        notExtUser_Arr = ["Invite To \(Themes.sharedInstance.GetAppname())","Share Contact".localized(),"Variation"]
         propertiesTableView.reloadData()
 
     }

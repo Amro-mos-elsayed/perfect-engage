@@ -586,3 +586,17 @@
 "will appear at the top of the stories list." = "سوف تظهر في قائمة الحالات";
 "won't appear at the top of the stories list anymore." = "لن تظهر في قائمة الحالات مجدداً";
 "Save" = "حفظ";
+
+
+"changed the security code" = "تم تحديث كود الأمان الخاص به";
+"created the group" = "قام بإنشاء المجموعة";
+"changed the group icon" = "قام بتغيير ايقونة المجموعة";
+"removed" = "قام بإزالة";
+"added" = "قام بإضافة";
+"Media,Links and Docs" = "الوسائط والروابط والمستندات";
+"Save to Camera Roll" = "حفظ في البوم الكاميرا";
+"Share Contact" = "مشاركة جهة الاتصال";
+"Groups In Common" = "المجموعات المشتركة";
+"PARTICIPANT" = "مشترك";
+"PARTICIPANTS" = "مشتركين";
+"admin" = "مدير";

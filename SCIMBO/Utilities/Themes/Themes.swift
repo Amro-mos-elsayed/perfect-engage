@@ -1285,11 +1285,11 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         var message = ""
         if(type == "1")
         {
-            message = "\(Themes.sharedInstance.setNameTxt(from, "single")) created the group"
+            message = "\(Themes.sharedInstance.setNameTxt(from, "single")) \("created the group".localized())"
         }
         if(type == "2")
         {
-            message = "\(Themes.sharedInstance.setNameTxt(from, "single")) changed the group icon"
+            message = "\(Themes.sharedInstance.setNameTxt(from, "single")) \("changed the group icon".localized())"
         }
         if(type == "4" || type == "5")
         {
@@ -1298,11 +1298,11 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             
             if(type == "4")
             {
-                message = "\(from) removed \(to)"
+                message = "\(from) \("removed".localized()) \(to)"
             }
             else
             {
-                message = "\(from) added \(to)"
+                message = "\(from) \("added".localized()) \(to)"
             }
             
         }

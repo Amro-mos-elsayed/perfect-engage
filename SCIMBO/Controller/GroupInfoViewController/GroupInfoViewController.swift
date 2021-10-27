@@ -69,7 +69,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         activity_IndicatorView.isHidden = true
         activity_IndicatorView.hidesWhenStopped = true
         self.editBtn.isHidden = true
-        propertyNameArray = ["Media,Links and Docs","Tasks","Mute", "Save to Camera Roll"]
+        propertyNameArray = ["Media,Links and Docs".localized(),"Tasks".localized(),"Mute".localized(), "Save to Camera Roll".localized()]
         propertyImgArray = [#imageLiteral(resourceName: "media"),#imageLiteral(resourceName: "star"),#imageLiteral(resourceName: "infomute"),#imageLiteral(resourceName: "gallery_ic")]
         GetStarmessageCount()
         getRecord()
@@ -326,7 +326,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                 groupMemCell.Status_lbl.isHidden=false
                 if(Grouppeoplerecord.isAdmin == "1")
                 {
-                    groupMemCell.admin_lbl.text="admin"
+                    groupMemCell.admin_lbl.text="admin".localized()
                     groupMemCell.admin_lbl.isHidden=false
                 }
                 else
@@ -1129,7 +1129,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         if(tableView == groupMembers_TblView)
             
         {
-            return  (Group_DetailArr.count == 0) ? "\(Group_DetailArr.count) PARTICIPANT" : "\(Group_DetailArr.count) PARTICIPANTS"
+            return  (Group_DetailArr.count == 0) ? "\(Group_DetailArr.count) \("PARTICIPANT".localized())" : "\(Group_DetailArr.count) \("PARTICIPANTS".localized())"
         }
         return nil
     }

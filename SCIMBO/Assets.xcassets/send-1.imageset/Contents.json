@@ -1,12 +1,13 @@
 {
   "images" : [
     {
-      "filename" : "Goarr.png",
+      "filename" : "Group.png",
       "idiom" : "universal",
       "language-direction" : "left-to-right",
       "scale" : "1x"
     },
     {
+      "filename" : "Group-1.png",
       "idiom" : "universal",
       "language-direction" : "left-to-right",
       "scale" : "2x"
