@@ -488,13 +488,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let id = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "from"))
         let convId = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "convId"))
         let chat_type:String = Themes.sharedInstance.CheckNullvalue(Passed_value: notify.userInfo?["chat_type"])
+        let chatId = (chat_type == "group") ? convId : id
         let is_mute = Themes.sharedInstance.CheckMuteChats(id: (chat_type == "group") ? convId : id , type: chat_type)
         if(is_mute && !(self.navigationController?.topViewController is InitiateChatViewController))
         {
             return
         }
-        
-        if(!(self.navigationController?.topViewController is InitiateChatViewController))
+        let openedId = Themes.sharedInstance.currentOpendChatId
+        if(!(self.navigationController?.topViewController is InitiateChatViewController) || ((openedId != chatId && (self.navigationController?.topViewController is InitiateChatViewController))))
         {
             var offline = "false"
             if((notify.userInfo?["offline"]) != nil)

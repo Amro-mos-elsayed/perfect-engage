@@ -97,6 +97,8 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         return alertController
     }
     
+    var currentOpendChatId: String = ""
+    
     func RemoveNonnumericEntitites(PassedValue:NSString)->String
     {
         let stringArray = PassedValue.components(

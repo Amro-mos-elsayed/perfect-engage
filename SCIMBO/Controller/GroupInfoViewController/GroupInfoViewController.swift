@@ -689,7 +689,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
             }
             else if(cell?.propertyTitle_Lbl.text ==  NSLocalizedString("Exit group", comment: "Exit group") )
             {
-                let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+                let optionMenu = UIAlertController(title: nil, message: "Choose option".localized(), preferredStyle: .actionSheet)
                 
                 // 2
                 let  exitGroupAction = UIAlertAction(title: NSLocalizedString( "Exit group", comment: "Exit group"), style: .default, handler: {
