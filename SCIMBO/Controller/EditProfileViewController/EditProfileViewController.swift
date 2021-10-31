@@ -601,7 +601,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         UIView.animate(withDuration: 5, animations: {
             self.imageShow_View.isHidden = true
             self.doneBtn.isHidden = false
-            self.doneBtn.setTitle(NSLocalizedString("Done".localized(), comment: "com") , for: UIControl.State.normal)
+            self.doneBtn.setTitle(NSLocalizedString("Done", comment: "com") , for: UIControl.State.normal)
             self.headerTitle.text = "Edit Profile".localized()
             
         })
