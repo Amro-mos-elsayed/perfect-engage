@@ -569,7 +569,6 @@
 "Other Chats" = "دردشات أخرى";
 "Messages" = " الرسائل";
 "Stories" = "الحالة";
-"You" = "أنت";
 "Delete this Story update? It will also be deleted for everyone who received it." = "حذف هذة الحالة؟ سوف يتم حذفها ايضا عند كل من وصلت إليه.";
 "🕘 Sending..." = "🕘 إرسال...";
 "just now" = "الآن";
@@ -600,3 +599,30 @@
 "PARTICIPANT" = "مشترك";
 "PARTICIPANTS" = "مشتركين";
 "admin" = "مدير";
+"Away" = "غير متاح";
+"Business trip" = "رحلة عمل";
+"Do not disturb" = "لا تقاطع";
+"On vacation" = "في عطلة";
+"Offline" = "غير متصل على الانترنت";
+"Chat Backup" = "نسخ احتياطي";
+"Edit Profile" = "تعديل الحساب";
+"Profile Photo" = "الصورة الشخصية";
+"error in connection" = "خطأ في الاتصال";
+"Profile name updated successfully" = "تم تعديل اسم المستخدم بنجاح.";
+"Profile picture updated successfully." = "تم تعديل الصورة الشخصية بنجاح.";
+"does not have access to your camera. to enable access, tap Settings and turn on Camera" = "ليس مسموحا له بالوصول الى كاميرتك. انقر على الاعدادات, تم قم بتشغيل الكاميرا";
+
+
+"Group successfully created" = "تم انشاء المجموعة بنجاح";
+"Please enter group name" = "من فضلك ادخل اسم المجموعة";
+"Group Subject" = "اسم المجموعة";
+"Group Info" = "معلومات المجموعة";
+"Clear Chat" = "مسح الدردشة";
+"Exit Group" = "الخروج من المجموعة";
+"Choose option" = "اختر"; 
+"1 Year" = "سنة واحدة";
+"1 Week" = "اسبوع واحد";
+"8 Hours" = "سنة واحدة";
+"changed the subject name" = "قام بتغيير اسم المجموعة";
+"Select Contacts" = "اختر جهة اتصال";
+"Delete Photo" = "مسح الصورة";

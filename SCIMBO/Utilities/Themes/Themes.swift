@@ -1107,7 +1107,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         }
         else{
             if id == Themes.sharedInstance.Getuser_id() {
-                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : "You"
+                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : "You".localized()
             }
             else{
                 if(Themes.sharedInstance.contactExist(id)) {
@@ -1308,7 +1308,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         }
         if(type == "6")
         {
-            message = "\(Themes.sharedInstance.setNameTxt(from, "single")) changed the subject name"
+            message = "\(Themes.sharedInstance.setNameTxt(from, "single")) \("changed the subject name".localized())"
             
         }
         if(type == "7")
@@ -1316,7 +1316,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             
             var to = Themes.sharedInstance.setNameTxt(to, "single")
             
-            if(to == "You")
+            if(to == "You" || to == "You".localized())
             {
                 to = to.appending("'re")
             }
@@ -1948,18 +1948,18 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
     }
     func ShowNotification(_ subtitle:String, _ success : Bool)
     {
-        SWMessage.sharedInstance.showNotificationWithTitle(
-            Themes.sharedInstance.GetAppname(),
-            subtitle: subtitle,
-            type: success ? .success : .warning
-        )
         if UIDevice.isIphoneX{
-            SWMessage.sharedInstance.offsetHeightForMessage = 0
+            SWMessage.sharedInstance.offsetHeightForMessage = 15
         }
         else{
             SWMessage.sharedInstance.offsetHeightForMessage = 0
         }
         
+        SWMessage.sharedInstance.showNotificationWithTitle(
+            Themes.sharedInstance.GetAppname().localized(),
+            subtitle: subtitle,
+            type: success ? .success : .warning
+        )
     }
     func convertImageToBase64(imageData: Data) -> String {
         let base64String = imageData.base64EncodedString()
@@ -2313,31 +2313,31 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         else
         {
             convId = GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "opponent_id", fetchString: id, returnStr: "conv_id")
-            let optionMenu = UIAlertController(title: nil, message:  "Choose option", preferredStyle: .actionSheet)
+            let optionMenu = UIAlertController(title: nil, message:  "Choose option".localized(), preferredStyle: .actionSheet)
             
             // 2
-            let eightHrAction = UIAlertAction(title: "8 Hours", style: .default, handler: {
+            let eightHrAction = UIAlertAction(title: "8 Hours".localized(), style: .default, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Deleted")
                 let dic:[AnyHashable: Any] = ["from":self.Getuser_id(),"to":id,"option":"8 Hours","type":type,"status":"1","secret_type":"0","notify_status":"0","convId":convId]
                 SocketIOManager.sharedInstance.muteChat(param: dic as! [String : Any])
                 
             })
-            let oneWeekAction = UIAlertAction(title: "1 Week", style: .default, handler: {
+            let oneWeekAction = UIAlertAction(title: "1 Week".localized(), style: .default, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Saved")
                 let dic:[AnyHashable: Any] = ["from":self.Getuser_id(),"to":id,"option":"1 Week","type":type,"status":"1","secret_type":"0","notify_status":"0","convId":convId]
                 SocketIOManager.sharedInstance.muteChat(param: dic as! [String : Any])
                 
             })
-            let oneYearAction = UIAlertAction(title: "1 Year", style: .default, handler: {
+            let oneYearAction = UIAlertAction(title: "1 Year".localized(), style: .default, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("File Saved")
                 let dic:[AnyHashable: Any] = ["from":self.Getuser_id(),"to":id,"option":"1 Year","type":type,"status":"1","secret_type":"0","notify_status":"0","convId":convId]
                 SocketIOManager.sharedInstance.muteChat(param: dic as! [String : Any])
                 
             })
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            let cancelAction = UIAlertAction(title: "Cancel".localized(), style: .cancel, handler: {
                 (alert: UIAlertAction!) -> Void in
                 print("Cancelled")
             })
@@ -3043,6 +3043,22 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         }
         return ManagedObj as? User_detail
     }
+    
+    
+    public func convertStringtoArabic(_ paramString: String) -> String {
+        var finalString: String = paramString
+        finalString = finalString.replacingOccurrences(of: "٠", with: "0")
+        finalString = finalString.replacingOccurrences(of: "١", with: "1")
+        finalString = finalString.replacingOccurrences(of: "٢", with: "2")
+        finalString = finalString.replacingOccurrences(of: "٣", with: "3")
+        finalString = finalString.replacingOccurrences(of: "٤", with: "4")
+        finalString = finalString.replacingOccurrences(of: "٥", with: "5")
+        finalString = finalString.replacingOccurrences(of: "٦", with: "6")
+        finalString = finalString.replacingOccurrences(of: "٧", with: "7")
+        finalString = finalString.replacingOccurrences(of: "٨", with: "8")
+        finalString = finalString.replacingOccurrences(of: "٩", with: "9")
+        return finalString
+    }
 }
 
 
@@ -3534,7 +3550,7 @@ extension UILabel {
         }
         else{
             if id == Themes.sharedInstance.Getuser_id() {
-                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : "You"
+                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : "You".localized()
             }
             else{
                 if(Themes.sharedInstance.contactExist(id)) {

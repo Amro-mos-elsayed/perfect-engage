@@ -54,6 +54,7 @@ class NewGroupSetNameViewController: UIViewController,UICollectionViewDelegate,U
         SetView()
         profileImgBtn.image = #imageLiteral(resourceName: "groupavatar")
         groupNameTxt.delegate = self
+        groupNameTxt.placeholder = "Group Subject".localized()
         // Do any additional setup after loading the view.
     }
     
@@ -68,7 +69,12 @@ class NewGroupSetNameViewController: UIViewController,UICollectionViewDelegate,U
     }
     func SetView()
     {
-        noOfParticipantsLbl.text = "PARTICIPANTS: \(collectionArray.count) OF 256"
+        if languageHandler.ApplicationLanguage().contains("ar") {
+            noOfParticipantsLbl.text = "المشتركون \(collectionArray.count) من 256"
+        }else{
+            noOfParticipantsLbl.text = "PARTICIPANTS: \(collectionArray.count) OF 256"
+        }
+        
         for i in 0..<collectionArray.count{
             collectionImgArray.add(collectionArray[i])
         }
@@ -79,7 +85,7 @@ class NewGroupSetNameViewController: UIViewController,UICollectionViewDelegate,U
     @objc func GroupCreated()
     {
         self.DismissLoader(IsfromUploader: true)
-        Themes.sharedInstance.ShowNotification("Group successfully created", true)
+        Themes.sharedInstance.ShowNotification("Group successfully created".localized(), true)
         let indexDic = ["index":1]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.getPageIndex), object: nil, userInfo: indexDic)
         self.popToRoot(animated: true)
@@ -126,7 +132,11 @@ class NewGroupSetNameViewController: UIViewController,UICollectionViewDelegate,U
         let  getPhoneno = getObj.id as String
         collectionArray.remove(at: sender.tag)
         self.delegate.changeSelecFrmColl(ID: getPhoneno , from: "setName")
-        noOfParticipantsLbl.text = "PARTICIPANTS: \(collectionArray.count) OF 256"
+        if languageHandler.ApplicationLanguage().contains("ar") {
+            noOfParticipantsLbl.text = "المشتركون \(collectionArray.count) من 256"
+        }else{
+            noOfParticipantsLbl.text = "PARTICIPANTS: \(collectionArray.count) OF 256"
+        }
         //tagCpyArry.removeObject(at:  sender.tag)
         if collectionArray.count == 0{
             createBtn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
@@ -248,7 +258,7 @@ class NewGroupSetNameViewController: UIViewController,UICollectionViewDelegate,U
         self.view.endEditing(true)
         if(collectionArray.count != 0){
             if groupNameTxt.text?.trimmingCharacters(in: .whitespaces).isEmpty == true{
-                Themes.sharedInstance.ShowNotification("Please enter group name", false)
+                Themes.sharedInstance.ShowNotification("Please enter group name".localized(), false)
             }
             else{
                 User_idArr = NSMutableArray()

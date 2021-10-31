@@ -1434,7 +1434,7 @@ class ArchivedViewController: UIViewController,UITableViewDataSource,UITableView
                     }
                     else if(Grouppeoplerecord.id as String == Themes.sharedInstance.Getuser_id())
                     {
-                        Grouppeoplerecord.Name = "You"
+                        Grouppeoplerecord.Name = "You".localized() as NSString
                         groupNameArr.add("\(Grouppeoplerecord.Name)")
                     }
                     else

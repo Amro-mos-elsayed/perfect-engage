@@ -37,7 +37,7 @@ class HomeBaseViewController: UIViewController,UIScrollViewDelegate ,CAPSPageMen
         addNotificationListener()
         setNavigationController()
        let codeLang = languageHandler.ApplicationLanguage()
-        if codeLang == "ar"{
+        if codeLang.contains("ar"){
             BottomStackView.semanticContentAttribute = .forceLeftToRight
         }
         statusLbl.font = UIFont.systemFont(ofSize: 10, weight: UIFont.Weight.semibold)

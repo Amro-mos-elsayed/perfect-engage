@@ -61,9 +61,15 @@ class StatusListViewController: UIViewController,UITableViewDelegate,UITableView
             statusList_Array.add(value)
             
         }
-        if languageHandler.ApplicationLanguage() == "ar" {
-            statusList_Array = ["متاح","في قاعة السينما","مكالمات الطوارئ","نائم","في صالة الرياضة","في إجتماع"
-    ,"لا أستطيع الكلام","مشغول","البطارية علي وشك النفاذ","في العمل"]
+        if languageHandler.ApplicationLanguage().contains("ar") {
+            statusList_Array = [NSLocalizedString("Online", comment: "ava"),
+                                NSLocalizedString("Away", comment: "ava"),
+                                NSLocalizedString("Busy", comment: "ava"),
+                                NSLocalizedString("In a meeting", comment: "ava") ,
+                                NSLocalizedString("Do not disturb", comment: "ava") ,
+                                NSLocalizedString("Business trip", comment: "ava") ,
+                                NSLocalizedString("On vacation", comment: "ava"),
+                                NSLocalizedString("Offline", comment: "ava")]
         }
         let app = Themes.sharedInstance.GetAppname()
         if getDic.count == 0{

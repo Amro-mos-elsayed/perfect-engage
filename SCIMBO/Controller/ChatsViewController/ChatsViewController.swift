@@ -3208,7 +3208,7 @@
             var isCancelBtn:Bool!
             let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             let chatprerecord : GroupDetail = ChatPrerecordArr[indexpath.row] as! GroupDetail
-            let muteTitle = Themes.sharedInstance.CheckMuteChats(id: chatprerecord.id, type: "group") ? "Unmute" : "Mute"
+            let muteTitle = Themes.sharedInstance.CheckMuteChats(id: chatprerecord.id, type: "group") ? "Unmute".localized() : "Mute".localized()
             
             let MuteAction: UIAlertAction = UIAlertAction(title: muteTitle, style: .default) { action -> Void in
                 index = 0
@@ -3221,7 +3221,7 @@
                     self.actionCallback = nil;
                 }
             }
-            let ContactAction: UIAlertAction = UIAlertAction(title: "Group Info", style: .default) { action -> Void in
+            let ContactAction: UIAlertAction = UIAlertAction(title: "Group Info".localized(), style: .default) { action -> Void in
                 index = 1
                 isDeleteBtn = false
                 isCancelBtn = false
@@ -3238,7 +3238,7 @@
 //                index = 2
 //                self.exportChat(indexpath: indexpath)
 //            }
-            let ClearAction: UIAlertAction = UIAlertAction(title: "Clear Chat", style: .default) { action -> Void in
+            let ClearAction: UIAlertAction = UIAlertAction(title: "Clear Chat".localized(), style: .default) { action -> Void in
                 index = 3
                 isDeleteBtn = false
                 isCancelBtn = false
@@ -3287,7 +3287,7 @@
                 
             else
             {
-                DelAction = UIAlertAction(title: "Exit Group", style: .destructive) { action -> Void in
+                DelAction = UIAlertAction(title: "Exit Group".localized(), style: .destructive) { action -> Void in
                     index = 6
                     
                     isDeleteBtn = false
@@ -3302,7 +3302,7 @@
                 }
             }
             
-            let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+            let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel".localized(), style: .cancel) { action -> Void in
                 index = 0
                 isDeleteBtn = false
                 isCancelBtn = true

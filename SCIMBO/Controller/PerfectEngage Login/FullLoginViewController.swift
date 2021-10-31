@@ -52,6 +52,7 @@ class FullLoginViewController: UIViewController {
         self.listenToKeyboard()
         emailView.isHidden = !loginTypeEmployee
         userNameView.isHidden = !loginTypeEmployee
+        MobileTextField.keyboardType = .asciiCapableNumberPad
     }
     
     func listenToKeyboard() {

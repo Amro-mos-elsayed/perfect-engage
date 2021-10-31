@@ -19,6 +19,9 @@ class SettingsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         setting_Img.layer.cornerRadius = 8.0
         setting_Img.clipsToBounds = true
+        if languageHandler.ApplicationLanguage().contains("ar") {
+            rightArrow_ImgView.image = UIImage.init(named: "Goarr")
+        }
         // Initialization code
     }
 

@@ -214,7 +214,7 @@ class SelectShareContactViewController: UIViewController,UITableViewDelegate,UIT
                                         }
                                         else
                                         {
-                                            userNames.add("You")
+                                            userNames.add("You".localized())
                                         }
                                     }
                                     
@@ -261,7 +261,7 @@ class SelectShareContactViewController: UIViewController,UITableViewDelegate,UIT
                             print(ChatArr.count)
                             chatprerecord.messageCount = String(ChatArr.count)
                             
-                            if(userNames.contains("You")){
+                            if userNames.contains("You".localized()) || userNames.contains("You"){
                                 ChatPrerecordArr.add(chatprerecord)
                             }else if(chatprerecord.ischattype == "single"){
                                 ChatPrerecordArr.add(chatprerecord)
@@ -415,7 +415,7 @@ class SelectShareContactViewController: UIViewController,UITableViewDelegate,UIT
                     }
                     else
                     {
-                        userNames.add("You")
+                        userNames.add("You".localized())
                     }
                 }
                 

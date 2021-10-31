@@ -187,7 +187,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
             let imageViewer = GSImageViewerController(imageInfo: imageInfo, transitionInfo: transitionInfo)
             self.doneBtn.isHidden = false
             self.doneBtn.setTitle(NSLocalizedString("Edit", comment: "Edit"), for: UIControl.State.normal)
-            self.headerTitle.text = "Profile Photo"
+            self.headerTitle.text = "Profile Photo".localized()
             self.presentView(imageViewer, animated: true)
             
         }
@@ -342,8 +342,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
                 UIView.animate(withDuration: 5, animations: {
                     self.imageShow_View.isHidden = true
                     self.doneBtn.isHidden = false
-                    self.doneBtn.setTitle( "Done", for: UIControl.State.normal)
-                    self.headerTitle.text = "Edit Profile"
+                    self.doneBtn.setTitle( "Done".localized(), for: UIControl.State.normal)
+                    self.headerTitle.text = "Edit Profile".localized()
                     
                 })
                 
@@ -353,7 +353,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
             }
             else{
                 
-                if doneBtn.titleLabel?.text == "Done" {
+                if doneBtn.titleLabel?.text == "Done".localized() {
                     self.pop(animated: true)
                     
                 }
@@ -363,8 +363,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
                     UIView.animate(withDuration: 5, animations: {
                         self.imageShow_View.isHidden = true
                         self.doneBtn.isHidden = false
-                        self.doneBtn.setTitle( "Done", for: UIControl.State.normal)
-                        self.headerTitle.text = "Edit Profile"
+                        self.doneBtn.setTitle( "Done".localized(), for: UIControl.State.normal)
+                        self.headerTitle.text = "Edit Profile".localized()
                     })
                 }
                 
@@ -397,8 +397,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         SocketIOManager.sharedInstance.Delegate = self
         self.imageShow_View.isHidden = true
         self.doneBtn.isHidden = false
-        self.doneBtn.setTitle( "Done", for: UIControl.State.normal)
-        self.headerTitle.text = "Edit Profile"
+        self.doneBtn.setTitle( "Done".localized(), for: UIControl.State.normal)
+        self.headerTitle.text = "Edit Profile".localized()
         self.imageShow_View.isHidden = true
         //        setUserDetails()
     }
@@ -456,20 +456,20 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
                     activityView.stopAnimating()
                     activityView.isHidden = true
                     setUserDetails()
-                    self.view.makeToast(message: "Profile name updated successfully", duration: 3, position: HRToastActivityPositionDefault)
+                    self.view.makeToast(message: "Profile name updated successfully".localized(), duration: 3, position: HRToastActivityPositionDefault)
                 }
                 else
                 {
                     setUserDetails()
                     self.activityView.stopAnimating()
                     self.activityView.isHidden = true
-                    self.view.makeToast(message: "Profile picture updated successfully.", duration: 3, position: HRToastActivityPositionDefault)
+            self.view.makeToast(message: "Profile picture updated successfully.".localized(), duration: 3, position: HRToastActivityPositionDefault)
                 }
             }
             else{
                 activityView.stopAnimating()
                 activityView.isHidden = true
-                self.view.makeToast(message: "error in connection" , duration: 3, position: HRToastActivityPositionDefault)
+                self.view.makeToast(message: "error in connection".localized() , duration: 3, position: HRToastActivityPositionDefault)
             }
         }
     }
@@ -477,7 +477,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
     @IBAction func doneAction(_ sender: UIButton) {
         nameTxt.resignFirstResponder()
         
-        if doneBtn.titleLabel?.text == "Done"{
+        if doneBtn.titleLabel?.text == "Done".localized(){
             
             if nameTxt.text?.trimmingCharacters(in: .whitespaces).isEmpty == false{
                 Themes.sharedInstance.activityView(View: self.view)
@@ -493,7 +493,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         }
         else {
             let alert:UIAlertController=UIAlertController(title:nil, message: nil, preferredStyle: UIAlertController.Style.actionSheet)
-            let deleteAction = UIAlertAction(title: "Delete Photo", style: UIAlertAction.Style.default)
+            let deleteAction = UIAlertAction(title: "Delete Photo".localized(), style: UIAlertAction.Style.default)
             {
                 UIAlertAction in
                 
@@ -505,8 +505,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
                 DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.User_detail , FetchString: Themes.sharedInstance.Getuser_id() , attribute:"user_id" , UpdationElements: UpdateDict as NSDictionary?)
                 self.imageShow_View.isHidden = true
                 self.doneBtn.isHidden = false
-                self.doneBtn.setTitle( "Done", for: UIControl.State.normal)
-                self.headerTitle.text = "Edit Profile"
+                self.doneBtn.setTitle( "Done".localized(), for: UIControl.State.normal)
+                self.headerTitle.text = "Edit Profile".localized()
                 //var array: [Any]? = self.navigationController?.viewControllers
                 //self.navigationController?.popToViewController(array?[0] as! UIViewController, animated: true)
                 self.imageShow_View.isHidden = true
@@ -570,8 +570,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
                 UIView.animate(withDuration: 5, animations: {
                     self.imageShow_View.isHidden = true
                     self.doneBtn.isHidden = false
-                    self.doneBtn.setTitle( "Done", for: UIControl.State.normal)
-                    self.headerTitle.text = "Edit Profile"
+                    self.doneBtn.setTitle( "Done".localized(), for: UIControl.State.normal)
+                    self.headerTitle.text = "Edit Profile".localized()
                     
                     
                 })
@@ -601,8 +601,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         UIView.animate(withDuration: 5, animations: {
             self.imageShow_View.isHidden = true
             self.doneBtn.isHidden = false
-            self.doneBtn.setTitle(NSLocalizedString("Done", comment: "com") , for: UIControl.State.normal)
-            self.headerTitle.text = "Edit Profile"
+            self.doneBtn.setTitle(NSLocalizedString("Done".localized(), comment: "com") , for: UIControl.State.normal)
+            self.headerTitle.text = "Edit Profile".localized()
             
         })
         

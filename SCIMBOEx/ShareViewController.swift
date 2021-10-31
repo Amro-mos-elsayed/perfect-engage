@@ -370,7 +370,7 @@ class ShareViewController: UIViewController, UISearchBarDelegate, UITableViewDel
                                         }
                                         else
                                         {
-                                            userNames.add("You")
+                                            userNames.add(NSLocalizedString("You", comment: ""))
                                         }
                                     }
                                     
@@ -417,7 +417,7 @@ class ShareViewController: UIViewController, UISearchBarDelegate, UITableViewDel
                             print(ChatArr.count)
                             chatprerecord.messageCount = String(ChatArr.count)
                             
-                            if(userNames.contains("You")){
+                            if userNames.contains("You") || userNames.contains(NSLocalizedString("You", comment: "")){
                                 ChatPrerecordArr.add(chatprerecord)
                             }else if(chatprerecord.ischattype == "single"){
                                 ChatPrerecordArr.add(chatprerecord)
@@ -550,7 +550,7 @@ class ShareViewController: UIViewController, UISearchBarDelegate, UITableViewDel
                     }
                     else
                     {
-                        userNames.add("You")
+                        userNames.add(NSLocalizedString("You", comment: ""))
                     }
                 }
                 

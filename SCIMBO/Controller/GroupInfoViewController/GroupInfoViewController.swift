@@ -469,7 +469,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                 {
                     let alert : UIAlertController = UIAlertController(title: "", message: NSLocalizedString( "Choose an Option", comment: "comment"), preferredStyle: .actionSheet)
                     
-                    let infoAction = UIAlertAction(title: "Info", style: .default, handler: { (alert: UIAlertAction!) in
+                    let infoAction = UIAlertAction(title: "Info".localized(), style: .default, handler: { (alert: UIAlertAction!) in
                         let singleInfoVC:SingleInfoViewController=self.storyboard?.instantiateViewController(withIdentifier: "SingleInfoViewController") as! SingleInfoViewController
                         singleInfoVC.user_id = Themes.sharedInstance.CheckNullvalue(Passed_value: Grouppeoplerecord.id)
                         singleInfoVC.fromGroupInfo = true
@@ -785,7 +785,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         let noMediaAction: UIAlertAction = UIAlertAction(title: "Without Media", style: .default) { action -> Void in
             self.attach_without_media_group(id: id)
         }
-        let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
+        let CancelAction: UIAlertAction = UIAlertAction(title: "Cancel".localized(), style: .cancel) { action -> Void in
             
         }
         sheet_action.addAction(MediaAction)
@@ -1213,7 +1213,7 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
             UIAlertAction in
             self.openGallary()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel)
+        let cancelAction = UIAlertAction(title: "Cancel".localized(), style: UIAlertAction.Style.cancel)
         {
             UIAlertAction in
         }
@@ -1271,21 +1271,21 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
         {
             if  (image_view.image?.isEqual(UIImage(named: "groupavatar")))!
             {
-                let alert:UIAlertController=UIAlertController(title: "Choose Image", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+                let alert:UIAlertController=UIAlertController(title: "Choose Image".localized(), message: nil, preferredStyle: UIAlertController.Style.actionSheet)
                 
-                let cameraAction = UIAlertAction(title: "Camera", style: UIAlertAction.Style.default)
+                let cameraAction = UIAlertAction(title: "Camera".localized(), style: UIAlertAction.Style.default)
                 {
                     
                     UIAlertAction in
                     self.openCamera()
                 }
                 
-                let gallaryAction = UIAlertAction(title: "Gallery", style: UIAlertAction.Style.default)
+                let gallaryAction = UIAlertAction(title: "Gallery".localized(), style: UIAlertAction.Style.default)
                 {
                     UIAlertAction in
                     self.openGallary()
                 }
-                let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel)
+                let cancelAction = UIAlertAction(title: "Cancel".localized(), style: UIAlertAction.Style.cancel)
                 {
                     UIAlertAction in
                     

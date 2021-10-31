@@ -29,12 +29,12 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         if(checkArchived)
         {
-            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup"], "2" : []]
+            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup".localized()], "2" : []]
             
         }
         else
         {
-            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup"], "2" : []]
+            Datasource  = ["0" : [NSLocalizedString("Chat Wallpaper", comment: "comm")], "1" : ["Chat Backup".localized()], "2" : []]
         }
         table.reloadData()
     }

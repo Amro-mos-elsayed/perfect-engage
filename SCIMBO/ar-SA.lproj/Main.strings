@@ -266,7 +266,7 @@
 "fFe-ZJ-gwD.placeholder" = "your phone number";
 
 /* Class = "UILabel"; text = "Subject"; ObjectID = "fIt-FS-KkM"; */
-"fIt-FS-KkM.text" = "Subject";
+"fIt-FS-KkM.text" = "العنوان";
 
 /* Class = "UIButton"; normalTitle = "Save"; ObjectID = "FMc-lA-Ius"; */
 "FMc-lA-Ius.normalTitle" = "حفظ";
@@ -590,7 +590,7 @@
 "oXA-mC-EIU.text" = "Vaigunda Anand";
 
 /* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "ozv-4e-Fhj"; */
-"ozv-4e-Fhj.normalTitle" = "تعديل";
+"ozv-4e-Fhj.normalTitle" = "";
 
 /* Class = "UILabel"; text = "No popup"; ObjectID = "p07-L2-UiQ"; */
 "p07-L2-UiQ.text" = "No popup";

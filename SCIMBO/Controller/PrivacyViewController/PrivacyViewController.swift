@@ -111,7 +111,7 @@ class PrivacyViewController: UIViewController {
             show_status = Themes.sharedInstance.CheckNullvalue(Passed_value: $0.show_status)
 
         }
-        if languageHandler.ApplicationLanguage() == "ar" {
+        if languageHandler.ApplicationLanguage().contains("ar") {
             if last_seen == "everyone"{
                 last_seen = "الكل"
             }

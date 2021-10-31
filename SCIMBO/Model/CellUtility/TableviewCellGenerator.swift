@@ -520,7 +520,7 @@ class TableviewCellGenerator{
             }
             else
             {
-                cell.replayName.text = "You"
+                cell.replayName.text = "You".localized()
             }
             cell.replaycolour.backgroundColor = UIColor(red:23/255, green:109/255, blue:69/255, alpha:1.0)
             cell.replayName.textColor = UIColor(red:23/255, green:109/255, blue:69/255, alpha:1.0)

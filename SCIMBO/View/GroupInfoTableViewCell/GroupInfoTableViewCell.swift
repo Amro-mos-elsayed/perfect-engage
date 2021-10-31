@@ -15,8 +15,12 @@ class GroupInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var propertyTitle_Lbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        if languageHandler.ApplicationLanguage().contains("ar") {
+            rightArrow_ImgView.image = UIImage.init(named: "Goarr")
+        }
         // Initialization code
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

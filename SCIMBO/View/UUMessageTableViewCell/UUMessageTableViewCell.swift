@@ -2350,7 +2350,7 @@ class UUMessageCell: UITableViewCell, UUMessageContentButtonDelegate {
             }
             else
             {
-                ReplyView.name_Lbl.text = "You"
+                ReplyView.name_Lbl.text = "You".localized()
                 isFromStatus = false
             }
             ReplyView.user_status_Lbl.backgroundColor = UIColor(red:23/255, green:109/255, blue:69/255, alpha:1.0)

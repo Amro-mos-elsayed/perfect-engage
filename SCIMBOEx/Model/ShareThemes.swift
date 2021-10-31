@@ -1534,7 +1534,7 @@ class Themes: NSObject {
         }
         else{
             if id == Themes.sharedInstance.Getuser_id() {
-                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : "You"
+                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : NSLocalizedString("You", comment: "")
             }
             else{
                 if(Themes.sharedInstance.contactExist(id)) {
@@ -2057,7 +2057,7 @@ extension UILabel {
         }
         else{
             if id == Themes.sharedInstance.Getuser_id() {
-                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : "You"
+                name = type == "" ? Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.User_detail, attrib_name: "user_id", fetchString: id, returnStr: "name") : NSLocalizedString("You", comment: "")
             }
             else{
                 if(Themes.sharedInstance.contactExist(id)) {

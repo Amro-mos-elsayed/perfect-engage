@@ -29,7 +29,6 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     @IBOutlet weak var table_bottom: NSLayoutConstraint!
     @IBOutlet weak var tableViewIndex: TableViewIndex!
     @IBOutlet weak var contacts_TblView:UITableView!
-    @IBOutlet weak var editBtn:UIButton!
     @IBOutlet weak var contactsLbl:UILabel!
     
     @IBOutlet weak var bottomView: UIView!
@@ -80,7 +79,7 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         bottomView.layer.masksToBounds = true
         bottomView.isHidden = true //false
         goback.isHidden = false
-        contactsLbl.text = "Select Contacts"
+        contactsLbl.text = "Select Contacts".localized()
         
         getContacts()
     }

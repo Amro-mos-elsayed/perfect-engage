@@ -6029,49 +6029,73 @@
     private func actionSheetIndex(_ index: Int) {
         if(index == 0)
         {
-            let pickerController = DKImagePickerController()
-            pickerController.maxSelectableCount = 10
-            pickerController.assetType = .allPhotos
-            pickerController.sourceType = .camera
-            pickerController.didSelectAssets = { (assets: [DKAsset]) in
-                if(assets.count > 0)
-                {
-                    self.selectedAssets = assets
-                    Themes.sharedInstance.activityView(View: self.view)
-                    if(self.Chat_type == "group")
-                    {
-                        AssetHandler.sharedInstance.isgroup = true
-                    }
-                    else
-                    {
-                        AssetHandler.sharedInstance.isgroup = false
-                        
-                    }
-                    AssetHandler.sharedInstance.ProcessAsset(assets: [assets[0]],oppenentID: self.opponent_id,isFromStatus: false, completionHandler: {[weak self]
-                        (AssetArr, error) -> ()? in
-                        if((AssetArr?.count)! > 0)
-                        {
-                            DispatchQueue.main.async {
-                                Themes.sharedInstance.RemoveactivityView(View: (self?.view)!)
-                                
-                                let EditVC = self?.storyboard?.instantiateViewController(withIdentifier: "EditViewControllerID") as! EditViewController
-                                EditVC.AssetArr = AssetArr!
-                                EditVC.isVideoData = false
-                                EditVC.isfromStatus = false
-                                EditVC.Delegate = self
-                                EditVC.selectedAssets = (self?.selectedAssets)!
-                                EditVC.isgroup = AssetHandler.sharedInstance.isgroup
-                                EditVC.to_id = (self?.opponent_id)!
-                                self?.pushView(EditVC, animated: true)
-                                
-                            }
-                        }
-                        return ()
-                    })
-                }
+            let cameraMediaType = AVMediaType.video
+            let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
+            if cameraAuthorizationStatus == .authorized {
                 
+                let pickerController = DKImagePickerController()
+                pickerController.maxSelectableCount = 10
+                pickerController.assetType = .allPhotos
+                pickerController.sourceType = .camera
+                pickerController.didSelectAssets = { (assets: [DKAsset]) in
+                    if(assets.count > 0)
+                    {
+                        self.selectedAssets = assets
+                        Themes.sharedInstance.activityView(View: self.view)
+                        if(self.Chat_type == "group")
+                        {
+                            AssetHandler.sharedInstance.isgroup = true
+                        }
+                        else
+                        {
+                            AssetHandler.sharedInstance.isgroup = false
+                            
+                        }
+                        AssetHandler.sharedInstance.ProcessAsset(assets: [assets[0]],oppenentID: self.opponent_id,isFromStatus: false, completionHandler: {[weak self]
+                            (AssetArr, error) -> ()? in
+                            if((AssetArr?.count)! > 0)
+                            {
+                                DispatchQueue.main.async {
+                                    Themes.sharedInstance.RemoveactivityView(View: (self?.view)!)
+                                    
+                                    let EditVC = self?.storyboard?.instantiateViewController(withIdentifier: "EditViewControllerID") as! EditViewController
+                                    EditVC.AssetArr = AssetArr!
+                                    EditVC.isVideoData = false
+                                    EditVC.isfromStatus = false
+                                    EditVC.Delegate = self
+                                    EditVC.selectedAssets = (self?.selectedAssets)!
+                                    EditVC.isgroup = AssetHandler.sharedInstance.isgroup
+                                    EditVC.to_id = (self?.opponent_id)!
+                                    self?.pushView(EditVC, animated: true)
+                                    
+                                }
+                            }
+                            return ()
+                        })
+                    }
+                    
+                }
+                self.presentView(pickerController, animated: true)
+            }else{
+                switch cameraAuthorizationStatus {
+                case .denied:
+                    let message = "\(Themes.sharedInstance.GetAppname()) \("does not have access to your camera. to enable access, tap Settings and turn on Camera".localized())"
+                    
+                    let alert = UIAlertController.init(title: nil, message: message, preferredStyle: .alert)
+                    let action = UIAlertAction.init(title: "Cancel".localized(), style: .cancel, handler: nil)
+                    let action2 = UIAlertAction.init(title: "Settings".localized(), style: .default) { _ in
+                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                    }
+                    alert.addAction(action)
+                    alert.addAction(action2)
+                    self.present(alert, animated: true)
+                    break
+                case .notDetermined:
+                    break
+                default:
+                    break
+                }
             }
-            self.presentView(pickerController, animated: true)
         }
         else if(index == 1)
         {
