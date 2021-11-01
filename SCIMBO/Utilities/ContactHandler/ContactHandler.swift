@@ -49,7 +49,7 @@ class ContactHandler: NSObject {
         if(ResponseDict.count > 0)
         {
             let message:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "Status"))
-            let name:String = "" //Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "Name"))
+            let name:String = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "Name"))
             let id:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "id"))
             let msisdn:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "msisdn"))
             var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "avatar"))

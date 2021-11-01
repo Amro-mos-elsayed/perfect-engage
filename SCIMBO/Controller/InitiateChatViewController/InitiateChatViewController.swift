@@ -147,7 +147,6 @@
             group_user_lbl.text = "Tap here for group info"
         }
         Themes.sharedInstance.currentOpendChatId = opponent_id
-        let c = 9
     }
     
     func UpdateUI()
