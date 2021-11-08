@@ -12,6 +12,12 @@ import CallKit
 
 extension AppDelegate: PKPushRegistryDelegate {
     
+    func pushRegistrySetup() {
+        let pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
+        pushRegistry.delegate = self
+        pushRegistry.desiredPushTypes = [.voIP]
+    }
+    
     // MARK: - PKPushRegistryDelegate
     func pushRegistry(_ registry: PKPushRegistry, didUpdate credentials: PKPushCredentials, for type: PKPushType) {
         

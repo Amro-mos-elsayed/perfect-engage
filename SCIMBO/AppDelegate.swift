@@ -970,7 +970,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             defaults?.set(count, forKey: "BadgeCount")
             self.MovetoRooVC()
             self.pushRegistrySetup()
-            self.pushnotificationSetup()
+            UIApplication.shared.unregisterForRemoteNotifications()
         }
     }
     
@@ -1401,12 +1401,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             navigationController?.viewControllers = [signinVC]
             self.window!.rootViewController = navigationController
         }
-    }
-    
-    func pushRegistrySetup() {
-        let pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
-        pushRegistry.delegate = self
-        pushRegistry.desiredPushTypes = [.voIP]
     }
     
     func pushnotificationSetup()

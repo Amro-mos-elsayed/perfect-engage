@@ -6080,7 +6080,7 @@
             }else{
                 switch cameraAuthorizationStatus {
                 case .denied:
-                    let message = "\(Themes.sharedInstance.GetAppname()) \("does not have access to your camera. to enable access, tap Settings and turn on Camera".localized())"
+                    let message = "'\(Themes.sharedInstance.GetAppname())' \("does not have access to your camera. to enable access, tap Settings and turn on Camera".localized())"
                     
                     let alert = UIAlertController.init(title: nil, message: message, preferredStyle: .alert)
                     let action = UIAlertAction.init(title: "Cancel".localized(), style: .cancel, handler: nil)

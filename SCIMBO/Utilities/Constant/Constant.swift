@@ -11,7 +11,7 @@ import Foundation
 //let BaseURLArray = ["https://swccengage.perfect-engage.com"] // SWCC
 //let BaseURLArray = ["https://pee.perfect-engage.com"]// minister
 //let BaseURLArray = ["https://dev2pengage.perfect-engage.com"]
-let BaseURLArray = ["https://devswccengage.perfect-engage.com"]
+let BaseURLArray = ["https://devswccengage.perfect-engage.com"] // Dev SWCC
 
 
 var BaseUrl : String {

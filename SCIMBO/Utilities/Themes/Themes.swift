@@ -1972,7 +1972,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
     func GetAppname()->String
     {
         let appname:String = self.CheckNullvalue(Passed_value: Bundle.main.infoDictionary!["CFBundleDisplayName"])
-        return appname
+        return appname.localized()
         
     }
     
