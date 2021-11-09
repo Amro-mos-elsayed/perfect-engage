@@ -350,10 +350,6 @@ class FullLoginViewController: UIViewController {
     
     func UpdateUserInfo(name:String,imagedata:String,base64data:String, email: String)
     {
-        guard let user = Themes.sharedInstance.GetuserDetails() else {
-            return
-        }
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             SocketIOManager.sharedInstance.changeName(name: Themes.sharedInstance.CheckNullvalue(Passed_value: name), from: Themes.sharedInstance.Getuser_id(), email: Themes.sharedInstance.CheckNullvalue(Passed_value: email))
                 

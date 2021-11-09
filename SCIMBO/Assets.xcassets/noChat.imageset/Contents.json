@@ -1,21 +1,23 @@
 {
   "images" : [
     {
+      "filename" : "no_message.png",
       "idiom" : "universal",
-      "filename" : "Start Chatting.png",
       "scale" : "1x"
     },
     {
+      "filename" : "no_message@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "no_message@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }
