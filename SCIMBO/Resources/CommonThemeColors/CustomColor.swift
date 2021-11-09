@@ -12,7 +12,7 @@ class CustomColor: NSObject {
     static let sharedInstance=CustomColor()
     
    // let themeColor = UIColor(red: 0.00, green: 0.46, blue: 0.20, alpha: 1.00)
-    let themeColor = UIColor(red: 5/256, green: 100/256, blue: 202/256, alpha: 1.00)
+    let themeColor = UIColor(red: 233/256, green: 154/256, blue: 42/256, alpha: 1.00)
     //let themeColor = UIColor.red
     let alertColor = UIColor(red: 5/256, green: 100/256, blue: 202/256, alpha: 1.00)
     let alertColorForJss = UIColor.red

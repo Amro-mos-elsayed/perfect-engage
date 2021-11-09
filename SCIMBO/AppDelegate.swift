@@ -113,7 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         Themes.sharedInstance.getCurrentLocationCountryCode()
         self.pushRegistrySetup()
-        self.pushnotificationSetup()
+        //self.pushnotificationSetup()
 //        Fabric.with([Crashlytics.self])
 //        Fabric.sharedSDK().debug = true
         

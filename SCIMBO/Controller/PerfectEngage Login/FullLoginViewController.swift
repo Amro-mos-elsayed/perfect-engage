@@ -142,6 +142,7 @@ class FullLoginViewController: UIViewController {
                 let errNo = result["errNum"] as! String
                 let message = result["message"]
                 if errNo == "0"{
+                    self.appDelegate().pushnotificationSetup()
                     URLhandler.sharedinstance.makeGetCall(url: Constant.sharedinstance.Settings, param: [:], completionHandler: { [self](Object, error) ->  () in
                         if(error != nil)
                         {
@@ -392,6 +393,9 @@ class FullLoginViewController: UIViewController {
         self.pop(animated: false)
     }
     
+    func appDelegate() -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
     
 }
 

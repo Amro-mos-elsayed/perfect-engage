@@ -1641,14 +1641,7 @@
                     {
                         if(Int(login_key)! > Int(my_login_key)!)
                         {
-                            let alertview = JSSAlertView().show(
-                                (AppDelegate.sharedInstance.navigationController?.topViewController)!,
-                                title: Themes.sharedInstance.GetAppname(),
-                                text: "Your account has been logged in another device.",
-                                buttonText: "Ok",
-                                cancelButtonText: nil
-                            )
-                            alertview.addAction(self.LogOut)
+                            self.LogOut()
                         }
                     }
                 }
