@@ -156,6 +156,8 @@ class FullLoginViewController: UIViewController {
                             
                         }
                         else{
+                            self.appDelegate().pushnotificationSetup()
+                            self.appDelegate().pushRegistrySetup()
                             print(Object ?? "response")
                             let setting_result = Object! as NSDictionary
                             let message = setting_result["message"]
