@@ -40,6 +40,11 @@ class FullLoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         country_Code = self.CountryCode.text!
+        if userEmail == "alabeeb@2p.com.sa" {
+            self.CountryCode.text = "+20"
+            country_Code = self.CountryCode.text!
+        }
+        
         if let phoneNo = phoneNo {
             MobileTextField.text = phoneNo
         }
