@@ -112,8 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         self.MovetoRooVC()
         
         Themes.sharedInstance.getCurrentLocationCountryCode()
-//        self.pushRegistrySetup()
-//        self.pushnotificationSetup()
+        self.pushRegistrySetup()
+        self.pushnotificationSetup()
 //        Fabric.with([Crashlytics.self])
 //        Fabric.sharedSDK().debug = true
         
@@ -972,13 +972,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             self.pushRegistrySetup()
             self.pushnotificationSetup()
         }
-    }
-    
-    func stopVoIPPush() {
-        let pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
-        pushRegistry.desiredPushTypes = []
-        pushRegistry.delegate = nil
-       // voipRegistry = nil
     }
     
     // MARK: - IMAGE UPLOAD HANDLING
