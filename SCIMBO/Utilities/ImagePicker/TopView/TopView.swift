@@ -18,13 +18,13 @@ open class TopView: UIView {
   var configuration = Configuration()
 
   var currentFlashIndex = 0
-  let flashButtonTitles = ["AUTO", "ON", "OFF"]
+    let flashButtonTitles = ["AUTO".localized(), "ON".localized(), "OFF".localized()]
 
   open lazy var flashButton: UIButton = { [unowned self] in
     let button = UIButton()
     button.frame = CGRect(x: self.frame.size.width - 70, y: 0, width: 70, height: 70)
-    button.setImage(AssetManager.getImage("AUTO"), for: UIControl.State())
-    button.setTitle("AUTO", for: UIControl.State())
+    button.setImage(AssetManager.getImage("AUTO".localized()), for: UIControl.State())
+    button.setTitle("AUTO".localized(), for: UIControl.State())
     button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 0)
     button.setTitleColor(UIColor.white, for: UIControl.State())
     button.setTitleColor(UIColor.white, for: .highlighted)

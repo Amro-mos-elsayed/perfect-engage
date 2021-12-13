@@ -12,12 +12,6 @@ import CallKit
 
 extension AppDelegate: PKPushRegistryDelegate {
     
-    func pushRegistrySetup() {
-        let pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
-        pushRegistry.delegate = self
-        pushRegistry.desiredPushTypes = [.voIP]
-    }
-    
     // MARK: - PKPushRegistryDelegate
     func pushRegistry(_ registry: PKPushRegistry, didUpdate credentials: PKPushCredentials, for type: PKPushType) {
         
@@ -46,7 +40,9 @@ extension AppDelegate: PKPushRegistryDelegate {
         //fakeCall()
         #endif
         print(payload.dictionaryPayload)
-        let strany = payload.dictionaryPayload as! [String: Any]
+        guard let strany = payload.dictionaryPayload as? [String: Any] else {
+            return
+        }
         guard let payloadObject = parsedPayloadObject(payload: strany) else {
             return
         }
@@ -55,9 +51,6 @@ extension AppDelegate: PKPushRegistryDelegate {
         let uuid = UUID()
         let provider = providerDelegate.provider
         provider.setDelegate(self.providerDelegate, queue: nil)
-        let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .phoneNumber, value: payloadObject.sendername ?? "unknown number")
-        update.hasVideo = false
         let remoteName = payloadObject.sendername ?? "unknown number".localized()
         providerDelegate.reportIncomingCall(uuid: uuid, handle: remoteName) { error in
             

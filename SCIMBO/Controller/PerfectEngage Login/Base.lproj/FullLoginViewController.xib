@@ -17,6 +17,7 @@
                 <outlet property="CountryCode" destination="zmk-ER-kps" id="4oh-3T-KJ6"/>
                 <outlet property="CountryFlag" destination="oVg-m5-rqY" id="065-hu-eAb"/>
                 <outlet property="MobileTextField" destination="olc-nq-tw6" id="RKd-Go-LVM"/>
+                <outlet property="countryCodeButton" destination="PPY-0q-YSq" id="Yif-ub-tSQ"/>
                 <outlet property="emailTextField" destination="ngu-yd-qKq" id="ruH-7o-uQl"/>
                 <outlet property="emailView" destination="fyO-by-8PP" id="s9r-HD-YqJ"/>
                 <outlet property="userMobileView" destination="FHe-lQ-nAX" id="JHs-10-Ttr"/>

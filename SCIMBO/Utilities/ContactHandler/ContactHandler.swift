@@ -189,7 +189,7 @@ class ContactHandler: NSObject {
                     
                 }
                 let mute_status = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Chat_intiated_details, attrib_name: "opponent_id", fetchString: _id, returnStr: "is_mute")
-                
+                let isDeleted = (FavDict.value(forKey: "isDelete") as? Bool) ?? false
                 let ConvDict:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":_id,"type":"single","chat_type":"normal"]
                 self.EmitConvDetails(ConvDict: ConvDict)
                 image_Url = image_Url == "" ? "photo" : image_Url
@@ -214,6 +214,7 @@ class ContactHandler: NSObject {
                     "show_status":profile_status,
                     "contactUserList" : contactUserList,
                     "formatted" : msisdn,
+                    "IsDeleted" : isDeleted,
                     "email_address":email,
                     "isUserTypeEmployee" : (userType == "Employee"),
                     "showNumber" : showMobileNumber ?? true

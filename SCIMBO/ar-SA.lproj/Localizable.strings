@@ -628,3 +628,9 @@
 "Delete Photo" = "مسح الصورة";
 "Settings" = "الاعدادات";
 "Perfect Engage" = "التواصل الفعال";
+"App needs a permission to record audio." = "يحتاج التطبيق الى إذن لتسجيل الصوت.";
+"Hold for video, tap for photo" = "اضغط باستمرار للفيديو ، اضغط لالتقاط صورة";
+"AUTO" = "تلقاءي";
+"ON" = "تشغيل";
+"OFF" = "إيقاف";
+"Yesterday" = "الأمس";

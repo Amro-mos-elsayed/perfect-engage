@@ -14,7 +14,7 @@
 "NSCameraUsageDescription" = "يتيح لك هذا التقاط الصور ومقاطع الفيديو من داخل رعد مباشرة";
 
 /* Privacy - Contacts Usage Description */
-"NSContactsUsageDescription" = "قم بتحميل جهات الاتصال الخاصة بك على خوادم Scimbo لمساعدتك على الاتصال بأصدقائك بسرعة ومساعدتنا في تقديم تجربة أفضل.";
+"NSContactsUsageDescription" = "قم بتحميل جهات الاتصال الخاصة بك على خوادمنا لمساعدتك على الاتصال بأصدقائك بسرعة ومساعدتنا في تقديم تجربة أفضل.";
 
 /* Privacy - Location Always Usage Description */
 "NSLocationAlwaysUsageDescription" = " يتيح لك هذا إرسال موقعك الحالي أو مكان قريب.";

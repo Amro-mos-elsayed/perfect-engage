@@ -27,6 +27,7 @@ class FullLoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var BottomViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var countryCodeButton: UIButton!
     var keyboardheight : CGFloat = 0.0
     var URL_handler:URLhandler = URLhandler()
     var signUp = SignUp()
@@ -81,6 +82,7 @@ class FullLoginViewController: UIViewController {
         emailTextField.isUserInteractionEnabled = false
         userNameTextField.isUserInteractionEnabled = false
         MobileTextField.isUserInteractionEnabled = loginTypeEmployee ? false : true
+        countryCodeButton.isUserInteractionEnabled = loginTypeEmployee ? false : true
         if !loginTypeEmployee {
             MobileTextField.backgroundColor = .clear
             userMobileView.backgroundColor = .clear

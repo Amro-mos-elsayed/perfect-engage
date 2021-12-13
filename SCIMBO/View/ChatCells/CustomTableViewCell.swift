@@ -33,6 +33,8 @@ class CustomTableViewCell:UITableViewCell{
     public var showVideoSize = false
     public var TagRangeArr : [NSRange] = [NSRange]()
     public var TagIdArr : [String] = [String]()
+    public weak var tble: UITableView?
+    public var indexPath: IndexPath?
     
     //MARK:- computed properties
     public var group = Bool(){
@@ -315,6 +317,9 @@ class CustomTableViewCell:UITableViewCell{
             {
                 self.delegate?.PasPersonDetail(id: Themes.sharedInstance.CheckNullvalue(Passed_value: TagIdArr[index]))
             }
+        }
+        if let tble = tble, let indexPath = indexPath {
+            self.tble?.delegate?.tableView?(tble, didSelectRowAt: indexPath)
         }
     }
     

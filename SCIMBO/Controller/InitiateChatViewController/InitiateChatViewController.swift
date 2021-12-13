@@ -6092,7 +6092,58 @@
                     self.present(alert, animated: true)
                     break
                 case .notDetermined:
-                    break
+                    AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+                            if response {
+                                
+                                let pickerController = DKImagePickerController()
+                                pickerController.maxSelectableCount = 10
+                                pickerController.assetType = .allPhotos
+                                pickerController.sourceType = .camera
+                                pickerController.didSelectAssets = { (assets: [DKAsset]) in
+                                    if(assets.count > 0)
+                                    {
+                                        self.selectedAssets = assets
+                                        Themes.sharedInstance.activityView(View: self.view)
+                                        if(self.Chat_type == "group")
+                                        {
+                                            AssetHandler.sharedInstance.isgroup = true
+                                        }
+                                        else
+                                        {
+                                            AssetHandler.sharedInstance.isgroup = false
+                                            
+                                        }
+                                        AssetHandler.sharedInstance.ProcessAsset(assets: [assets[0]],oppenentID: self.opponent_id,isFromStatus: false, completionHandler: {[weak self]
+                                            (AssetArr, error) -> ()? in
+                                            if((AssetArr?.count)! > 0)
+                                            {
+                                                DispatchQueue.main.async {
+                                                    Themes.sharedInstance.RemoveactivityView(View: (self?.view)!)
+                                                    
+                                                    let EditVC = self?.storyboard?.instantiateViewController(withIdentifier: "EditViewControllerID") as! EditViewController
+                                                    EditVC.AssetArr = AssetArr!
+                                                    EditVC.isVideoData = false
+                                                    EditVC.isfromStatus = false
+                                                    EditVC.Delegate = self
+                                                    EditVC.selectedAssets = (self?.selectedAssets)!
+                                                    EditVC.isgroup = AssetHandler.sharedInstance.isgroup
+                                                    EditVC.to_id = (self?.opponent_id)!
+                                                    self?.pushView(EditVC, animated: true)
+                                                    
+                                                }
+                                            }
+                                            return ()
+                                        })
+                                    }
+                                    
+                                }
+                                DispatchQueue.main.async {
+                                self.presentView(pickerController, animated: true)
+                                }
+                            } else {
+
+                            }
+                        }
                 default:
                     break
                 }

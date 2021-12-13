@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import "ACMacros.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface UUInputFunctionView ()<UITextViewDelegate, Mp3RecorderDelegate, HPGrowingTextViewDelegate>
 {
@@ -159,6 +160,8 @@
 #pragma mark - 录音touch事件
 - (void)beginRecordVoice:(UIButton *)button
 {
+    if( [self audioAccessPermission]) {
+    
     _btnVoiceRecord.hidden = false;
     _textView.hidden = true;
     
@@ -171,6 +174,21 @@
     playTime = 0;
     playTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countVoiceTime) userInfo:nil repeats:YES];
     //    [UUProgressHUD show];
+    }else {
+        [self showAlertAudioPermission];
+    }
+}
+
+- (BOOL) audioAccessPermission
+{
+    switch ([[AVAudioSession sharedInstance] recordPermission]) {
+        case AVAudioSessionRecordPermissionGranted:
+            return YES;
+        case AVAudioSessionRecordPermissionDenied:
+            return NO;
+        case AVAudioSessionRecordPermissionUndetermined:
+            return YES;
+    }
 }
 
 - (void)endRecordVoice:(UIButton *)button
@@ -289,6 +307,9 @@
 //改变输入与录音状态
 - (void)voiceRecord:(UIButton *)sender
 {
+    
+    
+    
     AudioServicesPlaySystemSound(0);
     AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
@@ -306,6 +327,31 @@
     [self beginRecordVoice:self.btnVoiceRecord];
     
 }
+
+- (void) showAlertAudioPermission
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:NSLocalizedString(@"App needs a permission to record audio.", @"") preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"Settings", @"") style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+                        }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", @"") style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:cancel];
+    [alert addAction:ok];
+    
+    id rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+    if([rootViewController isKindOfClass:[UINavigationController class]])
+    {
+        rootViewController = ((UINavigationController *)rootViewController).viewControllers.firstObject;
+    }
+    if([rootViewController isKindOfClass:[UITabBarController class]])
+    {
+        rootViewController = ((UITabBarController *)rootViewController).selectedViewController;
+    }
+    //...
+    [rootViewController presentViewController:alert animated:YES completion:nil];
+}
+
 
 - (void)cameraAction:(UIButton *)sender
 {

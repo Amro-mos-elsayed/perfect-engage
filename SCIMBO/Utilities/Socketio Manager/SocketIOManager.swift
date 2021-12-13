@@ -2777,7 +2777,14 @@
                             if let dict = $0 as? NSDictionary {
                                 if(dict.count > 0)
                                 {
-                                    self.GroupResponse(dict, true)
+                                    let grouptype:String=Themes.sharedInstance.CheckNullvalue(Passed_value: dict.object(forKey: "groupType"))
+                                    if grouptype != "10" {
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                            self.GroupResponse(dict, true)
+                                        }
+                                    }else{
+                                        self.GroupResponse(dict, true)
+                                    }
                                 }
                             }
                         }

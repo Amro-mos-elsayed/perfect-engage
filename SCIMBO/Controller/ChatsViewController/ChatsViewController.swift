@@ -1909,7 +1909,7 @@
         
         
         self.searchController.dismissView(animated:true, completion:nil)
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
+        if(ContactHandler.sharedInstance.CheckCheckPermission() || true)
         {
             let favouritesVC:FavouritesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
             let navController = UINavigationController(rootViewController: favouritesVC)

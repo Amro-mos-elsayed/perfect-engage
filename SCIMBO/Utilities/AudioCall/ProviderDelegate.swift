@@ -69,7 +69,7 @@ class ProviderDelegate: NSObject, SocketIOManagerDelegate {
             let update = CXCallUpdate()
             CallerName = handle
             update.remoteHandle = CXHandle.init(type: .generic, value: handle)
-            update.hasVideo = hasVideo
+            update.hasVideo = objcallrecord?.type != "0"
             
             provider.reportNewIncomingCall(with: uuid, update: update) { error in
                 if error == nil {
@@ -129,7 +129,45 @@ extension ProviderDelegate: CXProviderDelegate {
         callManager.removeAllCalls()
     }
     
+    func  audioAccessPermission() -> Bool
+    {
+        switch AVAudioSession.sharedInstance().recordPermission
+        {
+        case .granted:
+            return false;
+        case .denied:
+            return true;
+        case .undetermined:
+            return false;
+        }
+    }
+    
+    func needsAudioPermission() -> Bool {
+        
+        if audioAccessPermission() {
+            var rootViewController = UIApplication.shared.delegate?.window??.rootViewController
+            
+            if let rootvc = rootViewController as? UINavigationController {
+                rootViewController = rootvc.viewControllers.first
+            }
+            if let rootvc = rootViewController as? UITabBarController {
+                rootViewController = rootvc.selectedViewController
+            }
+            
+            let alert = Themes.sharedInstance.showAudioPermissionAlert
+            rootViewController?.present(alert, animated: true)
+            return true
+        }
+        return false
+    }
+    
+    
     func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
+        
+        if needsAudioPermission(){
+            return
+        }
+        
         configureAudioSession()
         
         answerCall()

@@ -123,7 +123,7 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
             switchControl.setOn(isShowNumber, animated: false)
             
             let status = user.status ?? ""
-            var lang = Locale.preferredLanguages[0].substring(to: 2)
+            let lang = Locale.preferredLanguages[0].substring(to: 2)
             if lang == "ar"{
                 statusBtn.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.right
             }else{
@@ -223,21 +223,44 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         }
         else
         {
-            if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
+            if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera))
             {
-                self.picker.sourceType = UIImagePickerController.SourceType.camera
+                let cameraMediaType = AVMediaType.video
+                let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
                 
-                if let activeController = self.navigationController?.visibleViewController{
+                switch cameraAuthorizationStatus {
+                case .authorized:
+                    self.picker.sourceType = UIImagePickerController.SourceType.camera
                     
-                    if activeController.isKind(of: GSImageViewerController.self){
-                        UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.presentView(self.picker, animated: true)
+                    if let activeController = self.navigationController?.visibleViewController{
                         
-                        
+                        if activeController.isKind(of: GSImageViewerController.self){
+                            UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.presentView(self.picker, animated: true)
+                            
+                            
+                        }
+                        else{
+                            self.presentView(self.picker, animated: true)
+                        }
                     }
-                    else{
-                        self.presentView(self.picker, animated: true)
+                case .denied:
+                    let message = "'\(Themes.sharedInstance.GetAppname())' \("does not have access to your camera. to enable access, tap Settings and turn on Camera".localized())"
+                    
+                    let alert = UIAlertController.init(title: nil, message: message, preferredStyle: .alert)
+                    let action = UIAlertAction.init(title: "Cancel".localized(), style: .cancel, handler: nil)
+                    let action2 = UIAlertAction.init(title: "Settings".localized(), style: .default) { _ in
+                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
                     }
+                    alert.addAction(action)
+                    alert.addAction(action2)
+                    self.present(alert, animated: true)
+                    break
+                case .notDetermined : break
+                    
+                case .restricted:
+                    break
                 }
+                
             }
             else
             {
@@ -682,6 +705,8 @@ class EditProfileViewController: UIViewController,UIImagePickerControllerDelegat
         let sheet_action: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let Logout: UIAlertAction = UIAlertAction(title: NSLocalizedString("Logout", comment: "comment"), style: .destructive) { action -> Void in
             
+            let Dict:NSDictionary = ["from":Themes.sharedInstance.Getuser_id()]
+            SocketIOManager.sharedInstance.mobileToWebLogout(Param: Dict as! [String : Any])
             (UIApplication.shared.delegate as! AppDelegate).Logout()
         }
         let CancelAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .cancel) { action -> Void in

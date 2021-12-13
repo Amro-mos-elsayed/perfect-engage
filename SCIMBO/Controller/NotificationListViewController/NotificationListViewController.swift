@@ -31,7 +31,7 @@ class NotificationListViewController: UIViewController,UITableViewDelegate,UITab
         super.viewDidLoad()
         
         let Dict:Dictionary = ["single_sound":"1015","group_sound":"1015"]
-        DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Notification_Setting, FetchString: Themes.sharedInstance.Getuser_id(), attribute: "user_id", UpdationElements: Dict as NSDictionary?)
+        //DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Notification_Setting, FetchString: Themes.sharedInstance.Getuser_id(), attribute: "user_id", UpdationElements: Dict as NSDictionary?)
         
         if UIDevice.isIphoneX {
             topViewHeightConstraint.constant = Constant.sharedinstance.NavigationBarHeight_iPhoneX

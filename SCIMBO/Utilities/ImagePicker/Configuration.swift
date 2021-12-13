@@ -37,7 +37,7 @@ public struct Configuration {
     public var settingsTitle = "Settings"
     public var requestPermissionTitle = "Permission denied"
     public var requestPermissionMessage = "Please, allow the application to access to your photo library."
-    public var userDescriptionLabelText = "Hold for video, tap for photo"
+    public var userDescriptionLabelText = "Hold for video, tap for photo".localized()
     
     // MARK: Dimensions
     

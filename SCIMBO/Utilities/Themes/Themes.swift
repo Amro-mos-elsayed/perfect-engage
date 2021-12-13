@@ -79,7 +79,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         
         let alertController = UIAlertController (title: self.GetAppname(), message: "\(self.GetAppname()) doesn't have access to your contacts. \n \(self.GetAppname()) needs access to your iPhone's contacts to help you connect with other people on \(self.GetAppname()). To enable access, tap Settings and turn on Contacts.", preferredStyle: .alert)
         
-        let settingsAction = UIAlertAction(title: "Settings", style: .default) { (_) -> Void in
+        let settingsAction = UIAlertAction(title: "Settings".localized(), style: .default) { (_) -> Void in
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
                 return
             }
@@ -92,7 +92,29 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         }
         
         alertController.addAction(settingsAction)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel".localized(), style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        return alertController
+    }
+    
+    var showAudioPermissionAlert : UIAlertController {
+        
+        let alertController = UIAlertController (title: self.GetAppname(), message: "App needs a permission to record audio.".localized(), preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: "Settings".localized(), style: .default) { (_) -> Void in
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    print("Settings opened: \(success)") // Prints true
+                })
+            }
+        }
+        
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: "Cancel".localized(), style: .default, handler: nil)
         alertController.addAction(cancelAction)
         return alertController
     }
@@ -452,12 +474,24 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
             let timeDiff = (timestamp as NSString).longLongValue + serverTimestamp
             let date = Date(timeIntervalSince1970: TimeInterval("\(timeDiff)")!/1000)
-            let dateFormatters = DateFormatter()
-            dateFormatters.dateFormat = "h:mm a"
-            dateFormatters.timeZone = TimeZone(abbreviation: "GMT")
-            dateFormatters.timeZone = NSTimeZone.system
-            let dateStr:String = dateFormatters.string(from: date as Date)
-            return dateStr
+            
+            if Calendar.current.isDateInToday(date){
+                let dateFormatters = DateFormatter()
+                dateFormatters.dateFormat = "h:mm a"
+                dateFormatters.timeZone = TimeZone(abbreviation: "GMT")
+                dateFormatters.timeZone = NSTimeZone.system
+                let dateStr:String = dateFormatters.string(from: date as Date)
+                return dateStr
+            }else if Calendar.current.isDateInYesterday(date) {
+                return "Yesterday".localized()
+            }else {
+                let dateFormatters = DateFormatter()
+                dateFormatters.dateFormat = "dd/MM/yyyy"
+                dateFormatters.timeZone = TimeZone(abbreviation: "GMT")
+                dateFormatters.timeZone = NSTimeZone.system
+                let dateStr:String = dateFormatters.string(from: date as Date)
+                return dateStr
+            }
         }
         
         return timestamp

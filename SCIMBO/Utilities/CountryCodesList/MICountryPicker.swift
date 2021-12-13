@@ -159,7 +159,7 @@ open class MICountryPicker: UITableViewController {
             searchController.dimsBackgroundDuringPresentation = false
             tableView.tableHeaderView = searchController.searchBar
             //searchController.hidesNavigationBarDuringPresentation = true
-            searchController.navigationController?.setNavigationBarHidden(true, animated: true)
+            searchController.navigationController?.setNavigationBarHidden(false, animated: true)
         }
     }
     

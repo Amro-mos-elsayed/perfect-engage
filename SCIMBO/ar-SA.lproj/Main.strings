@@ -458,7 +458,7 @@
 "KZ5-p3-L4O.text" = "بيانات المجموعة";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "L4C-JL-Clb"; */
-"L4C-JL-Clb.normalTitle" = "الرجوع";
+"L4C-JL-Clb.normalTitle" = "";
 
 /* Class = "UILabel"; text = "Red"; ObjectID = "l4m-nz-PmM"; */
 "l4m-nz-PmM.text" = "Red";

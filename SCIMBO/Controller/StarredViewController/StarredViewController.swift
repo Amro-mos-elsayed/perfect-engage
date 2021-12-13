@@ -1083,6 +1083,8 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
             {
                 
                 let cell1 = TableviewCellGenerator.sharedInstance.returnCell(for: tableView, messageFrame: messageFrame, indexPath: indexPath)
+                cell1.tble = tableView
+                cell1.indexPath = indexPath
                 cell1.delegate = self
                 cell1.RowIndex = IndexPath(row: indexPath.section, section: 0)
                 cell1.customButton.addTarget(self, action: #selector(self.didClickCellButton(_:)), for: .touchUpInside)
