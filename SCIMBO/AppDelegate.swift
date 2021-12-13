@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var notification_dict:NSDictionary = NSDictionary()
     var chat_type:String = String()
     //var orientationLock = UIInterfaceOrientationMask.all
-    var navigationController : RootNavController?
+    var navigationController : UINavigationController?
     var player : AVAudioPlayer?
     var callactivity : NSUserActivity?
     
@@ -97,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //            // callback after privacy changed
 //        }
         
-        // change tint color of navigation bar items        
+        // change tint color of navigation bar items
         UINavigationBar.appearance().tintColor = CustomColor.sharedInstance.themeColor/* Change tint color using Xcode default vales */
         UIBarButtonItem.appearance().tintColor = CustomColor.sharedInstance.themeColor
         UIToolbar.appearance().tintColor = CustomColor.sharedInstance.themeColor
@@ -969,8 +969,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             let defaults = UserDefaults(suiteName: Constant.sharedinstance.AppGroupID)
             defaults?.set(count, forKey: "BadgeCount")
             self.MovetoRooVC()
-            self.stopVoIPPush()
-            UIApplication.shared.unregisterForRemoteNotifications()
+            self.pushRegistrySetup()
+            self.pushnotificationSetup()
         }
     }
     
@@ -1304,7 +1304,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 let state = UIApplication.shared.applicationState
                 if state == .background {
                     iterationCount = 0
-                    VideoCallWaitTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector:  #selector(self.MakeNotificaiton), userInfo: nil, repeats: true)
+                    VideoCallWaitTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector:  #selector(self.MakeNotificaiton), userInfo: nil, repeats: false)
                 }else{
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let objVC:VideoViewController = storyboard.instantiateViewController(withIdentifier: "VideoViewControllerID") as! VideoViewController
@@ -1405,9 +1405,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         else
         {
             let signinVC = LoginTypeViewController.init()
+            navigationController = UINavigationController.init()
+            navigationController?.isNavigationBarHidden = true
             navigationController?.viewControllers = [signinVC]
             self.window!.rootViewController = navigationController
         }
+    }
+    
+    func pushRegistrySetup() {
+        let pushRegistry = PKPushRegistry(queue: DispatchQueue.main)
+        pushRegistry.delegate = self
+        pushRegistry.desiredPushTypes = [.voIP]
     }
     
     func pushnotificationSetup()
