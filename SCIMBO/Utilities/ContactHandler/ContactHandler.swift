@@ -214,7 +214,7 @@ class ContactHandler: NSObject {
                     "show_status":profile_status,
                     "contactUserList" : contactUserList,
                     "formatted" : msisdn,
-                    "IsDeleted" : isDeleted,
+                    "isDeletedd" : isDeleted,
                     "email_address":email,
                     "isUserTypeEmployee" : (userType == "Employee"),
                     "showNumber" : showMobileNumber ?? true
