@@ -177,7 +177,7 @@ class ContactHandler: NSObject {
                 let contact_ID = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "_id"))
                 let email = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.value(forKey: "email"))
                 var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: FavDict.object(forKey: "ProfilePic"))
-                print("❌   \(name) - \(email) - \(msisdn)")
+                print("❌   \(name) - \(email) - \(msisdn) - \(_id) - \(contact_ID)")
                 if(image_Url != "")
                 {
                     if(image_Url.substring(to: 1) == ".")

@@ -189,7 +189,7 @@ class Constant : NSObject
     let sc_delete_chat_opponenet:String="sc_delete_chat_opponenet"
     let sc_clear_chat_opponenet:String="sc_clear_chat_opponenet"
     let userDeactivated = "userDeactivated"
-
+    let checkUserStatus = "checkUserStatus"
     //Chat Entity Name
     let Chat_one_one:String="Chat_one_one"
     let Chat_intiated_details:String="Chat_intiated_details"
