@@ -63,7 +63,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
     var isCalling:Bool = Bool()
     var dataSource:NSMutableArray = NSMutableArray()
     
-    var contactDetails: Favourite_Contact!
+    var contactDetails: Favourite_Contact?
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -83,15 +83,18 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         getContactDetails()
         isCalling = false
         scrollView.delegate = self
-        SocketIOManager.sharedInstance.EmituserDetails(Param: ["userId":contactDetails.id! as String])
+        SocketIOManager.sharedInstance.EmituserDetails(Param: ["userId":contactDetails?.id ?? ""])
     }
     
     
     
     func getContactDetails() {
         let contacts = DatabaseHandler.sharedInstance.FetchFromDatabase(Entityname: Constant.sharedinstance.Favourite_Contact, attribute: "id", FetchString: user_id, SortDescriptor: nil) as! NSArray
-        contactDetails = (contacts.object(at: 0) as! Favourite_Contact)
-        isEmployeeImage.isHidden = contactDetails.isUserTypeEmployee
+        if contacts.count > 0{
+            contactDetails = (contacts.object(at: 0) as? Favourite_Contact)
+        }
+        isEmployeeImage.isHidden = contactDetails?.isUserTypeEmployee ?? true
+        
         
     }
     //966556299553
@@ -519,12 +522,14 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         cell.groupName_TxtField.setNameTxt(user_id, "single")
         headerLbl.setNameTxt(user_id, "single")
         cell.phoneLbl.setPhoneTxt(user_id)
-        let showNumber = contactDetails.showNumber
+        let showNumber = contactDetails?.showNumber ?? false
         if !showNumber{
             cell.phoneLbl.text = ""
         }
-        cell.emailLbl.text = contactDetails.email_address
+        cell.emailLbl.text = contactDetails?.email_address ?? ""
         cell.statusLbl.setStatusTxt(user_id)
+        cell.userId = self.user_id
+        cell.getContactIsActive()
         
         if(section == 0)
         {

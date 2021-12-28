@@ -438,6 +438,32 @@
             group_user_lbl.text = "Tap here for group info"
         }
         self.reloaddata()
+        getContactIsActive()
+    }
+    
+    func getContactIsActive() {
+        let id = Themes.sharedInstance.CheckNullvalue(Passed_value: opponent_id)
+        SocketIOManager.sharedInstance.checkUserStatus(from: id)
+        NotificationCenter.default.addObserver(self, selector: #selector(activatedUsers(_:)), name: NSNotification.Name.init("chechActive"), object: nil)
+    }
+    
+    @objc func activatedUsers(_ notification: Notification) {
+        
+        
+        guard let isDeleted = notification.userInfo?["isDeleted"] as? String else {
+            return
+        }
+        if isDeleted == "1"{
+            videocall_Btn.isUserInteractionEnabled = false
+            audiocall_Btn.isUserInteractionEnabled = false
+            self.IFView.isHidden = true
+            videocall_Btn.tintColor = .gray
+            audiocall_Btn.tintColor = .gray
+        }else {
+            videocall_Btn.tintColor = .white
+            audiocall_Btn.tintColor = .white
+        }
+        
     }
     
     func reloaddata()

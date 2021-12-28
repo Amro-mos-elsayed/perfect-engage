@@ -647,6 +647,11 @@
         emitEvent(Constant.sharedinstance.userDeactivated, param)
     }
     
+    func checkUserStatus(from:String){
+        let param = ["id":from]
+        emitEvent(Constant.sharedinstance.checkUserStatus, param)
+    }
+    
     func changeStatus(status:String,from:String)
     {
         let param = ["status":status.decoded,"from":from];
@@ -1655,6 +1660,15 @@
                 self.LogOut()
             }
         }
+        
+        socket.on(Constant.sharedinstance.checkUserStatus) { data, ack in
+            
+            let data = self.returnDataFromEncryption(data)
+            if let obj = data["obj"] as? NSDictionary, let isDeleted = obj["isDeleted"] as? String {
+                NotificationCenter.default.post(name: Notification.Name("chechActive"), object: nil,userInfo: ["isDeleted" : isDeleted])
+            }
+            
+        }
 
         
         socket.on(Constant.sharedinstance.checkMobileLoginKey as String) {data, ack in
@@ -1835,6 +1849,8 @@
                 
             }
         }
+        
+        
         
         socket.on(Constant.sharedinstance.sc_get_user_Details as String) {data, ack in
             

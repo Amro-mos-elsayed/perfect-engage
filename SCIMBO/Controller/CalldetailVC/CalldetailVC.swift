@@ -12,11 +12,14 @@ class CalldetailVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var user_img: UIImageView!
     @IBOutlet weak var user_Name: UILabel!
+    @IBOutlet weak var callButton: UIButton!
     var user_id:String = String()
     var DataSourceDictArr:NSMutableArray = NSMutableArray()
     var user_common_id:String = String()
     var status:String = String()
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
+    
+    
     
     
     override func viewDidLoad() {
@@ -34,7 +37,28 @@ class CalldetailVC: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.tableFooterView = UIView()
+        getContactIsActive()
         // Do any additional setup after loading the view.
+    }
+    
+    func getContactIsActive() {
+        let id = Themes.sharedInstance.CheckNullvalue(Passed_value: user_id)
+        SocketIOManager.sharedInstance.checkUserStatus(from: id)
+        NotificationCenter.default.addObserver(self, selector: #selector(activatedUsers(_:)), name: NSNotification.Name.init("chechActive"), object: nil)
+    }
+    
+    @objc func activatedUsers(_ notification: Notification) {
+        
+        
+        guard let isDeleted = notification.userInfo?["isDeleted"] as? String else {
+            return
+        }
+        if isDeleted == "1"{
+            callButton.isUserInteractionEnabled = false
+        }else {
+            callButton.isUserInteractionEnabled = true
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

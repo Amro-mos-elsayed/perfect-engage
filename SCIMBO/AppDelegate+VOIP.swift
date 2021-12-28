@@ -86,7 +86,7 @@ extension AppDelegate: PKPushRegistryDelegate {
         let state = UIApplication.shared.applicationState
         if state == .background {
             iterationCount = 0
-            VideoCallWaitTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector:  #selector(self.MakeNotificaiton), userInfo: nil, repeats: true)
+            VideoCallWaitTimer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector:  #selector(self.MakeNotificaiton), userInfo: nil, repeats: false)
         }else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let objVC:VideoViewController = storyboard.instantiateViewController(withIdentifier: "VideoViewControllerID") as! VideoViewController

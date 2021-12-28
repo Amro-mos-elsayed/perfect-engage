@@ -129,6 +129,7 @@
         <attribute name="is_locked" optional="YES" attributeType="String"/>
         <attribute name="is_mute" optional="YES" attributeType="String"/>
         <attribute name="is_online" optional="YES" attributeType="String"/>
+        <attribute name="isDeletedd" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isUserTypeEmployee" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="last_seen" optional="YES" attributeType="String"/>
         <attribute name="msisdn" optional="YES" attributeType="String"/>
@@ -406,7 +407,7 @@
         <element name="Contact_details" positionX="90" positionY="135" width="128" height="135"/>
         <element name="Conv_detail" positionX="144" positionY="189" width="128" height="105"/>
         <element name="Data_Usage_Settings" positionX="63" positionY="108" width="128" height="120"/>
-        <element name="Favourite_Contact" positionX="54" positionY="99" width="128" height="479"/>
+        <element name="Favourite_Contact" positionX="54" positionY="99" width="128" height="494"/>
         <element name="Group_details" positionX="45" positionY="90" width="128" height="284"/>
         <element name="Group_message_ack" positionX="54" positionY="99" width="128" height="89"/>
         <element name="Link_details" positionX="54" positionY="99" width="128" height="135"/>

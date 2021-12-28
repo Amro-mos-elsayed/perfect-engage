@@ -5477,6 +5477,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="callButton" destination="SJQ-od-wig" id="06Q-km-TfD"/>
                         <outlet property="tableView" destination="Qpf-53-bp2" id="qqH-4E-NzW"/>
                         <outlet property="topViewHeightConstraint" destination="WqY-KA-wxa" id="clb-p4-9IN"/>
                         <outlet property="user_Name" destination="1Ck-nJ-PCG" id="gxT-6G-63g"/>
@@ -12687,24 +12688,24 @@
         <image name="edit_blue" width="32" height="32"/>
         <image name="export" width="512" height="512"/>
         <image name="facebook" width="60" height="60"/>
-        <image name="favstar" width="127" height="152"/>
+        <image name="favstar" width="42.5" height="50.5"/>
         <image name="flipcamera" width="75" height="75"/>
         <image name="goArrow" width="64" height="64"/>
         <image name="goarr_white" width="75" height="75"/>
         <image name="groupavatar" width="208" height="208"/>
-        <image name="guest-icon" width="54" height="54"/>
+        <image name="guest-icon" width="72" height="72"/>
         <image name="info_white" width="50" height="50"/>
         <image name="lock" width="96" height="96"/>
         <image name="login_bg" width="375" height="441"/>
-        <image name="logo" width="115" height="171"/>
+        <image name="logo" width="941" height="526.5"/>
         <image name="mail_settings" width="100" height="72"/>
         <image name="mobileimage" width="200" height="200"/>
         <image name="moreIcon" width="75" height="75"/>
         <image name="navigation (5)" width="50" height="50"/>
-        <image name="no-calls-found" width="404" height="404"/>
-        <image name="no-chatting" width="404" height="411"/>
-        <image name="no-tasks-found" width="260" height="308"/>
-        <image name="noChat" width="450" height="475"/>
+        <image name="no-calls-found" width="172" height="172"/>
+        <image name="no-chatting" width="208" height="208"/>
+        <image name="no-tasks-found" width="146" height="172"/>
+        <image name="noChat" width="52.5" height="57.5"/>
         <image name="noloudspeaker" width="75" height="75"/>
         <image name="pin (11)" width="25" height="25"/>
         <image name="playIcon" width="55" height="55"/>
@@ -12732,7 +12733,7 @@
         <image name="videocallattend" width="75" height="76"/>
         <image name="zoomedLogo" width="151" height="225"/>
         <namedColor name="themeColor">
-            <color red="0.019607843137254902" green="0.39215686274509803" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.9137254901960784" green="0.60392156862745094" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
