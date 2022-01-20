@@ -47,78 +47,44 @@ class ShareDetailViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func getContactDetail(){
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            let contactStore = CNContactStore()
-            // let toFetch = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName)] as [Any]
-            //        let toFetch = [contactsViewController.descriptorForRequiredKeys()]
-            //let predicate = CNContact.predicateForContacts(matchingName: "Lia H")
-            // print(userDetail.name)
-            // let predicate = CNContact.predicateForContacts(matchingName:userDetail.phno_ID)
-            let contactNo_ID:String = Themes.sharedInstance.removeUniqueContactID(ID: contctID)
-            
-            let predicate = CNContact.predicateForContacts(withIdentifiers : [contactNo_ID])
-
-            
-            let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey,CNContactViewController.descriptorForRequiredKeys()] as [Any]
-            //        var message: String!
-            // let fetchPredicate = CNContact.predicateForContactsInContainer(withIdentifier: container.identifier)
-            
-            //        let contacts = try contactStore.unifiedContact
-            //        (contactIdentifier!, keysToFetch: toFetch)
-            var contacts = [CNContact]()
-            do {
-                contacts = try contactStore.unifiedContacts(matching: predicate, keysToFetch: keys as! [CNKeyDescriptor])
-                
-                if contacts.count > 0 {
-                    do {
+        let contactStore = CNContactStore()
+        let contactNo_ID:String = Themes.sharedInstance.removeUniqueContactID(ID: contctID)
+        let predicate = CNContact.predicateForContacts(withIdentifiers : [contactNo_ID])
+        let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey,CNContactViewController.descriptorForRequiredKeys()] as [Any]
+        var contacts = [CNContact]()
+        do {
+            contacts = try contactStore.unifiedContacts(matching: predicate, keysToFetch: keys as! [CNKeyDescriptor])
+            if contacts.count > 0 {
+                do {
+                    for i in 0..<contacts.count
+                    {
+                        let currentcontact:CNContact = contacts[i] as CNContact
+                        let Phonenumber:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ((currentcontact.phoneNumbers[0].value ).value(forKey: "digits") as! String))
                         
-                        
-                        for i in 0..<contacts.count
-                        {
+                        print(currentcontact.givenName)
+                        print(currentcontact.organizationName)
+                        print(currentcontact.jobTitle)
+                        let nameDic = ["name":currentcontact.givenName,"isSelect":false] as NSDictionary
+                        let depatmetDtl = ["organization":currentcontact.organizationName,"jobtitile":currentcontact.jobTitle,"isSelect":false] as [String : Any]
+                        if currentcontact.organizationName != "" || currentcontact.jobTitle != ""{
                             
-                            let currentcontact:CNContact = contacts[i] as CNContact
-                            let Phonenumber:String=Themes.sharedInstance.CheckNullvalue(Passed_value: ((currentcontact.phoneNumbers[0].value ).value(forKey: "digits") as! String))
-                            
-                            print(currentcontact.givenName)
-                            print(currentcontact.organizationName)
-                            print(currentcontact.jobTitle)
-                            
-                            
-                            let nameDic = ["name":currentcontact.givenName,"isSelect":false] as NSDictionary
-                            
-                            let depatmetDtl = ["organization":currentcontact.organizationName,"jobtitile":currentcontact.jobTitle,"isSelect":false] as [String : Any]
-                            if currentcontact.organizationName != "" || currentcontact.jobTitle != ""{
-                                
-                                chckContact_OrgDtl = true
-                            }else{
-                                chckContact_OrgDtl = false
-                            }
-                            
-                            let phno = ["phone":Phonenumber,"isSelect":false] as [String : Any]
-                            detailDic.add(nameDic)
-                            detailDic.add(depatmetDtl)
-                            detailDic.add(phno)
+                            chckContact_OrgDtl = true
+                        }else{
+                            chckContact_OrgDtl = false
                         }
-                        shareTableView.reloadData()
+                        
+                        let phno = ["phone":Phonenumber,"isSelect":false] as [String : Any]
+                        detailDic.add(nameDic)
+                        detailDic.add(depatmetDtl)
+                        detailDic.add(phno)
                     }
-                    //                catch{
-                    //                    print(error.localizedDescription)
-                    //                }
-                    
+                    shareTableView.reloadData()
                 }
-                
-            }
-            catch {
-                print(error.localizedDescription)
             }
         }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
+        catch {
+            print(error.localizedDescription)
         }
-        
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

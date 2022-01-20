@@ -556,82 +556,65 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
     }
     
     func saveTarget(sender: UIButton) {
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            let row = sender.tag
-            let indexpath = NSIndexPath.init(row: 0, section: row)
-            let cellItem:CustomTableViewCell = (chattableview.cellForRow(at: indexpath as IndexPath) as? CustomTableViewCell)!
-            self.is_chatPage_contact = true
-            var phone_num:[CNLabeledValue<CNPhoneNumber>] = []
-            
-            var email:[CNLabeledValue<NSString>] = []
-            var address:[CNLabeledValue<CNPostalAddress>] = []
-            
-            let contact = CNMutableContact()
-            contact.givenName = (cellItem.messageFrame.message.contact_name)!
-            
-            let data = (cellItem.messageFrame.message.contact_details)!.data(using:.utf8)
-            do {
-                
-                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
-                let contact_address = CNMutablePostalAddress()
-                // Parse JSON data
-                let phone_number:NSArray = jsonResult.value(forKey: "phone_number") as! NSArray
-                _ = phone_number.map {
-                    let i = phone_number.index(of: $0)
-                    let get_value:NSDictionary = phone_number[i] as! NSDictionary
-                    let type = get_value.value(forKey:"type") as! String
-                    let value_ph = get_value.value(forKey:"value") as! String
-                    let values = CNLabeledValue(label:type , value:CNPhoneNumber(stringValue:value_ph))
-                    phone_num.append(values)
-                }
-                
-                let email_arr:NSArray = jsonResult.value(forKey: "email") as! NSArray
-                _ = email_arr.map {
-                    let i = email_arr.index(of: $0)
-                    let get_value:NSDictionary = email_arr[i] as! NSDictionary
-                    let type = get_value.value(forKey:"type") as! String
-                    let value_ph = get_value.value(forKey:"value") as! String
-                    let values = CNLabeledValue(label:type , value:value_ph as NSString)
-                    email.append(values)
-                }
-                
-                let address_arr:NSArray = jsonResult.value(forKey: "address") as! NSArray
-                _ = address_arr.map {
-                    let i = address_arr.index(of: $0)
-                    
-                    let get_value:NSDictionary = address_arr[i] as! NSDictionary
-                    contact_address.street = get_value.value(forKey:"street") as! String
-                    contact_address.city = get_value.value(forKey:"city") as! String
-                    contact_address.state = get_value.value(forKey:"state") as! String
-                    contact_address.postalCode = get_value.value(forKey:"postalCode") as! String
-                    contact_address.country = get_value.value(forKey:"country") as! String
-                    let values = CNLabeledValue<CNPostalAddress>(label:"home" , value:contact_address)
-                    address.append(values)
-                }
-            } catch {
-                
-            }
-            
-            if(phone_num.count > 0){
-                
-                contact.phoneNumbers = phone_num
-                contact.emailAddresses = email
-                contact.postalAddresses = address
-                
-            }
-            
-            let controller = CNContactViewController(forNewContact: contact)
-            controller.delegate = self
-            
-            let navigationController = UINavigationController(rootViewController: controller)
-            self.presentView(navigationController, animated: true)
-        }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
+        let row = sender.tag
+        let indexpath = NSIndexPath.init(row: 0, section: row)
+        let cellItem:CustomTableViewCell = (chattableview.cellForRow(at: indexpath as IndexPath) as? CustomTableViewCell)!
+        self.is_chatPage_contact = true
+        var phone_num:[CNLabeledValue<CNPhoneNumber>] = []
         
+        var email:[CNLabeledValue<NSString>] = []
+        var address:[CNLabeledValue<CNPostalAddress>] = []
+        
+        let contact = CNMutableContact()
+        contact.givenName = (cellItem.messageFrame.message.contact_name)!
+        
+        let data = (cellItem.messageFrame.message.contact_details)!.data(using:.utf8)
+        do {
+            let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+            let contact_address = CNMutablePostalAddress()
+            // Parse JSON data
+            let phone_number:NSArray = jsonResult.value(forKey: "phone_number") as! NSArray
+            _ = phone_number.map {
+                let i = phone_number.index(of: $0)
+                let get_value:NSDictionary = phone_number[i] as! NSDictionary
+                let type = get_value.value(forKey:"type") as! String
+                let value_ph = get_value.value(forKey:"value") as! String
+                let values = CNLabeledValue(label:type , value:CNPhoneNumber(stringValue:value_ph))
+                phone_num.append(values)
+            }
+            let email_arr:NSArray = jsonResult.value(forKey: "email") as! NSArray
+            _ = email_arr.map {
+                let i = email_arr.index(of: $0)
+                let get_value:NSDictionary = email_arr[i] as! NSDictionary
+                let type = get_value.value(forKey:"type") as! String
+                let value_ph = get_value.value(forKey:"value") as! String
+                let values = CNLabeledValue(label:type , value:value_ph as NSString)
+                email.append(values)
+            }
+            let address_arr:NSArray = jsonResult.value(forKey: "address") as! NSArray
+            _ = address_arr.map {
+                let i = address_arr.index(of: $0)
+                
+                let get_value:NSDictionary = address_arr[i] as! NSDictionary
+                contact_address.street = get_value.value(forKey:"street") as! String
+                contact_address.city = get_value.value(forKey:"city") as! String
+                contact_address.state = get_value.value(forKey:"state") as! String
+                contact_address.postalCode = get_value.value(forKey:"postalCode") as! String
+                contact_address.country = get_value.value(forKey:"country") as! String
+                let values = CNLabeledValue<CNPostalAddress>(label:"home" , value:contact_address)
+                address.append(values)
+            }
+        } catch {
+        }
+        if(phone_num.count > 0){
+            contact.phoneNumbers = phone_num
+            contact.emailAddresses = email
+            contact.postalAddresses = address
+        }
+        let controller = CNContactViewController(forNewContact: contact)
+        controller.delegate = self
+        let navigationController = UINavigationController(rootViewController: controller)
+        self.presentView(navigationController, animated: true)
     }
     
     func SetData(user_id:String)

@@ -81,7 +81,6 @@
                         }
                         
                     }
-                    ContactHandler.sharedInstance.GetPermission()
                 }
                 
                 @IBAction func nextBtnAction(_ sender:UIButton) {

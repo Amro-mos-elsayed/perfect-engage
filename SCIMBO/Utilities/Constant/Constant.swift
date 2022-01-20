@@ -254,7 +254,8 @@ class Constant : NSObject
     let getPageIndex = "getPageIndex"
     let receivedTurnMessage:String="receivedTurnMessage"
     let reconnectInternet:String="reconnectInternet"
-
+    let contactPermissionIsGiven :String = "contactPermissionIsGiven"
+    
     //Error Message
     let ErrorMessage:String = "Network connection failed"
     let BecomeCelebrity:String = "Please become a connect"

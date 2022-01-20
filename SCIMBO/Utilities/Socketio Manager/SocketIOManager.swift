@@ -354,53 +354,37 @@
         StatusDownloadHandler.sharedinstance.handleDownLoad()
     }
     
-    func EmitforGetOfflineDetails(Nickname : NSString)
-    {
+    func EmitforGetOfflineDetails(Nickname : NSString) {
         let CheckLogin=DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.User_detail, attribute: nil, FetchString: nil)
         
-        if(CheckLogin && !isFromLogin)
-        {
-            if(ContactHandler.sharedInstance.CheckCheckPermission())
-            {
-                
-                if(isConnectedFirstTime)
-                {
-                    isConnectedFirstTime = false
-                    
-                    if Themes.sharedInstance.getFirstTime() == "" {
-                        Themes.sharedInstance.saveFirstTime(firsttime: "YES")
-                        ContactHandler.sharedInstance.StoreContacts()
-                    }
-                    
-//                    if(!ContactHandler.sharedInstance.StorecontactInProgress)
-//                    {
-                        //ContactHandler.sharedInstance.StoreContacts()
-//                    }
+        if(CheckLogin && !isFromLogin) {
+            if(isConnectedFirstTime) {
+                isConnectedFirstTime = false
+                if Themes.sharedInstance.getFirstTime() == "" {
+                    Themes.sharedInstance.saveFirstTime(firsttime: "YES")
+                    ContactHandler.sharedInstance.StoreContacts()
                 }
-                SecretmessageHandler.sharedInstance.starttimer()
-                let GetgroupParam = ["from":Nickname];
-                let param = ["msg_to":Nickname];
-                
-                emitEvent(Constant.sharedinstance.appgetGroupList, GetgroupParam)
-                emitEvent(Constant.sharedinstance.sc_get_offline_messages, param)
-                emitEvent(Constant.sharedinstance.sc_get_offline_deleted_messages, param)
-                emitEvent(Constant.sharedinstance.sc_get_offline_status, param)
-                
-                //Get offline group Messages
-                let timestamp:String = String(Int(Date().timeIntervalSince1970))
-                
-                _=["client_time":timestamp]
-                
-                
-                let GetgroupOfflinemessage = ["from":Nickname,"groupType":"13"];
-                self.Groupevent(param: GetgroupOfflinemessage)
-                let GetgroupOfflinedeletemessage = ["from":Nickname,"groupType":"20"];
-                self.Groupevent(param: GetgroupOfflinedeletemessage)
-                let Dict:NSDictionary = ["from":Nickname,
-                                         "DeviceId":Themes.sharedInstance.getDeviceToken(),
-                                         "callToken":Themes.sharedInstance.getCallToken()]
-                self.EmitAppsetting(Dict: Dict)
             }
+            SecretmessageHandler.sharedInstance.starttimer()
+            let GetgroupParam = ["from":Nickname];
+            let param = ["msg_to":Nickname];
+            
+            emitEvent(Constant.sharedinstance.appgetGroupList, GetgroupParam)
+            emitEvent(Constant.sharedinstance.sc_get_offline_messages, param)
+            emitEvent(Constant.sharedinstance.sc_get_offline_deleted_messages, param)
+            emitEvent(Constant.sharedinstance.sc_get_offline_status, param)
+            
+            //Get offline group Messages
+            let timestamp:String = String(Int(Date().timeIntervalSince1970))
+            _=["client_time":timestamp]
+            let GetgroupOfflinemessage = ["from":Nickname,"groupType":"13"];
+            self.Groupevent(param: GetgroupOfflinemessage)
+            let GetgroupOfflinedeletemessage = ["from":Nickname,"groupType":"20"];
+            self.Groupevent(param: GetgroupOfflinedeletemessage)
+            let Dict:NSDictionary = ["from":Nickname,
+                                     "DeviceId":Themes.sharedInstance.getDeviceToken(),
+                                     "callToken":Themes.sharedInstance.getCallToken()]
+            self.EmitAppsetting(Dict: Dict)
         }
     }
     

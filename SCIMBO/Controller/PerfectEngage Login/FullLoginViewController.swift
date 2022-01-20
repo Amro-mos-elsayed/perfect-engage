@@ -53,7 +53,6 @@ class FullLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ContactHandler.sharedInstance.GetPermission()
         self.SetUI()
         self.listenToKeyboard()
         emailView.isHidden = !loginTypeEmployee

@@ -38,7 +38,6 @@
     @IBOutlet weak var refreshBtn1: UIButton!
     @IBOutlet weak var no_contact_lbl: CustomLblFont!
     var timer : Timer?
-    @IBOutlet weak var secret_chat_btn: UIButton!
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
@@ -122,17 +121,6 @@
         self.ReloadTable()
     }
     
-    @IBAction func go_to_secret(_ sender: UIButton) {
-        searchController.searchBar.resignFirstResponder()
-        searchController.isActive = false
-        let singleInfoVC:SecretChatsController=self.storyboard?.instantiateViewController(withIdentifier: "SecretChatsControllerID") as! SecretChatsController
-        self.searchController.searchBar.resignFirstResponder()
-        self.searchController.isActive = false
-        self.dismissView(animated: true, completion: {
-            self.delegate?.MovetoChatView(viewcontroller: singleInfoVC)
-        })
-        
-    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ContactHandler.sharedInstance.Delegate?=self
@@ -354,62 +342,33 @@
         let indexDic = ["index":2]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.getPageIndex), object: nil, userInfo: indexDic)
     }
+    
     @IBAction func DidclickRefresh(_ sender: Any) {
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            Themes.sharedInstance.activityView(View: self.view)
-            self.refresh()
-        }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
+        Themes.sharedInstance.activityView(View: self.view)
+        self.refresh()
     }
     
     @IBAction func DidclickRefreshButton(_ sender: Any) {
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            
-            let predicate = NSPredicate(format: "is_fav != %@", "2")
-            let CheckFav = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: predicate, Limit: 0) as! NSArray
-            if(CheckFav.count > 0)
-            {
-                self.ReloadTable()
-            }
-            else
-            {
-                self.no_contact_lbl.text = "Loading contacts..."
-                self.startrotateView()
-                timer = Timer.scheduledTimer(timeInterval: TimeInterval(Constant.sharedinstance.SocketWaitDelaytime), target: self, selector: #selector(self.stoprotateView), userInfo: nil, repeats: true)
-                ContactHandler.sharedInstance.Delegate?=self
-                RefreshBtn.isUserInteractionEnabled=false
-                ContactHandler.sharedInstance.StoreContacts()
-            }
-        }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-            self.stoprotateView()
-        }
+        let predicate = NSPredicate(format: "is_fav != %@", "2")
+        let CheckFav = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: predicate, Limit: 0) as! NSArray
         
-    }
-    
-    
-    
-    @objc func refresh()
-    {
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            self.perform(#selector(FavouritesViewController.DismissLoader), with: nil, afterDelay: TimeInterval(Constant.sharedinstance.SocketWaitDelaytime))
+        if(CheckFav.count > 0) {
+            self.ReloadTable()
+        } else {
+            self.no_contact_lbl.text = "Loading contacts..."
+            self.startrotateView()
+            timer = Timer.scheduledTimer(timeInterval: TimeInterval(Constant.sharedinstance.SocketWaitDelaytime), target: self, selector: #selector(self.stoprotateView), userInfo: nil, repeats: true)
             ContactHandler.sharedInstance.Delegate?=self
             RefreshBtn.isUserInteractionEnabled=false
             ContactHandler.sharedInstance.StoreContacts()
         }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
-        
+    }
+
+    @objc func refresh() {
+        self.perform(#selector(FavouritesViewController.DismissLoader), with: nil, afterDelay: TimeInterval(Constant.sharedinstance.SocketWaitDelaytime))
+        ContactHandler.sharedInstance.Delegate?=self
+        RefreshBtn.isUserInteractionEnabled=false
+        ContactHandler.sharedInstance.StoreContacts()
     }
     
     @objc func DismissLoader() {
@@ -430,23 +389,14 @@
     @IBAction func DidClickContact(_ sender: Any) {
         searchController.searchBar.resignFirstResponder()
         searchController.isActive = false
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            let controller = CNContactViewController(forNewContact: nil)
-            //controller.editButtonItem.tintColor = UIColor.blue
-            controller.delegate = self
-            let navigationController = UINavigationController(rootViewController: controller)
-            navigationController.isNavigationBarHidden = false
-            navigationController.navigationBar.tintColor = CustomColor.sharedInstance.themeColor
-            self.searchController.searchBar.resignFirstResponder()
-            self.searchController.isActive = false
-            self.presentView(navigationController, animated: true)
-        }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
-        
+        let controller = CNContactViewController(forNewContact: nil)
+        controller.delegate = self
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.isNavigationBarHidden = false
+        navigationController.navigationBar.tintColor = CustomColor.sharedInstance.themeColor
+        self.searchController.searchBar.resignFirstResponder()
+        self.searchController.isActive = false
+        self.presentView(navigationController, animated: true)
     }
     
     @IBAction func DidClickNewGroup(_ sender: Any) {
