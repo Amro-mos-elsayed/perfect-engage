@@ -826,37 +826,6 @@
         self.pop(animated: true)
     }
     
-    @IBAction func DidclickNewChat(_ sender: UIButton) {
-        
-        
-        self.searchController.dismissView(animated:true, completion:nil)
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            
-            let favouritesVC:SecretChatContactVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SecretChatContactVC") as! SecretChatContactVC
-            let navController = UINavigationController(rootViewController: favouritesVC)
-            navController.navigationBar.isHidden = true
-            navController.modalPresentationStyle = .fullScreen
-            favouritesVC.delegate = self
-            self.searchController.dismissView(animated:true, completion:nil)
-            self.searchController.searchBar.resignFirstResponder()
-            self.searchController.isActive = false
-            self.presentView(navController, animated: true)
-            
-        }
-        else
-        {
-            self.searchController.dismissView(animated:true, completion:nil)
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath)
-    {
-        
-    }
-    
     func updateSearchResults(for searchController: UISearchController) {
         searchActive = true
         searchController.obscuresBackgroundDuringPresentation = false

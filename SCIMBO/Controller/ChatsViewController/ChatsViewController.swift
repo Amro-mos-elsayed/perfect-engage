@@ -1905,39 +1905,25 @@
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func DidclickNewChat(_ sender: UIButton) {
-        
-        
-        self.searchController.dismissView(animated:true, completion:nil)
-        if(ContactHandler.sharedInstance.CheckCheckPermission() || true)
-        {
-            let favouritesVC:FavouritesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
-            let navController = UINavigationController(rootViewController: favouritesVC)
-            navController.navigationBar.isHidden = true
-          
-            if #available(iOS 13.0, *) {
-                navController.isModalInPresentation = false
-            } else {
-                // Fallback on earlier versions
-            }
-            navController.modalPresentationStyle = .fullScreen
-            navController.isModalInPopover = false
-            favouritesVC.delegate = self
-            self.searchController.dismissView(animated:true, completion:nil)
-            self.searchController.searchBar.resignFirstResponder()
-            self.searchController.isActive = false
-            self.presentView(navController, animated: true)
-            //self.pushView(navController, animated: true)
-            
-        }
-        else
-        {
-            self.searchController.dismissView(animated:true, completion:nil)
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
-        
-    }
     
+    @IBAction func DidclickNewChat(_ sender: UIButton) {
+        self.searchController.dismissView(animated:true, completion:nil)
+        let favouritesVC:FavouritesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FavouritesViewController") as! FavouritesViewController
+        let navController = UINavigationController(rootViewController: favouritesVC)
+        navController.navigationBar.isHidden = true
+        
+        if #available(iOS 13.0, *) {
+            navController.isModalInPresentation = false
+        }
+        
+        navController.modalPresentationStyle = .fullScreen
+        navController.isModalInPopover = false
+        favouritesVC.delegate = self
+        self.searchController.dismissView(animated:true, completion:nil)
+        self.searchController.searchBar.resignFirstResponder()
+        self.searchController.isActive = false
+        self.presentView(navController, animated: true)
+    }
     
     func deleteMail(_ path:IndexPath) {
     }

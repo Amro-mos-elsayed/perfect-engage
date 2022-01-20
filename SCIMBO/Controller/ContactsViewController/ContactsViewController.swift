@@ -46,10 +46,11 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     var searchActive:Bool = false
     var oppponent_id:String = String()
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ContactHandler.sharedInstance.GetPermission()
+        ContactHandler.sharedInstance.getPhoneContact()
+
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         if UIDevice.isIphoneX {
             topViewHeightConstraint.constant = Constant.sharedinstance.NavigationBarHeight_iPhoneX
@@ -80,8 +81,6 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         bottomView.isHidden = true //false
         goback.isHidden = false
         contactsLbl.text = "Select Contacts".localized()
-        
-        getContacts()
     }
     
     @IBAction func go_backAct(_ sender: UIButton) {
@@ -128,6 +127,7 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         let favContacts_Array = DatabaseHandler.sharedInstance.FetchFromDatabaseWithPredicate(Entityname: Constant.sharedinstance.Favourite_Contact, SortDescriptor: nil, predicate: Predicate, Limit: 0) as! [Favourite_Contact]
         favContacts_ArrObj = favContacts_Array
         filterContact()
+        contacts_TblView.reloadData()
     }
     
     func filterContact(){
@@ -355,7 +355,15 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.contactsReceivedNotification(notification:)), name: NSNotification.Name(rawValue: Constant.sharedinstance.contactPermissionIsGiven), object: nil)
+
         super.viewWillAppear(animated)
+    }
+    
+    @objc func contactsReceivedNotification(notification: Notification) {
+        DispatchQueue.main.async {
+            self.getContacts()
+        }
     }
     
     fileprivate func setNativeIndexHidden(_ hidden: Bool) {
@@ -405,7 +413,7 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
     }
     
     @IBAction func DidclickContact(_ sender: Any) {
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
+        if(ContactHandler.sharedInstance.checkPhoneContactsPermission())
         {
             let controller = CNContactViewController(forNewContact: nil)
             controller.delegate = self

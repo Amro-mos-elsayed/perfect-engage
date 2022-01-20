@@ -53,7 +53,6 @@ class SecondLoginVC: UIViewController,MICountryPickerDelegate,UITextFieldDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ContactHandler.sharedInstance.GetPermission()
         self.SetUI()
         
         // Do any additional setup after loading the view.

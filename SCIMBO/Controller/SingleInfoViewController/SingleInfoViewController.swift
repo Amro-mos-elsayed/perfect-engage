@@ -25,7 +25,6 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
     @IBOutlet weak var imageviewbottomlayout: NSLayoutConstraint!
     
     @IBOutlet weak var imgBottomContstraint: NSLayoutConstraint!
-    @IBOutlet weak var editBtn:UIButton!
     @IBOutlet weak var headerLbl: CustomLblFont!
     @IBOutlet weak var userImg: UIButton!
     @IBOutlet weak var baseView: UIView!
@@ -76,10 +75,7 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         }
         addNotificationListener()
         checkFav = "Existing"
-        
-        editBtn.isHidden = true
         propertiesTableView.tableFooterView = UIView()
-                        
         getContactDetails()
         isCalling = false
         scrollView.delegate = self
@@ -1169,56 +1165,6 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         self.presentView(ImageViewerController(configuration: configuration), animated: true)
         
         //
-    }
-    
-    @IBAction func editBtnAction(_ sender: UIButton) {
-        if(ContactHandler.sharedInstance.CheckCheckPermission())
-        {
-            let favrecord = returnFavRecord(user_id)
-            if(favrecord.contact_ID != "")
-            {
-                let contactStore = CNContactStore()
-                let contactNo_ID:String = Themes.sharedInstance.removeUniqueContactID(ID: Themes.sharedInstance.CheckNullvalue(Passed_value: favrecord.contact_ID))
-                
-                let predicate = CNContact.predicateForContacts(withIdentifiers : [contactNo_ID])
-                
-                let keys = [CNContactFormatter.descriptorForRequiredKeys(for: CNContactFormatterStyle.fullName), CNContactEmailAddressesKey, CNContactBirthdayKey, CNContactImageDataKey,CNContactViewController.descriptorForRequiredKeys()] as [Any]
-                var contacts = [CNContact]()
-                do {
-                    contacts = try contactStore.unifiedContacts(matching: predicate, keysToFetch: keys as! [CNKeyDescriptor])
-                    
-                    if contacts.count > 0 {
-                        
-                        do {
-                            let contactsViewController = CNContactViewController(forNewContact: contacts[0])
-                            contactsViewController.delegate = self
-                            contactsViewController.title = ""
-                            contactsViewController.allowsEditing = true
-                            
-                            self.navigationController?.isNavigationBarHidden = false
-                            self.pushView(contactsViewController, animated: true)
-                        }
-                    }
-                    else
-                    {
-                        self.view.makeToast(message: "This contact not added in contacts", duration: 3, position: HRToastActivityPositionDefault)
-                    }
-                }
-                catch {
-                    print(error.localizedDescription)
-                    
-                }
-            }
-            else
-            {
-                self.view.makeToast(message: "This contact not added in contacts", duration: 3, position: HRToastActivityPositionDefault)
-            }
-            
-        }
-        else
-        {
-            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
-        }
     }
     
     func contactViewController(_ viewController: CNContactViewController, didCompleteWith contact: CNContact?){
