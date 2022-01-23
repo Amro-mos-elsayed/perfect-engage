@@ -16,7 +16,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userIdTextField: UITextField!
     @IBOutlet weak var PasswordIdTextField: UITextField!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
-
+    
+    //Constants
+    let bottomPadding: CGFloat = 34
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -52,14 +56,13 @@ class LoginViewController: UIViewController {
     
     @objc func keyBoardWillShow(_ notification: Notification) {
         let keyboardHeight = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.height
-        bottomConstraint.constant = keyboardHeight
+        bottomConstraint.constant = keyboardHeight + bottomPadding
         print(keyboardHeight)
     }
     
     @objc func keyBoardWillHide(_ notification: Notification) {
-        bottomConstraint.constant = 0
+        bottomConstraint.constant = bottomPadding
     }
-
 
     @IBAction func loginButtonTapped(_ sender: UIButton) {
         
