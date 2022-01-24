@@ -145,18 +145,15 @@ class FullLoginViewController: UIViewController {
             else{
                 print(responseObject ?? "response")
                 let result = responseObject! as NSDictionary
-                let errNo = result["errNum"] as! String
+                if let errNo = result["errNum"] as? String {
                 let message = result["message"]
                 if errNo == "0"{
                     self.appDelegate().pushnotificationSetup()
                     URLhandler.sharedinstance.makeGetCall(url: Constant.sharedinstance.Settings, param: [:], completionHandler: { [self](Object, error) ->  () in
-                        if(error != nil)
-                        {
+                        if(error != nil) {
                             self.view.makeToast(message: Constant.sharedinstance.ErrorMessage , duration: 3, position: HRToastActivityPositionDefault)
                             print(error ?? "defaultValue")
-                            
-                        }
-                        else{
+                        } else{
                             self.appDelegate().pushnotificationSetup()
                             self.appDelegate().pushRegistrySetup()
                             print(Object ?? "response")
@@ -166,7 +163,6 @@ class FullLoginViewController: UIViewController {
                             let twilio = setting_result["twilio"] as! String
                             
                             if errNo == "0"{
-                                
                                 if(live == "0" || twilio == "development"){
                                     self.NavigateToProfileWithOutOTP(otp: Themes.sharedInstance.CheckNullvalue(Passed_value: result["code"]), mssidn_No: "\(self.country_Code)\(self.MobileTextField.text!)", User_id: Themes.sharedInstance.CheckNullvalue(Passed_value: result["_id"]), profilepic: Themes.sharedInstance.CheckNullvalue(Passed_value: result["ProfilePic"]), Name: Themes.sharedInstance.CheckNullvalue(Passed_value: result["Name"]), status: Themes.sharedInstance.CheckNullvalue(Passed_value: result["Status"]), PhNumber: self.MobileTextField.text!, CountryCode: self.country_Code)
                                 }
@@ -207,6 +203,7 @@ class FullLoginViewController: UIViewController {
                                     
                                 }
                             }
+                        
                             else
                             {
                                 self.view.makeToast(message: message as! String, duration: 3, position: HRToastActivityPositionDefault)
@@ -217,6 +214,7 @@ class FullLoginViewController: UIViewController {
                 else
                 {
                     Themes.sharedInstance.ShowNotification(message as! String , false)
+                }
                 }
             }
         })
@@ -250,42 +248,30 @@ class FullLoginViewController: UIViewController {
                 print(responseObject ?? "response")
                 
                 let result = responseObject! as NSDictionary
-                let errNo = result["errNum"] as! String
-                if errNo != "1"{
+                if let errNo = result["errNum"] as? String {
+                if errNo != "1" {
                     var image_Url = Themes.sharedInstance.CheckNullvalue(Passed_value: profilepic)
                     print("\(image_Url.count)")
                     print("\(image_Url.length)")
-                    if(image_Url.substring(to: 1) == ".")
-                    {
+                    if(image_Url.substring(to: 1) == ".") {
                         image_Url.remove(at: image_Url.startIndex)
                     }
-                    if(image_Url != "")
-                    {
+                    if(image_Url != "") {
                         image_Url = ("\(ImgUrl)\(image_Url)")
-                    }
-                    else
-                    {
+                    } else {
                         image_Url = ""
                     }
                     var status = status
-                    if(status == "")
-                    {
+                    if(status == "") {
                         status = NSLocalizedString("Online", comment: "note" )
-                        
                     }
-                    
-                    
                     var user_id = Themes.sharedInstance.CheckNullvalue(Passed_value: result.value(forKey: "_id"))
-                    if(user_id == "")
-                    {
+                    if(user_id == "") {
                         user_id = User_id
                     }
-                    
                     Themes.sharedInstance.savepublicKey(DeviceToken: "")
                     Themes.sharedInstance.savesPrivatekey(DeviceToken: "")
                     Themes.sharedInstance.savesecurityToken(DeviceToken: "")
-                    
-                    
                     
                     let token = Themes.sharedInstance.CheckNullvalue(Passed_value: result["token"])
                     KeychainService.removePassword()
@@ -304,8 +290,10 @@ class FullLoginViewController: UIViewController {
                         self.moveHomeVC(Name: finalUserName, mssidn_No: mssidn_No, User_id: user_id, imageUrl: image_Url, email: email)
                     }
                 }
+                }
             }
         })
+        
     }
     func storeStatus(User_id: String, status: String){
         
