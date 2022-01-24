@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -121,10 +121,9 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="fX8-Xc-iQT" firstAttribute="top" secondItem="Ygd-k9-med" secondAttribute="top" constant="20" id="Vma-im-shz"/>
                         <constraint firstAttribute="trailing" secondItem="fX8-Xc-iQT" secondAttribute="trailing" constant="20" id="YRj-tN-od2"/>
+                        <constraint firstItem="fX8-Xc-iQT" firstAttribute="top" secondItem="Ygd-k9-med" secondAttribute="top" constant="20" id="jQR-Lx-qkN"/>
                         <constraint firstItem="fX8-Xc-iQT" firstAttribute="leading" secondItem="Ygd-k9-med" secondAttribute="leading" constant="20" id="ocq-4M-bFH"/>
-                        <constraint firstAttribute="height" constant="375" id="uM0-is-dp5"/>
                     </constraints>
                 </view>
             </subviews>
@@ -135,6 +134,7 @@
                 <constraint firstItem="Ygd-k9-med" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nhh-WS-GtX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kbf-QH-r9A" secondAttribute="trailing" id="UCW-rN-eP0"/>
                 <constraint firstItem="Ygd-k9-med" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Xng-UY-3NI"/>
+                <constraint firstItem="Ygd-k9-med" firstAttribute="top" secondItem="Kbf-QH-r9A" secondAttribute="bottom" id="Y0m-GL-iOZ"/>
                 <constraint firstItem="Kbf-QH-r9A" firstAttribute="width" secondItem="Kbf-QH-r9A" secondAttribute="height" multiplier="375:441" id="bDI-UJ-OaL"/>
                 <constraint firstItem="Kbf-QH-r9A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="emI-xP-dYb"/>
                 <constraint firstItem="Kbf-QH-r9A" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wjP-tF-LXw"/>
