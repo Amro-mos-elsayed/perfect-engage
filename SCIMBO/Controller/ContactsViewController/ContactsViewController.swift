@@ -51,6 +51,8 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         ContactHandler.sharedInstance.GetPermission()
         ContactHandler.sharedInstance.getPhoneContact()
 
+        showPhoneContactsPermissionIfneeded()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         if UIDevice.isIphoneX {
             topViewHeightConstraint.constant = Constant.sharedinstance.NavigationBarHeight_iPhoneX
@@ -83,13 +85,17 @@ class ContactsViewController:  UIViewController,TableViewIndexDelegate,TableView
         contactsLbl.text = "Select Contacts".localized()
     }
     
+    func showPhoneContactsPermissionIfneeded() {
+        let status = CNContactStore.authorizationStatus(for: .contacts)
+        if status == .denied {
+            self.presentView(Themes.sharedInstance.showContactPermissionAlert, animated: true)
+        }
+    }
     @IBAction func go_backAct(_ sender: UIButton) {
-        
         searchController.dismissView(animated:true, completion:nil)
         self.searchController.searchBar.resignFirstResponder()
         self.searchController.isActive = false
         self.navigationController?.pop(animated:true)
-        
     }
     
     @IBAction func share_contact(_ sender: UIButton) {
