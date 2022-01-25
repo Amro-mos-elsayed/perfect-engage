@@ -38,26 +38,11 @@ class FullLoginViewController: UIViewController {
     var customColor = CustomColor()
     var loginTypeEmployee: Bool = true
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        country_Code = self.CountryCode.text!
-        if userEmail == "alabeeb@2p.com.sa" {
-            self.CountryCode.text = "+20"
-            country_Code = self.CountryCode.text!
-        }
-        
-        if let phoneNo = phoneNo {
-            MobileTextField.text = phoneNo
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.SetUI()
         self.listenToKeyboard()
-        emailView.isHidden = !loginTypeEmployee
-        userNameView.isHidden = !loginTypeEmployee
-        MobileTextField.keyboardType = .asciiCapableNumberPad
     }
     
     func listenToKeyboard() {
@@ -92,8 +77,10 @@ class FullLoginViewController: UIViewController {
         MobileTextField.textAlignment = .natural
         userNameTextField.text = userName
         CountryCode.adjustsFontSizeToFitWidth = true
-        Themes.sharedInstance.setCountryCode(CountryCode,CountryFlag)
-        
+        countryCodeSetup()
+        if let phoneNo = phoneNo {
+            MobileTextField.text = phoneNo
+        }
         borderedViews.forEach { view in
             view.layer.cornerRadius = 25
             view.layer.borderWidth = 1
@@ -104,6 +91,37 @@ class FullLoginViewController: UIViewController {
         }
         let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
+        emailView.isHidden = !loginTypeEmployee
+        userNameView.isHidden = !loginTypeEmployee
+        MobileTextField.keyboardType = .asciiCapableNumberPad
+    }
+    
+    private func countryCodeSetup() {
+        if loginTypeEmployee {
+            setCountryFlag()
+            CountryCode.text = country_Code
+        } else {
+            Themes.sharedInstance.setCountryCode(CountryCode,CountryFlag)
+        }
+    }
+    
+    private func setCountryFlag() {
+        let CallingCodes = { () -> [[String: String]] in
+            let resourceBundle = Bundle(for: MICountryPicker.classForCoder())
+            guard let path = resourceBundle.path(forResource: "CallingCodes", ofType: "plist") else { return [] }
+            return NSArray(contentsOfFile: path) as! [[String: String]]
+        }()
+        let CtryCode:String = country_Code
+        
+        let bundle = "assets.bundle/"
+        let countryData = CallingCodes.filter { $0["dial_code"] == CtryCode }
+
+        if countryData.count > 0 {
+            let dict = countryData[0]
+            if let imageCode = dict["code"] {
+                CountryFlag.image = UIImage(named: "\(bundle)\(imageCode.uppercased())\(".png")", in:Bundle (for: type(of: self)), compatibleWith: nil)!
+            }
+        }
     }
                
     @objc func keyboardWillShow(notification: Notification) {
