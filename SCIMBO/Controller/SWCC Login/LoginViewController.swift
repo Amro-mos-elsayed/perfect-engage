@@ -26,15 +26,7 @@ class LoginViewController: UIViewController {
         setupUI()
         listenToKeyboard()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        #if DEBUG
-        userIdTextField.text = "alabeeb@2p.com.sa"
-        PasswordIdTextField.text = "Aa.2p123!"
-        #endif
-    }
-    
+  
     func listenToKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -74,12 +66,17 @@ class LoginViewController: UIViewController {
     
     func login(uid: String, password: String) {
         loginRequest(uid: uid, password: password) { user in
-            var mobileNum = user.telephoneNumber!//.substring(from: 3)
-            if mobileNum.count > 11{
-                mobileNum = mobileNum.substring(from: 3)
+            guard let email: String = user.mail,
+                  let phoneNumber = user.telephoneNumber,
+                  let countryCode = user.countryCode,
+                  let userName = user.displayName else {
+                return
             }
-            let email: String = user.mail!
-            self.navigateToLoginVC(phoneNumber: mobileNum, code: "", userName: user.displayName!,email: email)
+            
+            self.navigateToLoginVC(phoneNumber: phoneNumber,
+                                   code: countryCode,
+                                   userName: userName,
+                                   email: email)
         }
     }
     
@@ -89,6 +86,7 @@ class LoginViewController: UIViewController {
         vc.phoneNo = phoneNumber
         vc.userEmail = email
         vc.userName = userName
+        vc.country_Code = code
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -145,9 +143,9 @@ struct LoginModel: Codable {
 
 // MARK: - ResultObject
 struct ResultObject: Codable {
-    let telephoneNumber,displayName,mail: String?
+    let telephoneNumber,displayName,mail,countryCode: String?
 
     enum CodingKeys: String, CodingKey {
-        case telephoneNumber,displayName,mail
+        case telephoneNumber,displayName,mail,countryCode
     }
 }
