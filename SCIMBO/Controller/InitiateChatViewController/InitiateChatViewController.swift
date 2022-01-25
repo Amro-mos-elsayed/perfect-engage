@@ -24,7 +24,7 @@
  
  
 
-  class InitiateChatViewController: UIViewController,UUInputFunctionViewDelegate,UUMessageCellDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,EditViewControllerDelegate,UserDetlUpdationDelegate,UIActionSheetDelegate,VNDocumentCameraViewControllerDelegate, UINavigationControllerDelegate,UUAVAudioPlayerDelegate,ReplyDetailViewDelegate,MapViewViewControllerDelegate,contactShare,CNContactViewControllerDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,unKnownPerson,secretTime, UIViewControllerTransitioningDelegate, CustomTableViewCellDelegate, AudioManagerDelegate, UIGestureRecognizerDelegate
+  class InitiateChatViewController: UIViewController,UUInputFunctionViewDelegate,UUMessageCellDelegate,UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,EditViewControllerDelegate,UserDetlUpdationDelegate,UIActionSheetDelegate,VNDocumentCameraViewControllerDelegate, UINavigationControllerDelegate,UUAVAudioPlayerDelegate,ReplyDetailViewDelegate,MapViewViewControllerDelegate,contactShare,CNContactViewControllerDelegate,MFMailComposeViewControllerDelegate,MFMessageComposeViewControllerDelegate,secretTime, UIViewControllerTransitioningDelegate, CustomTableViewCellDelegate, AudioManagerDelegate, UIGestureRecognizerDelegate
  {
     
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
@@ -456,14 +456,17 @@
         if isDeleted == "1"{
             videocall_Btn.isUserInteractionEnabled = false
             audiocall_Btn.isUserInteractionEnabled = false
-            self.IFView.isHidden = true
+            self.IFView.textView.isEditable = false
+            self.IFView.plusBtn.tintColor = .gray
+            self.IFView.plusBtn.isEnabled = false
+            self.IFView.btnChangeVoiceState.tintColor = .gray
+            self.IFView.btnChangeVoiceState.isEnabled = false
             videocall_Btn.tintColor = .gray
             audiocall_Btn.tintColor = .gray
         }else {
             videocall_Btn.tintColor = .white
             audiocall_Btn.tintColor = .white
         }
-        
     }
     
     func reloaddata()
@@ -549,7 +552,6 @@
     func updateChatViewAtLoad()
     {
         chatTableView.register(UINib(nibName: "ChatInfoCell", bundle: nil), forCellReuseIdentifier: "ChatInfoCell")
-        chatTableView.register(UINib(nibName: "UnknownCell", bundle: nil), forCellReuseIdentifier: "UnknownCell")
         chatTableView.register(UINib(nibName: "EncryptionTableViewCell", bundle: nil), forCellReuseIdentifier: "EncryptionTableViewCell")
         
 
@@ -4853,13 +4855,9 @@
             cell_main.selectedBackgroundView = backgroundView
             return cell_main
         }
-        else
-        {
-            let cell:UnknownCell = tableView.dequeueReusableCell(withIdentifier: "UnknownCell") as! UnknownCell
-            cell.delegate = self
-            cell.user_id = opponent_id
-            cell.updateUI()
-            cell.selectionStyle = .none
+        else {
+            let cell = UITableViewCell()
+            cell.backgroundColor = .clear
             return cell
         }
     }
@@ -5342,28 +5340,6 @@
             }
         }
         return (menuOptionNameArray, menuOptionImageNameArray)
-    }
-    
-    func Add_To_Conacts()
-    {
-        
-        var phone_num:[CNLabeledValue<CNPhoneNumber>] = []
-        let phonenumber = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Favourite_Contact, attrib_name: "id", fetchString: opponent_id, returnStr: "msisdn")
-        phone_num.append(CNLabeledValue(label:"Home" , value:CNPhoneNumber(stringValue: phonenumber)))
-        
-        let contact = CNMutableContact()
-        
-        if(phone_num.count > 0){
-            
-            contact.phoneNumbers = phone_num
-        }
-        
-        let controller = CNContactViewController(forNewContact: contact)
-        controller.delegate = self
-        
-        let navigationController = UINavigationController(rootViewController: controller)
-        self.presentView(navigationController, animated: true)
-        
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
