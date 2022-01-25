@@ -964,61 +964,6 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
         return String(format:"%4.2f %@",convertedValue, tokens[multiplyFactor] as! String)
     }
     
-    
-    func checkBlock(id : String) -> Bool {
-        return DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Blocked_user, attribute: "id", FetchString: id)
-    }
-    
-    func showBlockalert(id : String)
-    {
-        let TitleStr = self.checkBlock(id: id) ? "Unblock" : "Block"
-        
-        let optionMenu = UIAlertController(title: nil, message: TitleStr == "Unblock" ? "Unblock contact to send a message" : "Blocked Contact will no longer be able to call you or send you messages", preferredStyle: .actionSheet)
-
-        let BlockAction = UIAlertAction(title: TitleStr, style: TitleStr == "Unblock" ? .default : .destructive, handler: {
-            (alert: UIAlertAction!) -> Void in
-            self.executeBlockUser(id : id)
-        })
-        
-        let ReportAction = UIAlertAction(title: "Report Spam", style: .destructive, handler: {
-            (alert: UIAlertAction!) -> Void in
-            self.executeReportUser(id : id)
-        })
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            (alert: UIAlertAction!) -> Void in
-            print("Cancelled")
-        })
-        
-        optionMenu.addAction(BlockAction)
-        if(TitleStr == "Block") {
-            optionMenu.addAction(ReportAction)
-        }
-        optionMenu.addAction(cancelAction)
-        
-        AppDelegate.sharedInstance.navigationController?.presentView(optionMenu, animated: true)
-    }
-    
-    func executeBlockUser(id: String)
-    {
-        if(URLhandler.sharedinstance.isConnectedToNetwork())
-        {
-            let status:String = self.checkBlock(id: id) ? "0" : "1"
-            let Dict:NSDictionary = ["from":self.Getuser_id(),"to":id,"secret_type":"no","status":status]
-            if(SocketIOManager.sharedInstance.iSSocketDisconnected == false){
-                SocketIOManager.sharedInstance.EmitBlockUsers(Dict: Dict)
-            }else{
-                _ = JSSAlertView().show((AppDelegate.sharedInstance.navigationController?.topViewController)!,title: self.GetAppname(),text: "Unable to connect to server",buttonText: "OK",color: CustomColor.sharedInstance.alertColor)
-            }
-            
-            
-        }
-        else
-        {
-            _ = JSSAlertView().show((AppDelegate.sharedInstance.navigationController?.topViewController)!,title: self.GetAppname(),text: "Unable to connect to internet",buttonText: "OK",color: CustomColor.sharedInstance.alertColor)
-        }
-    }
-    
     func executeReportUser(id: String)
     {
         if(URLhandler.sharedinstance.isConnectedToNetwork())

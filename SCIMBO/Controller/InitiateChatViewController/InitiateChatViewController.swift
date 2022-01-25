@@ -961,12 +961,6 @@
     @IBAction func DidclickVideo(_ sender: Any)
     {
         self.view.endEditing(true)
-        guard !Themes.sharedInstance.checkBlock(id: opponent_id) else
-        {
-            Themes.sharedInstance.showBlockalert(id: opponent_id)
-            return
-        }
-        
         self.audiocall_Btn.isUserInteractionEnabled = false
         self.videocall_Btn.isUserInteractionEnabled = false
         
@@ -998,12 +992,6 @@
     @IBAction func DidclickAudio(_ sender: Any)
     {
         self.view.endEditing(true)
-        guard !Themes.sharedInstance.checkBlock(id: opponent_id) else
-        {
-            Themes.sharedInstance.showBlockalert(id: opponent_id)
-            return
-        }
-        
         self.audiocall_Btn.isUserInteractionEnabled = false
         self.videocall_Btn.isUserInteractionEnabled = false
         
@@ -2714,12 +2702,6 @@
     }
     func uuInputFunctionView(_ funcView: UUInputFunctionView, sendMessage message: String)
     {
-        guard !Themes.sharedInstance.checkBlock(id: opponent_id) else
-        {
-            Themes.sharedInstance.showBlockalert(id: opponent_id)
-            return
-        }
-        
         var message = message.trimmingCharacters(in: .whitespacesAndNewlines)
         var is_tag = ""
         if(self.TagIdArr.count > 0)
@@ -3050,11 +3032,6 @@
         return param
     }
     func uuInputFunctionView(_ funcView: UUInputFunctionView, sendVoice voice: Data, time second: Int) {
-        guard !Themes.sharedInstance.checkBlock(id: opponent_id) else
-        {
-            Themes.sharedInstance.showBlockalert(id: opponent_id)
-            return
-        }
         var secret_msg_id:String = ""
         var user_common_id = opponent_id + "-" + Themes.sharedInstance.Getuser_id()
         let checkBool:Bool = DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Secret_Chat, attribute: "user_common_id", FetchString: user_common_id)
@@ -5956,10 +5933,6 @@
     
     func callActionSheet() {
         self.pauseGif()
-        guard !Themes.sharedInstance.checkBlock(id: opponent_id) else{
-            Themes.sharedInstance.showBlockalert(id: opponent_id)
-            return
-        }
         let actionSheetController: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let CameraAction: UIAlertAction = UIAlertAction(title: NSLocalizedString("Camera", comment: "Camera" ) , style: .default) { action -> Void in

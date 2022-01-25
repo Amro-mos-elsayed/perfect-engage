@@ -532,7 +532,7 @@ extension CallLogVC:UITableViewDataSource,UITableViewDelegate
         return true
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-
+        
         if editingStyle == .delete {
             let objDict:NSDictionary = DataSourceDictArr.object(at: indexPath.row) as! NSDictionary
             let objArr:NSArray = objDict["detail"] as! NSArray
@@ -565,57 +565,37 @@ extension CallLogVC:UITableViewDataSource,UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var Dict:NSDictionary = NSDictionary()
-        if(!isbeginEdit)
-        {
-            if(searchActive == true)
-            {
+        if(!isbeginEdit) {
+            if(searchActive == true) {
                 Dict =   SearchSourceDictArr[indexPath.row] as! NSDictionary
-            }
-            else
-            {
+            } else {
                 Dict =   DataSourceDictArr[indexPath.row] as! NSDictionary
             }
             
             let objCallRecord:calllog_Record = (Dict["detail"] as! NSArray)[0] as! calllog_Record
             
-            if(!Themes.sharedInstance.checkBlock(id: objCallRecord.OppUser_id))
-            {
-                if(SocketIOManager.sharedInstance.socket.status == .connected)
-                {
-                    let status:String = Dict["call_type"] as! String
-                    
-                    
-                    
-                    var timestamp:String =  String(Date().ticks)
-                    var servertimeStr:String = Themes.sharedInstance.getServerTime()
-                    
-                    if(servertimeStr == "")
-                    {
-                        servertimeStr = "0"
-                    }
-                    let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
-                    timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
-                    
-                    let docID = "\(Themes.sharedInstance.Getuser_id())-\(objCallRecord.OppUser_id)-\(timestamp)"
-                    let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: objCallRecord.OppUser_id),"type":Int(status)!,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
-                    SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
-                    AppDelegate.sharedInstance.openCallPage(type: status, roomid: timestamp, id: objCallRecord.OppUser_id)
-                    
-                    
-                    
+            if(SocketIOManager.sharedInstance.socket.status == .connected) {
+                let status:String = Dict["call_type"] as! String
+                var timestamp:String =  String(Date().ticks)
+                var servertimeStr:String = Themes.sharedInstance.getServerTime()
+                
+                if(servertimeStr == "") {
+                    servertimeStr = "0"
                 }
-                else
-                {
-                    self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
-                }
+                let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
+                timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
+                
+                let docID = "\(Themes.sharedInstance.Getuser_id())-\(objCallRecord.OppUser_id)-\(timestamp)"
+                let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: objCallRecord.OppUser_id),"type":Int(status)!,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
+                SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
+                AppDelegate.sharedInstance.openCallPage(type: status, roomid: timestamp, id: objCallRecord.OppUser_id)
+                
+                
+                
             }
-            else
-            {
-                Themes.sharedInstance.showBlockalert(id: objCallRecord.OppUser_id)
+            else {
+                self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
             }
-            
-            
-            
         }
     }
     
