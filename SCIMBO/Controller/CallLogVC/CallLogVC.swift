@@ -24,6 +24,11 @@ class CallLogVC: UIViewController,UISearchControllerDelegate,UISearchResultsUpda
     var ismissedCall:Bool = Bool()
     var isbeginEdit:Bool = Bool()
     
+    var currentUserId: String!
+    var currentUserObjCallRecord: calllog_Record!
+    var currentUserDict: NSDictionary!
+    var enableCall: Bool = false
+    
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
@@ -112,20 +117,19 @@ class CallLogVC: UIViewController,UISearchControllerDelegate,UISearchResultsUpda
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        enableCall = false
         ReloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
+        enableCall = false
         searchController.searchBar.resignFirstResponder()
         searchController.isActive = false
         SocketIOManager.sharedInstance.Delegate = nil
-        
     }
+
     
-    func ReloadData()
-    {
-        
+    func ReloadData() {
         Edit_Btn.isHidden = true
         DataSourceDictArr = NSMutableArray()
         SearchSourceDictArr = NSMutableArray()
@@ -528,6 +532,22 @@ extension CallLogVC:UITableViewDataSource,UITableViewDelegate
         self.pushView(ObjCalldetailVC, animated: true)
         
     }
+    
+    func getContactIsActive() {
+        let id = Themes.sharedInstance.CheckNullvalue(Passed_value: self.currentUserId)
+        SocketIOManager.sharedInstance.checkUserStatus(from: id)
+        NotificationCenter.default.addObserver(self, selector: #selector(activatedUsers(_:)), name: NSNotification.Name.init("chechActive"), object: nil)
+    }
+    
+    @objc func activatedUsers(_ notification: Notification) {
+        guard let isDeleted = notification.userInfo?["isDeleted"] as? String else {
+            return
+        }
+        if (!(isDeleted == "1")) && enableCall {
+            openCall()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -574,28 +594,34 @@ extension CallLogVC:UITableViewDataSource,UITableViewDelegate
             
             let objCallRecord:calllog_Record = (Dict["detail"] as! NSArray)[0] as! calllog_Record
             
-            if(SocketIOManager.sharedInstance.socket.status == .connected) {
-                let status:String = Dict["call_type"] as! String
-                var timestamp:String =  String(Date().ticks)
-                var servertimeStr:String = Themes.sharedInstance.getServerTime()
-                
-                if(servertimeStr == "") {
-                    servertimeStr = "0"
-                }
-                let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
-                timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
-                
-                let docID = "\(Themes.sharedInstance.Getuser_id())-\(objCallRecord.OppUser_id)-\(timestamp)"
-                let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: objCallRecord.OppUser_id),"type":Int(status)!,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
-                SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
-                AppDelegate.sharedInstance.openCallPage(type: status, roomid: timestamp, id: objCallRecord.OppUser_id)
-                
-                
-                
+            self.currentUserDict = Dict
+            self.currentUserId = objCallRecord.OppUser_id
+            self.currentUserObjCallRecord = objCallRecord
+            enableCall = true
+            getContactIsActive()
+        }
+    }
+    
+    func openCall() {
+        if(SocketIOManager.sharedInstance.socket.status == .connected) {
+            let status:String = currentUserDict["call_type"] as! String
+            var timestamp:String =  String(Date().ticks)
+            var servertimeStr:String = Themes.sharedInstance.getServerTime()
+            
+            if(servertimeStr == "") {
+                servertimeStr = "0"
             }
-            else {
-                self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
-            }
+            let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
+            timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
+            
+            
+            let docID = "\(Themes.sharedInstance.Getuser_id())-\(currentUserObjCallRecord.OppUser_id)-\(timestamp)"
+            let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: currentUserObjCallRecord.OppUser_id),"type":Int(status)!,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
+            SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
+            AppDelegate.sharedInstance.openCallPage(type: status, roomid: timestamp, id: currentUserObjCallRecord.OppUser_id)
+        }
+        else {
+            self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
         }
     }
     
