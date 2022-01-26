@@ -701,49 +701,33 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
     }
     
     
-    @IBAction func DidclickVideo(_ sender: Any)
-    {
-        if(!Themes.sharedInstance.checkBlock(id: user_id))
-        {
-            if(!isCalling)
-            {
-                isCalling = true
-                self.view.endEditing(true)
-                if(SocketIOManager.sharedInstance.socket.status == .connected)
-                {
-                    var timestamp:String =  String(Date().ticks)
-                    var servertimeStr:String = Themes.sharedInstance.getServerTime()
-                    
-                    if(servertimeStr == "")
-                    {
-                        servertimeStr = "0"
-                    }
-                    let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
-                    timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
-                    
-                    
-                    let docID = Themes.sharedInstance.Getuser_id() + "-" + user_id + "-" + timestamp
-                    let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: user_id),"type":1,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
-                    SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
-                    AppDelegate.sharedInstance.openCallPage(type: "1", roomid: timestamp, id: user_id)
-                    
+    @IBAction func DidclickVideo(_ sender: Any) {
+        if(!isCalling) {
+            isCalling = true
+            self.view.endEditing(true)
+            if(SocketIOManager.sharedInstance.socket.status == .connected) {
+                var timestamp:String =  String(Date().ticks)
+                var servertimeStr:String = Themes.sharedInstance.getServerTime()
+                
+                if(servertimeStr == "") {
+                    servertimeStr = "0"
                 }
-                else
-                {
-                    self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
-                    isCalling = false
-                    
-                }
+                let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
+                timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
                 
                 
-                self.perform(#selector(self.updateCallbtn), with: nil, afterDelay: 3)
+                let docID = Themes.sharedInstance.Getuser_id() + "-" + user_id + "-" + timestamp
+                let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: user_id),"type":1,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
+                SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
+                AppDelegate.sharedInstance.openCallPage(type: "1", roomid: timestamp, id: user_id)
+                
+            } else {
+                self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
+                isCalling = false
+                
             }
+            self.perform(#selector(self.updateCallbtn), with: nil, afterDelay: 3)
         }
-        else
-        {
-            Themes.sharedInstance.showBlockalert(id: user_id)
-        }
-        
     }
     
     
@@ -752,47 +736,31 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         isCalling = false
     }
     
-    @IBAction func DidclickAudio(_ sender: Any)
-    {
-        if(!Themes.sharedInstance.checkBlock(id: user_id))
-        {
-            if(!isCalling)
-            {
-                isCalling = true
-                self.view.endEditing(true)
-                if(SocketIOManager.sharedInstance.socket.status == .connected)
-                {
-                    var timestamp:String =  String(Date().ticks)
-                    var servertimeStr:String = Themes.sharedInstance.getServerTime()
-                    
-                    if(servertimeStr == "")
-                    {
-                        servertimeStr = "0"
-                    }
-                    let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
-                    timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
-                    
-                    
-                    let docID = Themes.sharedInstance.Getuser_id() + "-" + user_id + "-" + timestamp
-                    let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: user_id),"type":0,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
-                    SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
-                    AppDelegate.sharedInstance.openCallPage(type: "0", roomid: timestamp, id: user_id)
-                    
+    @IBAction func DidclickAudio(_ sender: Any) {
+        if(!isCalling) {
+            isCalling = true
+            self.view.endEditing(true)
+            if(SocketIOManager.sharedInstance.socket.status == .connected) {
+                var timestamp:String =  String(Date().ticks)
+                var servertimeStr:String = Themes.sharedInstance.getServerTime()
+                
+                if(servertimeStr == "") {
+                    servertimeStr = "0"
                 }
-                else
-                {
-                    self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
-                    isCalling = false
-                    
-                }
+                let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
+                timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
                 
                 
-                self.perform(#selector(self.updateCallbtn), with: nil, afterDelay: 3)
+                let docID = Themes.sharedInstance.Getuser_id() + "-" + user_id + "-" + timestamp
+                let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: user_id),"type":0,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
+                SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
+                AppDelegate.sharedInstance.openCallPage(type: "0", roomid: timestamp, id: user_id)
+                
+            } else {
+                self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
+                isCalling = false
             }
-        }
-        else
-        {
-            Themes.sharedInstance.showBlockalert(id: user_id)
+            self.perform(#selector(self.updateCallbtn), with: nil, afterDelay: 3)
         }
     }
     
@@ -975,7 +943,6 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
                 }
                 
                 if indexPath.row == section3Arr.count-1{
-                    //blockchat()
                     //self.clearchat()
                 }
             }
@@ -989,11 +956,6 @@ class SingleInfoViewController: UIViewController,UITableViewDelegate,UITableView
         ObjInitiateChatViewController.Chat_type="secret"
         ObjInitiateChatViewController.opponent_id = user_id
         self.pushView(ObjInitiateChatViewController, animated: true)
-    }
-    
-    func blockchat()
-    {
-        Themes.sharedInstance.showBlockalert(id: self.user_id)
     }
     
     func clearchat()

@@ -478,8 +478,6 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                     
                     let VoiceCallAction = UIAlertAction(title: NSLocalizedString("Voice Call", comment: "comment") , style: .default, handler: { (alert: UIAlertAction!) in
                         
-                        if(!Themes.sharedInstance.checkBlock(id: Grouppeoplerecord.id as String))
-                        {
                             if(SocketIOManager.sharedInstance.socket.status == .connected)
                             {
                                 
@@ -503,18 +501,10 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                                 self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
                                 
                             }
-                            
-                        }
-                        else
-                        {
-                            Themes.sharedInstance.showBlockalert(id: Grouppeoplerecord.id as String)
-                        }
                     })
                     
                     let VideoCallAction = UIAlertAction(title: NSLocalizedString("Video Call", comment:"com" ) , style: .default, handler: { (alert: UIAlertAction!) in
-                        if(!Themes.sharedInstance.checkBlock(id: Grouppeoplerecord.id as String))
-                        {
-                            if(SocketIOManager.sharedInstance.socket.status == .connected)
+                        if(SocketIOManager.sharedInstance.socket.status == .connected)
                             {
                                 
                                 var timestamp:String =  String(Date().ticks)
@@ -530,16 +520,9 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                                 let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: Grouppeoplerecord.id),"type":1,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
                                 SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
                                 AppDelegate.sharedInstance.openCallPage(type: "1", roomid: timestamp, id: Grouppeoplerecord.id as String)
-                            }
-                            else
-                            {
+                            } else {
                                 self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
                             }
-                        }
-                        else
-                        {
-                            Themes.sharedInstance.showBlockalert(id: Grouppeoplerecord.id as String)
-                        }
                     })
                     
                     let removeAction : UIAlertAction = UIAlertAction(title: NSLocalizedString("Remove from Group", comment:"tesr" ) , style: UIAlertAction.Style.destructive, handler: { (alert: UIAlertAction!) -> Void in

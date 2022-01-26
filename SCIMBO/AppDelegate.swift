@@ -1437,17 +1437,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 let phoneNumber = Themes.sharedInstance.CheckNullvalue(Passed_value: personHandle?.value)
                 print(phoneNumber)
                 let id = Themes.sharedInstance.GetsingleDetail(entityname: Constant.sharedinstance.Favourite_Contact, attrib_name: "msisdn", fetchString: phoneNumber, returnStr: "id")
-                if(id != "")
-                {
-                    if(!Themes.sharedInstance.checkBlock(id: id))
-                    {
-                        if(SocketIOManager.sharedInstance.socket.status == .connected)
-                        {
+                if(id != "") {
+                    if(SocketIOManager.sharedInstance.socket.status == .connected) {
                             var timestamp:String =  String(Date().ticks)
                             var servertimeStr:String = Themes.sharedInstance.getServerTime()
                             
-                            if(servertimeStr == "")
-                            {
+                            if(servertimeStr == "") {
                                 servertimeStr = "0"
                             }
                             let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
@@ -1458,14 +1453,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                             SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
                             self.openCallPage(type: "0", roomid: timestamp, id: id)
                         }
-                    }
-                    else
-                    {
-                        Themes.sharedInstance.showBlockalert(id: id)
-                    }
                 }
-                
-                
             }
         }
     }

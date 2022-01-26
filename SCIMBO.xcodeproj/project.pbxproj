@@ -126,7 +126,6 @@
 		C38FA2FB252B16D60037129A /* CreateCustomeAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FA2F9252B16D60037129A /* CreateCustomeAlbum.swift */; };
 		C3DF21F9250103B40036440B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3DF21F7250103B40036440B /* Localizable.strings */; };
 		C3DF21FA2504ED000036440B /* AboutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DF21FC2504ED000036440B /* AboutTableViewCell.xib */; };
-		C3DF22032506707C0036440B /* UnknownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DF22052506707C0036440B /* UnknownCell.xib */; };
 		C50190841E4D8991004FCAA8 /* NewGroupSetNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50190831E4D8991004FCAA8 /* NewGroupSetNameViewController.swift */; };
 		C50190871E4D8998004FCAA8 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50190861E4D8998004FCAA8 /* NewGroupViewController.swift */; };
 		C501908D1E4D8AF7004FCAA8 /* NewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C501908C1E4D8AF7004FCAA8 /* NewGroup.swift */; };
@@ -547,7 +546,6 @@
 		C5CE61771F6AC12000F3CF94 /* Chat.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = C5CE61761F6AC12000F3CF94 /* Chat.xcdatamodel */; };
 		C5D18F3C222F997E005D3B32 /* Filemanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C58CA59E1ECD7288009502FB /* Filemanager.swift */; };
 		C5D3D061209C8A250066ADDF /* ATAppUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D3D060209C8A240066ADDF /* ATAppUpdater.m */; };
-		C5D53E6A1F6F995600073172 /* UnknownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D53E681F6F995600073172 /* UnknownCell.swift */; };
 		C5D5A0A11F8DFA6400E722BD /* outgoing_tone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5D5A0A01F8DE4C000E722BD /* outgoing_tone.mp3 */; };
 		C5D5A740204D534800ADF954 /* UUInputFunctionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D5A73F204D534800ADF954 /* UUInputFunctionView.xib */; };
 		C5D9BFA6205028910022787C /* MetadataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9BF9B2050288C0022787C /* MetadataManager.swift */; };
@@ -827,9 +825,6 @@
 		C3DF21FB2504ED000036440B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutTableViewCell.xib; sourceTree = "<group>"; };
 		C3DF21FE2504ED040036440B /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/AboutTableViewCell.strings"; sourceTree = "<group>"; };
 		C3DF22022504ED0A0036440B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AboutTableViewCell.strings; sourceTree = "<group>"; };
-		C3DF22042506707C0036440B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UnknownCell.xib; sourceTree = "<group>"; };
-		C3DF2209250670810036440B /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/UnknownCell.strings"; sourceTree = "<group>"; };
-		C3DF220B250670830036440B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UnknownCell.strings; sourceTree = "<group>"; };
 		C50190831E4D8991004FCAA8 /* NewGroupSetNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupSetNameViewController.swift; sourceTree = "<group>"; };
 		C50190861E4D8998004FCAA8 /* NewGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroupViewController.swift; sourceTree = "<group>"; };
 		C501908C1E4D8AF7004FCAA8 /* NewGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGroup.swift; sourceTree = "<group>"; };
@@ -1317,7 +1312,6 @@
 		C5CE61761F6AC12000F3CF94 /* Chat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chat.xcdatamodel; sourceTree = "<group>"; };
 		C5D3D05F209C8A230066ADDF /* ATAppUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAppUpdater.h; sourceTree = "<group>"; };
 		C5D3D060209C8A240066ADDF /* ATAppUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAppUpdater.m; sourceTree = "<group>"; };
-		C5D53E681F6F995600073172 /* UnknownCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnknownCell.swift; path = UnknownCell/UnknownCell.swift; sourceTree = "<group>"; };
 		C5D5A0A01F8DE4C000E722BD /* outgoing_tone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = outgoing_tone.mp3; sourceTree = "<group>"; };
 		C5D5A73F204D534800ADF954 /* UUInputFunctionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UUInputFunctionView.xib; sourceTree = "<group>"; };
 		C5D9BF9B2050288C0022787C /* MetadataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetadataManager.swift; sourceTree = "<group>"; };
@@ -2633,7 +2627,6 @@
 				7B2C38BE1F7E4B2400698B3F /* SearchMessageTableViewCell */,
 				7B4796FB1F7A5DDB0025A510 /* MediaTableViewCell */,
 				C5CB31A01F70E67C00FCC566 /* VideoTrimCell */,
-				C5D53E671F6F990500073172 /* UnknownView */,
 				C57BBD8C1F4ABB550044D1A9 /* ReplyDetailView */,
 				C5C2414E1F46BDE4007943A4 /* MessageDetailHeaderView */,
 				C543F6C61F4445960038C065 /* MessageInfoCell */,
@@ -3969,15 +3962,6 @@
 			path = VersionChecker;
 			sourceTree = "<group>";
 		};
-		C5D53E671F6F990500073172 /* UnknownView */ = {
-			isa = PBXGroup;
-			children = (
-				C5D53E681F6F995600073172 /* UnknownCell.swift */,
-				C3DF22052506707C0036440B /* UnknownCell.xib */,
-			);
-			name = UnknownView;
-			sourceTree = "<group>";
-		};
 		C5D9BF9A205027E80022787C /* PhoneNumberKitCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -4506,7 +4490,6 @@
 				C54C055C1E3B59A800E1BE7D /* Chat_record_circle.png in Resources */,
 				C54C055D1E3B59A800E1BE7D /* chat_send_message.png in Resources */,
 				C520C2BD2080C466007FC7AA /* PersonViewedStatusView.xib in Resources */,
-				C3DF22032506707C0036440B /* UnknownCell.xib in Resources */,
 				C54A5FC8222D093D008608F2 /* Appfile in Resources */,
 				C5CD7B6D20D29C2B0088A6B1 /* EncryptionTableViewCell.xib in Resources */,
 				C569F22622B9442100680A80 /* Assets.xcassets in Resources */,
@@ -4923,7 +4906,6 @@
 				C5FCDE2A1F83B4EC009C44BF /* prng.c in Sources */,
 				436C61012073CAD80048FC47 /* ImageGalleryViewCell.swift in Sources */,
 				C50B1FDF2078031600F76AEC /* OpenGraph.swift in Sources */,
-				C5D53E6A1F6F995600073172 /* UnknownCell.swift in Sources */,
 				C54C04DB1E3B474300E1BE7D /* NSString+HTML.m in Sources */,
 				C50B1FEC2078031600F76AEC /* URLEmbeddedViewOGData.xcdatamodeld in Sources */,
 				C5FCDE091F83B4D8009C44BF /* ioapi_buf.c in Sources */,
@@ -5320,17 +5302,6 @@
 				C3DF22022504ED0A0036440B /* en */,
 			);
 			name = AboutTableViewCell.xib;
-			sourceTree = "<group>";
-		};
-		C3DF22052506707C0036440B /* UnknownCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3DF22042506707C0036440B /* Base */,
-				C3DF2209250670810036440B /* ar-SA */,
-				C3DF220B250670830036440B /* en */,
-			);
-			name = UnknownCell.xib;
-			path = UnknownCell;
 			sourceTree = "<group>";
 		};
 		C5328A791E07E389000572F2 /* Main.storyboard */ = {

@@ -92,37 +92,26 @@ class CalldetailVC: UIViewController {
         self.pushView(singleInfoVC, animated: true)
     }
     @IBAction func DidclickCall_Btn(_ sender: Any) {
-        
-        if(!Themes.sharedInstance.checkBlock(id: user_id))
+        if(SocketIOManager.sharedInstance.socket.status == .connected)
         {
-            if(SocketIOManager.sharedInstance.socket.status == .connected)
-            {
-                var timestamp:String =  String(Date().ticks)
-                var servertimeStr:String = Themes.sharedInstance.getServerTime()
-                
-                if(servertimeStr == "")
-                {
-                    servertimeStr = "0"
-                }
-                let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
-                timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
-                let docID = "\(Themes.sharedInstance.Getuser_id())-\(user_id)-\(timestamp)"
-                let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: user_id),"type":Int(status)!,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
-                SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
-                AppDelegate.sharedInstance.openCallPage(type: status, roomid: timestamp, id: user_id)
-                
-                
+            var timestamp:String =  String(Date().ticks)
+            var servertimeStr:String = Themes.sharedInstance.getServerTime()
+            
+            if(servertimeStr == "") {
+                servertimeStr = "0"
             }
-            else
-            {
-                self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
-            }
+            let serverTimestamp:Int64 = (servertimeStr as NSString).longLongValue
+            timestamp =  "\((timestamp as NSString).longLongValue - serverTimestamp)"
+            let docID = "\(Themes.sharedInstance.Getuser_id())-\(user_id)-\(timestamp)"
+            let param:NSDictionary = ["from":Themes.sharedInstance.Getuser_id(),"to":Themes.sharedInstance.CheckNullvalue(Passed_value: user_id),"type":Int(status)!,"id":Int64(timestamp)!,"toDocId":docID, "roomid" : timestamp]
+            SocketIOManager.sharedInstance.emitCallDetail(Param: param as! [String : Any])
+            AppDelegate.sharedInstance.openCallPage(type: status, roomid: timestamp, id: user_id)
+            
+            
         }
-        else
-        {
-            Themes.sharedInstance.showBlockalert(id: user_id)
+        else {
+            self.view.makeToast(message: Constant.sharedinstance.ErrorMessage, duration: 3, position: HRToastActivityPositionDefault)
         }
-        
     }
     
     func addNotificationListener() {

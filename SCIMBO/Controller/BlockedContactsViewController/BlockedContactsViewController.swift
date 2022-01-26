@@ -93,10 +93,6 @@ class BlockedContactsViewController: UIViewController,UITableViewDelegate,UITabl
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let favRecord:FavRecord=favArray.object(at: indexPath.row) as! FavRecord
-        Themes.sharedInstance.showBlockalert(id: favRecord.id)
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
