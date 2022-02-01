@@ -3634,3 +3634,20 @@
         return nil
     }
  }
+
+ 
+ extension ChatsViewController: ScreenRecordingDetectorDelegate {
+    func screenRecordingStatusChanged(isRecording: Bool, isMirroring: Bool) {
+        let window = UIApplication.shared.keyWindow!
+        let blackView = UIView(frame: window.bounds)
+        blackView.backgroundColor = .black
+        if isRecording || isMirroring {
+            let blackView = UIView(frame: window.bounds)
+            window.addSubview(blackView)
+        } else {
+            if blackView != nil {
+                blackView.removeFromSuperview()
+            }
+        }
+    }
+ }

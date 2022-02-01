@@ -636,6 +636,12 @@
 		C5FD61481E68024100495E8E /* FilterContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD61471E68024100495E8E /* FilterContact.swift */; };
 		C5FE83441E557E4D00AF42A1 /* GroupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FE83431E557E4D00AF42A1 /* GroupDetail.swift */; };
 		CA954072EF9DBA2FA539EC32 /* Pods_SCIMBOEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6368B3FC18336B516C0B52 /* Pods_SCIMBOEx.framework */; };
+		FD29CF0227A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */; };
+		FD29CF0327A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */; };
+		FD29CF0427A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */; };
+		FD3A78C127A7D51F004334F7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A78C027A7D51F004334F7 /* UIViewExtension.swift */; };
+		FD3A78C227A7D51F004334F7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A78C027A7D51F004334F7 /* UIViewExtension.swift */; };
+		FD3A78C327A7D51F004334F7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3A78C027A7D51F004334F7 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1420,6 +1426,8 @@
 		C5FE83431E557E4D00AF42A1 /* GroupDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetail.swift; sourceTree = "<group>"; };
 		EA6368B3FC18336B516C0B52 /* Pods_SCIMBOEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCIMBOEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C119BFF87696B85B014DEC /* Pods-SCIMBOEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCIMBOEx.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCIMBOEx/Pods-SCIMBOEx.release.xcconfig"; sourceTree = "<group>"; };
+		FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRecordingDetector.swift; sourceTree = "<group>"; };
+		FD3A78C027A7D51F004334F7 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1584,6 +1592,7 @@
 			isa = PBXGroup;
 			children = (
 				436C60E92073CAD80048FC47 /* ConstraintsSetup.swift */,
+				FD3A78C027A7D51F004334F7 /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2601,6 +2610,7 @@
 				C5770B2E1E0A831E00EA815D /* TPKeyboard */,
 				C5328AB31E07E7D6000572F2 /* Themes */,
 				C5328AA11E07E69B000572F2 /* CAPSPageMenu */,
+				FD29CF0027A67D06000D1F92 /* ScreenRecording */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -4248,6 +4258,14 @@
 			path = GroupDetail;
 			sourceTree = "<group>";
 		};
+		FD29CF0027A67D06000D1F92 /* ScreenRecording */ = {
+			isa = PBXGroup;
+			children = (
+				FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */,
+			);
+			path = ScreenRecording;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4736,6 +4754,8 @@
 			files = (
 				7C35ED3326F0DCD3006BB3B4 /* NotificationService.swift in Sources */,
 				7C1BB6CA27159BDF00312940 /* AppGroupConstants.swift in Sources */,
+				FD3A78C327A7D51F004334F7 /* UIViewExtension.swift in Sources */,
+				FD29CF0427A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4950,6 +4970,7 @@
 				C543F6C51F44182D0038C065 /* MessageInfoViewController.swift in Sources */,
 				C51FFC361F8673BC002B6DB2 /* ARDMessageResponse.m in Sources */,
 				7C5BE17826CA6ADD00FBDA66 /* AppDelegate+VOIP.swift in Sources */,
+				FD29CF0227A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */,
 				C591FC0C1E4C393300A16E1B /* Truncation.swift in Sources */,
 				C55192772058DACF00F6495A /* TransitionAnimator.swift in Sources */,
 				C50190A11E4D95C8004FCAA8 /* GroupInfoGroupMemTableCell.swift in Sources */,
@@ -5030,6 +5051,7 @@
 				C54649A71E15189C00FD8A68 /* OTPViewController.swift in Sources */,
 				C5A49C66219EB53800157EEE /* FTConstants.swift in Sources */,
 				C38FA2FA252B16D60037129A /* CreateCustomeAlbum.swift in Sources */,
+				FD3A78C127A7D51F004334F7 /* UIViewExtension.swift in Sources */,
 				C51FFC5C1F8673BC002B6DB2 /* RTCSessionDescription+JSON.m in Sources */,
 				436C60D32073C9C70048FC47 /* MyStatusListTableViewCell.swift in Sources */,
 				7BB66E061FBB26C4002EC451 /* CryptLib.m in Sources */,
@@ -5161,6 +5183,7 @@
 				C564F972226DA5DE006090D3 /* PartialFormatter.swift in Sources */,
 				C38FA2FB252B16D60037129A /* CreateCustomeAlbum.swift in Sources */,
 				C5FBE3D9221AE23A006DC947 /* ShareMultimediaRecord.swift in Sources */,
+				FD29CF0327A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */,
 				C5FBE3C7221AE220006DC947 /* ShareSelectContactTableViewCell.swift in Sources */,
 				C5FBE3E7221AE352006DC947 /* NSManageObject+Bindings.m in Sources */,
 				C564F974226DA5DE006090D3 /* PhoneNumberKit.swift in Sources */,
@@ -5185,6 +5208,7 @@
 				C5FBE3E1221AE2DE006DC947 /* CoreDataStorage.swift in Sources */,
 				C5FBE3D4221AE23A006DC947 /* ShareAssetHandler.swift in Sources */,
 				C5D18F3C222F997E005D3B32 /* Filemanager.swift in Sources */,
+				FD3A78C227A7D51F004334F7 /* UIViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -5351,16 +5375,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5380,15 +5404,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = NotificationService/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.NotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.NotificationServiceExtention;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
@@ -5533,7 +5557,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
@@ -5560,7 +5584,7 @@
 					"$(PROJECT_DIR)/SCIMBO/Utilities/OtherResources/VoiceLib",
 					"${SDKROOT}/usr/include/libxml2",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -5655,7 +5679,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5677,7 +5701,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5705,7 +5729,7 @@
 					"$(PROJECT_DIR)/SCIMBO/Utilities/OtherResources/VoiceLib",
 					"${SDKROOT}/usr/include/libxml2",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -5800,7 +5824,7 @@
 					"-framework",
 					"\"WebRTC\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex;
 				PRODUCT_NAME = Raad;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5826,7 +5850,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5838,10 +5862,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LOCALIZED_STRING_SWIFTUI_SUPPORT = YES;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.shareextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.shareextension;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5868,7 +5892,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 30;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69QNL7X9JV;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -5880,9 +5904,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				LOCALIZED_STRING_SWIFTUI_SUPPORT = YES;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 2.0;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.2p.Engage.shareextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.2p.EngageGitex.shareextension;
 				PRODUCT_NAME = RaadEX;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
