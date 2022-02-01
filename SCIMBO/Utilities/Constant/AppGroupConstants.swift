@@ -9,9 +9,9 @@
 import Foundation
 
 class AppGroupConstants{
-    static let AppGroupID = "group.com.2p.Engage" // dev
+//    static let AppGroupID = "group.com.2p.Engage" // dev
     //static let AppGroupID = "group.com.2p.EngageProd" // minister
-    //static let AppGroupID = "group.com.2p.EngageGitex" // gitex
+    static let AppGroupID = "group.com.2p.EngageGitex" // gitex
     //static let AppGroupID = "group.com.2p.swcc.engage" // SWCC
     //static let AppGroupID = "group.com.2p.swccDev1" // SWCC
 }
