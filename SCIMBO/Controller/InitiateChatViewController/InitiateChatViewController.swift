@@ -4555,8 +4555,7 @@
         if(error != nil) {
             message = "Error Occurred."
         }
-        else
-        {
+        else {
             switch result {
             case .cancelled:
                 message = "Mail cancelled."
@@ -4579,55 +4578,29 @@
     
     
     func contactViewController(_ viewController: CNContactViewController, didCompleteWith contact: CNContact?) {
-        if contact != nil{
-            if((contact?.givenName)! != "" && self.is_chatPage_contact == false)
-            {
+        if contact != nil {
+            if((contact?.givenName)! != "" && self.is_chatPage_contact == false) {
                 let param = ["name" : (contact?.givenName)!]
                 DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Favourite_Contact, FetchString: opponent_id, attribute: "id", UpdationElements: param as NSDictionary)
                 chatTableView.reloadData()
-//                if(!ContactHandler.sharedInstance.StorecontactInProgress)
-//                {
                     ContactHandler.sharedInstance.StoreContacts()
-//                }
             }
         }
         viewController.dismissView(animated: true, completion: nil)
-        
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let rows = tableView.numberOfRows(inSection: 0)
-        guard rows - 1 < tableView.numberOfRows(inSection: 0) else {return}
-        if indexPath.row == rows - 1 {
-            DispatchQueue.main.async {
-                if self.chatModel.dataSource.count > indexPath.row{
-                    tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .bottom, animated: true)
-                }
-            }
-        }
-    }
-    
-    private func checkLastMessage(for indexPath:IndexPath, with messageFrame: UUMessageFrame) -> Bool{
-        if(indexPath.row == self.chatModel.dataSource.count-1)
-        {
+    private func checkLastMessage(for indexPath:IndexPath, with messageFrame: UUMessageFrame) -> Bool {
+        if(indexPath.row == self.chatModel.dataSource.count-1) {
             return true
-        }
-        else
-        {
-            if(indexPath.row+1 <= self.chatModel.dataSource.count-1)
-            {
+        } else {
+            if(indexPath.row+1 <= self.chatModel.dataSource.count-1) {
                 let CheckmessageFrame: UUMessageFrame = self.chatModel.dataSource[indexPath.row+1] as! UUMessageFrame
-                if(messageFrame.message.from != CheckmessageFrame.message.from)
-                {
+                if(messageFrame.message.from != CheckmessageFrame.message.from) {
                     return true
-                }
-                else
-                {
+                } else {
                     return false
                 }
-            }
-            else
-            {
+            } else {
                 return false
             }
         }
