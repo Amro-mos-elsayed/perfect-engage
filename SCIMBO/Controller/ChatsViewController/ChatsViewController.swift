@@ -704,9 +704,8 @@
                     if(self.ChatPrerecordArr.count > 0)
                     {
                         var SortArray:NSArray=NSArray(array: self.ChatPrerecordArr)
-                        let descriptor: NSSortDescriptor = NSSortDescriptor(key: "opponentlastmessageDate", ascending: false)
                         SortArray = SortArray.sorted{(Themes.sharedInstance.shouldSortChatObj(first: $0, second: $1))} as NSArray
-//                        self.ChatPrerecordArr=NSMutableArray(array: SortArray)
+                        self.ChatPrerecordArr=NSMutableArray(array: SortArray)
 //                        print(">>>>>>the count is\(self.ChatPrerecordArr.count)")
                         self.chats_Tblview.reloadData()
                         self.ReloadAllTable()
@@ -1054,16 +1053,6 @@
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        //let ChatPrerecord : NSSet = NSSet(array: ChatPrerecordArr as! [Any])
-        
-//         if ChatPrerecord.count > 0 {
-//            let allObjects = ChatPrerecord.allObjects as! [ChatBaseModel]
-//            let sortedObjects = allObjects.sorted{Double($0.opponentlastmessageDate)! > Double($1.opponentlastmessageDate)!}
-//            ChatPrerecordArr = NSMutableArray(array: sortedObjects)
-//         }
-       // Phonenumber = Themes.sharedInstance.CheckNullvalue(Passed_value: (($0.value ).value(forKey: "digits") as! String))
-        
         if(searchActive == true && (self.section[section] as! String == "Chats".localized() || self.section[section] as! String == "Other Chats".localized())){
             guard allArray.count > section else{return 0}
             let row:NSArray = allArray[section] as! NSArray

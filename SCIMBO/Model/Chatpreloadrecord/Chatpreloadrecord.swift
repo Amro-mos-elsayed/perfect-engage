@@ -16,7 +16,7 @@ class Chatpreloadrecord: ChatBaseModel {
     var MessageType:String = String()
     var opponentunreadmessagecount:String = String()
     var Chatdivision:String = String()
-    //var opponentlastmessageDate:String = String()
+//    var opponentlastmessageDate:String = String()
     var opponentlastmessageid:String = String()
     var oppopnentnumber:String = String()
     var ismessagetype:String = String()
