@@ -576,25 +576,6 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                         Themes.sharedInstance.activityView(View: self.view)
                         SocketIOManager.sharedInstance.Groupevent(param: param)
                     })
-                    
-                    let AddtoContactsAction : UIAlertAction = UIAlertAction(title: NSLocalizedString("Add to Contacts", comment: "com") , style: UIAlertAction.Style.default, handler: { (alert: UIAlertAction!) -> Void in
-                        
-                        var phone_num:[CNLabeledValue<CNPhoneNumber>] = []
-                        phone_num.append(CNLabeledValue(label:"Home" , value:CNPhoneNumber(stringValue:Grouppeoplerecord.Name as String)))
-                        
-                        let contact = CNMutableContact()
-                        
-                        if(phone_num.count > 0){
-                            
-                            contact.phoneNumbers = phone_num
-                        }
-                        
-                        let controller = CNContactViewController(forNewContact: contact)
-                        controller.delegate = self
-                        
-                        let navigationController = UINavigationController(rootViewController: controller)
-                        self.presentView(navigationController, animated: true)
-                    })
                     let cancelAction : UIAlertAction = UIAlertAction(title: NSLocalizedString("Cancel", comment: "com") , style: UIAlertAction.Style.cancel, handler: { (alert: UIAlertAction!) -> Void in
                     })
                     if(isAdmin == false || is_you_removed == true)
@@ -603,12 +584,6 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                         alert.addAction(VoiceCallAction)
                         alert.addAction(VideoCallAction)
                         alert.addAction(messageAction)
-                        
-                        let CheckFav:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Favourite_Contact, attribute: "id", FetchString: Themes.sharedInstance.CheckNullvalue(Passed_value: Grouppeoplerecord.id))
-                        if(!CheckFav)
-                        {
-                            alert.addAction(AddtoContactsAction)
-                        }
                         alert.addAction(cancelAction)
                         self.presentView(alert, animated: true, completion: nil)
                     }
@@ -618,11 +593,6 @@ class GroupInfoViewController: UIViewController,UITableViewDelegate,UITableViewD
                         alert.addAction(VoiceCallAction)
                         alert.addAction(VideoCallAction)
                         alert.addAction(messageAction)
-                        let CheckFav:Bool =  DatabaseHandler.sharedInstance.countForDataForTable(Entityname: Constant.sharedinstance.Favourite_Contact, attribute: "id", FetchString: Themes.sharedInstance.CheckNullvalue(Passed_value: Grouppeoplerecord.id))
-                        if(!CheckFav)
-                        {
-                            alert.addAction(AddtoContactsAction)
-                        }
                         if(Grouppeoplerecord.isAdmin == "0")
                         {
                             alert.addAction(makeAdminAction)
