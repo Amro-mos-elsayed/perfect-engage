@@ -147,7 +147,7 @@ class FullLoginViewController: UIViewController {
         while (MobileTextField.text?.hasPrefix("0"))! {
             MobileTextField.text = MobileTextField.text?.substring(from: 1)
         }
-        let param:NSDictionary = ["msisdn":"\(country_Code)\(MobileTextField.text!)","manufacturer":"Apple","OS":"ios","Version":"\(Themes.sharedInstance.osVersion)","DeviceId":Themes.sharedInstance.getDeviceToken(),"DateTime":"\(Themes.sharedInstance.current_Time)","PhNumber":"\(MobileTextField.text!)","CountryCode":"\(country_Code)", "callToken":Themes.sharedInstance.getCallToken()]
+        let param:NSDictionary = ["msisdn":"\(country_Code)\(MobileTextField.text!)","manufacturer":"Apple","OS":"ios","Version":"\(Themes.sharedInstance.osVersion)","DeviceId":Themes.sharedInstance.getDeviceToken(),"DateTime":"\(Themes.sharedInstance.current_Time)","PhNumber":"\(MobileTextField.text!)","CountryCode":"\(country_Code)", "callToken":Themes.sharedInstance.getCallToken(), "name": "\(userNameTextField.text!)", "email": "\(emailTextField.text!)"]
         Themes.sharedInstance.activityView(View: self.view)
         
         let url = loginTypeEmployee ? Constant.sharedinstance.RegisterNo : Constant.sharedinstance.RegisterGuestNo

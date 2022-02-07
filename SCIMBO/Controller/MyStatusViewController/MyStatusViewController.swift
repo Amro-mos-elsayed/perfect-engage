@@ -274,6 +274,11 @@ class MyStatusViewController: UIViewController, UIViewControllerTransitioningDel
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: Constant.sharedinstance.updateViewCount), object: nil, queue: OperationQueue.main) { [weak self] (notify: Notification) in
             guard let weak = self else { return }
+            if(notify.object != nil) {
+                let thumbnail = Themes.sharedInstance.CheckNullvalue(Passed_value: (notify.object as! NSDictionary).value(forKey: "thumbnail"))
+                
+                print("Saraaaaah thumbnail: \(thumbnail)")
+            }
             weak.MyStatusTableView.reloadData()
         }
     }
@@ -351,8 +356,14 @@ extension MyStatusViewController: UITableViewDataSource, UITableViewDelegate{
         if(FetchMessageArr.count > 0)
         {
             let messageObj : NSManagedObject = FetchMessageArr[0] as! NSManagedObject
+            print("Saraaaaaaaah \(Themes.sharedInstance.CheckNullvalue(Passed_value: messageObj.value(forKey: "theme_color")))")
             let data = messageObj.value(forKey: "viewed_by") as? Data
+            
+//            let data = Themes.sharedInstance.CheckNullvalue(Passed_value: messageObj.value(forKey: "viewed_by"))  as? Data
             let viewedArray =   NSKeyedUnarchiver.unarchiveObject(with: data ?? Data()) as? NSArray
+            
+//                let viewedArray = try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data ?? Data()) as? NSArray
+                        
             if(viewedArray != nil)
             {
                 if let viewedArray = viewedArray {
@@ -370,6 +381,7 @@ extension MyStatusViewController: UITableViewDataSource, UITableViewDelegate{
         {
             cell.viewsLabel.text = "0"
         }
+        
         
         if(bottomView.isHidden)
         {
