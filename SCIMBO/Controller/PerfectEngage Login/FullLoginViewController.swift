@@ -102,6 +102,7 @@ class FullLoginViewController: UIViewController {
             CountryCode.text = country_Code
         } else {
             Themes.sharedInstance.setCountryCode(CountryCode,CountryFlag)
+            country_Code = CountryCode.text ?? ""
         }
     }
     
@@ -147,11 +148,21 @@ class FullLoginViewController: UIViewController {
         while (MobileTextField.text?.hasPrefix("0"))! {
             MobileTextField.text = MobileTextField.text?.substring(from: 1)
         }
-        let param:NSDictionary = ["msisdn":"\(country_Code)\(MobileTextField.text!)","manufacturer":"Apple","OS":"ios","Version":"\(Themes.sharedInstance.osVersion)","DeviceId":Themes.sharedInstance.getDeviceToken(),"DateTime":"\(Themes.sharedInstance.current_Time)","PhNumber":"\(MobileTextField.text!)","CountryCode":"\(country_Code)", "callToken":Themes.sharedInstance.getCallToken(), "name": "\(userNameTextField.text!)", "email": "\(emailTextField.text!)"]
+        var param: [String : Any] = ["msisdn":"\(country_Code)\(MobileTextField.text!)","manufacturer":"Apple","OS":"ios","Version":"\(Themes.sharedInstance.osVersion)","DeviceId":Themes.sharedInstance.getDeviceToken(),"DateTime":"\(Themes.sharedInstance.current_Time)","PhNumber":"\(MobileTextField.text!)","CountryCode":"\(country_Code)", "callToken":Themes.sharedInstance.getCallToken()]
+        //, "name": "\(userNameTextField.text!)", "email": "\(emailTextField.text!)"
+        
+        print("country_Code:   \(CountryCode.text!)")
+        print("Mobile Number:   \(MobileTextField.text!)")
+        
+        if loginTypeEmployee {
+            param["name"] = "\(userNameTextField.text!)"
+            param["email"] = "\(userNameTextField.text!)"
+        }
+        
         Themes.sharedInstance.activityView(View: self.view)
         
         let url = loginTypeEmployee ? Constant.sharedinstance.RegisterNo : Constant.sharedinstance.RegisterGuestNo
-        URLhandler.sharedinstance.makeCall(url:url as String, param: param, completionHandler: {(responseObject, error) ->  () in
+        URLhandler.sharedinstance.makeCall(url:url as String, param: param as NSDictionary, completionHandler: {(responseObject, error) ->  () in
             Themes.sharedInstance.RemoveactivityView(View: self.view)
             if(error != nil)
             {
