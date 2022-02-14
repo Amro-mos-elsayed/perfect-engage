@@ -152,6 +152,11 @@ class Callhandler: NSObject {
                     let center = UNUserNotificationCenter.current()
                     center.removeAllPendingNotificationRequests()
                     center.removeAllDeliveredNotifications()
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let objVC:VideoViewController = storyboard.instantiateViewController(withIdentifier: "VideoViewControllerID") as! VideoViewController
+                    
+//                    objVC.isOpenCall = false
+//                    print("isOpenCall objVC.isOpenCall: \(objVC.isOpenCall)")
                 }
                 
             }

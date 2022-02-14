@@ -34,6 +34,7 @@ class VideoViewController: UIViewController,ARDAppClientDelegate, RTCEAGLVideoVi
     var roomUrl = ""
     var roomName = "bzzhj21sad"
     var client: ARDAppClient?
+    var isOpenCall: Bool = false
     var localVideoTrack: RTCVideoTrack?
     var remoteVideoTrack: RTCVideoTrack?
     var localVideoSize = CGSize.zero
@@ -419,6 +420,13 @@ class VideoViewController: UIViewController,ARDAppClientDelegate, RTCEAGLVideoVi
             
         }
         
+        print("Sarah isOpenCall: \(isOpenCall)")
+        if isOpenCall {
+//            print ("isOpenCall: \(isOpenCall)")
+            AcceptIncomingCall(roomName: self.roomName)
+        }
+        
+        print ("isOpenCall: \(isOpenCall)")
     }
     
     func makeOutgoingCall(roomName : String)

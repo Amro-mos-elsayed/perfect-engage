@@ -93,6 +93,7 @@ extension AppDelegate: PKPushRegistryDelegate {
             objVC.isCalling = false
             objVC.roomName = roomid
             objVC.opponent_id = from
+            objVC.isOpenCall = true
             objVC.objcallrecord = callRecord
             objVC.view.tag = 1
             presentView(objVC.view)
