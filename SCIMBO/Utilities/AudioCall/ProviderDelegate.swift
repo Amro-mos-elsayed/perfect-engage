@@ -171,7 +171,8 @@ extension ProviderDelegate: CXProviderDelegate {
         configureAudioSession()
         
         answerCall()
-        
+        let isOpencall: [String:Bool] = ["isOpencall": true]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.isOpenCall), object: objcallrecord , userInfo: isOpencall)
         guard let call = callManager.callWithUUID(uuid: action.callUUID) else {
             action.fail()
             return

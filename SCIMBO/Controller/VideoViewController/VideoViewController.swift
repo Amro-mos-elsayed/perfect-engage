@@ -422,11 +422,8 @@ class VideoViewController: UIViewController,ARDAppClientDelegate, RTCEAGLVideoVi
         
         print("Sarah isOpenCall: \(isOpenCall)")
         if isOpenCall {
-//            print ("isOpenCall: \(isOpenCall)")
             AcceptIncomingCall(roomName: self.roomName)
         }
-        
-        print ("isOpenCall: \(isOpenCall)")
     }
     
     func makeOutgoingCall(roomName : String)
@@ -485,6 +482,10 @@ class VideoViewController: UIViewController,ARDAppClientDelegate, RTCEAGLVideoVi
         buttonContainerView.isHidden = false
         accept_view.isHidden = true
         isAttenCall = true
+        
+        isOpenCall = false
+        let isOpencall: [String:Bool] = ["isOpencall": false]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.isOpenCall), object: objcallrecord , userInfo: isOpencall)
     }
     
     func RejectIncomingCall(_ ifUserBusy : Bool)

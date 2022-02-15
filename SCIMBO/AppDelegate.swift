@@ -69,8 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     var currentRoomName : String = String()
     var currentOpponentId : String = String()
-
-   weak var CallRetryTimer:Timer?
+    var isOpencallCheck: Bool = false
+    weak var CallRetryTimer:Timer?
     var callRetryDict : NSDictionary = NSDictionary()
     
     weak var Delegate : AppDelegateDelegates?
@@ -144,6 +144,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             guard let weak = self else { return }
             weak.incomingCall(notify)
         }
+        
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: Constant.sharedinstance.isOpenCall), object: nil, queue: OperationQueue.main) { [weak self] (notify: Notification) in
+            guard let weak = self else { return }
+            weak.setOpenCallAutomatically(notify)
+        }
+        
         
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: Constant.sharedinstance.outgoingcall), object: nil, queue: OperationQueue.main) { [weak self] (notify: Notification) in
             guard let weak = self else { return }
@@ -1282,6 +1289,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
+    func setOpenCallAutomatically(_ notify: Notification) {
+        if let isOpencall = notify.userInfo?["isOpencall"] as? Bool {
+            isOpencallCheck = isOpencall
+        } else {
+            isOpencallCheck = false
+        }
+    }
+    
     func incomingCall(_ notify: Notification)
     {
         let CallRecord:Call_record = notify.object as! Call_record
@@ -1302,6 +1317,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let objVC:VideoViewController = storyboard.instantiateViewController(withIdentifier: "VideoViewControllerID") as! VideoViewController
                     objVC.isCalling = false
+                    objVC.isOpenCall = isOpencallCheck
                     objVC.roomName = CallRecord.roomid
                     objVC.opponent_id = CallRecord.from
                     objVC.objcallrecord = CallRecord
@@ -1582,6 +1598,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                     VideoCallWaitTimer?.invalidate()
                     VideoCallWaitTimer = nil
                     iterationCount = 0
+//                    let isOpencall: [String:Bool] = ["isOpencall": false]
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue: Constant.sharedinstance.incomingcall), object: ObjCallRecord, userInfo: nil)
                 }
             }

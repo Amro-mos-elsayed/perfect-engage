@@ -233,6 +233,7 @@ class Constant : NSObject
     let user_deleted:String = "user_deleted"
     let user_cleared:String = "user_cleared"
     let incomingcall:String="incomingcall"
+    let isOpenCall:String="inOpenCall"
     let outgoingcall:String="outgoingcall"
     let incomingstatus:String="incomingstatus"
     let callStatus:String="callStatus"
