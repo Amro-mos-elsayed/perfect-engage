@@ -1,53 +1,96 @@
 PODS:
   - ACPDownload (1.1.0)
-  - ActionSheetPicker-3.0 (2.3.0)
-  - Alamofire (4.3.0)
+  - ActionSheetPicker-3.0 (2.3.1)
+  - Alamofire (4.9.1)
   - ContentSheet (0.1.5)
-  - DKImagePickerController (3.6.1):
-    - DKImagePickerController/Camera (= 3.6.1)
-    - DKImagePickerController/ImageManager (= 3.6.1)
-  - DKImagePickerController/Camera (3.6.1)
-  - DKImagePickerController/ImageManager (3.6.1)
-  - DropDown (2)
-  - FLAnimatedImage (1.0.12)
-  - GLNotificationBar (1.3.3)
-  - GSImageViewerController (1.2.0)
-  - HockeySDK (4.1.6):
-    - HockeySDK/DefaultLib (= 4.1.6)
-  - HockeySDK/DefaultLib (4.1.6)
+  - CropViewController (2.6.1)
+  - DKCamera (1.6.7)
+  - DKImagePickerController (4.3.2):
+    - DKImagePickerController/Camera (= 4.3.2)
+    - DKImagePickerController/Core (= 4.3.2)
+    - DKImagePickerController/ImageDataManager (= 4.3.2)
+    - DKImagePickerController/InlineCamera (= 4.3.2)
+    - DKImagePickerController/PhotoEditor (= 4.3.2)
+    - DKImagePickerController/PhotoGallery (= 4.3.2)
+    - DKImagePickerController/Resource (= 4.3.2)
+  - DKImagePickerController/Camera (4.3.2):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/Core (4.3.2):
+    - DKImagePickerController/ImageDataManager
+    - DKImagePickerController/Resource
+  - DKImagePickerController/ImageDataManager (4.3.2)
+  - DKImagePickerController/InlineCamera (4.3.2):
+    - DKCamera
+    - DKImagePickerController/Core
+  - DKImagePickerController/PhotoEditor (4.3.2):
+    - CropViewController (~> 2.5)
+    - DKImagePickerController/Core
+  - DKImagePickerController/PhotoGallery (4.3.2):
+    - DKImagePickerController/Core
+    - DKPhotoGallery
+  - DKImagePickerController/Resource (4.3.2)
+  - DKPhotoGallery (0.0.17):
+    - DKPhotoGallery/Core (= 0.0.17)
+    - DKPhotoGallery/Model (= 0.0.17)
+    - DKPhotoGallery/Preview (= 0.0.17)
+    - DKPhotoGallery/Resource (= 0.0.17)
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Core (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Preview
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Model (0.0.17):
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Preview (0.0.17):
+    - DKPhotoGallery/Model
+    - DKPhotoGallery/Resource
+    - SDWebImage
+    - SwiftyGif
+  - DKPhotoGallery/Resource (0.0.17):
+    - SDWebImage
+    - SwiftyGif
+  - DropDown (2.3.13)
+  - FLAnimatedImage (1.0.16)
+  - GLNotificationBar (2.3.5)
+  - GSImageViewerController (1.6.3)
+  - HockeySDK (5.1.4):
+    - HockeySDK/DefaultLib (= 5.1.4)
+  - HockeySDK/DefaultLib (5.1.4)
   - ICGVideoTrimmer (1.1)
-  - JSSAlertView (3.0.4)
-  - Mantis (0.27)
-  - MMMaterialDesignSpinner (0.2.3)
+  - JSSAlertView (5.0.2)
+  - Mantis (0.52)
+  - MMMaterialDesignSpinner (0.2.5)
   - NSTimer-Blocks (0.0.1)
-  - ObjectMapper (3.3.0)
-  - PinCodeTextField (0.0.4):
-    - PinCodeTextField/Swift (= 0.0.4)
-  - PinCodeTextField/Core (0.0.4)
-  - PinCodeTextField/Swift (0.0.4):
-    - PinCodeTextField/Core
-  - RSKImageCropper (1.6.3)
-  - SDWebImage/Core (4.4.2)
-  - SDWebImage/GIF (4.4.2):
+  - ObjectMapper (3.5.3)
+  - PinCodeTextField (0.2.0)
+  - RSKImageCropper (3.0.2)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
+  - SDWebImage/GIF (4.4.8):
     - FLAnimatedImage (~> 1.0)
     - SDWebImage/Core
-  - SimpleImageViewer (1.1)
+  - SimpleImageViewer (1.1.1)
   - SnapKit (3.1.2)
-  - Socket.IO-Client-Swift (13.1.0):
+  - Socket.IO-Client-Swift (13.1.3):
     - Starscream (~> 3.0.2)
-  - Starscream (3.0.3)
-  - SWActivityIndicatorView (1.0.0)
-  - SwiftKeychainWrapper (3.0.1)
-  - SwiftyGif (4.2.0)
-  - SwiftyGiphy (1.1.1):
+  - Starscream (3.0.6)
+  - SWActivityIndicatorView (2.0.0)
+  - SwiftKeychainWrapper (3.4.0)
+  - SwiftyGif (5.4.3)
+  - SwiftyGiphy (1.3.1):
     - FLAnimatedImage (~> 1.0)
     - NSTimer-Blocks
     - ObjectMapper (~> 3.0)
     - SDWebImage/GIF
   - SwiftyJSON (3.0.0)
-  - SwiftyRSA (1.3.1):
-    - SwiftyRSA/ObjC (= 1.3.1)
-  - SwiftyRSA/ObjC (1.3.1)
+  - SwiftyRSA (1.7.0):
+    - SwiftyRSA/ObjC (= 1.7.0)
+  - SwiftyRSA/ObjC (1.7.0)
   - SWMessages (0.3.0)
   - Toast-Swift (2.0.0)
   - WebRTC (61.19850-master)
@@ -82,12 +125,15 @@ DEPENDENCIES:
   - WebRTC (from `https://github.com/xquezme/WebRTC.git`, tag `61.19850-master`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - ACPDownload
     - ActionSheetPicker-3.0
     - Alamofire
     - ContentSheet
+    - CropViewController
+    - DKCamera
     - DKImagePickerController
+    - DKPhotoGallery
     - DropDown
     - FLAnimatedImage
     - GLNotificationBar
@@ -123,7 +169,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PinCodeTextField:
-    :commit: 3d10ab02526fa4ca79a38311478ea2b220739b3c
+    :commit: 11f01f7e8ee20fbc076117b3bd442b3a5807be8f
     :git: https://github.com/tkach/PinCodeTextField
   WebRTC:
     :git: https://github.com/xquezme/WebRTC.git
@@ -131,38 +177,41 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   ACPDownload: 9c6349be96019b6c8c87ad46570af1cbc7106bf4
-  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  ActionSheetPicker-3.0: 2f5e3fde6b3205a7318f9338e4ec0f373ce7e75c
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   ContentSheet: ac530032e7e8b1e0f21724ab74427fcbaf85c700
-  DKImagePickerController: 4f8072aed44119a33955c9583273ea7c8739c0f4
-  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
-  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
-  GLNotificationBar: 1151ef5fe5e420cbb9da3c4c67435dba43c95a73
-  GSImageViewerController: cd90d8a692666981d432f7633bcaa66aa7592221
-  HockeySDK: 95db557d54489a570dcdefae0d02f98eecc279a3
+  CropViewController: 58fb440f30dac788b129d2a1f24cffdcb102669c
+  DKCamera: a902b66921fca14b7a75266feb8c7568aa7caa71
+  DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
+  DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FLAnimatedImage: 8f3e854ebf9680b71f0b6e700939687fc4d82b4b
+  GLNotificationBar: c439ff7acb306ad32e1c0caa74e041c69f959244
+  GSImageViewerController: 20a257d7e3dd9ee171c2dfea659992eba2761839
+  HockeySDK: c2b7e0afce4587af7b6264ab0fd854f5876afaa6
   ICGVideoTrimmer: 1f54de0595af56af2a406f20cdb33c1c440d15cd
-  JSSAlertView: 7d8345c88e6fd8b515bc49f0fc8d8c69f6776b9c
-  Mantis: d2aaacfa5efaedcbc193282d6fff8b2c3e4a707f
-  MMMaterialDesignSpinner: 55c80b454f7928d0ed789cc3c456fa06bd6a2f16
+  JSSAlertView: 18345e37d8295827428c12b773b6d75d0dfd0b28
+  Mantis: 0fb7056ad8fbe61e0c195b483d73591a06bcae09
+  MMMaterialDesignSpinner: a548042720c2e5f04212048483085d7942ac3e81
   NSTimer-Blocks: 88faf9aef5f250ead087f3f67ae642517083bf36
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  PinCodeTextField: 1248da9733734692d598941a5a0866af1ffc5e0a
-  RSKImageCropper: 356e36fc58c57c371b5d8b23d603936d6a73df6c
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  SimpleImageViewer: 293698047ffaf41e79c0c6b052ed38b218583453
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  PinCodeTextField: 6d7d174cf44f13118174682cf5e00aeb19f770a5
+  RSKImageCropper: 1ac71e9a82e3f41eea3eedfff8eacb0d3821c9ec
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SimpleImageViewer: 34c3a2cde2d9ac022146772cefc27fca14b0c8b1
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
-  Socket.IO-Client-Swift: b67a96d6a9e5f271bceb93e99779d2cf77c74868
-  Starscream: dfb1b3f39506717ee52b67fb48de0c8269504cbc
-  SWActivityIndicatorView: 950f50c2e6fec7338d13c8b95c1a6c9fca4f516f
-  SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
-  SwiftyGif: a149bf84df23370592f3f075561ae02c8632a314
-  SwiftyGiphy: 87930387b007b84c463bee2ec2a2d28d88b78b93
+  Socket.IO-Client-Swift: d30d6fd08a38ad2a182b090936a043bf512ab2de
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  SWActivityIndicatorView: b3d43933021d3e3ba08a814b43751e3f58031e87
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
+  SwiftyGif: 6c3eafd0ce693cad58bb63d2b2fb9bacb8552780
+  SwiftyGiphy: 2ea9f708b883b436c84aab646c3322e607b45a00
   SwiftyJSON: f57b2b44bc166617372d1c70773591fe9f0f5fd4
-  SwiftyRSA: 2da6509638c4a9e4f4407177f0a3cffc4e6e112b
+  SwiftyRSA: 8c6dd1ea7db1b8dc4fb517a202f88bb1354bc2c6
   SWMessages: 39dc4ffdde42004b2ee5af14077fc73668498350
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
   WebRTC: 85cad411deb1c0c09b7963152cd9902e7bbae70c
 
-PODFILE CHECKSUM: 0e74c206cf94eb92fc431f97d1dcd8f08b6f56bc
+PODFILE CHECKSUM: 76a02e70c11b3cdb8fad2fa3c3a5c06b4fe93498
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.11.2

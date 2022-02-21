@@ -15,6 +15,10 @@ import ICGVideoTrimmer
 }
 
 class ShareEditViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,ICGVideoTrimmerDelegate,UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
+    func trimmerView(_ trimmerView: ICGVideoTrimmerView!, didChangeLeftPosition startTime: CGFloat, rightPosition endTime: CGFloat) {
+        
+    }
+    
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mediaCollectionView: UICollectionView!
     @IBOutlet weak var mediaCollectionView_main: UICollectionView!

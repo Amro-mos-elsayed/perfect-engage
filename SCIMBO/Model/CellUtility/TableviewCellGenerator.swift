@@ -446,7 +446,7 @@ class TableviewCellGenerator{
             if FileManager.default.fileExists(atPath: PhotoPath) {
                 let url = URL(fileURLWithPath: PhotoPath)
                 do {
-                    let image = UIImage(gifData: try Data(contentsOf: url))
+                    let image = try UIImage(gifData: try Data(contentsOf: url))
                     imageView.setGifImage(image)
                     imageView.stopAnimatingGif()
                 }

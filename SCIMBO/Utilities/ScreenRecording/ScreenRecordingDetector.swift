@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ScreenRecordingDetectorDelegate: class {
+protocol ScreenRecordingDetectorDelegate: AnyObject {
     func screenRecordingStatusChanged(isRecording: Bool, isMirroring: Bool)
 }
 

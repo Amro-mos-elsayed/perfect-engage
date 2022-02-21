@@ -187,7 +187,7 @@ class ShareVideoTrimCell: UICollectionViewCell,ICGVideoTrimmerDelegate {
         let AVasset:AVAsset = AVAsset(url: videoURL )
         TrimmerView.themeColor = UIColor.lightGray
         TrimmerView.asset =  AVasset
-        TrimmerView.rulerLabelInterval = 5
+//        TrimmerView.rulerLabelInterval = 5
         TrimmerView.minLength = CGFloat(5)
         TrimmerView.maxLength = fromStatus ? CGFloat(30) : CGFloat(ObjRecord.Endtime)
         TrimmerView.showsRulerView = false

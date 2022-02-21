@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'SCIMBO' do
+target 'Raad' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SCIMBO
+  # Pods for Raad
 pod 'Alamofire', '~> 4.3'
 pod 'SwiftyJSON', '3.0.0'
 pod 'JSSAlertView'
@@ -36,7 +36,7 @@ pod 'Mantis', '~> 0.27'
 
 end
 
-target 'SCIMBOEx' do
+target 'RaadEx' do
     use_frameworks!
     pod 'RSKImageCropper'
     pod 'ICGVideoTrimmer'

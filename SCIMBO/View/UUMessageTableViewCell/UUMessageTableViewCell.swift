@@ -2814,7 +2814,7 @@ class UUMessageCell: UITableViewCell, UUMessageContentButtonDelegate {
                 {
                     print(TagIdArr[index])
                     isPerson = true
-                    index = TagRangeArr.index(of: range)!
+                    index = TagRangeArr.firstIndex(of: range)!
                 }
             }
         }

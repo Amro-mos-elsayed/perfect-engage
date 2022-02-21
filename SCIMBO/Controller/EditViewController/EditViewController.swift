@@ -18,7 +18,34 @@ import Mantis
     @objc optional func EdittedImage(AssetArr:NSMutableArray,Status:String)
 }
 
-class EditViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,ICGVideoTrimmerDelegate,UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
+class EditViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,ICGVideoTrimmerDelegate,UICollectionViewDelegateFlowLayout, UITextFieldDelegate, CropViewControllerDelegate {
+    func cropViewControllerDidCrop(_ cropViewController: CropViewController, cropped: UIImage) {
+        print(cropped)
+        let ObjMultiMedia:MultimediaRecord = AssetArr[self.EditedIndex] as! MultimediaRecord
+        ObjMultiMedia.Thumbnail = cropped
+        
+        AssetHandler.sharedInstance.ProcessFilterAsset(ObjMultiRecord: ObjMultiMedia, oppenentID: self.to_id, isFromStatus: isfromStatus, completionHandler: { (objrec) -> ()? in
+            self.AssetArr.removeObject(at: self.EditedIndex)
+            self.AssetArr.insert(objrec, at: self.EditedIndex)
+            self.mediaCollectionView_main.reloadData()
+            self.mediaCollectionView.reloadData()
+            return ()
+        })
+    }
+    
+    func cropViewControllerDidFailToCrop(_ cropViewController: CropViewController, original: UIImage) {
+        
+    }
+    
+    func cropViewControllerDidCancel(_ cropViewController: CropViewController, original: UIImage) {
+        
+    }
+    
+    func cropViewControllerWillDismiss(_ cropViewController: CropViewController) {
+        
+    }
+    
+    
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var mediaCollectionView: UICollectionView!
     @IBOutlet weak var mediaCollectionView_main: UICollectionView!
@@ -56,6 +83,9 @@ class EditViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
     
     
+    
+    func trimmerView(_ trimmerView: ICGVideoTrimmerView!, didChangeLeftPosition startTime: CGFloat, rightPosition endTime: CGFloat) {
+    }
     
     override var prefersStatusBarHidden: Bool {
         return true
@@ -681,8 +711,8 @@ class EditViewController: UIViewController,UICollectionViewDelegate,UICollection
         pickerController.maxSelectableCount = 10
         pickerController.assetType = .allAssets
         pickerController.sourceType = .photo
-        pickerController.isFromChat = true
-        pickerController.defaultSelectedAssets = self.selectedAssets
+//        pickerController.isFromChat = true
+//        pickerController.defaultSelectedAssets = self.selectedAssets
         pickerController.didSelectAssets = { (assets: [DKAsset]) in
             _ = self.AssetArr.map {
                 let objrec = $0 as! MultimediaRecord
@@ -760,13 +790,13 @@ class EditViewController: UIViewController,UICollectionViewDelegate,UICollection
                 self.pop(animated: true)
             }
         }
-        pickerController.didClickGif = {
-            let picker = SwiftyGiphyViewController()
-            picker.delegate = self
-            let navigation = UINavigationController(rootViewController: picker)
-            self.presentView(navigation, animated: true)
-            
-        }
+//        pickerController.didClickGif = {
+//            let picker = SwiftyGiphyViewController()
+//            picker.delegate = self
+//            let navigation = UINavigationController(rootViewController: picker)
+//            self.presentView(navigation, animated: true)
+//
+//        }
         self.presentView(pickerController, animated: true)
     }
     func doStatusSendAction()
@@ -1047,21 +1077,21 @@ extension EditViewController : SwiftyGiphyViewControllerDelegate {
     }
 }
 
-extension EditViewController : CropViewControllerProtocal{
-    func didGetCroppedImage(image: UIImage) {
-        print(image)
-        let ObjMultiMedia:MultimediaRecord = AssetArr[self.EditedIndex] as! MultimediaRecord
-        ObjMultiMedia.Thumbnail = image
-        
-        AssetHandler.sharedInstance.ProcessFilterAsset(ObjMultiRecord: ObjMultiMedia, oppenentID: self.to_id, isFromStatus: isfromStatus, completionHandler: { (objrec) -> ()? in
-            self.AssetArr.removeObject(at: self.EditedIndex)
-            self.AssetArr.insert(objrec, at: self.EditedIndex)
-            self.mediaCollectionView_main.reloadData()
-            self.mediaCollectionView.reloadData()
-            return ()
-        })
-
-        
-    }
-
-}
+//extension EditViewController : CropViewControllerProtocal{
+//    func didGetCroppedImage(image: UIImage) {
+//        print(image)
+//        let ObjMultiMedia:MultimediaRecord = AssetArr[self.EditedIndex] as! MultimediaRecord
+//        ObjMultiMedia.Thumbnail = image
+//
+//        AssetHandler.sharedInstance.ProcessFilterAsset(ObjMultiRecord: ObjMultiMedia, oppenentID: self.to_id, isFromStatus: isfromStatus, completionHandler: { (objrec) -> ()? in
+//            self.AssetArr.removeObject(at: self.EditedIndex)
+//            self.AssetArr.insert(objrec, at: self.EditedIndex)
+//            self.mediaCollectionView_main.reloadData()
+//            self.mediaCollectionView.reloadData()
+//            return ()
+//        })
+//
+//
+//    }
+//
+//}

@@ -16,12 +16,12 @@ class ButtonPicker: UIButton {
     static let buttonBorderSize: CGFloat = 68
   }
 
-  var configuration = Configuration()
+//  var configuration = Configuration()
 
   lazy var numberLabel: UILabel = { [unowned self] in
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.font = self.configuration.numberLabelFont
+//    label.font = self.configuration.numberLabelFont
     label.isHidden = true
     return label
     }()
@@ -30,13 +30,13 @@ class ButtonPicker: UIButton {
 
   // MARK: - Initializers
 
-  public init(configuration: Configuration? = nil) {
-    if let configuration = configuration {
-      self.configuration = configuration
-    }
-    super.init(frame: .zero)
-    configure()
-  }
+//  public init(configuration: Configuration? = nil) {
+//    if let configuration = configuration {
+//      self.configuration = configuration
+//    }
+//    super.init(frame: .zero)
+//    configure()
+//  }
 
   override init(frame: CGRect) {
     super.init(frame: frame)

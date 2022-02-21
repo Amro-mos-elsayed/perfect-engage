@@ -67,7 +67,7 @@ class CallManager {
   }
   
   func callWithUUID(uuid: UUID) -> Call? {
-    guard let index = calls.index(where: { $0.uuid == uuid }) else {
+    guard let index = calls.firstIndex(where: { $0.uuid == uuid }) else {
       return nil
     }
     return calls[index]
@@ -83,7 +83,7 @@ class CallManager {
   }
   
   func remove(call: Call) {
-    guard let index = calls.index(where: { $0 === call }) else { return }
+    guard let index = calls.firstIndex(where: { $0 === call }) else { return }
     calls.remove(at: index)
     callsChangedHandler?()
   }

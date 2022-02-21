@@ -113,11 +113,13 @@
 		7CD1C55B26C0060E00650610 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD1C55826C0060E00650610 /* OTPTextField.swift */; };
 		7CD1C55D26C12C6E00650610 /* SWCC_OTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1C55F26C12C6E00650610 /* SWCC_OTPViewController.xib */; };
 		7CD1C56226C12DD000650610 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD1C56426C12DD000650610 /* LoginViewController.xib */; };
+		ADA337EE5A4E0284087CE432 /* Pods_RaadEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCC266310EBA985B0C75F17 /* Pods_RaadEx.framework */; };
 		BA57F82F20B532C600E76E7F /* SecretmessageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57F82E20B532C600E76E7F /* SecretmessageHandler.swift */; };
 		BA8F4D1720BFDFC900D0AA35 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F4D1520BFDFC400D0AA35 /* SettingsTableViewCell.swift */; };
 		BA8F4D1820BFDFC900D0AA35 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA8F4D1620BFDFC500D0AA35 /* SettingsTableViewCell.xib */; };
 		BA8F4D1B20BFE03D00D0AA35 /* DetailtableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F4D1920BFE03C00D0AA35 /* DetailtableViewCell.swift */; };
 		BA8F4D1C20BFE03D00D0AA35 /* DetailtableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA8F4D1A20BFE03C00D0AA35 /* DetailtableViewCell.xib */; };
+		BDAE68D241694BAFEFBCAE70 /* Pods_Raad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128839274159770117B26FA7 /* Pods_Raad.framework */; };
 		C38F75AB24F3BE0E00EC2B3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C38F75A924F3BE0E00EC2B3F /* Localizable.strings */; };
 		C38F75AE24F3F9A800EC2B3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C38F75AC24F3F9A800EC2B3F /* InfoPlist.strings */; };
 		C38F75AF24F5AD9300EC2B3F /* MyStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38F75B124F5AD9300EC2B3F /* MyStatusTableViewCell.xib */; };
@@ -528,7 +530,6 @@
 		C5BBE7881F7BB02D00E5D96C /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BBE7871F7BB02D00E5D96C /* libc++.tbd */; };
 		C5BBE78C1F7BB04900E5D96C /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BBE78B1F7BB04900E5D96C /* libsqlite3.tbd */; };
 		C5BBE7901F7BB05E00E5D96C /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5BBE78F1F7BB05E00E5D96C /* VideoToolbox.framework */; };
-		C5BC8A500EC6E7706A572A73 /* Pods_SCIMBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CC2FD9AE311B5CF7BB8BDD /* Pods_SCIMBO.framework */; };
 		C5BF4E061F7A177700B0F759 /* NetworkUsageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF4E051F7A177700B0F759 /* NetworkUsageVC.swift */; };
 		C5C241501F46BDF9007943A4 /* MessageDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C2414F1F46BDF9007943A4 /* MessageDetailHeaderView.swift */; };
 		C5C241521F46BE05007943A4 /* MessageDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C241511F46BE05007943A4 /* MessageDetailHeaderView.xib */; };
@@ -635,7 +636,6 @@
 		C5FCDE2C1F83B4EC009C44BF /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = C5FCDE221F83B4EC009C44BF /* sha1.c */; };
 		C5FD61481E68024100495E8E /* FilterContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FD61471E68024100495E8E /* FilterContact.swift */; };
 		C5FE83441E557E4D00AF42A1 /* GroupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FE83431E557E4D00AF42A1 /* GroupDetail.swift */; };
-		CA954072EF9DBA2FA539EC32 /* Pods_SCIMBOEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6368B3FC18336B516C0B52 /* Pods_SCIMBOEx.framework */; };
 		FD29CF0227A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */; };
 		FD29CF0327A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */; };
 		FD29CF0427A67D1F000D1F92 /* ScreenRecordingDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */; };
@@ -687,6 +687,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		128839274159770117B26FA7 /* Pods_Raad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Raad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		291DDAB3460CF401CCEC9A93 /* Pods-RaadEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaadEx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RaadEx/Pods-RaadEx.debug.xcconfig"; sourceTree = "<group>"; };
 		35BBBA972E10C41E9A7EC9CD /* Pods-SCIMBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCIMBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SCIMBO/Pods-SCIMBO.debug.xcconfig"; sourceTree = "<group>"; };
 		436C60C22073C9BF0048FC47 /* StatusViewedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewedTableViewCell.swift; sourceTree = "<group>"; };
 		436C60C32073C9C00048FC47 /* StatusHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusHeaderView.xib; sourceTree = "<group>"; };
@@ -760,6 +762,7 @@
 		43AB9AAA20870D4C002DAA48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		43AB9AAC20870D63002DAA48 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		43AB9AAE20870D6A002DAA48 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		5DCC266310EBA985B0C75F17 /* Pods_RaadEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RaadEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E6E152B46730E178843425 /* Pods-SCIMBOEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCIMBOEx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SCIMBOEx/Pods-SCIMBOEx.debug.xcconfig"; sourceTree = "<group>"; };
 		7B0B24081FCC27E800C09211 /* SwKeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwKeyStore.swift; sourceTree = "<group>"; };
 		7B2C38BC1F7E246E00698B3F /* SearchMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMessage.swift; sourceTree = "<group>"; };
@@ -804,12 +807,12 @@
 		7CD1C56326C12DD000650610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		7CD1C56626C12DDA00650610 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/LoginViewController.strings"; sourceTree = "<group>"; };
 		7CE6F712AC80A234F9472815 /* Pods-SCIMBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCIMBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCIMBO/Pods-SCIMBO.release.xcconfig"; sourceTree = "<group>"; };
+		B3EF5F1C71E35A2262D9C48A /* Pods-RaadEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaadEx.release.xcconfig"; path = "Pods/Target Support Files/Pods-RaadEx/Pods-RaadEx.release.xcconfig"; sourceTree = "<group>"; };
 		BA57F82E20B532C600E76E7F /* SecretmessageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretmessageHandler.swift; sourceTree = "<group>"; };
 		BA8F4D1520BFDFC400D0AA35 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		BA8F4D1620BFDFC500D0AA35 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		BA8F4D1920BFE03C00D0AA35 /* DetailtableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailtableViewCell.swift; sourceTree = "<group>"; };
 		BA8F4D1A20BFE03C00D0AA35 /* DetailtableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailtableViewCell.xib; sourceTree = "<group>"; };
-		C2CC2FD9AE311B5CF7BB8BDD /* Pods_SCIMBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCIMBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C309F1142552B0DF00F31DA6 /* RaadRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RaadRelease.entitlements; sourceTree = "<group>"; };
 		C325F7C124D041A10013F5D5 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/Main.strings"; sourceTree = "<group>"; };
 		C325F7C224D041A20013F5D5 /* ar-SA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ar-SA"; path = "ar-SA.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -1424,8 +1427,9 @@
 		C5FCDE2D1F83B68C009C44BF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C5FD61471E68024100495E8E /* FilterContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterContact.swift; sourceTree = "<group>"; };
 		C5FE83431E557E4D00AF42A1 /* GroupDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetail.swift; sourceTree = "<group>"; };
-		EA6368B3FC18336B516C0B52 /* Pods_SCIMBOEx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SCIMBOEx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73D4AAEA1979BDF5580B65C /* Pods-Raad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Raad/Pods-Raad.debug.xcconfig"; sourceTree = "<group>"; };
 		F4C119BFF87696B85B014DEC /* Pods-SCIMBOEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCIMBOEx.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCIMBOEx/Pods-SCIMBOEx.release.xcconfig"; sourceTree = "<group>"; };
+		F9EA470FD99FA893E62D2688 /* Pods-Raad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Raad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Raad/Pods-Raad.release.xcconfig"; sourceTree = "<group>"; };
 		FD29CF0127A67D1F000D1F92 /* ScreenRecordingDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRecordingDetector.swift; sourceTree = "<group>"; };
 		FD3A78C027A7D51F004334F7 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1468,7 +1472,7 @@
 				C54C05731E3B59A800E1BE7D /* libmp3lame.a in Frameworks */,
 				C53525D41E1E902C00B8A791 /* CoreLocation.framework in Frameworks */,
 				C53DACCB1E1CE5140060EDFF /* Contacts.framework in Frameworks */,
-				C5BC8A500EC6E7706A572A73 /* Pods_SCIMBO.framework in Frameworks */,
+				BDAE68D241694BAFEFBCAE70 /* Pods_Raad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1480,7 +1484,7 @@
 				C5FBE3EC221AED21006DC947 /* CoreMedia.framework in Frameworks */,
 				C5FBE3EB221AED1A006DC947 /* CoreServices.framework in Frameworks */,
 				C5FBE3E9221AED12006DC947 /* AVFoundation.framework in Frameworks */,
-				CA954072EF9DBA2FA539EC32 /* Pods_SCIMBOEx.framework in Frameworks */,
+				ADA337EE5A4E0284087CE432 /* Pods_RaadEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1494,6 +1498,10 @@
 				7CE6F712AC80A234F9472815 /* Pods-SCIMBO.release.xcconfig */,
 				70E6E152B46730E178843425 /* Pods-SCIMBOEx.debug.xcconfig */,
 				F4C119BFF87696B85B014DEC /* Pods-SCIMBOEx.release.xcconfig */,
+				D73D4AAEA1979BDF5580B65C /* Pods-Raad.debug.xcconfig */,
+				F9EA470FD99FA893E62D2688 /* Pods-Raad.release.xcconfig */,
+				291DDAB3460CF401CCEC9A93 /* Pods-RaadEx.debug.xcconfig */,
+				B3EF5F1C71E35A2262D9C48A /* Pods-RaadEx.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1791,8 +1799,8 @@
 				C53525D31E1E902C00B8A791 /* CoreLocation.framework */,
 				C53DACCA1E1CE5140060EDFF /* Contacts.framework */,
 				C52BF0C31E092117005B76AB /* QuartzCore.framework */,
-				C2CC2FD9AE311B5CF7BB8BDD /* Pods_SCIMBO.framework */,
-				EA6368B3FC18336B516C0B52 /* Pods_SCIMBOEx.framework */,
+				128839274159770117B26FA7 /* Pods_Raad.framework */,
+				5DCC266310EBA985B0C75F17 /* Pods_RaadEx.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -4347,7 +4355,7 @@
 					C5328A711E07E386000572F2 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 69QNL7X9JV;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -4370,6 +4378,7 @@
 					C5FBE3AC221ADDBC006DC947 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = 69QNL7X9JV;
+						LastSwiftMigration = 1320;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -4607,7 +4616,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SCIMBO-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Raad-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -4620,7 +4629,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SCIMBO/Pods-SCIMBO-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Raad/Pods-Raad-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/HockeySDK/HockeySDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -4629,7 +4638,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SCIMBO/Pods-SCIMBO-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Raad/Pods-Raad-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C49021DC0945113FDDBA7E39 /* [CP] Embed Pods Frameworks */ = {
@@ -4638,12 +4647,15 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SCIMBO/Pods-SCIMBO-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Raad/Pods-Raad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ACPDownload/ACPDownload.framework",
 				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ContentSheet/ContentSheet.framework",
+				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/DKCamera/DKCamera.framework",
 				"${BUILT_PRODUCTS_DIR}/DKImagePickerController/DKImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/DKPhotoGallery/DKPhotoGallery.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GLNotificationBar/GLNotificationBar.framework",
@@ -4656,7 +4668,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PinCodeTextField/PinCodeTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/RSKImageCropper/RSKImageCropper.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage.default-GIF/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SWActivityIndicatorView/SWActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SWMessages/SWMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
@@ -4677,7 +4689,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ContentSheet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKCamera.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKPhotoGallery.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GLNotificationBar.framework",
@@ -4707,7 +4722,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SCIMBO/Pods-SCIMBO-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Raad/Pods-Raad-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C533E45E20219D7C004A7D5F /* ShellScript */ = {
@@ -4738,7 +4753,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SCIMBOEx-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RaadEx-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -5548,7 +5563,7 @@
 		};
 		C5328A881E07E38A000572F2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35BBBA972E10C41E9A7EC9CD /* Pods-SCIMBO.debug.xcconfig */;
+			baseConfigurationReference = D73D4AAEA1979BDF5580B65C /* Pods-Raad.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -5684,7 +5699,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}//SCIMBO/Bridging Header/Scimbo_BridgingHeader.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
 			};
@@ -5692,7 +5707,7 @@
 		};
 		C5328A891E07E38A000572F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CE6F712AC80A234F9472815 /* Pods-SCIMBO.release.xcconfig */;
+			baseConfigurationReference = F9EA470FD99FA893E62D2688 /* Pods-Raad.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -5829,7 +5844,7 @@
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}//SCIMBO/Bridging Header/Scimbo_BridgingHeader.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
 			};
@@ -5837,7 +5852,7 @@
 		};
 		C5FBE3B9221ADDBC006DC947 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70E6E152B46730E178843425 /* Pods-SCIMBOEx.debug.xcconfig */;
+			baseConfigurationReference = 291DDAB3460CF401CCEC9A93 /* Pods-RaadEx.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -5871,7 +5886,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/SCIMBOEx/Bridging Header/ShareSCIMBO_BridgingHeader.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
 			};
@@ -5879,7 +5894,7 @@
 		};
 		C5FBE3BA221ADDBC006DC947 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4C119BFF87696B85B014DEC /* Pods-SCIMBOEx.release.xcconfig */;
+			baseConfigurationReference = B3EF5F1C71E35A2262D9C48A /* Pods-RaadEx.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -5912,7 +5927,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "${SRCROOT}/SCIMBOEx/Bridging Header/ShareSCIMBO_BridgingHeader.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_WORKSPACE = YES;
 			};

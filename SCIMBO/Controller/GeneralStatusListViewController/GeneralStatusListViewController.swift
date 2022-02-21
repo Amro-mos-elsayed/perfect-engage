@@ -680,7 +680,7 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
                     cell.statusLabel.isHidden = false
                     cell.statusLabel.text = messageFrame.message.payload
                     cell.statusLabel.font = UIFont(name: messageFrame.message.theme_font, size: cell.statusLabel.font.pointSize)
-                    cell.currentUserImg.backgroundColor = UIColor(hexString: Themes.sharedInstance.CheckNullvalue(Passed_value: (messageFrame.message.theme_color)))
+                    cell.currentUserImg.backgroundColor = UIColor(named: Themes.sharedInstance.CheckNullvalue(Passed_value: (messageFrame.message.theme_color)))
                 }
                 cell.plusIcon.isHidden = true
                 cell.statusIndicatorView.numberOfStatus = CGFloat((datasource?.count)!)
@@ -773,7 +773,7 @@ extension GeneralStatusListViewController: UITableViewDataSource, UITableViewDel
                     cell.statusTextLabel.text = messageFrame.message.payload
                     cell.statusTextLabel.font = UIFont(name: messageFrame.message.theme_font, size: cell.statusTextLabel.font.pointSize)
                     cell.friendsImg.image = nil
-                    cell.friendsImg.backgroundColor = UIColor(hexString: Themes.sharedInstance.CheckNullvalue(Passed_value: (messageFrame.message.theme_color)))
+                    cell.friendsImg.backgroundColor = UIColor(named: Themes.sharedInstance.CheckNullvalue(Passed_value: (messageFrame.message.theme_color)))
                     
                 }
 
@@ -1144,7 +1144,7 @@ extension GeneralStatusListViewController: ImagePickerDelegate{
             pickerController.maxSelectableCount = 10
             pickerController.assetType = .allAssets
             pickerController.sourceType = .photo
-            pickerController.isFromChat = true
+//            pickerController.isFromChat = true
             pickerController.didSelectAssets = { (assets: [DKAsset]) in
                 self.delegate?.isStatusBarHidden(false)
                 if(assets.count > 0)
@@ -1168,13 +1168,13 @@ extension GeneralStatusListViewController: ImagePickerDelegate{
                     })
                 }
             }
-            pickerController.didClickGif = {
-                self.delegate?.isStatusBarHidden(false)
-                let picker = SwiftyGiphyViewController()
-                picker.delegate = self
-                let navigation = UINavigationController(rootViewController: picker)
-                self.presentView(navigation, animated: true)
-            }
+//            pickerController.didClickGif = {
+//                self.delegate?.isStatusBarHidden(false)
+//                let picker = SwiftyGiphyViewController()
+//                picker.delegate = self
+//                let navigation = UINavigationController(rootViewController: picker)
+//                self.presentView(navigation, animated: true)
+//            }
             self.presentView(pickerController, animated: true)
         }
     }

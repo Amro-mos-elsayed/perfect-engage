@@ -946,10 +946,10 @@ class StarredViewController: UIViewController,UITableViewDataSource,UITableViewD
                                 imgCell.gifImg.stopAnimatingGif()
                                 imgCell.customButton.setImage(#imageLiteral(resourceName: "gifIcon"), for: .normal)
                                 
-                                let configuration = ImageViewerConfiguration { config in
-                                    config.gifimageView = imgCell.gifImg
-                                    config.imagePath = url
-                                }
+                                let configuration = ImageViewerConfiguration( configurationClosure: { config in
+                                    config.imageView = imgCell.gifImg
+//                                    config.imagePath = url
+                                })
                                 self.presentView(ImageViewerController(configuration: configuration), animated: true)
                                 if (cellItem.delegate is UIViewController) {
                                     (cellItem.delegate as! UIViewController).view.endEditing(true)

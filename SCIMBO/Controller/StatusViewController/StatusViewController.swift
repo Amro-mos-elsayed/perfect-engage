@@ -753,14 +753,14 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
             contentSheet.blurBackground = false
             contentSheet.showDefaultHeader = false
             fromBottomView = true
-            if(ratio > 0.90)
-            {
-                contentSheet.CollapsedHeightRatio = 0.90
-            }
-            else
-            {
-                contentSheet.CollapsedHeightRatio = CGFloat(ratio)
-            }
+//            if(ratio > 0.90)
+//            {
+//                contentSheet.CollapsedHeightRatio = 0.90
+//            }
+//            else
+//            {
+//                contentSheet.CollapsedHeightRatio = CGFloat(ratio)
+//            }
             let vc = UIViewController.init()
             vc.view = content as? UIView
             self.presentView(vc, animated: true)
@@ -834,7 +834,7 @@ class StatusViewController: UIViewController, SegmentedProgressBarDelegate, Cont
                 textStatusLabel.text = messageFrame.message.payload!
                 textStatusLabel.font = UIFont(name: messageFrame.message.theme_font, size: 25)
                 blurImageView.image = nil
-                statusImgView.backgroundColor = UIColor(hexString: messageFrame.message.theme_color)
+                statusImgView.backgroundColor = UIColor(named: messageFrame.message.theme_color)
                 if(self.isMyStatus)
                 {
                     self.currentUserName.text = "Me"

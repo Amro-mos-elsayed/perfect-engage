@@ -333,7 +333,7 @@ extension MyStatusViewController: UITableViewDataSource, UITableViewDelegate{
             cell.statusLabel.text = messageFrame.message.payload
             cell.statusLabel.font = UIFont(name: messageFrame.message.theme_font, size: cell.statusLabel.font.pointSize)
             cell.userImg.image = nil
-            cell.userImg.backgroundColor = UIColor(hexString: Themes.sharedInstance.CheckNullvalue(Passed_value: (messageFrame.message.theme_color)))
+            cell.userImg.backgroundColor = UIColor(named: Themes.sharedInstance.CheckNullvalue(Passed_value: (messageFrame.message.theme_color)))
         }
         
         if(messageFrame.message.message_status == "0")

@@ -2750,7 +2750,7 @@
             if(self.TagIdArr.count > 0)
             {
                 self.TagIdArr.forEach { id in
-                    let index = self.TagIdArr.index(of: id)
+                    let index = self.TagIdArr.firstIndex(of: id)
                     message = message.replacingOccurrences(of: self.TagNameArr[index!], with: "@@***\(id)@@***")
                 }
             }
@@ -3570,8 +3570,8 @@
                                 imgCell.customButton.setImage(#imageLiteral(resourceName: "gifIcon"), for: .normal)
                                 
                                 let configuration = ImageViewerConfiguration { config in
-                                    config.gifimageView = imgCell.gifImg
-                                    config.imagePath = url
+                                    config.imageView = imgCell.gifImg
+//                                    config.imagePath = url
                                 }
                                 self.presentView(ImageViewerController(configuration: configuration), animated: true)
                                 if (cellItem.delegate is UIViewController) {
@@ -5223,7 +5223,7 @@
             {
                 if (menuOptionNameArray.contains(customMenuItem2))
                 {
-                    let index = (menuOptionNameArray.index(of: customMenuItem2))!
+                    let index = (menuOptionNameArray.firstIndex(of: customMenuItem2))!
                     menuOptionNameArray.remove(at: index)
                     menuOptionImageNameArray.remove(at: index)
                 }
@@ -5231,7 +5231,7 @@
             
             if messageFrame.message.payload == "" && menuOptionNameArray.contains(customMenuItem4)
             {
-                let index = (menuOptionNameArray.index(of: customMenuItem4))!
+                let index = (menuOptionNameArray.firstIndex(of: customMenuItem4))!
                 menuOptionNameArray.remove(at: index)
                 menuOptionImageNameArray.remove(at: index)
                 
@@ -5277,14 +5277,14 @@
             {
                 if (menuOptionNameArray.contains(customMenuItem2))
                 {
-                    let index = (menuOptionNameArray.index(of: customMenuItem2))!
+                    let index = (menuOptionNameArray.firstIndex(of: customMenuItem2))!
                     menuOptionNameArray.remove(at: index)
                     menuOptionImageNameArray.remove(at: index)
                 }
             }
             if messageFrame.message.payload == "" && menuOptionNameArray.contains(customMenuItem4)
             {
-                let index = (menuOptionNameArray.index(of: customMenuItem4))!
+                let index = (menuOptionNameArray.firstIndex(of: customMenuItem4))!
                 menuOptionNameArray.remove(at: index)
                 menuOptionImageNameArray.remove(at: index)
             }
@@ -6096,7 +6096,7 @@
             pickerController.singleSelect = true
             pickerController.assetType = .allAssets
             pickerController.sourceType = .photo
-            pickerController.isFromChat = true
+//            pickerController.isFromChat = true
             pickerController.didSelectAssets = { (assets: [DKAsset]) in
                 if(assets.count > 0)
                 {
@@ -6129,13 +6129,13 @@
                     })
                 }
             }
-            pickerController.didClickGif = {
-                let picker = SwiftyGiphyViewController()
-                picker.delegate = self
-                let navigation = UINavigationController(rootViewController: picker)
-                self.presentView(navigation, animated: true)
-                
-            }
+//            pickerController.didClickGif = {
+//                let picker = SwiftyGiphyViewController()
+//                picker.delegate = self
+//                let navigation = UINavigationController(rootViewController: picker)
+//                self.presentView(navigation, animated: true)
+//
+//            }
             self.presentView(pickerController, animated: true)
         }
         else if(index == 2)
@@ -6216,7 +6216,7 @@
             TagIdArr = arr[0] as! [String]
             TagPersonRange = arr[1] as! [NSRange]
             _ = TagPersonRange.map{
-                let index = TagPersonRange.index(of: $0)!
+                let index = TagPersonRange.firstIndex(of: $0)!
                 var range = $0
                 range.location = range.location - 1
                 range.length = range.length + 1
@@ -6442,7 +6442,7 @@
                 TagPersonRange.forEach { ranges in
                     if(ranges.contains(range.location))
                     {
-                        let Index = TagPersonRange.index(of: ranges)!
+                        let Index = TagPersonRange.firstIndex(of: ranges)!
                         TagPersonRange.remove(at: Index)
                         TagIdArr.remove(at: Index)
                         TagNameArr.remove(at: Index)

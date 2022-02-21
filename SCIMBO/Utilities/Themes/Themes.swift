@@ -1454,7 +1454,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
             //let CheckFavcontactArr:NSMutableArray=NSMutableArray()
             _ = contactsArray.map {
                 let constactObj = $0
-                let i = contactsArray.index(of: $0)!
+                let i = contactsArray.firstIndex(of: $0)!
                 contacts_AArrObj.append(constactObj)
                 contactNoArrId.add(contacts_AArrObj[i].value(forKey: "contact_id")!)
                 contactNameArrId.add(contacts_AArrObj[i].value(forKey: "contact_name")!)
@@ -2124,7 +2124,7 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
                     NameArr.append(name)
                     
                     _ = idArr.map{
-                        let index = idArr.index(of: $0)!
+                        let index = idArr.firstIndex(of: $0)!
                         let id = "@@***" + $0 + "@@***"
                         var range = payload.nsRange(from: payload.range(of: id)!)
                         ids.append($0)
@@ -2839,15 +2839,15 @@ class Themes: NSObject,UNUserNotificationCenterDelegate {
                 let Message = self.returnOtherMessages(from, to, group_type)
                 let state = UIApplication.shared.applicationState
                 if(state == .active) {
-                    if(notificationBar.CheckNotificationbarisHidden())
-                    {
+//                    if(notificationBar.CheckNotificationbarisHidden())
+//                    {
                         var style:GLNotificationStyle!
                         style = .detailedBanner
                         notificationBar = GLNotificationBar(title: groupName, message:Message , preferredStyle:style) { (bool) in
                         }
                         notificationBar.showTime(2.0)
                         self.playSound(nil)
-                    }
+//                    }
                 }
                 else{
                     

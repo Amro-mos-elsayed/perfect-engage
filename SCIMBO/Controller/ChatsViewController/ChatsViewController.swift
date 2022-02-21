@@ -683,7 +683,7 @@
                                         if (ChatPrerecordArr[index] as? GroupDetail) != nil {
                                       var group = ChatPrerecordArr[index] as! GroupDetail
                                       var id2 = group.id
-                                      var id3 = (GroupDetailRec as! GroupDetail).id
+                                      var id3 = (GroupDetailRec ).id
                                         if id2 == id3  {
                                            found = true
                                         }

@@ -399,8 +399,8 @@ class MediaViewController: UIViewController,UITableViewDataSource,UITableViewDel
                 if(URL(string: ObjMultiMedia.upload_Path)?.pathExtension == "gif")
                 {
                     let configuration = ImageViewerConfiguration { config in
-                        config.gifimageView = cell.MediaImageView
-                        config.imagePath = URL(fileURLWithPath: ObjMultiMedia.upload_Path)
+                        config.imageView = cell.MediaImageView
+//                        config.imagePath = URL(fileURLWithPath: ObjMultiMedia.upload_Path)
 
                     }
                     self.presentView(ImageViewerController(configuration: configuration), animated: true)

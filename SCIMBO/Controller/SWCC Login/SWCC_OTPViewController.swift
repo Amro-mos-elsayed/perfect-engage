@@ -346,7 +346,7 @@ extension SWCC_OTPViewController: OTPFieldViewDelegate {
         otpTextFieldView.fieldsCount = 6
         otpTextFieldView.fieldBorderWidth = 2
         otpTextFieldView.defaultBorderColor = UIColor.lightGray
-        otpTextFieldView.filledBorderColor = UIColor.init(hexString: "E99A2A")
+        otpTextFieldView.filledBorderColor = UIColor(named: "E99A2A")!
         otpTextFieldView.requireCursor = false
         otpTextFieldView.displayType = .underlinedBottom
         otpTextFieldView.fieldSize = 50

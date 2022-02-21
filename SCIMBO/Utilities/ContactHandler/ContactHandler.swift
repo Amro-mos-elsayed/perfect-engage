@@ -401,7 +401,7 @@ class ContactHandler: NSObject {
         DispatchQueue.global(qos: .background).async {
             
             _ =    self.contacts.map{
-                let indexofContact = (self.contacts).index(of: $0)
+                let indexofContact = (self.contacts).firstIndex(of: $0)
                 let currentcontact = $0
                 
                 //var email:String = ""

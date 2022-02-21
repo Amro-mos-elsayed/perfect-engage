@@ -291,7 +291,7 @@ class CustomTableViewCell:UITableViewCell{
                 {
                     print(TagIdArr[index])
                     isPerson = true
-                    index = TagRangeArr.index(of: range)!
+                    index = TagRangeArr.firstIndex(of: range)!
                 }
             }
             

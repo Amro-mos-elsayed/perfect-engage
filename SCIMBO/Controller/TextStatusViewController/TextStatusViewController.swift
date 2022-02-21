@@ -24,26 +24,26 @@ class TextStatusViewController: UIViewController {
     @IBOutlet weak var sendViewBottomConstraint: NSLayoutConstraint!
     
     
-    fileprivate let colorArray = [UIColor(hexString: "#233540"),
-                                  UIColor(hexString: "#7ACCA5"),
-                                  UIColor(hexString: "#6D267D"),
-                                  UIColor(hexString: "#5696FE"),
-                                  UIColor(hexString: "#7D8FA3"),
-                                  UIColor(hexString: "#72666B"),
-                                  UIColor(hexString: "#56C9FF"),
-                                  UIColor(hexString: "#26C4DB"),
-                                  UIColor(hexString: "#FE7A6B"),
-                                  UIColor(hexString: "#8C688F"),
-                                  UIColor(hexString: "#C79ECC"),
-                                  UIColor(hexString: "#B5B226"),
-                                  UIColor(hexString: "#EFB230"),
-                                  UIColor(hexString: "#AD8772"),
-                                  UIColor(hexString: "#782138"),
-                                  UIColor(hexString: "#C1A040"),
-                                  UIColor(hexString: "#A52B70"),
-                                  UIColor(hexString: "#8294C9"),
-                                  UIColor(hexString: "#54C166"),
-                                  UIColor(hexString: "#FF898C")]
+    fileprivate let colorArray = [UIColor(named: "#233540"),
+                                  UIColor(named: "#7ACCA5"),
+                                  UIColor(named: "#6D267D"),
+                                  UIColor(named: "#5696FE"),
+                                  UIColor(named: "#7D8FA3"),
+                                  UIColor(named: "#72666B"),
+                                  UIColor(named: "#56C9FF"),
+                                  UIColor(named: "#26C4DB"),
+                                  UIColor(named: "#FE7A6B"),
+                                  UIColor(named: "#8C688F"),
+                                  UIColor(named: "#C79ECC"),
+                                  UIColor(named: "#B5B226"),
+                                  UIColor(named: "#EFB230"),
+                                  UIColor(named: "#AD8772"),
+                                  UIColor(named: "#782138"),
+                                  UIColor(named: "#C1A040"),
+                                  UIColor(named: "#A52B70"),
+                                  UIColor(named: "#8294C9"),
+                                  UIColor(named: "#54C166"),
+                                  UIColor(named: "#FF898C")]
     
     fileprivate let fontArray = [UIFont(name: "Roboto-Medium", size: 40.0), UIFont(name: "TimesNewRomanPSMT", size: 40.0), UIFont(name: "Norican-Regular", size: 40.0), UIFont(name: "Bryndan-Write", size: 40.0), UIFont(name: "Oswald-Heavy", size: 40.0)]
 

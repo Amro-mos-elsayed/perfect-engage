@@ -205,7 +205,7 @@ class SecretChatContactVC: UIViewController,UITableViewDelegate,UITableViewDataS
             
         }else{
                         
-            let favRecord:FavRecord = searchArray[indexPath.row] as! FavRecord
+            let favRecord:FavRecord = searchArray[indexPath.row] 
             let ObjInitiateChatViewController:InitiateChatViewController=self.storyboard?.instantiateViewController(withIdentifier: "InitiateChatViewControllerID") as! InitiateChatViewController            
             ObjInitiateChatViewController.is_fromSecret = true
             ObjInitiateChatViewController.Chat_type="secret"

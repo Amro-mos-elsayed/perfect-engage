@@ -65,9 +65,13 @@ class VideoTrimCell: UICollectionViewCell,ICGVideoTrimmerDelegate {
             self.media_ImageView.isHidden = true
             self.media_GifImageView.isHidden = false
             
-            let image = UIImage(gifData: ObjMultimedia.rawData)
+            do{
+            let image = try UIImage(gifData: ObjMultimedia.rawData)
             self.media_GifImageView.setGifImage(image)
             self.media_GifImageView.stopAnimatingGif()
+            }catch {
+                print(error.localizedDescription)
+            }
         }
         else
         {
@@ -204,7 +208,7 @@ class VideoTrimCell: UICollectionViewCell,ICGVideoTrimmerDelegate {
         let AVasset:AVAsset = AVAsset(url: videoURL )
         TrimmerView.themeColor = UIColor.lightGray
         TrimmerView.asset =  AVasset
-        TrimmerView.rulerLabelInterval = 5
+//        TrimmerView.rulerLabelInterval = 5
         TrimmerView.minLength = CGFloat(5)
         TrimmerView.maxLength = fromStatus ? CGFloat(30) : CGFloat(ObjRecord.Endtime)
         TrimmerView.showsRulerView = false

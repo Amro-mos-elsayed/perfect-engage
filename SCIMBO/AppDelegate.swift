@@ -581,8 +581,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                             Message = "\(String(describing: SenderName!)) Security code changed"
                         }
                         
-                        if(notificationBar.CheckNotificationbarisHidden())
-                        {
+//                        if(notificationBar.CheckNotificationbarisHidden())
+//                        {
                             
                             var style:GLNotificationStyle!
                             style = .detailedBanner
@@ -629,12 +629,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                     
                                 }
                                 
-                            }
+//                            }
                             
-                            notificationBar.addAction(GLNotifyAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .destructive, handler: { (result) in
+                                self.notificationBar.addAction(GLNotifyAction(title: NSLocalizedString("Cancel", comment: "comment"), style: .destructive, handler: { (result) in
                             }))
                             
-                            notificationBar.addAction(GLNotifyAction(title: "REPLY", style: .default, handler: { (result) in
+                                self.notificationBar.addAction(GLNotifyAction(title: "REPLY", style: .default, handler: { (result) in
                                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                                 let ObjInitiateChatViewController:InitiateChatViewController = storyboard.instantiateViewController(withIdentifier: "InitiateChatViewControllerID") as! InitiateChatViewController
                                 ObjInitiateChatViewController.Chat_type = Themes.sharedInstance.CheckNullvalue(Passed_value: chat_type)
@@ -644,7 +644,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                 ObjInitiateChatViewController.opponent_id = Themes.sharedInstance.CheckNullvalue(Passed_value: ResponseDict.value(forKey: "from"))
                                 self.navigationController?.pushView(ObjInitiateChatViewController, animated: true)
                             }))
-                            notificationBar.showTime(2.0)
+                                self.notificationBar.showTime(2.0)
                             
                             let state = UIApplication.shared.applicationState
                             if(state == .active) {
@@ -691,7 +691,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                                         
                                                     {
                                                         let GetSoundID:UInt32 = UInt32(single_sound)!
-                                                        notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate, systemSound: UInt(GetSoundID))
+                                                        self.notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate)
                                                     }
                                                     
                                                 }
@@ -700,18 +700,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                                     if(iShowgroupNotification)
                                                     {
                                                         let GetSoundID:UInt32 = UInt32(group_sound)!
-                                                        notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate, systemSound: UInt(GetSoundID))
+                                                        self.notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate)
                                                     }
                                                 }
                                             }
                                             else if(is_vibrate)
                                             {
-                                                notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate, systemSound: 0)
+                                                self.notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate)
                                                 
                                             }
                                             else
                                             {
-                                                notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate, systemSound: 0)
+                                                self.notificationBar.notificationSound("iphone", ofType: "mp3", vibrate: is_vibrate)
                                             }
                                         }
                                     }

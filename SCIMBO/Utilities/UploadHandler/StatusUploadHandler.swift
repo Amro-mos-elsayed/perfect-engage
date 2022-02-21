@@ -653,7 +653,7 @@ class StatusUploadHandler: NSObject {
                             if(isGif)
                             {
                                 do {
-                                    let image = UIImage(gifData: try Data(contentsOf: url))
+                                    let image = try UIImage(gifData: try Data(contentsOf: url))
                                     imageView.setGifImage(image)
                                     imageView.startAnimatingGif()
                                 }
@@ -714,9 +714,14 @@ class StatusUploadHandler: NSObject {
                                         let assetname:String = messageFrame.message.thumbnail! + ".gif"
                                         let Path:String =  Filemanager.sharedinstance.SaveImageFile(imagePath: "\(Constant.sharedinstance.statuspath)/\(assetname)",imagedata: imagedata!)
                                         
-                                        let image = UIImage(gifData: imagedata!)
-                                        imageView.setGifImage(image)
-                                        imageView.startAnimatingGif()
+                                        do {
+                                            let image = try UIImage(gifData: imagedata!)
+                                            imageView.setGifImage(image)
+                                            imageView.startAnimatingGif()
+                                        }
+                                        catch {
+                                            print(error.localizedDescription)
+                                        }
 
                                         DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Status_Upload_Details, FetchString: messageFrame.message.thumbnail!, attribute: "upload_data_id", UpdationElements: ["download_status" : "2","upload_Path":Path])
                                         if(completion != nil)
@@ -798,9 +803,14 @@ class StatusUploadHandler: NSObject {
                                     let assetname:String = messageFrame.message.thumbnail! + ".gif"
                                     let Path:String =  Filemanager.sharedinstance.SaveImageFile(imagePath: "\(Constant.sharedinstance.statuspath)/\(assetname)",imagedata: imagedata!)
                                     
-                                    let image = UIImage(gifData: imagedata!)
-                                    imageView.setGifImage(image)
-                                    imageView.startAnimatingGif()
+                                    do {
+                                        let image = try UIImage(gifData: imagedata!)
+                                        imageView.setGifImage(image)
+                                        imageView.startAnimatingGif()
+                                    }
+                                    catch {
+                                        print(error.localizedDescription)
+                                    }
                                     
                                     DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Status_Upload_Details, FetchString: messageFrame.message.thumbnail!, attribute: "upload_data_id", UpdationElements: ["download_status" : "2","upload_Path":Path])
                                     if(completion != nil)
@@ -860,7 +870,7 @@ class StatusUploadHandler: NSObject {
                         if(isGif)
                         {
                             do {
-                                let image = UIImage(gifData: try Data(contentsOf: url))
+                                let image = try UIImage(gifData: try Data(contentsOf: url))
                                 imageView.setGifImage(image)
                                 imageView.startAnimatingGif()
                             }
@@ -921,9 +931,14 @@ class StatusUploadHandler: NSObject {
                                     let assetname:String = messageFrame.message.thumbnail! + ".gif"
                                     let Path:String =  Filemanager.sharedinstance.SaveImageFile(imagePath: "\(Constant.sharedinstance.statuspath)/\(assetname)",imagedata: imagedata!)
                                     
-                                    let image = UIImage(gifData: imagedata!)
-                                    imageView.setGifImage(image)
-                                    imageView.startAnimatingGif()
+                                    do {
+                                        let image = try UIImage(gifData: imagedata!)
+                                        imageView.setGifImage(image)
+                                        imageView.startAnimatingGif()
+                                    }
+                                    catch {
+                                        print(error.localizedDescription)
+                                    }
                                     
                                     DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Status_Upload_Details, FetchString: messageFrame.message.thumbnail!, attribute: "upload_data_id", UpdationElements: ["download_status" : "2","upload_Path":Path])
                                     if(completion != nil)
@@ -1000,9 +1015,14 @@ class StatusUploadHandler: NSObject {
                             let assetname:String = messageFrame.message.thumbnail! + ".gif"
                             let Path:String =  Filemanager.sharedinstance.SaveImageFile(imagePath: "\(Constant.sharedinstance.statuspath)/\(assetname)",imagedata: imagedata!)
                             
-                            let image = UIImage(gifData: imagedata!)
-                            imageView.setGifImage(image)
-                            imageView.startAnimatingGif()
+                            do {
+                                let image = try UIImage(gifData: imagedata!)
+                                imageView.setGifImage(image)
+                                imageView.startAnimatingGif()
+                            }
+                            catch {
+                                print(error.localizedDescription)
+                            }
                             
                             DatabaseHandler.sharedInstance.UpdateData(Entityname: Constant.sharedinstance.Status_Upload_Details, FetchString: messageFrame.message.thumbnail!, attribute: "upload_data_id", UpdationElements: ["download_status" : "2","upload_Path":Path])
                             if(completion != nil)

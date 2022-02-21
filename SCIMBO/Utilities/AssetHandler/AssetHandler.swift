@@ -39,7 +39,7 @@ class AssetHandler: NSObject {
                         timestamp =  "\((timestamp as NSString).longLongValue + Int64(i) - serverTimestamp)"
                         let ObjMultiRecord:MultimediaRecord = MultimediaRecord()
                         let asset:DKAsset = assets[i]
-                        if(asset.isVideo)
+                        if(asset.type == DKAssetType.video)
                         {
                             DispatchQueue.main.asyncAfter(deadline: .now()+0.1, execute: {
                                 self.ReturnAssetvalue(asset: asset, from: from, to: "", User_chat_id: User_chat_id, url: url, timestamp: timestamp,isFromStatus: isFromStatus, completionHandler: { (ObjMultiRecord, error) -> ()? in
@@ -59,7 +59,7 @@ class AssetHandler: NSObject {
                         {
                             
                             
-                            asset.fetchOriginalImage(true, completeBlock: ({ (image, info) in
+                            asset.fetchOriginalImage(completeBlock: ({ (image, info) in
                                 print(image!)
                                 
                             }))
@@ -82,7 +82,7 @@ class AssetHandler: NSObject {
                                 ObjMultiRecord.assetpathname = url as String
                                 print(ObjMultiRecord.assetpathname)
                                 ObjMultiRecord.toID = ""
-                                ObjMultiRecord.isVideo = asset.isVideo
+                                ObjMultiRecord.isVideo = asset.type == DKAssetType.video
                                 ObjMultiRecord.StartTime = 0.0
                                 ObjMultiRecord.Endtime = 0.0
                                 ObjMultiRecord.Thumbnail = image
@@ -144,7 +144,7 @@ class AssetHandler: NSObject {
                         timestamp =  "\((timestamp as NSString).longLongValue + Int64(i) - serverTimestamp)"
                         let ObjMultiRecord:MultimediaRecord = MultimediaRecord()
                         let asset:DKAsset = assets[i]
-                        if(asset.isVideo)
+                        if(asset.type == DKAssetType.video)
                         {
                             DispatchQueue.main.asyncAfter(deadline: .now()+0.1, execute: {
                                 self.ReturnAssetvalue(asset: asset, from: from, to: to, User_chat_id: User_chat_id, url: url, timestamp: timestamp,isFromStatus: isFromStatus, completionHandler: { (ObjMultiRecord, error) -> ()? in
@@ -164,7 +164,7 @@ class AssetHandler: NSObject {
                         {
                             
                             
-                            asset.fetchOriginalImage(true, completeBlock: ({ (image, info) in
+                            asset.fetchOriginalImage(completeBlock: ({ (image, info) in
                                 print(image!)
                                 
                             }))
@@ -187,7 +187,7 @@ class AssetHandler: NSObject {
                                 ObjMultiRecord.assetpathname = url as String
                                 print(ObjMultiRecord.assetpathname)
                                 ObjMultiRecord.toID = to
-                                ObjMultiRecord.isVideo = asset.isVideo
+                                ObjMultiRecord.isVideo = asset.type == DKAssetType.video
                                 ObjMultiRecord.StartTime = 0.0
                                 ObjMultiRecord.Endtime = 0.0
                                 ObjMultiRecord.Thumbnail = image
@@ -306,7 +306,7 @@ class AssetHandler: NSObject {
         let ObjMultiRecord:MultimediaRecord = MultimediaRecord()
         let options: PHVideoRequestOptions = PHVideoRequestOptions()
         options.version = .original
-        asset.fetchAVAsset(options, completeBlock: { [weak self] (_asset, _: [AnyHashable : Any]?) in
+        asset.fetchAVAsset(options: options, completeBlock: { [weak self] (_asset, _: [AnyHashable : Any]?) in
             
             if let urlAsset = _asset as? AVURLAsset {
                 
@@ -372,7 +372,7 @@ class AssetHandler: NSObject {
                                     ObjMultiRecord.toID = to
                                     ObjMultiRecord.userCommonID = User_chat_id
                                     ObjMultiRecord.assetpathname! = url as String
-                                    ObjMultiRecord.isVideo = asset.isVideo
+                                    ObjMultiRecord.isVideo = asset.type == DKAssetType.video
                                     if(ObjMultiRecord.isVideo)
                                     {
                                         ObjMultiRecord.Thumbnail = self?.getThumnail(videoURL: urlAsset)

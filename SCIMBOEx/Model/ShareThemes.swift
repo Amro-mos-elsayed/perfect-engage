@@ -1246,7 +1246,7 @@ class Themes: NSObject {
                     NameArr.append(name)
                     
                     _ = idArr.map{
-                        let index = idArr.index(of: $0)!
+                        let index = idArr.firstIndex(of: $0)!
                         let id = "@@***" + $0 + "@@***"
                         var range = payload.nsRange(from: payload.range(of: id)!)
                         ids.append($0)
